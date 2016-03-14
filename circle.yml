@@ -1,4 +1,4 @@
-general:
-  artifacts:
-    - "dist"
-    - "styleguide"
+test:
+  post:
+    - mv dist $CIRCLE_ARTIFACTS
+    - mv styleguide $CIRCLE_ARTIFACTS
