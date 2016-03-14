@@ -6,7 +6,7 @@
   "source": [
     "src"
   ],
-  "destination":  "dist",
+  "destination":  "styleguide",
 
   "css": [
     "../dist/styleguide.css"
