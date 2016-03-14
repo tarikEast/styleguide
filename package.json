@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "./node_modules/.bin/gulp deploy",
     "dist": "./node_modules/.bin/gulp dist",
-    "test": "npm exec dist"
+    "test": "npm run dist"
   },
   "repository": {
     "type": "git",
