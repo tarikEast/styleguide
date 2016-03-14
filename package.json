@@ -4,6 +4,7 @@
   "description": "Styleguide for Node",
   "main": "index.js",
   "scripts": {
+    "deploy": "./node_modules/.bin/gulp deploy",
     "dist": "./node_modules/.bin/gulp dist",
     "test": "npm exec dist"
   },

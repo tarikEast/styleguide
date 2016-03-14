@@ -1,4 +1,4 @@
-test:
-  post:
-    - mv dist $CIRCLE_ARTIFACTS
-    - mv styleguide $CIRCLE_ARTIFACTS
+deployment:
+  gh-pages:
+    commands:
+      - npm run deploy
