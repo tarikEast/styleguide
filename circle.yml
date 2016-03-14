@@ -1,4 +1,5 @@
 deployment:
-  gh-pages:
+  github:
+    branch: master
     commands:
       - npm run deploy
