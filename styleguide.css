@@ -1,0 +1,6 @@
+button, .button {
+  background-color: red; }
+  button:hover, .button:hover {
+    background-color: green; }
+
+/*# sourceMappingURL=dist/styleguide.css.map */
