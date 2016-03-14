@@ -4,7 +4,8 @@
   "description": "Styleguide for Node",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/node-sass --output-style compressed src/styleguide.sass dist/styleguide.css && ./node_modules/.bin/kss-node --config kss-config.json"
+    "dist": "./node_modules/.bin/gulp dist",
+    "test": "npm exec dist"
   },
   "repository": {
     "type": "git",

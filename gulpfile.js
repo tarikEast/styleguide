@@ -34,4 +34,7 @@ gulp.task('styleguide', function(cb) {
   }, cb);
 });
 
+gulp.task('dist', ['styleguide', 'sass']);
+
 gulp.task('default', ['serve']);
+
