@@ -9,4 +9,8 @@
 // Style guide: base.buttons
 button, .button {
   background-color: red;
+
+  &:hover {
+    background-color: green;
+  }
 }
