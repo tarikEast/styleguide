@@ -5,4 +5,6 @@ deployment:
   github:
     branch: master
     commands:
+      - git config --global user.email "circleci@itsinthenode.com"
+      - git config --global user.name "CircleCI Bot"
       - npm run deploy
