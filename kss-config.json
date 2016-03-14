@@ -1,0 +1,15 @@
+{
+  "//": "The source and destination paths are relative to this file.",
+  "source": [
+    "src",
+    "bower_components"
+  ],
+  "destination":  "dist",
+
+  "css": [
+    "../css/styles.css",
+    "../css/even-more-styles.css"
+  ],
+  "js": [
+  ]
+}
