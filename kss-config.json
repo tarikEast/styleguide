@@ -1,14 +1,15 @@
 {
+  "title": "Node Style Guide",
+  "verbose": true,
+
   "//": "The source and destination paths are relative to this file.",
   "source": [
-    "src",
-    "bower_components"
+    "src"
   ],
   "destination":  "dist",
 
   "css": [
-    "../css/styles.css",
-    "../css/even-more-styles.css"
+    "../dist/styleguide.css"
   ],
   "js": [
   ]

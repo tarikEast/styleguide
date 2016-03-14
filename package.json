@@ -4,7 +4,7 @@
   "description": "Styleguide for Node",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/kss-node --config kss-config.json --verbose"
+    "test": "./node_modules/.bin/node-sass --output-style compressed src/styleguide.sass dist/styleguide.css && ./node_modules/.bin/kss-node --config kss-config.json"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   "homepage": "https://github.com/itsinthenode/styleguide#readme",
   "private": true,
   "devDependencies": {
-    "kss": "^2.4.0"
+    "kss": "^2.4.0",
+    "node-sass": "^3.4.2"
   }
 }
