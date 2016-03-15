@@ -4,8 +4,8 @@ var browserSync = require('browser-sync').create();
 var ghPages     = require('gulp-gh-pages');
 var kss         = require('kss');
 var sass        = require('gulp-sass');
+var sassLint    = require('gulp-sass-lint');
 var sourcemaps  = require('gulp-sourcemaps');
-
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['styleguide', 'sass'], function() {
@@ -35,6 +35,13 @@ gulp.task('styleguide', function(cb) {
     "source": ["src"],
     "title": "Node Style Guide"
   }, cb);
+});
+
+gulp.task('lint', function () {
+  gulp.src('./src/**/*.scss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 gulp.task('deploy',  function() {

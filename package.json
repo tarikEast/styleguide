@@ -22,6 +22,7 @@
     "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^2.2.0",
+    "gulp-sass-lint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "kss": "^2.4.0"
   }
