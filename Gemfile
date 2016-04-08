@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in node-styleguide.gemspec
 gemspec
+
+group :development do
+  gem 'byebug', platforms: [:mri_21, :mri_22], require: false
+end
