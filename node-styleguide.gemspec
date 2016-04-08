@@ -26,6 +26,9 @@ Gem::Specification.new do |s|
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  s.add_runtime_dependency 'sass', '>= 3.3.4'
+  s.add_runtime_dependency 'autoprefixer-rails', '>= 5.2.1'
+
   s.add_development_dependency "bundler", "~> 1.11"
   s.add_development_dependency "rake", "~> 10.0"
 end
