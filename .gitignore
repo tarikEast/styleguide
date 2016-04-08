@@ -1,4 +1,8 @@
-.publish
-node_modules
-dist
-styleguide
+/.bundle/
+/.publish
+/Gemfile.lock
+/dist
+/node_modules
+/pkg/
+/styleguide
+/tmp/
