@@ -13,14 +13,14 @@ gulp.task('serve', ['styleguide', 'sass'], function() {
     server: "./"
   });
 
-  gulp.watch("src/**/*.scss", ['styleguide', 'sass']);
-  gulp.watch("src/**/*.md").on('change', browserSync.reload);
+  gulp.watch("assets/**/*.scss", ['styleguide', 'sass']);
+  gulp.watch("assets/**/*.md").on('change', browserSync.reload);
   gulp.watch("styleguide/*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-  return gulp.src('./src/**/*.scss')
+  return gulp.src('./assets/**/*.scss')
   .pipe(sourcemaps.init())
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('./'))
@@ -30,15 +30,15 @@ gulp.task('sass', function() {
 
 gulp.task('styleguide', function(cb) {
   kss({
-    "css": ["../dist/styleguide.css", "styleguide.css"], // hack to deploy better
+    "css": ["../dist/stylesheets/styleguide.css", "stylesheets/styleguide.css"], // hack to deploy better
     "destination":  "styleguide",
-    "source": ["src"],
+    "source": ["assets"],
     "title": "Node Style Guide"
   }, cb);
 });
 
 gulp.task('lint', function () {
-  gulp.src('./src/**/*.scss')
+  gulp.src('./assets/**/*.scss')
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())

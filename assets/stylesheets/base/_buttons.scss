@@ -9,9 +9,10 @@
 //
 // Style guide: base.buttons
 button, .button {
-  background-color: red;
+  background-color: blue;
+  border: solid 1px;
 
   &:hover {
-    background-color: green;
+    background-color: red;
   }
 }
