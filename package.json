@@ -6,6 +6,7 @@
   "scripts": {
     "deploy": "./node_modules/.bin/gulp deploy",
     "dist": "./node_modules/.bin/gulp dist",
+    "start": "./node_modules/.bin/gulp serve",
     "test": "npm run dist"
   },
   "repository": {
