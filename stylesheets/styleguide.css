@@ -1,6 +1,7 @@
 button, .button {
-  background-color: red; }
+  background-color: blue;
+  border: solid 1px; }
   button:hover, .button:hover {
-    background-color: green; }
+    background-color: red; }
 
 /*# sourceMappingURL=styleguide.css.map */
