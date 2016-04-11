@@ -36,44 +36,38 @@
           <span class="kss-nav__ref">1</span
           ><span class="kss-nav__name">Base</span>
         </a>
-        <ul class="kss-nav__menu-child">
-            <li class="kss-nav__menu-item">
-              <a href="section-base.html#kssref-base-buttons">
-                <span class="kss-nav__ref ">1.1</span
-                ><span class="kss-nav__name">Button</span>
-              </a>
-            </li>
-            <li class="kss-nav__menu-item">
-              <a href="section-base.html#kssref-base-inputs-text">
-                <span class="kss-nav__ref kss-nav__ref-child">1.2.1</span
-                ><span class="kss-nav__name">Inputs: Text</span>
-              </a>
-            </li>
-        </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a href="section-core.html">
           <span class="kss-nav__ref">2</span
           ><span class="kss-nav__name">Core</span>
         </a>
+        <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-core.html#kssref-core-colors">
+                <span class="kss-nav__ref ">2.1</span
+                ><span class="kss-nav__name">Colors</span>
+              </a>
+            </li>
+        </ul>
       </li>
     </ul>
   </nav>
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-base" class="kss-section kss-section--depth-1">
+      <div     id="kssref-core" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-base">
+        <a class="kss-title__permalink" href="#kssref-core">
           <span class="kss-title__ref">
-              1
+              2
             <span class="kss-title__permalink-hash">
-                #Base
+                #Core
             </span>
           </span>
-          Base
+          Core
         </a>
       </h1>
 
@@ -82,24 +76,24 @@
 
 
       </div>
-      <section id="kssref-base-buttons" class="kss-section kss-section--depth-2">
+      <section id="kssref-core-colors" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-base-buttons">
+        <a class="kss-title__permalink" href="#kssref-core-colors">
           <span class="kss-title__ref">
-              1.1
+              2.1
             <span class="kss-title__permalink-hash">
-                #Base.Buttons
+                #Core.Colors
             </span>
           </span>
-          Button
+          Colors
         </a>
       </h2>
 
 
       <div class="kss-description">
-        <p>Your standard button suitable for clicking.</p>
+        <p>Standard text input</p>
 
       </div>
     </div>
@@ -112,66 +106,48 @@
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <button class="[modifier class]">Click Me</button>
+          <div class="color-sample [modifier class]">[modifier class]</div>
         </div>
         <div class="kss-modifier__name kss-style">
-          :hover
+          white
         </div>
         <div class="kss-modifier__description kss-style">
-          Highlights when hovering.
+          White
         </div>
         <div class="kss-modifier__example">
-          <button class="pseudo-class-hover">Click Me</button>
+          <div class="color-sample white">white</div>
         </div>
         <div class="kss-modifier__name kss-style">
-          :disabled
+          grey
         </div>
         <div class="kss-modifier__description kss-style">
-          Greyed out when disabled
+          Grey
         </div>
         <div class="kss-modifier__example">
-          <button class="pseudo-class-disabled">Click Me</button>
+          <div class="color-sample grey">grey</div>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          green
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Green
+        </div>
+        <div class="kss-modifier__example">
+          <div class="color-sample green">green</div>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          red
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Red
+        </div>
+        <div class="kss-modifier__example">
+          <div class="color-sample red">red</div>
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Click Me&lt;/button&gt;</code></pre>
-      </div>
-
-      </section>
-      <section id="kssref-base-inputs-text" class="kss-section kss-section--depth-3">
-
-    <div class="kss-style">
-      <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-base-inputs-text">
-          <span class="kss-title__ref">
-              1.2.1
-            <span class="kss-title__permalink-hash">
-                #Base.Inputs.Text
-            </span>
-          </span>
-          Inputs: Text
-        </a>
-      </h3>
-
-
-      <div class="kss-description">
-        <p>Standard text input</p>
-
-      </div>
-    </div>
-
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example
-        </div>
-        <div class="kss-modifier__example">
-          <input type="text" placeholder="Input some text" class="">
-        </div>
-      </div>
-
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;text&quot; placeholder=&quot;Input some text&quot; class=&quot;&quot;&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;color-sample [modifier class]&quot;&gt;[modifier class]&lt;/div&gt;</code></pre>
       </div>
 
       </section>
