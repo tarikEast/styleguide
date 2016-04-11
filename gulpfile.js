@@ -45,7 +45,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('deploy',  function() {
-  return gulp.src(['./dist/**/*', './styleguide/**/*'])
+  return gulp.src(['./dist/**/*', './styleguide/**/*', './circle.yml'])
     .pipe(ghPages());
 });
 
