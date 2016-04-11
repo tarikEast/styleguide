@@ -1,6 +1,4 @@
 
-$inputs-padding: 10px;
-
 // Text inputs
 //
 // Standard text input for text and email
@@ -14,6 +12,6 @@ $inputs-padding: 10px;
 // Style guide: Base.Inputs.Text
 input[type=text],
 input[type=email] {
-  padding: $inputs-padding 20px;
+  @include input-element;
 }
 

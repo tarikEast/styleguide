@@ -11,12 +11,12 @@
 // Style guide: Base.Buttons
 
 %button {
+  @include input-element;
+
   border: solid 1px;
   background-color: $palette-green;
   color: $palette-white;
   cursor: pointer;
-  padding: $inputs-padding 20px;
-  width: 100%;
 
   &:hover {
     background-color: darken($palette-green, 5);
@@ -25,10 +25,6 @@
   &:disabled {
     background-color: $palette-grey;
     cursor: normal;
-  }
-
-  @media($mq-desktop) {
-    width: initial;
   }
 }
 

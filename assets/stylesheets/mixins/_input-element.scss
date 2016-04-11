@@ -1,0 +1,12 @@
+
+%input-element {
+  height: 40px;
+  width: 100%;
+
+  @media($mq-desktop) {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: initial;
+  }
+}
+
