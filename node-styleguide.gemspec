@@ -5,7 +5,7 @@ require 'node/styleguide/version'
 
 Gem::Specification.new do |s|
   s.name          = "node-styleguide"
-  s.version       = Node::Styleguide::VERSION
+  s.version       = NodeStyleguide::VERSION
   s.authors       = ["Andreas Böhrnsen"]
   s.email         = ["andreas@frontrunner.io"]
 
