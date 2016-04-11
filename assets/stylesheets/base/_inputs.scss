@@ -3,15 +3,30 @@
 //
 // Standard text input for text and email
 //
-// text -  standard input for text
-// email - input for email
+//
+// :focus - no specialties on focus
+// .underlined - only showing a line for inputs
+//
 //
 // Markup:
-// <input type="{{modifier_class}}" placeholder="Input {{modifier_class}}">
+// <input type="text" placeholder="Input some text here" class="{{modifier_class}}">
+// <input type="email" placeholder="Input your mail here" class="{{modifier_class}}">
 //
 // Style guide: Base.Inputs.Text
 input[type=text],
 input[type=email] {
   @include input-element;
+
+  appearance: none;
+
+  &:focus {
+   outline: 0;
+  }
+
+  &.underlined {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $palette-grey;
+  }
 }
 

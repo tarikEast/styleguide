@@ -6,11 +6,15 @@
 // :disabled - Greyed out when disabled
 //
 // Markup:
-// <button class="{{modifier_class}}">Click Me</button>
+// <button class="{{modifier_class}}">Click this Button</button>
+// <input type="button" class="{{modifier_class}}" value="Click this Input Button">
+// <input type="submit" class="{{modifier_class}}" value="Click this Input Submit">
 //
 // Style guide: Base.Buttons
 
-%button {
+button,
+input[type=button],
+input[type=submit] {
   @include input-element;
 
   border: solid 1px;
@@ -28,6 +32,7 @@
   }
 }
 
-button, .button, input[type="submit"] {
-  @extend %button;
+input[type=submit] {
+  text-transform: uppercase;
 }
+
