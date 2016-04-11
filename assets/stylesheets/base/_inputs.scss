@@ -1,15 +1,19 @@
 
 $inputs-padding: 10px;
 
-// Inputs: Text
+// Text inputs
 //
-// Standard text input
+// Standard text input for text and email
+//
+// text -  standard input for text
+// email - input for email
 //
 // Markup:
-// <input type="text" placeholder="Input some text" class="{{modifier_class}}">
+// <input type="{{modifier_class}}" placeholder="Input {{modifier_class}}">
 //
 // Style guide: Base.Inputs.Text
-input[type=text] {
+input[type=text],
+input[type=email] {
   padding: $inputs-padding 20px;
 }
 
