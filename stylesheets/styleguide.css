@@ -12,22 +12,51 @@
 
 input[type=text],
 input[type=email] {
-  padding: 10px 20px; }
+  height: 40px;
+  width: 100%;
+  appearance: none; }
+  @media (min-width: 768px) {
+    input[type=text],
+    input[type=email] {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: initial; } }
+  input[type=text]:focus,
+  input[type=email]:focus {
+    outline: 0; }
+  input[type=text].underlined,
+  input[type=email].underlined {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid grey; }
 
-button, .button, input[type="submit"] {
+button,
+input[type=button],
+input[type=submit] {
+  height: 40px;
+  width: 100%;
   border: solid 1px;
   background-color: green;
   color: white;
-  cursor: pointer;
-  padding: 10px 20px;
-  width: 100%; }
-  button:hover, .button:hover, input[type="submit"]:hover {
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    button,
+    input[type=button],
+    input[type=submit] {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: initial; } }
+  button:hover,
+  input[type=button]:hover,
+  input[type=submit]:hover {
     background-color: #006700; }
-  button:disabled, .button:disabled, input[type="submit"]:disabled {
+  button:disabled,
+  input[type=button]:disabled,
+  input[type=submit]:disabled {
     background-color: grey;
     cursor: normal; }
-  @media (min-width: 768px) {
-    button, .button, input[type="submit"] {
-      width: initial; } }
+
+input[type=submit] {
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=styleguide.css.map */

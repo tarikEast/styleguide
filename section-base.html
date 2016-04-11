@@ -112,7 +112,9 @@
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <button class="[modifier class]">Click Me</button>
+          <button class="[modifier class]">Click this Button</button>
+<input type="button" class="[modifier class]" value="Click this Input Button">
+<input type="submit" class="[modifier class]" value="Click this Input Submit">
         </div>
         <div class="kss-modifier__name kss-style">
           :hover
@@ -121,7 +123,9 @@
           Highlights when hovering.
         </div>
         <div class="kss-modifier__example">
-          <button class="pseudo-class-hover">Click Me</button>
+          <button class="pseudo-class-hover">Click this Button</button>
+<input type="button" class="pseudo-class-hover" value="Click this Input Button">
+<input type="submit" class="pseudo-class-hover" value="Click this Input Submit">
         </div>
         <div class="kss-modifier__name kss-style">
           :disabled
@@ -130,12 +134,16 @@
           Greyed out when disabled
         </div>
         <div class="kss-modifier__example">
-          <button class="pseudo-class-disabled">Click Me</button>
+          <button class="pseudo-class-disabled">Click this Button</button>
+<input type="button" class="pseudo-class-disabled" value="Click this Input Button">
+<input type="submit" class="pseudo-class-disabled" value="Click this Input Submit">
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Click Me&lt;/button&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Click this Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;[modifier class]&quot; value=&quot;Click this Input Button&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;[modifier class]&quot; value=&quot;Click this Input Submit&quot;&gt;</code></pre>
       </div>
 
       </section>
@@ -169,30 +177,34 @@
           Default styling
         </div>
         <div class="kss-modifier__example">
-          <input type="[modifier class]" placeholder="Input [modifier class]">
+          <input type="text" placeholder="Input some text here" class="[modifier class]">
+<input type="email" placeholder="Input your mail here" class="[modifier class]">
         </div>
         <div class="kss-modifier__name kss-style">
-          text
+          :focus
         </div>
         <div class="kss-modifier__description kss-style">
-          standard input for text
+          no specialties on focus
         </div>
         <div class="kss-modifier__example">
-          <input type="text" placeholder="Input text">
+          <input type="text" placeholder="Input some text here" class="pseudo-class-focus">
+<input type="email" placeholder="Input your mail here" class="pseudo-class-focus">
         </div>
         <div class="kss-modifier__name kss-style">
-          email
+          .underlined
         </div>
         <div class="kss-modifier__description kss-style">
-          input for email
+          only showing a line for inputs
         </div>
         <div class="kss-modifier__example">
-          <input type="email" placeholder="Input email">
+          <input type="text" placeholder="Input some text here" class="underlined">
+<input type="email" placeholder="Input your mail here" class="underlined">
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;[modifier class]&quot; placeholder=&quot;Input [modifier class]&quot;&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;text&quot; placeholder=&quot;Input some text here&quot; class=&quot;[modifier class]&quot;&gt;
+&lt;input type=&quot;email&quot; placeholder=&quot;Input your mail here&quot; class=&quot;[modifier class]&quot;&gt;</code></pre>
       </div>
 
       </section>
