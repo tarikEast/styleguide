@@ -1,0 +1,21 @@
+
+// Select Menus
+//
+// Standard select input
+//
+//
+// .underlined - only showing a line for inputs
+//
+// Markup:
+// <select class="{{modifier_class}}">
+//  <option>first item</option>
+//  <option>second item</option>
+// </select>
+//
+// Style guide: Base.Select
+select {
+  @include input-element;
+  @include input-underlined;
+
+  min-width: 200px;
+}

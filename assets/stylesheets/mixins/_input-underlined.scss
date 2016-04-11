@@ -1,0 +1,11 @@
+
+@mixin input-underlined {
+  &.underlined {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid $palette-grey;
+  }
+}

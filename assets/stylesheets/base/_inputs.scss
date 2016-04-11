@@ -12,21 +12,18 @@
 // <input type="text" placeholder="Input some text here" class="{{modifier_class}}">
 // <input type="email" placeholder="Input your mail here" class="{{modifier_class}}">
 //
-// Style guide: Base.Inputs.Text
+// Style guide: Base.Inputs
 input[type=text],
 input[type=email] {
   @include input-element;
+  @include input-underlined;
 
   appearance: none;
+  min-width: 200px;
 
   &:focus {
    outline: 0;
   }
 
-  &.underlined {
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid $palette-grey;
-  }
 }
 
