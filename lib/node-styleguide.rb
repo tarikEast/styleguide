@@ -89,3 +89,5 @@ module NodeStyleguide
     end
   end
 end
+
+NodeStyleguide.load!
