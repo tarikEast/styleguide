@@ -10,7 +10,8 @@
 .color-sample.red {
   background-color: red; }
 
-input[type=text] {
+input[type=text],
+input[type=email] {
   padding: 10px 20px; }
 
 button, .button, input[type="submit"] {
