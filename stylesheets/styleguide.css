@@ -42,7 +42,7 @@ input[type=submit] {
   input[type=button]:disabled,
   input[type=submit]:disabled {
     background-color: grey;
-    cursor: normal; }
+    cursor: not-allowed; }
 
 input[type=submit] {
   text-transform: uppercase; }
