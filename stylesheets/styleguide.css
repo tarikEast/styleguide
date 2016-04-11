@@ -10,25 +10,13 @@
 .color-sample.red {
   background-color: red; }
 
-input[type=text],
-input[type=email] {
-  height: 40px;
-  width: 100%;
-  appearance: none; }
-  @media (min-width: 768px) {
-    input[type=text],
-    input[type=email] {
-      padding-left: 20px;
-      padding-right: 20px;
-      width: initial; } }
-  input[type=text]:focus,
-  input[type=email]:focus {
-    outline: 0; }
-  input[type=text].underlined,
-  input[type=email].underlined {
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid grey; }
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
 
 button,
 input[type=button],
@@ -58,5 +46,46 @@ input[type=submit] {
 
 input[type=submit] {
   text-transform: uppercase; }
+
+input[type=text],
+input[type=email] {
+  height: 40px;
+  width: 100%;
+  appearance: none;
+  min-width: 200px; }
+  @media (min-width: 768px) {
+    input[type=text],
+    input[type=email] {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: initial; } }
+  input[type=text].underlined,
+  input[type=email].underlined {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid grey; }
+  input[type=text]:focus,
+  input[type=email]:focus {
+    outline: 0; }
+
+select {
+  height: 40px;
+  width: 100%;
+  min-width: 200px; }
+  @media (min-width: 768px) {
+    select {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: initial; } }
+  select.underlined {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid grey; }
 
 /*# sourceMappingURL=styleguide.css.map */
