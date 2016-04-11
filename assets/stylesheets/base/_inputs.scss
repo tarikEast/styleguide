@@ -1,0 +1,15 @@
+
+$inputs-padding: 10px;
+
+// Inputs: Text
+//
+// Standard text input
+//
+// Markup:
+// <input type="text" placeholder="Input some text" class="{{modifier_class}}">
+//
+// Style guide: Base.Inputs.Text
+input[type=text] {
+  padding: $inputs-padding 20px;
+}
+

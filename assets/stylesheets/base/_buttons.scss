@@ -2,17 +2,36 @@
 //
 // Your standard button suitable for clicking.
 //
-// :hover   - Highlights when hovering.
+// :hover    - Highlights when hovering.
+// :disabled - Greyed out when disabled
 //
 // Markup:
 // <button class="{{modifier_class}}">Click Me</button>
 //
-// Style guide: base.buttons
-button, .button {
-  background-color: blue;
+// Style guide: Base.Buttons
+
+%button {
   border: solid 1px;
+  background-color: $palette-green;
+  color: $palette-white;
+  cursor: pointer;
+  padding: $inputs-padding 20px;
+  width: 100%;
 
   &:hover {
-    background-color: red;
+    background-color: darken($palette-green, 5);
   }
+
+  &:disabled {
+    background-color: $palette-grey;
+    cursor: normal;
+  }
+
+  @media($mq-desktop) {
+    width: initial;
+  }
+}
+
+button, .button, input[type="submit"] {
+  @extend %button;
 }

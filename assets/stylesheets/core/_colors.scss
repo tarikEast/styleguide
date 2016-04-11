@@ -1,3 +1,33 @@
 
+// Colors
+//
+// Standard text input
+//
+// white - White
+// grey - Grey
+// green - Green
+// red - Red
+//
+// Markup:
+// <div class="color-sample {{modifier_class}}">{{modifier_class}}</div>
+//
+// Style guide: Core.Colors
+$palette-white: white;
+$palette-grey: grey;
 $palette-red: red;
 $palette-green: green;
+
+.color-sample {
+  &.white {
+    background-color: $palette-white;
+  }
+  &.grey {
+    background-color: $palette-grey;
+  }
+  &.green {
+    background-color: $palette-green;
+  }
+  &.red {
+    background-color: $palette-red;
+  }
+}
