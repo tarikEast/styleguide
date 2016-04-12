@@ -3,32 +3,38 @@
 //
 // Standard text input
 //
-// white - White
-// grey - Grey
-// green - Green
-// red - Red
-//
 // Markup:
-// <div class="color-sample {{modifier_class}}">{{modifier_class}}</div>
+// <div class="color-sample white">white</div>
+// <div class="color-sample grey-light">grey-light</div>
+// <div class="color-sample grey">grey</div>
+// <div class="color-sample black">black</div>
+// <div class="color-sample green">green</div>
 //
 // Style guide: Core.Colors
 $palette-white: white;
 $palette-grey-light: #f3f3f3;
 $palette-grey: #cccccc;
-$palette-red: red;
+$palette-black: #333333;
 $palette-green: #81c538;
 
 .color-sample {
+  line-height: 40px;
+  padding-left: 5px;
+
   &.white {
     background-color: $palette-white;
   }
   &.grey {
     background-color: $palette-grey;
   }
+  &.grey-light {
+    background-color: $palette-grey-light;
+  }
+  &.black {
+    color: $palette-white;
+    background-color: $palette-black;
+  }
   &.green {
     background-color: $palette-green;
-  }
-  &.red {
-    background-color: $palette-red;
   }
 }
