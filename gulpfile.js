@@ -22,7 +22,9 @@ gulp.task('serve', ['styleguide', 'sass'], function() {
 gulp.task('sass', function() {
   return gulp.src('./assets/**/*.scss')
   .pipe(sourcemaps.init())
-  .pipe(sass().on('error', sass.logError))
+  .pipe(sass({
+    includePaths: ['./node_modules/normalize.css/']
+  }).on('error', sass.logError))
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('./dist/'))
   .pipe(browserSync.stream());
