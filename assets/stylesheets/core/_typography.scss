@@ -14,10 +14,12 @@ $font-size-medium: 1.5em;
 $font-size-big: 2.25em;
 $font-size-bigger: 3.375;
 
+$color-text: $palette-black;
+
 body {
   font-family: $font-family;
   font-weight: $font-weight-normal;
-  //color: $color-text;
+  color: $color-text;
   line-height: 1.5;
 
   // better font rendering
