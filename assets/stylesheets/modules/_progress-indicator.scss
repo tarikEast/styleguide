@@ -27,8 +27,8 @@ $step-info: #5b32d6 !default;
 
 // sizing
 
-$bubble-size: 20px !default;
-$bubble-line-thickness: 3px !default;
+$bubble-size: 14px !default;
+$bubble-line-thickness: 2px !default;
 $border-thickness: 1px !default;
 $darken-amount: 30% !default;
 
@@ -73,7 +73,6 @@ $darken-amount: 30% !default;
     background-color: $incomplete;
     display: block;
     margin: 0 auto 0.5em auto;
-    border-bottom: $border-thickness solid darken($incomplete, 20%);
   }
 
   // line connectors
