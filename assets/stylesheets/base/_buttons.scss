@@ -21,6 +21,7 @@ input[type=submit] {
   background-color: $palette-green;
   color: $palette-white;
   cursor: pointer;
+  text-transform: uppercase;
 
   &:hover {
     background-color: darken($palette-green, 5);
@@ -30,9 +31,5 @@ input[type=submit] {
     background-color: $palette-grey;
     cursor: not-allowed;
   }
-}
-
-input[type=submit] {
-  text-transform: uppercase;
 }
 
