@@ -6,13 +6,15 @@
 // :disabled - Greyed out when disabled
 //
 // Markup:
-// <button class="{{modifier_class}}">Click this Button</button>
-// <input type="button" class="{{modifier_class}}" value="Click this Input Button">
-// <input type="submit" class="{{modifier_class}}" value="Click this Input Submit">
+// <button class="{{modifier_class}}">Click Button</button>
+// <input type="button" class="{{modifier_class}}" value="Click Input Button">
+// <input type="submit" class="{{modifier_class}}" value="Click Input Submit">
+// <a href="#" class="button {{modifier_class}}">Click Link</a>
 //
 // Style guide: Base.Buttons
 
 button,
+.button,
 input[type=button],
 input[type=submit] {
   @include input-element;
@@ -37,3 +39,8 @@ input[type=submit] {
   }
 }
 
+a.button {
+  display: inline-block;
+  line-height: 40px; // TODO: introduce variable
+  text-align: center;
+}
