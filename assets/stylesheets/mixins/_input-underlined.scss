@@ -7,5 +7,9 @@
     border-radius: 0;
     border: 0;
     border-bottom: 1px solid $palette-grey;
+
+    @media($mq-desktop) {
+      padding-left: 0;
+    }
   }
 }
