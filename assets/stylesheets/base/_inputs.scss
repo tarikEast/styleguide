@@ -19,6 +19,7 @@ input[type=email] {
   @include input-underlined;
 
   appearance: none;
+  border: solid 1px $palette-grey;
   min-width: 200px;
 
   &:focus {
