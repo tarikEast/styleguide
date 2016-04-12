@@ -3,6 +3,7 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -380,6 +381,13 @@ html {
 *:after {
   box-sizing: inherit; }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 button,
 input[type=button],
 input[type=submit] {
@@ -412,6 +420,7 @@ input[type=email] {
   height: 40px;
   width: 100%;
   appearance: none;
+  border: solid 1px #cccccc;
   min-width: 200px; }
   @media (min-width: 768px) {
     input[type=text],
