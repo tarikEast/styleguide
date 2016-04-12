@@ -7,10 +7,18 @@ $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
+// TODO: use modular scale and vertical rhythm
+$font-size-small: 0.667em;
+$font-size-normal: 1em;
+$font-size-medium: 1.5em;
+$font-size-big: 2.25em;
+$font-size-bigger: 3.375;
+
 body {
   font-family: $font-family;
   font-weight: $font-weight-normal;
   //color: $color-text;
+  line-height: 1.5;
 
   // better font rendering
   text-rendering: auto;
