@@ -8,8 +8,9 @@
 //
 // Markup:
 // <select class="{{modifier_class}}">
-//  <option>first item</option>
-//  <option>second item</option>
+//  <option value="">choose an item</option>
+//  <option value="1">first item</option>
+//  <option value="2">second item</option>
 // </select>
 //
 // Style guide: Base.Select
