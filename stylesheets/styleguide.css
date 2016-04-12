@@ -394,6 +394,7 @@ input[type=submit] {
   height: 40px;
   width: 100%;
   border: solid 1px;
+  border-color: #74b132;
   background-color: #81c538;
   color: white;
   cursor: pointer;
@@ -408,11 +409,14 @@ input[type=submit] {
   button:hover,
   input[type=button]:hover,
   input[type=submit]:hover {
-    background-color: #74b132; }
+    background-color: #74b132;
+    border-color: #679d2d;
+    border: solid 1px #74b132; }
   button:disabled,
   input[type=button]:disabled,
   input[type=submit]:disabled {
     background-color: #cccccc;
+    border-color: #bfbfbf;
     cursor: not-allowed; }
 
 input[type=text],
