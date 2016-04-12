@@ -492,7 +492,6 @@ select {
       select.underlined {
         padding-left: 0; } }
 
-/* Copyright 2013-2015 etc Chris Tabor. See https://github.com/christabor/css-progress-wizard/blob/master/LICENSE for details. */
 .progress-indicator {
   display: flex;
   margin: 0;
