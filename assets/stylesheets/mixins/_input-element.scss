@@ -3,6 +3,10 @@
   height: 40px;
   width: 100%;
 
+  &:focus {
+   outline: 0;
+  }
+
   @media($mq-desktop) {
     padding-left: 20px;
     padding-right: 20px;
