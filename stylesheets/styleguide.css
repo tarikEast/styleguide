@@ -384,6 +384,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  line-height: 1.5;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -399,6 +400,10 @@ input[type=submit] {
   color: white;
   cursor: pointer;
   text-transform: uppercase; }
+  button:focus,
+  input[type=button]:focus,
+  input[type=submit]:focus {
+    outline: 0; }
   @media (min-width: 768px) {
     button,
     input[type=button],
@@ -426,6 +431,9 @@ input[type=email] {
   appearance: none;
   border: solid 1px #cccccc;
   min-width: 200px; }
+  input[type=text]:focus,
+  input[type=email]:focus {
+    outline: 0; }
   @media (min-width: 768px) {
     input[type=text],
     input[type=email] {
@@ -440,14 +448,13 @@ input[type=email] {
     border-radius: 0;
     border: 0;
     border-bottom: 1px solid #cccccc; }
-  input[type=text]:focus,
-  input[type=email]:focus {
-    outline: 0; }
 
 select {
   height: 40px;
   width: 100%;
   min-width: 200px; }
+  select:focus {
+    outline: 0; }
   @media (min-width: 768px) {
     select {
       padding-left: 20px;
