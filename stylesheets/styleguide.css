@@ -404,7 +404,7 @@ button,
 input[type=button],
 input[type=submit] {
   height: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
@@ -448,7 +448,7 @@ a.button {
 input[type=text],
 input[type=email] {
   height: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
@@ -477,7 +477,7 @@ a {
 
 select {
   height: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
