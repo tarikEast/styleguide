@@ -9,6 +9,7 @@
 // <div class="color-sample grey">grey</div>
 // <div class="color-sample black">black</div>
 // <div class="color-sample green">green</div>
+// <div class="color-sample red">red</div>
 //
 // Style guide: Core.Colors
 $palette-white: white;
@@ -16,6 +17,8 @@ $palette-grey-light: #f3f3f3;
 $palette-grey: #cccccc;
 $palette-black: #333333;
 $palette-green: #81c538;
+$palette-orange: #CC3D14;
+$palette-red: lighten(#B22E09, 10);
 
 .color-sample {
   line-height: 40px;
@@ -36,5 +39,8 @@ $palette-green: #81c538;
   }
   &.green {
     background-color: $palette-green;
+  }
+  &.red {
+    background-color: $palette-red;
   }
 }
