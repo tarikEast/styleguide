@@ -41,6 +41,6 @@ input[type=submit] {
 
 a.button {
   display: inline-block;
-  line-height: 50px; // TODO: introduce variable
+  line-height: $inputs-height;
   text-align: center;
 }
