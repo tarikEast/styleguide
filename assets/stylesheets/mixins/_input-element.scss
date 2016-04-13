@@ -1,6 +1,9 @@
 
 @mixin input-element {
   height: 40px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   width: 100%;
 
   &:focus {
@@ -8,8 +11,6 @@
   }
 
   @media($mq-desktop) {
-    padding-left: 20px;
-    padding-right: 20px;
     width: initial;
   }
 }
