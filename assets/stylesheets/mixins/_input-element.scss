@@ -1,7 +1,7 @@
 
 @mixin input-element {
   height: $inputs-height;
-  margin-bottom: 5px;
+  margin-bottom: $inputs-margin-bottom;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
