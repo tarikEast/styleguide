@@ -446,7 +446,8 @@ a.button {
   text-align: center; }
 
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=tel] {
   height: 50px;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -456,14 +457,17 @@ input[type=email] {
   border: solid 1px #cccccc;
   min-width: 300px; }
   input[type=text]:focus,
-  input[type=email]:focus {
+  input[type=email]:focus,
+  input[type=tel]:focus {
     outline: 0; }
   @media (min-width: 768px) {
     input[type=text],
-    input[type=email] {
+    input[type=email],
+    input[type=tel] {
       width: auto; } }
   input[type=text].underlined,
-  input[type=email].underlined {
+  input[type=email].underlined,
+  input[type=tel].underlined {
     -webkit-appearance: none;
     appearance: none;
     background: transparent;
@@ -514,8 +518,6 @@ select {
     text-overflow: ellipsis;
     color: #cccccc;
     display: block; }
-    .progress-indicator > li:hover {
-      color: gray; }
   .progress-indicator > li .bubble {
     border-radius: 1000px;
     width: 14px;
@@ -528,7 +530,7 @@ select {
     display: block;
     position: absolute;
     top: 6px;
-    width: 100%;
+    width: calc(50% - 7px);
     height: 2px;
     content: '';
     background-color: #cccccc; }
@@ -536,6 +538,8 @@ select {
     left: 0; }
   .progress-indicator > li .bubble:after {
     right: 0; }
+  .progress-indicator > li.progress .bubble:before {
+    background-color: #81c538; }
   .progress-indicator > li.completed {
     color: #81c538; }
     .progress-indicator > li.completed .bubble {
@@ -554,13 +558,6 @@ select {
       .progress-indicator > li.active .bubble:before, .progress-indicator > li.active .bubble:after {
         background-color: #337AB7;
         border-color: #122a3f; }
-  .progress-indicator > li a:hover .bubble {
-    background-color: #5671d0;
-    color: #5671d0;
-    border-color: #1f306e; }
-    .progress-indicator > li a:hover .bubble:before, .progress-indicator > li a:hover .bubble:after {
-      background-color: #5671d0;
-      border-color: #1f306e; }
   .progress-indicator > li.danger .bubble {
     background-color: #d3140f;
     color: #d3140f;
