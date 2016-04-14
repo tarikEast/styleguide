@@ -20,6 +20,6 @@ input[type=email] {
 
   appearance: none;
   border: solid 1px $palette-grey;
-  min-width: 200px;
+  min-width: $inputs-min-width;
 }
 

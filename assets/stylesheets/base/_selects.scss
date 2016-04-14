@@ -18,5 +18,5 @@ select {
   @include input-element;
   @include input-underlined;
 
-  min-width: 200px;
+  min-width: $inputs-min-width;
 }
