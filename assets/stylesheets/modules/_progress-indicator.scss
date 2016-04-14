@@ -21,7 +21,6 @@
 $incomplete: $palette-grey;
 $complete: $palette-green;
 $active: #337AB7 !default;
-$hover: #5671d0 !default;
 $step-danger: #d3140f !default;
 $step-warning: #edb10a !default;
 $step-info: #5b32d6 !default;
@@ -63,9 +62,6 @@ $darken-amount: 30% !default;
     text-overflow: ellipsis;
     color: $incomplete;
     display: block;
-    &:hover {
-      color: darken($incomplete, $darken-amount);
-    }
   }
   > li .bubble {
     border-radius: 1000px;
@@ -111,12 +107,6 @@ $darken-amount: 30% !default;
     .bubble {
       @include bubble-style($active);
     }
-  }
-
-  // button states
-
-  > li a:hover .bubble {
-    @include bubble-style($hover);
   }
 
   // override states
