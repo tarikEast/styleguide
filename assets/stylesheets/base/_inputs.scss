@@ -9,12 +9,14 @@
 //
 //
 // Markup:
-// <input type="text" placeholder="Input some text here" class="{{modifier_class}}">
-// <input type="email" placeholder="Input your mail here" class="{{modifier_class}}">
+// <input type="text" placeholder="Some text here" class="{{modifier_class}}">
+// <input type="email" placeholder="Mail address here" class="{{modifier_class}}">
+// <input type="tel" placeholder="Telephone number here" class="{{modifier_class}}">
 //
 // Style guide: Base.Inputs
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=tel], {
   @include input-element;
   @include input-underlined;
 
