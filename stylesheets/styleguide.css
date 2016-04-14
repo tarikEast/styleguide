@@ -424,7 +424,7 @@ input[type=submit] {
     .button,
     input[type=button],
     input[type=submit] {
-      width: initial; } }
+      width: auto; } }
   button:hover,
   .button:hover,
   input[type=button]:hover,
@@ -454,14 +454,14 @@ input[type=email] {
   width: 100%;
   appearance: none;
   border: solid 1px #cccccc;
-  min-width: 200px; }
+  min-width: 300px; }
   input[type=text]:focus,
   input[type=email]:focus {
     outline: 0; }
   @media (min-width: 768px) {
     input[type=text],
     input[type=email] {
-      width: initial; } }
+      width: auto; } }
   input[type=text].underlined,
   input[type=email].underlined {
     -webkit-appearance: none;
@@ -481,12 +481,12 @@ select {
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  min-width: 200px; }
+  min-width: 300px; }
   select:focus {
     outline: 0; }
   @media (min-width: 768px) {
     select {
-      width: initial; } }
+      width: auto; } }
   select.underlined {
     -webkit-appearance: none;
     appearance: none;
