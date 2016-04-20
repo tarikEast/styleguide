@@ -1,0 +1,16 @@
+
+// Profile Image
+//
+// for square images
+//
+// Markup:
+//   <img class="profile-image" src="http://lorempixel.com/160/160/people/1">
+//   <img class="profile-image" src="http://lorempixel.com/80/80/people/1">
+//
+// Style guide: Modules.ProfileImage
+
+.profile-image {
+  border: 1px solid $palette-white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px $palette-grey;
+}
