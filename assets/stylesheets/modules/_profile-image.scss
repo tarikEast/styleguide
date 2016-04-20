@@ -4,8 +4,9 @@
 // for square images
 //
 // Markup:
-//   <img class="profile-image" src="http://lorempixel.com/160/160/people/1">
-//   <img class="profile-image" src="http://lorempixel.com/80/80/people/1">
+//   <img class="profile-image" src="http://lorempixel.com/300/300/people/1">
+//   <img class="profile-image profile-image--small" src="http://lorempixel.com/300/300/people/1">
+//   <img class="profile-image profile-image--tiny" src="http://lorempixel.com/300/300/people/1">
 //
 // Style guide: Modules.ProfileImage
 
@@ -13,4 +14,16 @@
   border: 1px solid $palette-white;
   border-radius: 50%;
   box-shadow: 0 0 0 1px $palette-grey;
+  height: 160px;
+  width: 160px;
+
+  &--small {
+    height: 80px;
+    width: 80px;
+  }
+
+  &--tiny {
+    height: 40px;
+    width: 40px;
+  }
 }
