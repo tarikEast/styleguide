@@ -507,7 +507,15 @@ select {
 .profile-image {
   border: 1px solid white;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px #cccccc; }
+  box-shadow: 0 0 0 1px #cccccc;
+  height: 160px;
+  width: 160px; }
+  .profile-image--small {
+    height: 80px;
+    width: 80px; }
+  .profile-image--tiny {
+    height: 40px;
+    width: 40px; }
 
 .progress-indicator {
   display: flex;
