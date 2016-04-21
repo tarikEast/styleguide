@@ -4,6 +4,8 @@
 //
 // :hover    - Highlights when hovering.
 // :disabled - Greyed out when disabled
+// .button--text - text only button
+// .button--text:hover - text only button gets darker
 //
 // Markup:
 // <button class="{{modifier_class}}">Click Button</button>
@@ -37,6 +39,18 @@ input[type=submit] {
     border-color: darken($palette-grey, 5);
     cursor: not-allowed;
   }
+
+  &.button--text {
+    border: 0;
+    background-color: transparent;
+    color: $palette-grey-dark;
+
+    &:hover {
+      border: 0;
+      background-color: transparent;
+      color: darken($palette-grey-dark, 10);
+    }
+  }
 }
 
 a.button {
@@ -44,3 +58,4 @@ a.button {
   line-height: $inputs-height;
   text-align: center;
 }
+
