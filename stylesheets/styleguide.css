@@ -444,6 +444,20 @@ input[type=submit] {
     background-color: #cccccc;
     border-color: #bfbfbf;
     cursor: not-allowed; }
+  button.button--text,
+  .button.button--text,
+  input[type=button].button--text,
+  input[type=submit].button--text {
+    border: 0;
+    background-color: transparent;
+    color: #777777; }
+    button.button--text:hover,
+    .button.button--text:hover,
+    input[type=button].button--text:hover,
+    input[type=submit].button--text:hover {
+      border: 0;
+      background-color: transparent;
+      color: #5e5e5e; }
 
 a.button {
   display: inline-block;
