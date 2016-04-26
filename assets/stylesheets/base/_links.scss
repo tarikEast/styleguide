@@ -1,5 +1,29 @@
 
+// Links
+//
+// Your standard link suitable for clicking.
+//
+// :hover    - Highlights when hovering.
+// .muted    - dimmed version
+//
+// Markup:
+// <a href="#" class="{{modifier_class}}">Click Link</a>
+//
+// Style guide: Base.Links
 
 a {
+  color: $palette-grey-dark;
   text-decoration: none;
+
+  &:hover {
+    color: darken($palette-grey-dark, 10);
+  }
+
+  &.muted {
+    color: $palette-grey;
+
+    &:hover {
+      color: darken($palette-grey, 10);
+    }
+  }
 }
