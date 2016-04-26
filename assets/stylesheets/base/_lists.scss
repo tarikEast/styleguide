@@ -1,0 +1,18 @@
+
+// Lists
+//
+// clean list without styling
+//
+// Markup:
+// <ul>
+//   <li>Item 1</li>
+//   <li>Item 2</li>
+// </ul>
+//
+// Style guide: Base.Lists
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
