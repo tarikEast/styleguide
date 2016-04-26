@@ -10,7 +10,8 @@ var sourcemaps  = require('gulp-sourcemaps');
 // Static Server + watching scss/html files
 gulp.task('serve', ['styleguide', 'sass'], function() {
   browserSync.init({
-    server: "./"
+    server: "./",
+    port: 3001 // Rails is on 3000
   });
 
   gulp.watch("assets/**/*.scss", ['styleguide', 'sass']);
