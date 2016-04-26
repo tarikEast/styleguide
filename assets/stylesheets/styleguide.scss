@@ -1,20 +1,38 @@
 
 @import "normalize";
 
+// Core
+//
+// variable definitions, typography, colors
+//
+// Style guide: 1
 @import "core/breakpoints";
 @import "core/colors";
 @import "core/layout";
 @import "core/typography";
 @import "core/variables";
 
+// Mixins
+//
+// Style guide: 2
 @import "mixins/input-element";
 @import "mixins/input-underlined";
 
+// Base
+//
+// styles for basic html elements
+//
+// Style guide: 3
 @import "base/buttons";
 @import "base/inputs";
 @import "base/links";
 @import "base/lists";
 @import "base/selects";
 
+// Modules
+//
+// logical components that can consist of multiple tags
+//
+// Style guide: 4
 @import "modules/profile-image";
 @import "modules/progress-indicator";

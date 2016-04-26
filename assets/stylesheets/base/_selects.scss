@@ -13,7 +13,8 @@
 //  <option value="2">second item</option>
 // </select>
 //
-// Style guide: Base.Select
+// Style guide: 3.5
+
 select {
   @include input-element;
   @include input-underlined;

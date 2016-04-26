@@ -13,7 +13,8 @@
 // <input type="email" placeholder="Mail address here" class="{{modifier_class}}">
 // <input type="tel" placeholder="Telephone number here" class="{{modifier_class}}">
 //
-// Style guide: Base.Inputs.Text
+// Style guide: 3.2.1
+
 input[type=text],
 input[type=email],
 input[type=tel], {
@@ -34,7 +35,7 @@ input[type=tel], {
 // Markup:
 // <input type="range" class="{{modifier_class}}">
 //
-// Style guide: Base.Inputs.Range
+// Style guide: 3.2.2
 
 // TODO: cleanup (extracted from app)
 input[type=range] {
