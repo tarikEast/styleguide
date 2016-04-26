@@ -12,7 +12,6 @@
 // <input type="button" class="{{modifier_class}}" value="Click Input Button">
 // <input type="submit" class="{{modifier_class}}" value="Click Input Submit">
 // <a href="#" class="button {{modifier_class}}">Click Link</a>
-// <a href="#" class="button {{modifier_class}}">Click Link with a very long text that spans multiple lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
 //
 // Style guide: Base.Buttons
 
@@ -33,6 +32,7 @@ input[type=submit] {
     background-color: darken($palette-green, 5);
     border-color: darken($palette-green, 10);
     border: solid 1px darken($palette-green, 5);
+    color: $palette-white; // for .button
   }
 
   &:disabled {
