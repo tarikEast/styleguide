@@ -5,13 +5,14 @@
 // :hover    - Highlights when hovering.
 // :disabled - Greyed out when disabled
 // .button--text - text only button
-// .button--text:hover - text only button gets darker
+// .button--text.button--muted - text only button, muted text color
 //
 // Markup:
 // <button class="{{modifier_class}}">Click Button</button>
 // <input type="button" class="{{modifier_class}}" value="Click Input Button">
 // <input type="submit" class="{{modifier_class}}" value="Click Input Submit">
 // <a href="#" class="button {{modifier_class}}">Click Link</a>
+// <a href="#" class="button {{modifier_class}}">Click Link with a very long text that spans multiple lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
 //
 // Style guide: Base.Buttons
 
@@ -44,11 +45,21 @@ input[type=submit] {
     border: 0;
     background-color: transparent;
     color: $palette-grey-dark;
+    line-height: 25px;
+    text-transform: none;
 
     &:hover {
       border: 0;
       background-color: transparent;
       color: darken($palette-grey-dark, 10);
+    }
+
+    &.button--muted {
+      color: $palette-grey;
+
+      &:hover {
+        color: darken($palette-grey, 10);
+      }
     }
   }
 }
