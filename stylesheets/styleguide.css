@@ -606,7 +606,14 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd; }
 
 a {
+  color: #777777;
   text-decoration: none; }
+  a:hover {
+    color: #5e5e5e; }
+  a.muted {
+    color: #cccccc; }
+    a.muted:hover {
+      color: #b3b3b3; }
 
 select {
   border-radius: 4px;
