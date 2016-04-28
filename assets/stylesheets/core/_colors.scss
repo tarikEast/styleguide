@@ -13,13 +13,33 @@
 //
 // Style guide: 1.1
 $palette-white: white;
-$palette-grey-light: #f3f3f3;
-$palette-grey: #cccccc;
-$palette-grey-dark: #777777;
 $palette-black: #333333;
-$palette-green: #81c538;
+
+$palette-antrazit: #2E2E2E;
+
+$palette-grey-lighter: #ECECEC;
+$palette-grey-light: #D4D4D4;
+$palette-grey: #BCBCBC;
+$palette-grey-dark: #A5A5A5;
+$palette-grey-darker: #797979;
+
+$palette-yellow: #FFD700;
+$palette-khaki: #F0E68C;
 $palette-orange: #CC3D14;
-$palette-red: lighten(#B22E09, 10);
+$palette-red: #E70737;
+$palette-red-light: lighten(#B22E09, 10);
+
+$palette-purple: #4A38A5;
+
+$palette-blue: #00CCFF;
+$palette-blue-light: #40ABEC;
+$palette-blue-lighter: #ADCCE6;
+
+$palette-green: #81C537;
+$palette-green-ci: #71BD2B;
+$palette-green-light: #B9E58D;
+$palette-green-lighter: #D3EEB7;
+
 
 .color-sample {
   line-height: 40px;
