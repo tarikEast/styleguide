@@ -4,6 +4,9 @@
 //
 // :hover    - Highlights when hovering.
 // :disabled - Greyed out when disabled
+// .button--warn - red button
+// .button--info - blue button
+// .button--add - dashed ouline button with plus sign added before text
 // .button--text - text only button (DEPRECATED: use a link instead)
 // .button--text.button--muted - text only button, muted text color
 //
@@ -39,6 +42,46 @@ input[type=submit] {
     background-color: $palette-grey;
     border-color: darken($palette-grey, 5);
     cursor: not-allowed;
+  }
+
+  &.button--warn {
+    background-color: $palette-red;
+    border-color: darken($palette-red, 5);
+    color: $palette-white;
+
+    &:hover {
+      background-color: darken($palette-red, 5);
+      border-color: darken($palette-red, 10);
+      color: $palette-white;
+    }
+  }
+
+  &.button--info {
+    background-color: $palette-blue;
+    border-color: darken($palette-blue, 5);
+    color: $palette-white;
+
+    &:hover {
+      border-color: darken($palette-blue, 10);
+      background-color: darken($palette-blue, 5);
+      color: $palette-white;
+    }
+  }
+
+  &.button--add {
+    background-color: transparent;
+    border-style: dashed;
+    border-color: $palette-grey;
+    color: $palette-grey;
+
+    &:before {
+      content: "+ ";
+    }
+
+    &:hover {
+      border-color: darken($palette-grey, 10);
+      color: darken($palette-grey, 10);
+    }
   }
 
   // TODO: replace with link
