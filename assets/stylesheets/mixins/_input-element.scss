@@ -1,6 +1,6 @@
 
 @mixin input-element {
-  border-radius: 4px;
+  border-radius: $global-border-radius;
   height: $inputs-height;
   margin-bottom: $inputs-margin-bottom;
   padding-left: 20px;
