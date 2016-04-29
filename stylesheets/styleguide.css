@@ -691,6 +691,12 @@ select {
     border-bottom: 1px solid #BCBCBC;
     padding-left: 0; }
 
+.flash {
+  border: 1px solid red;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 20px; }
+
 .profile-image {
   border: 1px solid white;
   border-radius: 50%;

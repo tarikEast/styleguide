@@ -32,38 +32,44 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a href="section-1.html">
+        <a href="section-core.html">
           <span class="kss-nav__ref">1</span
           ><span class="kss-nav__name">Core</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a href="section-2.html">
+        <a href="section-base.html">
           <span class="kss-nav__ref">2</span
-          ><span class="kss-nav__name">Mixins</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a href="section-3.html">
-          <span class="kss-nav__ref">3</span
           ><span class="kss-nav__name">Base</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a href="section-4.html">
+        <a href="section-mixins.html">
+          <span class="kss-nav__ref">3</span
+          ><span class="kss-nav__name">Mixins</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-modules.html">
           <span class="kss-nav__ref">4</span
           ><span class="kss-nav__name">Modules</span>
         </a>
         <ul class="kss-nav__menu-child">
             <li class="kss-nav__menu-item">
-              <a href="section-4.html#kssref-4-1">
+              <a href="section-modules.html#kssref-modules-flash-messages">
                 <span class="kss-nav__ref ">4.1</span
+                ><span class="kss-nav__name">Flash messages</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-modules.html#kssref-modules-profile-image">
+                <span class="kss-nav__ref ">4.2</span
                 ><span class="kss-nav__name">Profile Image</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-4.html#kssref-4-2">
-                <span class="kss-nav__ref ">4.2</span
+              <a href="section-modules.html#kssref-modules-progress-indicator">
+                <span class="kss-nav__ref ">4.3</span
                 ><span class="kss-nav__name">Progress Indicator</span>
               </a>
             </li>
@@ -74,15 +80,15 @@
 </div>
 <article role="main" class="kss-main">
 
-      <div     id="kssref-4" class="kss-section kss-section--depth-1">
+      <div     id="kssref-modules" class="kss-section kss-section--depth-1">
 
     <div class="kss-style">
       <h1 class="kss-title kss-title--level-1">
-        <a class="kss-title__permalink" href="#kssref-4">
+        <a class="kss-title__permalink" href="#kssref-modules">
           <span class="kss-title__ref">
               4
             <span class="kss-title__permalink-hash">
-                #permalink
+                #Modules
             </span>
           </span>
           Modules
@@ -98,15 +104,51 @@
 
 
       </div>
-      <section id="kssref-4-1" class="kss-section kss-section--depth-2">
+      <section id="kssref-modules-flash-messages" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-4-1">
+        <a class="kss-title__permalink" href="#kssref-modules-flash-messages">
           <span class="kss-title__ref">
               4.1
             <span class="kss-title__permalink-hash">
-                #permalink
+                #Modules.Flash Messages
+            </span>
+          </span>
+          Flash messages
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>for message popups</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+            <div class="flash">This is a flash message</div>
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">  &lt;div class=&quot;flash&quot;&gt;This is a flash message&lt;/div&gt;</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-modules-profile-image" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-modules-profile-image">
+          <span class="kss-title__ref">
+              4.2
+            <span class="kss-title__permalink-hash">
+                #Modules.Profile Image
             </span>
           </span>
           Profile Image
@@ -122,31 +164,48 @@
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Example
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
         </div>
         <div class="kss-modifier__example">
-            <img class="profile-image" src="http://lorempixel.com/300/300/people/1">
-  <img class="profile-image profile-image--small" src="http://lorempixel.com/300/300/people/1">
-  <img class="profile-image profile-image--tiny" src="http://lorempixel.com/300/300/people/1">
+            <img class="profile-image [modifier class]" src="http://lorempixel.com/300/300/people/1">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .profile-image--small
+        </div>
+        <div class="kss-modifier__description kss-style">
+          small version
+        </div>
+        <div class="kss-modifier__example">
+            <img class="profile-image profile-image--small" src="http://lorempixel.com/300/300/people/1">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .profile-image--tiny
+        </div>
+        <div class="kss-modifier__description kss-style">
+          tiny version
+        </div>
+        <div class="kss-modifier__example">
+            <img class="profile-image profile-image--tiny" src="http://lorempixel.com/300/300/people/1">
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">  &lt;img class=&quot;profile-image&quot; src=&quot;http://lorempixel.com/300/300/people/1&quot;&gt;
-  &lt;img class=&quot;profile-image profile-image--small&quot; src=&quot;http://lorempixel.com/300/300/people/1&quot;&gt;
-  &lt;img class=&quot;profile-image profile-image--tiny&quot; src=&quot;http://lorempixel.com/300/300/people/1&quot;&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">  &lt;img class=&quot;profile-image [modifier class]&quot; src=&quot;http://lorempixel.com/300/300/people/1&quot;&gt;</code></pre>
       </div>
 
       </section>
-      <section id="kssref-4-2" class="kss-section kss-section--depth-2">
+      <section id="kssref-modules-progress-indicator" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
-        <a class="kss-title__permalink" href="#kssref-4-2">
+        <a class="kss-title__permalink" href="#kssref-modules-progress-indicator">
           <span class="kss-title__ref">
-              4.2
+              4.3
             <span class="kss-title__permalink-hash">
-                #permalink
+                #Modules.Progress Indicator
             </span>
           </span>
           Progress Indicator
