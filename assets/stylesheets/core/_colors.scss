@@ -12,6 +12,9 @@
 // <div class="color-sample red">red</div>
 //
 // Style guide: Core.Colors
+
+// color palette
+
 $palette-white: white;
 $palette-black: #333333;
 
@@ -39,6 +42,10 @@ $palette-green: #81C537;
 $palette-green-ci: #71BD2B;
 $palette-green-light: #B9E58D;
 $palette-green-lighter: #D3EEB7;
+
+// color definitions
+
+$app-background-color: $palette-grey-lighter;
 
 
 .color-sample {
