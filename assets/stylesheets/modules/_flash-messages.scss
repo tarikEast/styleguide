@@ -1,0 +1,16 @@
+
+// Flash messages
+//
+// for message popups
+//
+// Markup:
+//   <div class="flash">This is a flash message</div>
+//
+// Style guide: Modules.Flash Messages
+
+.flash {
+  border: 1px solid red;
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
