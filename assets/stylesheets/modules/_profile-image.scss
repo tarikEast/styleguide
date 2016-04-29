@@ -3,10 +3,11 @@
 //
 // for square images
 //
+// .profile-image--small - small version
+// .profile-image--tiny - tiny version
+//
 // Markup:
-//   <img class="profile-image" src="http://lorempixel.com/300/300/people/1">
-//   <img class="profile-image profile-image--small" src="http://lorempixel.com/300/300/people/1">
-//   <img class="profile-image profile-image--tiny" src="http://lorempixel.com/300/300/people/1">
+//   <img class="profile-image {{modifier_class}}" src="http://lorempixel.com/300/300/people/1">
 //
 // Style guide: Modules.Profile Image
 
