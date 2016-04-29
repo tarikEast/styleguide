@@ -5,7 +5,9 @@
 //
 // variable definitions, typography, colors
 //
-// Style guide: 1
+// weight: -1
+//
+// Style guide: Core
 @import "core/breakpoints";
 @import "core/colors";
 @import "core/layout";
@@ -14,7 +16,7 @@
 
 // Mixins
 //
-// Style guide: 2
+// Style guide: Mixins
 @import "mixins/input-element";
 @import "mixins/input-underlined";
 
@@ -22,7 +24,7 @@
 //
 // styles for basic html elements
 //
-// Style guide: 3
+// Style guide: Base
 @import "base/buttons";
 @import "base/inputs";
 @import "base/links";
@@ -33,6 +35,6 @@
 //
 // logical components that can consist of multiple tags
 //
-// Style guide: 4
+// Style guide: Modules
 @import "modules/profile-image";
 @import "modules/progress-indicator";
