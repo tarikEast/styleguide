@@ -1,20 +1,29 @@
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700); // normal: 400, medium: 500, bold: 700
+// font weights Roboto
+// thin: 100
+// light: 300       (used)
+// normal: 400      (used)
+// medium: 500      (used)
+// bold: 700        (used)
+// ultra-bold: 900
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
 $font-family: 'Roboto', sans-serif;
 
+$font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // TODO: use modular scale and vertical rhythm
-$font-size-small: 0.667em;
-$font-size-normal: 1em;
-$font-size-medium: 1.5em;
-$font-size-big: 2.25em;
-$font-size-bigger: 3.375;
+$font-size-tiny: 10px;
+$font-size-small: 12px;
+$font-size-normal: 16px;
+$font-size-big: 27px;
+$font-size-bigger: 30px;
 
-$color-text: $palette-black;
+$text-color: $palette-black;
 
 // reset headers
 h1, h2, h3, h4, h5 {
@@ -27,7 +36,7 @@ h1, h2, h3, h4, h5 {
 body {
   font-family: $font-family;
   font-weight: $font-weight-normal;
-  color: $color-text;
+  color: $text-color;
   line-height: 1.5;
 
   // better font rendering
@@ -36,4 +45,97 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// text styles
 
+/* AWESOME.: */
+%text-h1 {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-bigger;
+}
+
+/* You’re done.: */
+%text-h2 {
+  font-weight: $font-weight-normal;
+  font-size: $font-size-big;
+}
+
+/* Now go check your em: */
+%text-h3 {
+  font-weight: $font-weight-normal;
+  font-size: $font-size-normal;
+}
+
+/* text copy: */
+%text-h4 {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-normal;
+}
+
+/* HEADLINE GROUP OF BA Copy: */
+%text-h5 {
+  font-weight: $font-weight-medium;
+  font-size: $font-size-small;
+  color: $palette-grey-dark;
+}
+
+/* Body: */
+%text-body {
+  font-weight: $font-weight-light;
+  font-size: $font-size-normal;
+  color: $palette-black;
+}
+
+/* + Add: */
+%text-action {
+  font-weight: $font-weight-medium;
+  font-size: $font-size-normal;
+  color: $palette-grey-dark;
+}
+
+/* Friday 17th: */
+%text-description {
+  font-weight: $font-weight-medium;
+  font-size: $font-size-tiny;
+  color: $palette-grey;
+}
+
+// Text styles
+//
+// Markup:
+// <div class="text-sample h1">Awesome</div>
+// <div class="text-sample h2">You're done</div>
+// <div class="text-sample h3">Now go to your mail</div>
+// <div class="text-sample h4">POPUP TITLES / List header</div>
+// <div class="text-sample h5">Headline Group of Bars</div>
+// <div class="text-sample body">Body</div>
+// <div class="text-sample action">+ Add</div>
+// <div class="text-sample description">Friday 17th</div>
+//
+// Style guide: Core.Typography
+
+.text-sample {
+  &.h1 {
+    @extend %text-h1;
+  }
+  &.h2 {
+    @extend %text-h2;
+  }
+  &.h3 {
+    @extend %text-h3;
+  }
+  &.h4 {
+    @extend %text-h4;
+  }
+  &.h5 {
+    @extend %text-h5;
+  }
+  &.body {
+    @extend %text-body;
+  }
+  &.action {
+    @extend %text-action;
+  }
+  &.description {
+    @extend %text-description;
+  }
+}
