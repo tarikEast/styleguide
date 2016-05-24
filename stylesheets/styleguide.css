@@ -655,6 +655,15 @@ select {
   padding: 20px;
   margin-bottom: 20px; }
 
+.phone-wrapper {
+  max-width: 560px;
+  height: 90vh;
+  margin: 5vh auto;
+  border: 10px solid rgba(0, 0, 0, 0.8);
+  border-bottom-width: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3), inset 0 5px 0 rgba(0, 0, 0, 0.08); }
+
 .profile-image {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
