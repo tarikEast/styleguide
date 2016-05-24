@@ -15,6 +15,8 @@
 // <div class="color-sample blue">blue</div>
 // <div class="color-sample green">green</div>
 // <div class="color-sample green-light">green-light</div>
+// <div class="color-sample"> +++ not in pattern library +++ </div>
+// <div class="color-sample grey-darker">grey-darker</div>
 //
 // Style guide: Core.Colors
 
@@ -35,6 +37,7 @@ $palette-green: #81C538;
 $palette-green-light: #C4E79E; // was #B9E58D;
 
 // not in Sketch pattern library (in use?)
+$palette-grey-darker: #797979;
 $palette-yellow: #FFD700;
 $palette-khaki: #F0E68C;
 $palette-red-light: lighten(#B22E09, 10);
@@ -63,6 +66,9 @@ $palette-green-lighter: #D3EEB7;
   }
   &.grey-dark {
     background-color: $palette-grey-dark;
+  }
+  &.grey-darker {
+    background-color: $palette-grey-darker;
   }
   &.black {
     color: $palette-white;
