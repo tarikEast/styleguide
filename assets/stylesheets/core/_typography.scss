@@ -1,141 +1,136 @@
 
+// Text Styles
+//
+// TODO: add desktop sizes
+//
+// Markup:
+// <div class="text-sample display4"></div>
+// <div class="text-sample display3"></div>
+// <div class="text-sample display2"></div>
+// <div class="text-sample display1"></div>
+// <div class="text-sample headline"></div>
+// <div class="text-sample title"></div>
+// <div class="text-sample subheading"></div>
+// <div class="text-sample placeholder"></div>
+// <div class="text-sample body2"></div>
+// <div class="text-sample body1"></div>
+// <div class="text-sample caption"></div>
+// <div class="text-sample detail"></div>
+//
+// Style guide: Core.Text Styles
+
+
 // font weights Roboto
 // thin: 100
 // light: 300       (used)
 // normal: 400      (used)
 // medium: 500      (used)
-// bold: 700        (used)
+// bold: 700
 // ultra-bold: 900
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
 
 $font-family: 'Roboto', sans-serif;
 
 $font-weight-light: 300;
 $font-weight-normal: 400;
+$font-weight-regular: $font-weight-normal;
 $font-weight-medium: 500;
-$font-weight-bold: 700;
-
-// TODO: use modular scale and vertical rhythm
-$font-size-tiny: 10px;
-$font-size-small: 12px;
-$font-size-normal: 16px;
-$font-size-big: 27px;
-$font-size-bigger: 30px;
-
-$text-color: $palette-black;
-
-// reset headers
-h1, h2, h3, h4, h5 {
-  font-size: $font-size-normal;
-  font-weight: $font-weight-normal;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-body {
-  font-family: $font-family;
-  font-weight: $font-weight-normal;
-  color: $text-color;
-  line-height: 1.5;
-
-  // better font rendering
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 // text styles
-
-/* AWESOME.: */
-%text-h1 {
-  font-weight: $font-weight-bold;
-  font-size: $font-size-bigger;
-}
-
-/* You’re done.: */
-%text-h2 {
-  font-weight: $font-weight-normal;
-  font-size: $font-size-big;
-}
-
-/* Now go check your em: */
-%text-h3 {
-  font-weight: $font-weight-normal;
-  font-size: $font-size-normal;
-}
-
-/* text copy: */
-%text-h4 {
-  font-weight: $font-weight-bold;
-  font-size: $font-size-normal;
-}
-
-/* HEADLINE GROUP OF BA Copy: */
-%text-h5 {
-  font-weight: $font-weight-medium;
-  font-size: $font-size-small;
-  color: $palette-grey-dark;
-}
-
-/* Body: */
-%text-body {
-  font-weight: $font-weight-light;
-  font-size: $font-size-normal;
-  color: $palette-black;
-}
-
-/* + Add: */
-%text-action {
-  font-weight: $font-weight-medium;
-  font-size: $font-size-normal;
-  color: $palette-grey-dark;
-}
-
-/* Friday 17th: */
-%text-description {
-  font-weight: $font-weight-medium;
-  font-size: $font-size-tiny;
-  color: $palette-grey;
-}
-
-// Text styles
 //
-// Markup:
-// <div class="text-sample h1">Awesome</div>
-// <div class="text-sample h2">You're done</div>
-// <div class="text-sample h3">Now go to your mail</div>
-// <div class="text-sample h4">POPUP TITLES / List header</div>
-// <div class="text-sample h5">Headline Group of Bars</div>
-// <div class="text-sample body">Body</div>
-// <div class="text-sample action">+ Add</div>
-// <div class="text-sample description">Friday 17th</div>
-//
-// Style guide: Core.Typography
+// color should be $palette-black if not specified otherwise
 
+$text-styles: (
+  display4: (
+    font-size: 112px,
+    font-weight: $font-weight-light
+  ),
+
+  display3: (
+    font-size: 56px,
+    font-weight: $font-weight-regular
+  ),
+
+  display2: (
+    font-size: 45px,
+    font-weight: $font-weight-regular
+  ),
+
+  display1: (
+    font-size: 34px,
+    font-weight: $font-weight-medium
+  ),
+
+  headline: (
+    font-size: 24px,
+    font-weight: $font-weight-regular
+  ),
+
+  title: (
+    font-size: 20px,
+    font-weight: $font-weight-medium
+  ),
+
+  subheading: (
+    font-size: 16px,
+    font-weight: $font-weight-regular
+  ),
+
+  //choice,
+  placeholder: (
+    font-size: 16px,
+    font-weight: $font-weight-light,
+    color: $palette-grey
+  ),
+
+  body2: (
+    font-size: 14px,
+    font-weight: $font-weight-medium,
+    color: $palette-grey-dark
+  ),
+
+  body1: (
+    font-size: 14px,
+    font-weight: $font-weight-regular,
+    color: $palette-black
+  ),
+
+  caption: (
+    font-size: 12px,
+    font-weight: $font-weight-regular
+  ),
+
+  detail: (
+    font-size: 10px,
+    font-weight: $font-weight-medium,
+    color: $palette-grey-dark
+  )
+);
+
+// generate placeholder classes
+// (please don't use directly)
+@each $name, $styles in $text-styles {
+  %text-style-#{$name} {
+    @each $key, $value in $styles {
+      #{$key}: #{$value};
+    }
+  }
+}
+
+
+// use the mixin to set the text style
+@mixin text-style($name) {
+  @extend %text-style-#{$name};
+}
+
+
+// generate sample styles
 .text-sample {
-  &.h1 {
-    @extend %text-h1;
-  }
-  &.h2 {
-    @extend %text-h2;
-  }
-  &.h3 {
-    @extend %text-h3;
-  }
-  &.h4 {
-    @extend %text-h4;
-  }
-  &.h5 {
-    @extend %text-h5;
-  }
-  &.body {
-    @extend %text-body;
-  }
-  &.action {
-    @extend %text-action;
-  }
-  &.description {
-    @extend %text-description;
+  @each $name, $styles in $text-styles {
+    &.#{$name}:after {
+      @include text-style($name);
+      content: "#{$name}";
+    }
   }
 }
