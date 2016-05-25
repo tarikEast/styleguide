@@ -129,7 +129,11 @@ $text-styles: (
 
 // use the mixin to set the text style
 @mixin text-style($name) {
-  @extend %text-style-#{$name};
+  @if map-has-key($text-styles, $name) {
+    @extend %text-style-#{$name};
+  } @else {
+    @warn "Text style `#{$name}` not found.";
+  }
 }
 
 
