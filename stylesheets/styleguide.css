@@ -1,10 +1,9 @@
-@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -367,33 +366,89 @@ textarea {
   /* 2 */ }
 
 .color-sample {
-  line-height: 40px;
-  padding-left: 5px; }
+  height: 40px;
+  padding-left: 5px;
+  line-height: 40px; }
   .color-sample.white {
     background-color: #FFFFFF; }
+    .color-sample.white:after {
+      content: "white: #FFFFFF"; }
   .color-sample.grey-lighter {
     background-color: #F0F0F0; }
+    .color-sample.grey-lighter:after {
+      content: "grey-lighter: #F0F0F0"; }
   .color-sample.grey-light {
     background-color: #DCDCDC; }
+    .color-sample.grey-light:after {
+      content: "grey-light: #DCDCDC"; }
   .color-sample.grey {
     background-color: #C8C8C8; }
+    .color-sample.grey:after {
+      content: "grey: #C8C8C8"; }
   .color-sample.grey-dark {
     background-color: #B4B4B4; }
-  .color-sample.grey-darker {
-    background-color: #797979; }
+    .color-sample.grey-dark:after {
+      content: "grey-dark: #B4B4B4"; }
   .color-sample.black {
-    color: #FFFFFF;
     background-color: #3C3C3C; }
+    .color-sample.black:after {
+      content: "black: #3C3C3C"; }
   .color-sample.orange {
     background-color: #FF8D11; }
+    .color-sample.orange:after {
+      content: "orange: #FF8D11"; }
   .color-sample.red {
     background-color: #EC2B4B; }
+    .color-sample.red:after {
+      content: "red: #EC2B4B"; }
   .color-sample.blue {
     background-color: #5299CE; }
+    .color-sample.blue:after {
+      content: "blue: #5299CE"; }
   .color-sample.green {
     background-color: #81C538; }
+    .color-sample.green:after {
+      content: "green: #81C538"; }
   .color-sample.green-light {
     background-color: #C4E79E; }
+    .color-sample.green-light:after {
+      content: "green-light: #C4E79E"; }
+  .color-sample.grey-darker {
+    background-color: #797979; }
+    .color-sample.grey-darker:after {
+      content: "grey-darker: #797979"; }
+  .color-sample.yellow {
+    background-color: #FFD700; }
+    .color-sample.yellow:after {
+      content: "yellow: #FFD700"; }
+  .color-sample.khaki {
+    background-color: #F0E68C; }
+    .color-sample.khaki:after {
+      content: "khaki: #F0E68C"; }
+  .color-sample.red-light {
+    background-color: #e33b0b; }
+    .color-sample.red-light:after {
+      content: "red-light: #e33b0b"; }
+  .color-sample.purple {
+    background-color: #4A38A5; }
+    .color-sample.purple:after {
+      content: "purple: #4A38A5"; }
+  .color-sample.blue-light {
+    background-color: #40ABEC; }
+    .color-sample.blue-light:after {
+      content: "blue-light: #40ABEC"; }
+  .color-sample.blue-lighter {
+    background-color: #ADCCE6; }
+    .color-sample.blue-lighter:after {
+      content: "blue-lighter: #ADCCE6"; }
+  .color-sample.green-ci {
+    background-color: #71BD2B; }
+    .color-sample.green-ci:after {
+      content: "green-ci: #71BD2B"; }
+  .color-sample.green-lighter {
+    background-color: #D3EEB7; }
+    .color-sample.green-lighter:after {
+      content: "green-lighter: #D3EEB7"; }
 
 html {
   box-sizing: border-box; }
@@ -403,64 +458,93 @@ html {
 *:after {
   box-sizing: inherit; }
 
-h1, h2, h3, h4, h5 {
+.text-sample.display4:after {
+  font-size: 112px;
+  font-weight: 300; }
+
+.text-sample.display3:after {
+  font-size: 56px;
+  font-weight: 400; }
+
+.text-sample.display2:after {
+  font-size: 45px;
+  font-weight: 400; }
+
+.text-sample.display1:after {
+  font-size: 34px;
+  font-weight: 500; }
+
+.text-sample.headline:after {
+  font-size: 24px;
+  font-weight: 400; }
+
+.text-sample.title:after {
+  font-size: 20px;
+  font-weight: 500; }
+
+.text-sample.subheading:after {
   font-size: 16px;
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 0; }
+  font-weight: 400; }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #3C3C3C;
-  line-height: 1.5;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+.text-sample.placeholder:after {
+  font-size: 16px;
+  font-weight: 300;
+  color: #C8C8C8; }
 
-/* AWESOME.: */
-.text-sample.h1 {
-  font-weight: 700;
-  font-size: 30px; }
-
-/* You’re done.: */
-.text-sample.h2 {
-  font-weight: 400;
-  font-size: 27px; }
-
-/* Now go check your em: */
-.text-sample.h3 {
-  font-weight: 400;
-  font-size: 16px; }
-
-/* text copy: */
-.text-sample.h4 {
-  font-weight: 700;
-  font-size: 16px; }
-
-/* HEADLINE GROUP OF BA Copy: */
-.text-sample.h5 {
+.text-sample.body2:after {
+  font-size: 14px;
   font-weight: 500;
-  font-size: 12px;
   color: #B4B4B4; }
 
-/* Body: */
-.text-sample.body {
-  font-weight: 300;
-  font-size: 16px;
+.text-sample.body1:after, body, h1, h2, h3, h4, h5 {
+  font-size: 14px;
+  font-weight: 400;
   color: #3C3C3C; }
 
-/* + Add: */
-.text-sample.action {
+.text-sample.caption:after {
+  font-size: 12px;
+  font-weight: 400; }
+
+.text-sample.detail:after {
+  font-size: 10px;
   font-weight: 500;
-  font-size: 16px;
   color: #B4B4B4; }
 
-/* Friday 17th: */
-.text-sample.description {
-  font-weight: 500;
-  font-size: 10px;
-  color: #C8C8C8; }
+.text-sample.display4:after {
+  content: "display4"; }
+
+.text-sample.display3:after {
+  content: "display3"; }
+
+.text-sample.display2:after {
+  content: "display2"; }
+
+.text-sample.display1:after {
+  content: "display1"; }
+
+.text-sample.headline:after {
+  content: "headline"; }
+
+.text-sample.title:after {
+  content: "title"; }
+
+.text-sample.subheading:after {
+  content: "subheading"; }
+
+.text-sample.placeholder:after {
+  content: "placeholder"; }
+
+.text-sample.body2:after {
+  content: "body2"; }
+
+.text-sample.body1:after {
+  content: "body1"; }
+
+.text-sample.caption:after {
+  content: "caption"; }
+
+.text-sample.detail:after {
+  content: "detail"; }
 
 button,
 .button,
@@ -650,6 +734,16 @@ select {
     border: 0;
     border-bottom: 1px solid #C8C8C8;
     padding-left: 0; }
+
+body {
+  line-height: 1.5;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  margin-bottom: 0; }
 
 .flash {
   border: 1px solid #EC2B4B;
