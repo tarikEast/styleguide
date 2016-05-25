@@ -369,85 +369,85 @@ textarea {
   height: 40px;
   padding-left: 5px;
   line-height: 40px; }
-  .color-sample.white {
+  .color-sample.sample1 {
     background-color: #FFFFFF; }
-    .color-sample.white:after {
+    .color-sample.sample1:after {
       content: "white: #FFFFFF"; }
-  .color-sample.grey-lighter {
+  .color-sample.sample2 {
     background-color: #F0F0F0; }
-    .color-sample.grey-lighter:after {
+    .color-sample.sample2:after {
       content: "grey-lighter: #F0F0F0"; }
-  .color-sample.grey-light {
+  .color-sample.sample3 {
     background-color: #DCDCDC; }
-    .color-sample.grey-light:after {
+    .color-sample.sample3:after {
       content: "grey-light: #DCDCDC"; }
-  .color-sample.grey {
+  .color-sample.sample4 {
     background-color: #C8C8C8; }
-    .color-sample.grey:after {
+    .color-sample.sample4:after {
       content: "grey: #C8C8C8"; }
-  .color-sample.grey-dark {
+  .color-sample.sample5 {
     background-color: #B4B4B4; }
-    .color-sample.grey-dark:after {
+    .color-sample.sample5:after {
       content: "grey-dark: #B4B4B4"; }
-  .color-sample.black {
+  .color-sample.sample6 {
     background-color: #3C3C3C; }
-    .color-sample.black:after {
+    .color-sample.sample6:after {
       content: "black: #3C3C3C"; }
-  .color-sample.orange {
+  .color-sample.sample7 {
     background-color: #FF8D11; }
-    .color-sample.orange:after {
+    .color-sample.sample7:after {
       content: "orange: #FF8D11"; }
-  .color-sample.red {
+  .color-sample.sample8 {
     background-color: #EC2B4B; }
-    .color-sample.red:after {
+    .color-sample.sample8:after {
       content: "red: #EC2B4B"; }
-  .color-sample.blue {
+  .color-sample.sample9 {
     background-color: #5299CE; }
-    .color-sample.blue:after {
+    .color-sample.sample9:after {
       content: "blue: #5299CE"; }
-  .color-sample.green {
+  .color-sample.sample10 {
     background-color: #81C538; }
-    .color-sample.green:after {
+    .color-sample.sample10:after {
       content: "green: #81C538"; }
-  .color-sample.green-light {
+  .color-sample.sample11 {
     background-color: #C4E79E; }
-    .color-sample.green-light:after {
+    .color-sample.sample11:after {
       content: "green-light: #C4E79E"; }
-  .color-sample.grey-darker {
+  .color-sample.sample12 {
     background-color: #797979; }
-    .color-sample.grey-darker:after {
+    .color-sample.sample12:after {
       content: "grey-darker: #797979"; }
-  .color-sample.yellow {
+  .color-sample.sample13 {
     background-color: #FFD700; }
-    .color-sample.yellow:after {
+    .color-sample.sample13:after {
       content: "yellow: #FFD700"; }
-  .color-sample.khaki {
+  .color-sample.sample14 {
     background-color: #F0E68C; }
-    .color-sample.khaki:after {
+    .color-sample.sample14:after {
       content: "khaki: #F0E68C"; }
-  .color-sample.red-light {
-    background-color: #e33b0b; }
-    .color-sample.red-light:after {
-      content: "red-light: #e33b0b"; }
-  .color-sample.purple {
+  .color-sample.sample15 {
+    background-color: #f05a73; }
+    .color-sample.sample15:after {
+      content: "red-light: #f05a73"; }
+  .color-sample.sample16 {
     background-color: #4A38A5; }
-    .color-sample.purple:after {
+    .color-sample.sample16:after {
       content: "purple: #4A38A5"; }
-  .color-sample.blue-light {
+  .color-sample.sample17 {
     background-color: #40ABEC; }
-    .color-sample.blue-light:after {
+    .color-sample.sample17:after {
       content: "blue-light: #40ABEC"; }
-  .color-sample.blue-lighter {
+  .color-sample.sample18 {
     background-color: #ADCCE6; }
-    .color-sample.blue-lighter:after {
+    .color-sample.sample18:after {
       content: "blue-lighter: #ADCCE6"; }
-  .color-sample.green-ci {
+  .color-sample.sample19 {
     background-color: #71BD2B; }
-    .color-sample.green-ci:after {
+    .color-sample.sample19:after {
       content: "green-ci: #71BD2B"; }
-  .color-sample.green-lighter {
+  .color-sample.sample20 {
     background-color: #D3EEB7; }
-    .color-sample.green-lighter:after {
+    .color-sample.sample20:after {
       content: "green-lighter: #D3EEB7"; }
 
 html {
@@ -458,92 +458,92 @@ html {
 *:after {
   box-sizing: inherit; }
 
-.text-sample.display4:after {
+.text-style-sample.sample1:after {
   font-size: 112px;
   font-weight: 300; }
 
-.text-sample.display3:after {
+.text-style-sample.sample2:after {
   font-size: 56px;
   font-weight: 400; }
 
-.text-sample.display2:after {
+.text-style-sample.sample3:after {
   font-size: 45px;
   font-weight: 400; }
 
-.text-sample.display1:after {
+.text-style-sample.sample4:after {
   font-size: 34px;
   font-weight: 500; }
 
-.text-sample.headline:after {
+.text-style-sample.sample5:after {
   font-size: 24px;
   font-weight: 400; }
 
-.text-sample.title:after {
+.text-style-sample.sample6:after {
   font-size: 20px;
   font-weight: 500; }
 
-.text-sample.subheading:after {
+.text-style-sample.sample7:after {
   font-size: 16px;
   font-weight: 400; }
 
-.text-sample.placeholder:after {
+.text-style-sample.sample8:after {
   font-size: 16px;
   font-weight: 300;
   color: #C8C8C8; }
 
-.text-sample.body2:after {
+.text-style-sample.sample9:after {
   font-size: 14px;
   font-weight: 500;
   color: #B4B4B4; }
 
-.text-sample.body1:after, body, h1, h2, h3, h4, h5 {
+.text-style-sample.sample10:after, body, h1, h2, h3, h4, h5 {
   font-size: 14px;
   font-weight: 400;
   color: #3C3C3C; }
 
-.text-sample.caption:after {
+.text-style-sample.sample11:after {
   font-size: 12px;
   font-weight: 400; }
 
-.text-sample.detail:after {
+.text-style-sample.sample12:after {
   font-size: 10px;
   font-weight: 500;
   color: #B4B4B4; }
 
-.text-sample.display4:after {
+.text-style-sample.sample1:after {
   content: "display4"; }
 
-.text-sample.display3:after {
+.text-style-sample.sample2:after {
   content: "display3"; }
 
-.text-sample.display2:after {
+.text-style-sample.sample3:after {
   content: "display2"; }
 
-.text-sample.display1:after {
+.text-style-sample.sample4:after {
   content: "display1"; }
 
-.text-sample.headline:after {
+.text-style-sample.sample5:after {
   content: "headline"; }
 
-.text-sample.title:after {
+.text-style-sample.sample6:after {
   content: "title"; }
 
-.text-sample.subheading:after {
+.text-style-sample.sample7:after {
   content: "subheading"; }
 
-.text-sample.placeholder:after {
+.text-style-sample.sample8:after {
   content: "placeholder"; }
 
-.text-sample.body2:after {
+.text-style-sample.sample9:after {
   content: "body2"; }
 
-.text-sample.body1:after {
+.text-style-sample.sample10:after {
   content: "body1"; }
 
-.text-sample.caption:after {
+.text-style-sample.sample11:after {
   content: "caption"; }
 
-.text-sample.detail:after {
+.text-style-sample.sample12:after {
   content: "detail"; }
 
 button,
