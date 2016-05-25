@@ -10,19 +10,27 @@
 // </pre>
 //
 // Markup:
-// <div class="color-sample white"></div>
-// <div class="color-sample grey-lighter"></div>
-// <div class="color-sample grey-light"></div>
-// <div class="color-sample grey"></div>
-// <div class="color-sample grey-dark"></div>
-// <div class="color-sample black"></div>
-// <div class="color-sample orange"></div>
-// <div class="color-sample red"></div>
-// <div class="color-sample blue"></div>
-// <div class="color-sample green"></div>
-// <div class="color-sample green-light"></div>
+// <div class="color-sample sample1"></div>
+// <div class="color-sample sample2"></div>
+// <div class="color-sample sample3"></div>
+// <div class="color-sample sample4"></div>
+// <div class="color-sample sample5"></div>
+// <div class="color-sample sample6"></div>
+// <div class="color-sample sample7"></div>
+// <div class="color-sample sample8"></div>
+// <div class="color-sample sample9"></div>
+// <div class="color-sample sample10"></div>
+// <div class="color-sample sample11"></div>
 // <div class="color-sample"> +++ not in pattern library +++ </div>
-// <div class="color-sample grey-darker"></div>
+// <div class="color-sample sample12"></div>
+// <div class="color-sample sample13"></div>
+// <div class="color-sample sample14"></div>
+// <div class="color-sample sample15"></div>
+// <div class="color-sample sample16"></div>
+// <div class="color-sample sample17"></div>
+// <div class="color-sample sample18"></div>
+// <div class="color-sample sample19"></div>
+// <div class="color-sample sample20"></div>
 //
 // Style guide: Core.Colors
 
@@ -47,7 +55,7 @@ $colors: (
   'grey-darker': #797979,
   'yellow': #FFD700,
   'khaki': #F0E68C,
-  'red-light': lighten(#B22E09, 10),
+  'red-light': lighten(#EC2B4B, 10),
   'purple': #4A38A5,
   'blue-light': #40ABEC,
   'blue-lighter': #ADCCE6,
@@ -84,18 +92,19 @@ $palette-blue-lighter: color("blue-lighter");
 $palette-green-ci: color("green-ci");
 $palette-green-lighter: color("green-lighter");
 
+// generate samples
 .color-sample {
   height: 40px;
   padding-left: 5px;
   line-height: 40px;
 
+  $color-names: map-keys($colors);
   @each $name, $value in $colors {
-    &.#{$name} {
+    &.sample#{index($color-names, $name)} {
       background-color: $value;
       &:after {
         content: "#{$name}: #{$value}";
       }
     }
   }
-
 }
