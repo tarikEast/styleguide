@@ -458,54 +458,54 @@ html {
 *:after {
   box-sizing: inherit; }
 
-.text-style-sample.sample1:after {
+.text-style-sample.sample1 {
   font-size: 112px;
   font-weight: 300; }
 
-.text-style-sample.sample2:after {
+.text-style-sample.sample2 {
   font-size: 56px;
   font-weight: 400; }
 
-.text-style-sample.sample3:after {
+.text-style-sample.sample3 {
   font-size: 45px;
   font-weight: 400; }
 
-.text-style-sample.sample4:after {
+.text-style-sample.sample4 {
   font-size: 34px;
   font-weight: 500; }
 
-.text-style-sample.sample5:after {
+.text-style-sample.sample5 {
   font-size: 24px;
   font-weight: 400; }
 
-.text-style-sample.sample6:after {
+.text-style-sample.sample6 {
   font-size: 20px;
   font-weight: 500; }
 
-.text-style-sample.sample7:after {
+.text-style-sample.sample7 {
   font-size: 16px;
   font-weight: 400; }
 
-.text-style-sample.sample8:after {
+.text-style-sample.sample8 {
   font-size: 16px;
   font-weight: 300;
   color: #C8C8C8; }
 
-.text-style-sample.sample9:after {
+.text-style-sample.sample9 {
   font-size: 14px;
   font-weight: 500;
   color: #B4B4B4; }
 
-.text-style-sample.sample10:after, body, h1, h2, h3, h4, h5 {
+.text-style-sample.sample10, body, h1, h2, h3, h4, h5 {
   font-size: 14px;
   font-weight: 400;
   color: #3C3C3C; }
 
-.text-style-sample.sample11:after {
+.text-style-sample.sample11 {
   font-size: 12px;
   font-weight: 400; }
 
-.text-style-sample.sample12:after {
+.text-style-sample.sample12 {
   font-size: 10px;
   font-weight: 500;
   color: #B4B4B4; }
