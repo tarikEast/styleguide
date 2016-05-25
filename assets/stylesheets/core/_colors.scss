@@ -1,92 +1,92 @@
 
 // Colors
 //
-// Standard text input
-//
 // Markup:
-// <div class="color-sample white">white</div>
-// <div class="color-sample grey-lighter">grey-lighter</div>
-// <div class="color-sample grey-light">grey-light</div>
-// <div class="color-sample grey">grey</div>
-// <div class="color-sample grey-dark">grey-dark</div>
-// <div class="color-sample black">black</div>
-// <div class="color-sample orange">orange</div>
-// <div class="color-sample red">red</div>
-// <div class="color-sample blue">blue</div>
-// <div class="color-sample green">green</div>
-// <div class="color-sample green-light">green-light</div>
+// <div class="color-sample white"></div>
+// <div class="color-sample grey-lighter"></div>
+// <div class="color-sample grey-light"></div>
+// <div class="color-sample grey"></div>
+// <div class="color-sample grey-dark"></div>
+// <div class="color-sample black"></div>
+// <div class="color-sample orange"></div>
+// <div class="color-sample red"></div>
+// <div class="color-sample blue"></div>
+// <div class="color-sample green"></div>
+// <div class="color-sample green-light"></div>
 // <div class="color-sample"> +++ not in pattern library +++ </div>
-// <div class="color-sample grey-darker">grey-darker</div>
+// <div class="color-sample grey-darker"></div>
 //
 // Style guide: Core.Colors
 
 // color palette
 
-// in Sketch pattern library
-$palette-white: #FFFFFF;
-$palette-grey-lighter: #F0F0F0;
-$palette-grey-light: #DCDCDC;
-$palette-grey: #C8C8C8;
-$palette-grey-dark: #B4B4B4;
-$palette-black: #3C3C3C;
+$colors: (
+  // in Sketch pattern library
+  'white': #FFFFFF,
+  'grey-lighter': #F0F0F0,
+  'grey-light': #DCDCDC,
+  'grey': #C8C8C8,
+  'grey-dark': #B4B4B4,
+  'black': #3C3C3C,
 
-$palette-orange: #FF8D11;
-$palette-red: #EC2B4B;
-$palette-blue: #5299CE; // was #00CCFF;
-$palette-green: #81C538;
-$palette-green-light: #C4E79E; // was #B9E58D;
+  'orange': #FF8D11,
+  'red': #EC2B4B,
+  'blue': #5299CE, // was #00CCFF;
+  'green': #81C538,
+  'green-light': #C4E79E, // was #B9E58D;
 
-// not in Sketch pattern library (in use?)
-$palette-grey-darker: #797979;
-$palette-yellow: #FFD700;
-$palette-khaki: #F0E68C;
-$palette-red-light: lighten(#B22E09, 10);
-$palette-purple: #4A38A5;
-$palette-blue-light: #40ABEC;
-$palette-blue-lighter: #ADCCE6;
-$palette-green-ci: #71BD2B;
-$palette-green-lighter: #D3EEB7;
+  // not in Sketch pattern library
+  'grey-darker': #797979,
+  'yellow': #FFD700,
+  'khaki': #F0E68C,
+  'red-light': lighten(#B22E09, 10),
+  'purple': #4A38A5,
+  'blue-light': #40ABEC,
+  'blue-lighter': #ADCCE6,
+  'green-ci': #71BD2B,
+  'green-lighter': #D3EEB7
+);
 
+@function color($name) {
+  @if not map-has-key($colors, $name) {
+    @warn "Color `#{$name}` not found.";
+  }
+  @return map-get($colors, $name);
+}
+
+// deprecated usage (for backwards compat)
+$palette-white: color("white");
+$palette-grey-lighter: color("grey-lighter");
+$palette-grey-light: color("grey-light");
+$palette-grey: color("grey");
+$palette-grey-dark: color("grey-dark");
+$palette-black: color("black");
+$palette-orange: color("orange");
+$palette-red: color("red");
+$palette-blue: color("blue");
+$palette-green: color("green");
+$palette-green-light: color("green-light");
+$palette-grey-darker: color("grey-darker");
+$palette-yellow: color("yellow");
+$palette-khaki: color("khaki");
+$palette-red-light: color("red-light");
+$palette-purple: color("purple");
+$palette-blue-light: color("blue-light");
+$palette-blue-lighter: color("blue-lighter");
+$palette-green-ci: color("green-ci");
+$palette-green-lighter: color("green-lighter");
 
 .color-sample {
-  line-height: 40px;
+  height: 40px;
   padding-left: 5px;
 
-  &.white {
-    background-color: $palette-white;
+  @each $name, $value in $colors {
+    &.#{$name} {
+      background-color: $value;
+      &:after {
+        content: "#{$name}: #{$value}";
+      }
+    }
   }
-  &.grey-lighter {
-    background-color: $palette-grey-lighter;
-  }
-  &.grey-light {
-    background-color: $palette-grey-light;
-  }
-  &.grey {
-    background-color: $palette-grey;
-  }
-  &.grey-dark {
-    background-color: $palette-grey-dark;
-  }
-  &.grey-darker {
-    background-color: $palette-grey-darker;
-  }
-  &.black {
-    color: $palette-white;
-    background-color: $palette-black;
-  }
-  &.orange {
-    background-color: $palette-orange;
-  }
-  &.red {
-    background-color: $palette-red;
-  }
-  &.blue {
-    background-color: $palette-blue;
-  }
-  &.green {
-    background-color: $palette-green;
-  }
-  &.green-light {
-    background-color: $palette-green-light;
-  }
+
 }
