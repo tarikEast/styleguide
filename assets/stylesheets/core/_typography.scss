@@ -141,9 +141,11 @@ $text-styles: (
 .text-style-sample {
   $text-style-names: map-keys($text-styles);
   @each $name, $_ in $text-styles {
-    &.sample#{index($text-style-names, $name)}:after {
+    &.sample#{index($text-style-names, $name)} {
       @include text-style($name);
-      content: "#{$name}";
+      &:after {
+        content: "#{$name}";
+      }
     }
   }
 }
