@@ -3,6 +3,14 @@
 //
 // TODO: add desktop sizes
 //
+// Usage:
+//
+// <pre>
+// .my-header {
+//   @include text-style("display1");
+// }
+// </pre>
+//
 // Markup:
 // <div class="text-sample display4"></div>
 // <div class="text-sample display3"></div>
