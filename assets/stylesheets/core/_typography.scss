@@ -12,18 +12,18 @@
 // </pre>
 //
 // Markup:
-// <div class="text-sample display4"></div>
-// <div class="text-sample display3"></div>
-// <div class="text-sample display2"></div>
-// <div class="text-sample display1"></div>
-// <div class="text-sample headline"></div>
-// <div class="text-sample title"></div>
-// <div class="text-sample subheading"></div>
-// <div class="text-sample placeholder"></div>
-// <div class="text-sample body2"></div>
-// <div class="text-sample body1"></div>
-// <div class="text-sample caption"></div>
-// <div class="text-sample detail"></div>
+// <div class="text-style-sample sample1"></div>
+// <div class="text-style-sample sample2"></div>
+// <div class="text-style-sample sample3"></div>
+// <div class="text-style-sample sample4"></div>
+// <div class="text-style-sample sample5"></div>
+// <div class="text-style-sample sample6"></div>
+// <div class="text-style-sample sample7"></div>
+// <div class="text-style-sample sample8"></div>
+// <div class="text-style-sample sample9"></div>
+// <div class="text-style-sample sample10"></div>
+// <div class="text-style-sample sample11"></div>
+// <div class="text-style-sample sample12"></div>
 //
 // Style guide: Core.Text Styles
 
@@ -133,10 +133,11 @@ $text-styles: (
 }
 
 
-// generate sample styles
-.text-sample {
-  @each $name, $styles in $text-styles {
-    &.#{$name}:after {
+// generate sampls
+.text-style-sample {
+  $text-style-names: map-keys($text-styles);
+  @each $name, $_ in $text-styles {
+    &.sample#{index($text-style-names, $name)}:after {
       @include text-style($name);
       content: "#{$name}";
     }
