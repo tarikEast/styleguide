@@ -12,9 +12,9 @@
 // Style guide: Modules.Profile Image
 
 .profile-image {
-  border: 1px solid $palette-white;
+  border: 1px solid color("white");
   border-radius: 50%;
-  box-shadow: 0 0 0 1px $palette-grey;
+  box-shadow: 0 0 0 1px color("grey");
   height: 160px;
   width: 160px;
 

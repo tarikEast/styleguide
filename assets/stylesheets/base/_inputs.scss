@@ -26,6 +26,6 @@ input[type=tel], {
   @include input-underlined;
 
   appearance: none;
-  border: solid 1px $palette-grey;
+  border: solid 1px color("grey");
   min-width: $inputs-min-width;
 }

@@ -12,18 +12,18 @@
 // Style guide: Base.Links
 
 a {
-  color: $palette-grey-dark;
+  color: color("grey-dark");
   text-decoration: none;
 
   &:hover {
-    color: darken($palette-grey-dark, 10);
+    color: darken(color("grey-dark"), 10);
   }
 
   &.muted {
-    color: $palette-grey;
+    color: color("grey");
 
     &:hover {
-      color: darken($palette-grey, 10);
+      color: darken(color("grey"), 10);
     }
   }
 }

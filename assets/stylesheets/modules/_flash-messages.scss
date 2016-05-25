@@ -9,7 +9,7 @@
 // Style guide: Modules.Flash Messages
 
 .flash {
-  border: 1px solid $palette-red;
+  border: 1px solid color("red");
   border-radius: $global-border-radius;
   padding: 20px;
   margin-bottom: 20px;

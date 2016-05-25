@@ -18,8 +18,8 @@
 
 // colors
 
-$incomplete: $palette-grey;
-$complete: $palette-green;
+$incomplete: color("grey");
+$complete: color("green");
 $active: #337AB7 !default;
 $step-danger: #d3140f !default;
 $step-warning: #edb10a !default;

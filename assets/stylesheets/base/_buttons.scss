@@ -25,62 +25,62 @@ input[type=submit] {
   @include input-element;
 
   border: solid 1px;
-  border-color: darken($palette-green, 5);
-  background-color: $palette-green;
-  color: $palette-white;
+  border-color: darken(color("green"), 5);
+  background-color: color("green");
+  color: color("white");
   cursor: pointer;
   text-transform: uppercase;
 
   &:hover {
-    background-color: darken($palette-green, 5);
-    border-color: darken($palette-green, 10);
-    border: solid 1px darken($palette-green, 5);
-    color: $palette-white; // for .button
+    background-color: darken(color("green"), 5);
+    border-color: darken(color("green"), 10);
+    border: solid 1px darken(color("green"), 5);
+    color: color("white"); // for .button
   }
 
   &:disabled {
-    background-color: $palette-grey;
-    border-color: darken($palette-grey, 5);
+    background-color: color("grey");
+    border-color: darken(color("grey"), 5);
     cursor: not-allowed;
   }
 
   &.button--warn {
-    background-color: $palette-red;
-    border-color: darken($palette-red, 5);
-    color: $palette-white;
+    background-color: color("red");
+    border-color: darken(color("red"), 5);
+    color: color("white");
 
     &:hover {
-      background-color: darken($palette-red, 5);
-      border-color: darken($palette-red, 10);
-      color: $palette-white;
+      background-color: darken(color("red"), 5);
+      border-color: darken(color("red"), 10);
+      color: color("white");
     }
   }
 
   &.button--info {
-    background-color: $palette-blue;
-    border-color: darken($palette-blue, 5);
-    color: $palette-white;
+    background-color: color("blue");
+    border-color: darken(color("blue"), 5);
+    color: color("white");
 
     &:hover {
-      border-color: darken($palette-blue, 10);
-      background-color: darken($palette-blue, 5);
-      color: $palette-white;
+      border-color: darken(color("blue"), 10);
+      background-color: darken(color("blue"), 5);
+      color: color("white");
     }
   }
 
   &.button--add {
     background-color: transparent;
     border-style: dashed;
-    border-color: $palette-grey;
-    color: $palette-grey;
+    border-color: color("grey");
+    color: color("grey");
 
     &:before {
       content: "+ ";
     }
 
     &:hover {
-      border-color: darken($palette-grey, 10);
-      color: darken($palette-grey, 10);
+      border-color: darken(color("grey"), 10);
+      color: darken(color("grey"), 10);
     }
   }
 
@@ -88,21 +88,21 @@ input[type=submit] {
   &.button--text {
     border: 0;
     background-color: transparent;
-    color: $palette-grey-dark;
+    color: color("grey-dark");
     line-height: 25px;
     text-transform: none;
 
     &:hover {
       border: 0;
       background-color: transparent;
-      color: darken($palette-grey-dark, 10);
+      color: darken(color("grey-dark"), 10);
     }
 
     &.button--muted {
-      color: $palette-grey;
+      color: color("grey");
 
       &:hover {
-        color: darken($palette-grey, 10);
+        color: darken(color("grey"), 10);
       }
     }
   }

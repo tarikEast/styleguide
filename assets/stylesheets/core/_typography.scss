@@ -47,7 +47,7 @@ $font-weight-medium: 500;
 
 // text styles
 //
-// color should be $palette-black if not specified otherwise
+// color should be color("black") if not specified otherwise
 
 $text-styles: (
   display4: (
@@ -89,19 +89,19 @@ $text-styles: (
   placeholder: (
     font-size: 16px,
     font-weight: $font-weight-light,
-    color: $palette-grey
+    color: color("grey")
   ),
 
   body2: (
     font-size: 14px,
     font-weight: $font-weight-medium,
-    color: $palette-grey-dark
+    color: color("grey-dark")
   ),
 
   body1: (
     font-size: 14px,
     font-weight: $font-weight-regular,
-    color: $palette-black
+    color: color("black")
   ),
 
   caption: (
@@ -112,7 +112,7 @@ $text-styles: (
   detail: (
     font-size: 10px,
     font-weight: $font-weight-medium,
-    color: $palette-grey-dark
+    color: color("grey-dark")
   )
 );
 
