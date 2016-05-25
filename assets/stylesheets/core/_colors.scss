@@ -70,28 +70,6 @@ $colors: (
   @return map-get($colors, $name);
 }
 
-// deprecated usage (for backwards compat)
-$palette-white: color("white");
-$palette-grey-lighter: color("grey-lighter");
-$palette-grey-light: color("grey-light");
-$palette-grey: color("grey");
-$palette-grey-dark: color("grey-dark");
-$palette-black: color("black");
-$palette-orange: color("orange");
-$palette-red: color("red");
-$palette-blue: color("blue");
-$palette-green: color("green");
-$palette-green-light: color("green-light");
-$palette-grey-darker: color("grey-darker");
-$palette-yellow: color("yellow");
-$palette-khaki: color("khaki");
-$palette-red-light: color("red-light");
-$palette-purple: color("purple");
-$palette-blue-light: color("blue-light");
-$palette-blue-lighter: color("blue-lighter");
-$palette-green-ci: color("green-ci");
-$palette-green-lighter: color("green-lighter");
-
 // generate samples
 .color-sample {
   height: 40px;
