@@ -390,7 +390,8 @@ textarea {
     .color-sample.sample5:after {
       content: "grey-dark: #B4B4B4"; }
   .color-sample.sample6 {
-    background-color: #3C3C3C; }
+    background-color: #3C3C3C;
+    color: #FFFFFF; }
     .color-sample.sample6:after {
       content: "black: #3C3C3C"; }
   .color-sample.sample7 {
@@ -414,7 +415,8 @@ textarea {
     .color-sample.sample11:after {
       content: "green-light: #C4E79E"; }
   .color-sample.sample12 {
-    background-color: #797979; }
+    background-color: #797979;
+    color: #FFFFFF; }
     .color-sample.sample12:after {
       content: "grey-darker: #797979"; }
   .color-sample.sample13 {
@@ -426,7 +428,8 @@ textarea {
     .color-sample.sample14:after {
       content: "red-light: #f05a73"; }
   .color-sample.sample15 {
-    background-color: #4A38A5; }
+    background-color: #4A38A5;
+    color: #FFFFFF; }
     .color-sample.sample15:after {
       content: "purple: #4A38A5"; }
   .color-sample.sample16 {
@@ -438,7 +441,8 @@ textarea {
     .color-sample.sample17:after {
       content: "blue-lighter: #ADCCE6"; }
   .color-sample.sample18 {
-    background-color: #71BD2B; }
+    background-color: #71BD2B;
+    color: #FFFFFF; }
     .color-sample.sample18:after {
       content: "green-ci: #71BD2B"; }
   .color-sample.sample19 {
