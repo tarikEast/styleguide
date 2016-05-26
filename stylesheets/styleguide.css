@@ -422,32 +422,28 @@ textarea {
     .color-sample.sample13:after {
       content: "yellow: #FFD700"; }
   .color-sample.sample14 {
-    background-color: #F0E68C; }
-    .color-sample.sample14:after {
-      content: "khaki: #F0E68C"; }
-  .color-sample.sample15 {
     background-color: #f05a73; }
-    .color-sample.sample15:after {
+    .color-sample.sample14:after {
       content: "red-light: #f05a73"; }
-  .color-sample.sample16 {
+  .color-sample.sample15 {
     background-color: #4A38A5; }
-    .color-sample.sample16:after {
+    .color-sample.sample15:after {
       content: "purple: #4A38A5"; }
-  .color-sample.sample17 {
+  .color-sample.sample16 {
     background-color: #40ABEC; }
-    .color-sample.sample17:after {
+    .color-sample.sample16:after {
       content: "blue-light: #40ABEC"; }
-  .color-sample.sample18 {
+  .color-sample.sample17 {
     background-color: #ADCCE6; }
-    .color-sample.sample18:after {
+    .color-sample.sample17:after {
       content: "blue-lighter: #ADCCE6"; }
-  .color-sample.sample19 {
+  .color-sample.sample18 {
     background-color: #71BD2B; }
-    .color-sample.sample19:after {
+    .color-sample.sample18:after {
       content: "green-ci: #71BD2B"; }
-  .color-sample.sample20 {
+  .color-sample.sample19 {
     background-color: #D3EEB7; }
-    .color-sample.sample20:after {
+    .color-sample.sample19:after {
       content: "green-lighter: #D3EEB7"; }
 
 html {
@@ -742,6 +738,10 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+p {
   margin-top: 0;
   margin-bottom: 0; }
 
