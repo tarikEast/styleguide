@@ -552,6 +552,7 @@ input[type=button],
 input[type=submit] {
   border-radius: 4px;
   height: 50px;
+  min-height: 50px;
   margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -672,6 +673,7 @@ input[type=email],
 input[type=tel] {
   border-radius: 4px;
   height: 50px;
+  min-height: 50px;
   margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -716,6 +718,7 @@ ul {
 select {
   border-radius: 4px;
   height: 50px;
+  min-height: 50px;
   margin-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
