@@ -24,7 +24,7 @@ input[type=button],
 input[type=submit] {
   @include input-element;
 
-  border: solid 1px;
+  border: solid $button-border-width;
   border-color: darken(color("green"), 5);
   background-color: color("green");
   color: color("white");
