@@ -24,8 +24,24 @@ input[type=email],
 input[type=tel], {
   @include input-element;
   @include input-underlined;
+}
 
-  appearance: none;
-  border: solid 1px color("grey");
-  min-width: $inputs-min-width;
+// Text Area
+//
+// Standard text input for long text
+//
+// :focus - no specialties on focus
+//
+// Markup:
+// <textarea>Some longer text here</textarea>
+//
+// Style guide: Base.Inputs.Text Area
+textarea {
+  @include input-element;
+
+  // TODO: calculate values
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  resize: vertical;
 }
