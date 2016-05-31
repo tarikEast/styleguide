@@ -9,6 +9,7 @@
 //
 //
 // :focus - no specialties on focus
+// :disabled - greyed out
 // .underlined - only showing a line for inputs
 //
 //
@@ -31,6 +32,7 @@ input[type=tel], {
 // Standard text input for long text
 //
 // :focus - no specialties on focus
+// :disabled - greyed out
 //
 // Markup:
 // <textarea>Some longer text here</textarea>
@@ -41,7 +43,6 @@ textarea {
 
   // TODO: calculate values
   padding-top: 15px;
-  padding-bottom: 15px;
 
   resize: vertical;
 }

@@ -1,11 +1,9 @@
 
 @mixin form-element {
   border-radius: $global-border-radius;
-  height: $inputs-height;
-  min-height: $inputs-height; // cannot be squished together
-  margin-bottom: $inputs-margin-bottom;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: $form-element-height;
+  min-height: $form-element-height; // cannot be squished together
+  margin-bottom: $form-element-margin-bottom;
   width: 100%;
 
   &:focus {
