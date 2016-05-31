@@ -17,6 +17,16 @@
   border-bottom-width: 70px;
   border-radius: 10px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3), inset 0 5px 0 rgba(0, 0, 0, 0.08);
+
+  button,
+  input[type=text],
+  input[type=email],
+  input[type=submit],
+  input[type=tel],
+  select,
+  textarea {
+    width: 100%;
+  }
 }
 
 .phone-wrapper {
