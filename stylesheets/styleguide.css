@@ -563,12 +563,12 @@ input[type=submit] {
   border-radius: 4px;
   height: 50px;
   min-height: 50px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 5px;
   width: 100%;
   border: solid 1px;
   border-color: #74b132;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #81C538;
   color: #FFFFFF;
   cursor: pointer;
@@ -684,14 +684,13 @@ input[type=tel] {
   border-radius: 4px;
   height: 50px;
   min-height: 50px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 5px;
   width: 100%;
   -webkit-appearance: none;
   appearance: none;
   background-color: #FFFFFF;
   border: solid 1px #C8C8C8;
+  padding-left: 10px;
   min-width: 300px; }
   input[type=text]:focus,
   input[type=email]:focus,
@@ -702,6 +701,12 @@ input[type=tel] {
     input[type=email],
     input[type=tel] {
       width: auto; } }
+  input[type=text]:disabled,
+  input[type=email]:disabled,
+  input[type=tel]:disabled {
+    background-color: #F0F0F0;
+    border-color: #cfcfcf;
+    cursor: not-allowed; }
   input[type=text].underlined,
   input[type=email].underlined,
   input[type=tel].underlined {
@@ -715,23 +720,25 @@ textarea {
   border-radius: 4px;
   height: 50px;
   min-height: 50px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 5px;
   width: 100%;
   -webkit-appearance: none;
   appearance: none;
   background-color: #FFFFFF;
   border: solid 1px #C8C8C8;
+  padding-left: 10px;
   min-width: 300px;
   padding-top: 15px;
-  padding-bottom: 15px;
   resize: vertical; }
   textarea:focus {
     outline: 0; }
   @media (min-width: 768px) {
     textarea {
       width: auto; } }
+  textarea:disabled {
+    background-color: #F0F0F0;
+    border-color: #cfcfcf;
+    cursor: not-allowed; }
 
 a {
   color: #B4B4B4;
@@ -751,20 +758,23 @@ select {
   border-radius: 4px;
   height: 50px;
   min-height: 50px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 5px;
   width: 100%;
   -webkit-appearance: none;
   appearance: none;
   background-color: #FFFFFF;
   border: solid 1px #C8C8C8;
+  padding-left: 10px;
   min-width: 300px; }
   select:focus {
     outline: 0; }
   @media (min-width: 768px) {
     select {
       width: auto; } }
+  select:disabled {
+    background-color: #F0F0F0;
+    border-color: #cfcfcf;
+    cursor: not-allowed; }
   select.underlined {
     background: transparent;
     border-radius: 0;
