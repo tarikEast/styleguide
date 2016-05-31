@@ -19,5 +19,6 @@ select {
   @include input-element;
   @include input-underlined;
 
-  min-width: $inputs-min-width;
+  // TODO: add arrow
+
 }

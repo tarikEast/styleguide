@@ -11,12 +11,14 @@
 @import "core/breakpoints";
 @import "core/colors";
 @import "core/layout";
+@import "core/mobile";
 @import "core/typography";
 @import "core/variables";
 
 // Mixins
 //
 // Style guide: Mixins
+@import "mixins/form-element";
 @import "mixins/input-element";
 @import "mixins/input-underlined";
 
