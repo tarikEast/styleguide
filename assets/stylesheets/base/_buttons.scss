@@ -22,7 +22,7 @@ button,
 .button,
 input[type=button],
 input[type=submit] {
-  @include input-element;
+  @include form-element;
 
   border: solid $button-border-width;
   border-color: darken(color("green"), 5);

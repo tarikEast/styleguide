@@ -1,0 +1,18 @@
+
+@mixin form-element {
+  border-radius: $global-border-radius;
+  height: $inputs-height;
+  min-height: $inputs-height; // cannot be squished together
+  margin-bottom: $inputs-margin-bottom;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+
+  &:focus {
+   outline: 0;
+  }
+
+  @media($mq-desktop) {
+    width: auto;
+  }
+}
