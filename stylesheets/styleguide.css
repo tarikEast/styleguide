@@ -750,6 +750,11 @@ a {
     a.muted:hover {
       color: #afafaf; }
 
+label {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 0; }
+
 ul {
   list-style-type: none;
   padding-left: 0; }
