@@ -4,6 +4,7 @@
 //
 // :hover    - Highlights when hovering.
 // :disabled - Greyed out when disabled
+// .active   - Highlights when active
 // .button--warn - red button
 // .button--info - blue button
 // .button--add - dashed ouline button with plus sign added before text
@@ -33,7 +34,7 @@ input[type=submit] {
   cursor: pointer;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &.active {
     background-color: darken(color("green"), 5);
     border-color: darken(color("green"), 10);
     border: solid 1px darken(color("green"), 5);

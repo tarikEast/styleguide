@@ -16,7 +16,7 @@
 .button-group {
   display: flex;
   .button, button {
-    flex: 1 1 auto;
+    flex: 1 1 0; // flex-basis: 0 makes equal width
     border-radius: 0;
     border-right-width: 0;
     &:first-of-type {
