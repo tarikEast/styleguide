@@ -497,7 +497,7 @@ h1, h2, h3, p, div {
   font-weight: 400; }
 
 .text-style-sample.sample8 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #C8C8C8; }
 
@@ -556,6 +556,9 @@ h1, h2, h3, p, div {
 .text-style-sample.sample12:after {
   content: "detail"; }
 
+/*
+ * Styles input placeholders
+ */
 button,
 .button,
 input[type=button],
@@ -714,6 +717,30 @@ input[type=tel] {
     background-color: #F0F0F0;
     border-color: #cfcfcf;
     cursor: not-allowed; }
+  input[type=text]::-webkit-input-placeholder,
+  input[type=email]::-webkit-input-placeholder,
+  input[type=tel]::-webkit-input-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
+  input[type=text]:-moz-placeholder,
+  input[type=email]:-moz-placeholder,
+  input[type=tel]:-moz-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
+  input[type=text]::-moz-placeholder,
+  input[type=email]::-moz-placeholder,
+  input[type=tel]::-moz-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
+  input[type=text]:-ms-input-placeholder,
+  input[type=email]:-ms-input-placeholder,
+  input[type=tel]:-ms-input-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
   input[type=text].underlined,
   input[type=email].underlined,
   input[type=tel].underlined {
@@ -748,6 +775,22 @@ textarea {
     background-color: #F0F0F0;
     border-color: #cfcfcf;
     cursor: not-allowed; }
+  textarea::-webkit-input-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
+  textarea:-moz-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
+  textarea::-moz-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
+  textarea:-ms-input-placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #C8C8C8; }
 
 a {
   color: #B4B4B4;
