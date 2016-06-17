@@ -24,6 +24,7 @@ input[type=text],
 input[type=email],
 input[type=tel], {
   @include input-element;
+  @include input-placeholder;
   @include input-underlined;
 }
 
@@ -35,11 +36,13 @@ input[type=tel], {
 // :disabled - greyed out
 //
 // Markup:
-// <textarea>Some longer text here</textarea>
+// <textarea placeholder="Placeholder text"></textarea>
+// <textarea placeholder="Placeholder text">Looong text....</textarea>
 //
 // Style guide: Base.Inputs.Text Area
 textarea {
   @include input-element;
+  @include input-placeholder;
 
   // TODO: calculate values
   padding-top: 15px;
