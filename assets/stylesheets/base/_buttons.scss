@@ -4,6 +4,7 @@
 //
 // :hover    - Highlights when hovering.
 // :disabled - Greyed out when disabled
+// .active   - Highlights when active
 // .button--warn - red button
 // .button--info - blue button
 // .button--add - dashed ouline button with plus sign added before text
@@ -22,16 +23,18 @@ button,
 .button,
 input[type=button],
 input[type=submit] {
-  @include input-element;
+  @include form-element;
 
-  border: solid 1px;
+  border: solid $button-border-width;
   border-color: darken(color("green"), 5);
+  padding-left: $button-padding;
+  padding-right: $button-padding;
   background-color: color("green");
   color: color("white");
   cursor: pointer;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover, &.active {
     background-color: darken(color("green"), 5);
     border-color: darken(color("green"), 10);
     border: solid 1px darken(color("green"), 5);
@@ -110,7 +113,7 @@ input[type=submit] {
 
 a.button {
   display: inline-block;
-  line-height: $inputs-height;
+  line-height: $form-element-height;
   text-align: center;
 }
 

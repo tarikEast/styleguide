@@ -11,13 +11,16 @@
 @import "core/breakpoints";
 @import "core/colors";
 @import "core/layout";
+@import "core/mobile";
 @import "core/typography";
 @import "core/variables";
 
 // Mixins
 //
 // Style guide: Mixins
+@import "mixins/form-element";
 @import "mixins/input-element";
+@import "mixins/input-placeholder";
 @import "mixins/input-underlined";
 
 // Base
@@ -27,7 +30,9 @@
 // Style guide: Base
 @import "base/buttons";
 @import "base/inputs";
+@import "base/images";
 @import "base/links";
+@import "base/label";
 @import "base/lists";
 @import "base/selects";
 @import "base/text";
@@ -37,6 +42,7 @@
 // logical components that can consist of multiple tags
 //
 // Style guide: Modules
+@import "modules/button-group";
 @import "modules/flash-messages";
 @import "modules/phone-wrapper";
 @import "modules/profile-image";

@@ -9,8 +9,24 @@
 //
 // Style guide: Modules.Phone Wrapper
 
-@mixin phone-wrapper {
+@mixin desktop-view {
   max-width: 560px;
+  margin: 0 auto;
+
+  button,
+  input[type=text],
+  input[type=email],
+  input[type=submit],
+  input[type=tel],
+  select,
+  textarea {
+    width: 100%;
+  }
+}
+
+@mixin phone-wrapper {
+  @include desktop-view;
+
   height: 90vh;
   margin: 5vh auto;
   border: 10px solid rgba(0, 0, 0, 0.8);

@@ -9,6 +9,7 @@
 //
 //
 // :focus - no specialties on focus
+// :disabled - greyed out
 // .underlined - only showing a line for inputs
 //
 //
@@ -23,9 +24,28 @@ input[type=text],
 input[type=email],
 input[type=tel], {
   @include input-element;
+  @include input-placeholder;
   @include input-underlined;
+}
 
-  appearance: none;
-  border: solid 1px color("grey");
-  min-width: $inputs-min-width;
+// Text Area
+//
+// Standard text input for long text
+//
+// :focus - no specialties on focus
+// :disabled - greyed out
+//
+// Markup:
+// <textarea placeholder="Placeholder text"></textarea>
+// <textarea placeholder="Placeholder text">Looong text....</textarea>
+//
+// Style guide: Base.Inputs.Text Area
+textarea {
+  @include input-element;
+  @include input-placeholder;
+
+  // TODO: calculate values
+  padding-top: 15px;
+
+  resize: vertical;
 }

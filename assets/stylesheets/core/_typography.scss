@@ -87,7 +87,7 @@ $text-styles: (
 
   //choice,
   placeholder: (
-    font-size: 16px,
+    font-size: 14px, // is 16px in sketch
     font-weight: $font-weight-light,
     color: color("grey")
   ),
@@ -128,9 +128,17 @@ $text-styles: (
 
 
 // use the mixin to set the text style
-@mixin text-style($name) {
+@mixin text-style($name, $extend: true) {
   @if map-has-key($text-styles, $name) {
-    @extend %text-style-#{$name};
+    @if $extend {
+      // extend placeholder style
+      @extend %text-style-#{$name};
+    } @else {
+      // mixin the values
+      @each $key, $value in map-get($text-styles, $name) {
+        #{$key}: #{$value};
+      }
+    }
   } @else {
     @warn "Text style `#{$name}` not found.";
   }

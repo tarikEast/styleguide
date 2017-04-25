@@ -1,17 +1,20 @@
 
 @mixin input-element {
-  border-radius: $global-border-radius;
-  height: $inputs-height;
-  margin-bottom: $inputs-margin-bottom;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
+  @include form-element;
 
-  &:focus {
-   outline: 0;
-  }
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: color("white");
+  border: solid 1px color("grey");
+  padding-left: $inputs-padding-left;
 
   @media($mq-desktop) {
-    width: auto;
+    min-width: $inputs-min-width;
+  }
+
+  &:disabled {
+    background-color: color("grey-lighter");
+    border-color: darken(color("grey-light"), 5);
+    cursor: not-allowed;
   }
 }
