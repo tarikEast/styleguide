@@ -1,0 +1,36 @@
+// Type Face
+//
+// We're using platform-specific type faces to match the default system look
+// 
+//    macOS and iOS - SF UI Display<br>
+//    Windows - Segoe UI<br>
+//    Android - Roboto<br>
+//    Rest - sans-serif<br>
+//
+// Weight: -11
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   font-family: font-family();
+// }
+// </pre>
+//
+// Markup:
+// <div class="sample"></div>
+//
+// Style guide: Core.TypeFace
+
+$font-family: 'SF UI Display', 'Segoe UI', 'Roboto', sans-serif;
+
+@function font-family(){
+    @return $font-family;
+}
+
+.sample {
+    font-family: font-family();
+    &:after{
+        content: "this is a sample text"
+    }
+}

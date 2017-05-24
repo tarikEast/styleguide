@@ -1,6 +1,8 @@
 
 // Colors
 //
+// Weight: -9
+//
 // Usage:
 //
 // <pre>
@@ -17,49 +19,19 @@
 // <div class="color-sample sample5"></div>
 // <div class="color-sample sample6"></div>
 // <div class="color-sample sample7"></div>
-// <div class="color-sample sample8"></div>
-// <div class="color-sample sample9"></div>
-// <div class="color-sample sample10"></div>
-// <div class="color-sample sample11"></div>
-// <div class="color-sample"> +++ not in pattern library +++ </div>
-// <div class="color-sample sample12"></div>
-// <div class="color-sample sample13"></div>
-// <div class="color-sample sample14"></div>
-// <div class="color-sample sample15"></div>
-// <div class="color-sample sample16"></div>
-// <div class="color-sample sample17"></div>
-// <div class="color-sample sample18"></div>
-// <div class="color-sample sample19"></div>
 //
 // Style guide: Core.Colors
 
 // color palette
 
 $colors: (
-  // in Sketch pattern library
-  'white': #FFFFFF,
-  'grey-lighter': #F0F0F0,
-  'grey-light': #DCDCDC,
-  'grey': #C8C8C8,
-  'grey-dark': #B4B4B4,
-  'black': #3C3C3C,
-
-  'orange': #FF8D11,
-  'red': #EC2B4B,
-  'blue': #5299CE, // was #00CCFF;
-  'green': #81C538,
-  'green-light': #C4E79E, // was #B9E58D;
-
-  // not in Sketch pattern library
-  'grey-darker': #797979,
-  'yellow': #FFD700,
-  'yellow-light': #FFECAB,
-  'red-light': lighten(#EC2B4B, 10),
-  'purple': #4A38A5,
-  'blue-light': #40ABEC,
-  'blue-lighter': #ADCCE6,
-  'green-ci': #71BD2B,
-  'green-lighter': #D3EEB7
+  'carbon': #202A37,
+  'royal-blue': #2278f1,
+  'lime': #cbe6ff,
+  'grass': #bbeda2,
+  'metal': #888FA8,
+  'alarm-red': #e94659,
+  'white': #ffffff
 );
 
 @function color($name) {
@@ -79,7 +51,7 @@ $colors: (
   @each $name, $value in $colors {
     &.sample#{index($color-names, $name)} {
       background-color: $value;
-      @if (lightness($value) < 49) {
+      @if (lightness($value) < 60) {
         color: color("white");
       }
       &:after {
