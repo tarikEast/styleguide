@@ -1,16 +1,8 @@
 // Typography
 //
-// Mixins that can be applied to get look for texts.
+// Defined typographies.
 //
-// Weight: -10
-//
-// Usage:
-//
-// <pre>
-// .my-component {
-//   @include typography('primary-headline');
-// }
-// </pre>
+// Weight: 2
 //
 // Markup:
 // <div class="typography-sample sample1"></div>
@@ -19,7 +11,7 @@
 // <div class="typography-sample sample4"></div>
 // <div class="typography-sample sample5"></div>
 //
-// Style guide: Core.Hierarchy
+// Style guide: Typography
 
 $typography-config: (
     "primary-headline": (
@@ -102,3 +94,19 @@ $typography-config: (
         }
     }
 }
+
+// typography($style)
+//
+// Sass mixin to get specific typography.
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   @include typography('primary-headline');
+// }
+// </pre>
+//
+// $style - Name of the style.
+//
+// Style guide: Typography.Mixins

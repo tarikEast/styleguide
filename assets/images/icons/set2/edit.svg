@@ -1,0 +1,26 @@
+<svg width="28" height="28" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>&#168;&#246;&#207;</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-556 -1834)">
+<g id="Icon/Misc/Carbon/Edit">
+<g id="Icon/Misc/Carbon/Edit">
+<g id="Group">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(561.534 1840.07)" fill="#202A37"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path1_fill" transform="translate(573.189 1839.04)" fill="#202A37"/>
+</g>
+<g id="Shape">
+<use xlink:href="#path2_fill" transform="translate(562.789 1852.47)" fill="#202A37"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 15.6151L 5.03973 13.7432L 5.21918 13.6281L 15.6912 3.15613L 12.4616 0L 2.05493 10.4066L 1.94202 10.5803L 0 15.6151ZM 12.4697 1.40613L 14.2687 3.16431L 4.58929 12.8438L 1.73132 13.9053L 2.83691 11.0389L 12.4697 1.40613Z"/>
+<path id="path1_fill" d="M 0.707107 2.54683L 1.90711 1.34683C 2.37788 0.876056 3.15657 0.888616 3.67283 1.36186C 4.14498 1.79466 4.14498 2.60903 3.65714 3.09687L 2.45714 4.29687L 3.16425 5.00397L 4.36425 3.80397C 5.24784 2.92038 5.24784 1.44904 4.34856 0.624702C 3.44938 -0.199542 2.06165 -0.221925 1.2 0.639725L 0 1.83973L 0.707107 2.54683Z"/>
+<path id="path2_fill" d="M 0 0.707107L 1.25714 1.96425L 1.96425 1.25714L 0.707107 0L 0 0.707107Z"/>
+</defs>
+</svg>

@@ -1,15 +1,8 @@
-
 // Colors
 //
-// Weight: -9
+// Defined colors
 //
-// Usage:
-//
-// <pre>
-// .my-component {
-//   background-color: color("green");
-// }
-// </pre>
+// Weight: 3
 //
 // Markup:
 // <div class="color-sample sample1"></div>
@@ -19,15 +12,15 @@
 // <div class="color-sample sample5"></div>
 // <div class="color-sample sample6"></div>
 // <div class="color-sample sample7"></div>
+// <div class="color-sample sample8"></div>
 //
-// Style guide: Core.Colors
-
-// color palette
+// Style guide: Colors
 
 $colors: (
   'carbon': #202A37,
   'royal-blue': #2278f1,
-  'lime': #cbe6ff,
+  'lime': #2abf00,
+  'sky-blue': #cbe6ff,
   'grass': #bbeda2,
   'metal': #888FA8,
   'alarm-red': #e94659,
@@ -36,7 +29,7 @@ $colors: (
 
 @function color($name) {
   @if not map-has-key($colors, $name) {
-    @warn "Color `#{$name}` not found.";
+    @error "Invalid color specified! Choose one of #{map-keys($colors)}";
   }
   @return map-get($colors, $name);
 }
@@ -60,3 +53,20 @@ $colors: (
     }
   }
 }
+
+// color($name)
+//
+// Sass function that returns specified color hex value from color palette.
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   background-color: color("green");
+//   collor: color("metal");
+// }
+// </pre>
+//
+// $name - Name of the color.
+//
+// Style guide: Colors.Functions

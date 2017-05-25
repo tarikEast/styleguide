@@ -14,10 +14,19 @@ gulp.task('serve', ['styleguide', 'sass'], function() {
     port: 3001 // Rails is on 3000
   });
 
+  // gulp.watch("assets/**/*.svg", ['svg']);
   gulp.watch("assets/**/*.scss", ['styleguide', 'sass']);
   gulp.watch("assets/**/*.md").on('change', browserSync.reload);
   gulp.watch("styleguide/*.html").on('change', browserSync.reload);
 });
+
+// // adds svgs
+
+// gulp.task('svg', function(){
+//   return gulp.src('./assets/**/*.svg')
+//     .pipe(gulp.dest('./styleguide/public/'))
+//     .pipe(browserSync.stream()); 
+// });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {

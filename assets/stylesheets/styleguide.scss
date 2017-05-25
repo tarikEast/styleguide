@@ -1,15 +1,9 @@
 
 @import "normalize";
 
-// Core
-//
-//  Weight: -1
-//
-// variable definitions, typography, colors
-//
-//
-// Style guide: Core
-@import "core/breakpoints";
-@import "core/typeface";
+@import "core/fonts";
 @import "core/colors";
 @import "core/typography";
+@import "core/icons";
+
+@import "forms/buttons";

@@ -1,0 +1,97 @@
+// Icons
+//
+// Defined icons
+//
+// Weight: 4
+//
+// Style guide: Icons
+
+// Set 1
+//
+// Markup:
+// <i class="icon-set1 activity"></i>
+// <i class="icon-set1 arrow-down"></i>
+// <i class="icon-set1 arrow-side"></i>
+// <i class="icon-set1 check"></i>
+// <i class="icon-set1 close"></i>
+// <i class="icon-set1 comment"></i>
+// <i class="icon-set1 edit"></i>
+// <i class="icon-set1 filter"></i>
+// <i class="icon-set1 flag"></i>
+// <i class="icon-set1 mail"></i>
+// <i class="icon-set1 phone"></i>
+// <i class="icon-set1 plus"></i>
+// <i class="icon-set1 settings"></i>
+// <i class="icon-set1 trash"></i>
+// <i class="icon-set1 view"></i>
+//
+// Style guide: Icons.Set1
+
+// Set 2
+//
+// Markup:
+// <i class="icon-set2 check"></i>
+// <i class="icon-set2 comment"></i>
+// <i class="icon-set2 edit"></i>
+// <i class="icon-set2 error"></i>
+// <i class="icon-set2 flag"></i>
+// <i class="icon-set2 link"></i>
+// <i class="icon-set2 plus"></i>
+// <i class="icon-set2 search"></i>
+//
+// Style guide: Icons.Set2
+$icons: (
+    'set1':(
+        'activity': '/assets/images/icons/set1/activity.svg',
+        'arrow-down': '/assets/images/icons/set1/arrow-down.svg',
+        'arrow-side': '/assets/images/icons/set1/arrow-side.svg',
+        'check': '/assets/images/icons/set1/check.svg',
+        'close': '/assets/images/icons/set1/close.svg',
+        'comment': '/assets/images/icons/set1/comment.svg',
+        'edit': '/assets/images/icons/set1/edit.svg',
+        'filter': '/assets/images/icons/set1/filter.svg',
+        'flag': '/assets/images/icons/set1/flag.svg',
+        'mail': '/assets/images/icons/set1/mail.svg',
+        'phone': '/assets/images/icons/set1/phone.svg',
+        'plus': '/assets/images/icons/set1/plus.svg',
+        'settings': '/assets/images/icons/set1/settings.svg',
+        'trash': '/assets/images/icons/set1/trash.svg',
+        'view': '/assets/images/icons/set1/view.svg',
+    ),
+    'set2':(
+        'check': '/assets/images/icons/set2/check.svg',
+        'comment': '/assets/images/icons/set2/comment.svg',
+        'edit': '/assets/images/icons/set2/edit.svg',
+        'error': '/assets/images/icons/set2/error.svg',
+        'flag': '/assets/images/icons/set2/flag.svg',
+        'link': '/assets/images/icons/set2/link.svg',
+        'plus': '/assets/images/icons/set2/plus.svg',
+        'search': '/assets/images/icons/set2/search.svg',
+    )
+);
+
+@mixin defaultIconStyle {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@each $setName, $setIcons in $icons{
+    &.icon-#{$setName}{
+        @include defaultIconStyle;
+        @each $name, $url in $setIcons{
+            &.#{$name}{
+                background: url($url);
+            }
+        }
+    }
+}
+.sample-icon {
+    
+    background: url('/assets/images/icons/set1/activity.svg');
+    
+}

@@ -1,0 +1,47 @@
+// Buttons
+//
+// Definitions of buttons.
+//
+// Weight: 5
+//
+// Markup:
+// <button class="button">Text only</div>
+//
+// Style guide: Buttons
+
+$button-colors: (
+    "primary":(
+        "lime":(
+            "background-color": #2abf00,
+            "font-color": #ffffff,
+            "hover-background-color": #2abf00,
+            "hover-font-color": #ffffff,
+            "active-background-color": #2abf00,
+            "active-font-color": #ffffff,
+        )
+    )
+);
+
+.button{
+    border: none;
+    outline:none;
+    background: color('lime');
+    opacity: 1.00;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03);
+    border-radius: 2px;
+    line-height: 26px;
+    font-size: 13px;
+    color: color('white');
+    padding: {
+        left: 10px;
+        right: 10px;
+    }
+
+    &:hover{
+        background: #31c707;
+    }
+
+    &:active{
+        background: #29AF03;
+    }
+}

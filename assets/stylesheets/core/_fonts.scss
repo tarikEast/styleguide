@@ -1,0 +1,40 @@
+// Fonts
+//
+// We're using platform-specific fonts to match the default system look
+// 
+//    macOS and iOS - SF UI Display<br>
+//    Windows - Segoe UI<br>
+//    Android - Roboto<br>
+//    Default - sans-serif<br>
+//
+// Weight: 1
+//
+//
+// Style guide: Typeface
+
+$font-family: 'SF UI Display', 'Segoe UI', 'Roboto', sans-serif;
+
+@function font-family(){
+    @return $font-family;
+}
+
+.sample {
+    font-family: font-family();
+    &:after{
+        content: "this is a sample text"
+    }
+}
+
+// font-family()
+//
+// Sass function that returns font for use.
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   font-family: font-family();
+// }
+// </pre>
+//
+// Style guide: Typeface.Functions

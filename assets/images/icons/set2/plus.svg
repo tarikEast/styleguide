@@ -1,0 +1,22 @@
+<svg width="28" height="28" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>@$&#9;</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-516 -1834)">
+<g id="Icon/Misc/Carbon/Plus">
+<g id="Icon/Misc/Carbon/Plus">
+<g id="plus">
+<g id="Shape">
+<use xlink:href="#path0_fill" transform="translate(521 1839)" fill="#202A37"/>
+</g>
+<g id="Rectangle 136">
+<use xlink:href="#path1_fill" transform="translate(525 1843)" fill="#202A37"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 8.5C 0 13.1945 3.8056 17 8.5 17C 13.1944 17 17 13.1945 17 8.5C 17 3.80554 13.1944 0 8.5 0C 3.8056 0 0 3.80554 0 8.5ZM 16 8.5C 16 12.6421 12.6422 16 8.5 16C 4.35785 16 1 12.6421 1 8.5C 1 4.35791 4.35785 1 8.5 1C 12.6422 1 16 4.35791 16 8.5Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 4.5 0C 4.22388 0 4 0.223877 4 0.5L 4 4L 0.5 4C 0.223877 4 0 4.22388 0 4.5C 0 4.77612 0.223877 5 0.5 5L 4 5L 4 8.5C 4 8.77612 4.22388 9 4.5 9C 4.77612 9 5 8.77612 5 8.5L 5 5L 8.5 5C 8.77612 5 9 4.77612 9 4.5C 9 4.22388 8.77612 4 8.5 4L 5 4L 5 0.5C 5 0.223877 4.77612 0 4.5 0Z"/>
+</defs>
+</svg>
