@@ -9,35 +9,35 @@
 // Set 1
 //
 // Markup:
-// <i class="icon-set1 activity"></i>
-// <i class="icon-set1 arrow-down"></i>
-// <i class="icon-set1 arrow-side"></i>
-// <i class="icon-set1 check"></i>
-// <i class="icon-set1 close"></i>
-// <i class="icon-set1 comment"></i>
-// <i class="icon-set1 edit"></i>
-// <i class="icon-set1 filter"></i>
-// <i class="icon-set1 flag"></i>
-// <i class="icon-set1 mail"></i>
-// <i class="icon-set1 phone"></i>
-// <i class="icon-set1 plus"></i>
-// <i class="icon-set1 settings"></i>
-// <i class="icon-set1 trash"></i>
-// <i class="icon-set1 view"></i>
+// <i class="icon set1 activity"></i>
+// <i class="icon set1 arrow-down"></i>
+// <i class="icon set1 arrow-side"></i>
+// <i class="icon set1 check"></i>
+// <i class="icon set1 close"></i>
+// <i class="icon set1 comment"></i>
+// <i class="icon set1 edit"></i>
+// <i class="icon set1 filter"></i>
+// <i class="icon set1 flag"></i>
+// <i class="icon set1 mail"></i>
+// <i class="icon set1 phone"></i>
+// <i class="icon set1 plus"></i>
+// <i class="icon set1 settings"></i>
+// <i class="icon set1 trash"></i>
+// <i class="icon set1 view"></i>
 //
 // Style guide: Icons.Set1
 
 // Set 2
 //
 // Markup:
-// <i class="icon-set2 check"></i>
-// <i class="icon-set2 comment"></i>
-// <i class="icon-set2 edit"></i>
-// <i class="icon-set2 error"></i>
-// <i class="icon-set2 flag"></i>
-// <i class="icon-set2 link"></i>
-// <i class="icon-set2 plus"></i>
-// <i class="icon-set2 search"></i>
+// <i class="icon set2 check"></i>
+// <i class="icon set2 comment"></i>
+// <i class="icon set2 edit"></i>
+// <i class="icon set2 error"></i>
+// <i class="icon set2 flag"></i>
+// <i class="icon set2 link"></i>
+// <i class="icon set2 plus"></i>
+// <i class="icon set2 search"></i>
 //
 // Style guide: Icons.Set2
 $icons: (
@@ -74,24 +74,22 @@ $icons: (
     display: inline-block;
     height: 28px;
     width: 28px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    mask-size: cover;
+    -webkit-mask-size: cover;
 }
 
-@each $setName, $setIcons in $icons{
-    &.icon-#{$setName}{
-        @include defaultIconStyle;
-        @each $name, $url in $setIcons{
-            &.#{$name}{
-                background: url($url);
+.icon {
+    @include defaultIconStyle;
+    @each $setName, $setIcons in $icons{
+        &.#{$setName}{
+            @each $name, $url in $setIcons{
+                &.#{$name}{
+                    -webkit-mask: url($url);
+                    mask: url($url);
+                    background-color: red;
+                }
             }
         }
     }
-}
-.sample-icon {
-    
-    background: url('/assets/images/icons/set1/activity.svg');
-    
 }

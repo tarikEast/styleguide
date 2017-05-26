@@ -2,14 +2,16 @@
 //
 // Defined typographies.
 //
-// Weight: 2
+// .tg-primary-headline - Apply primary headline
+// .tg-secondary-headline - Apply secondary headline
+// .tg-sub-headline - Apply sub headline
+// .tg-meta-headline - Apply meta headline
+// .tg-paragraph-text - Apply paragraph text
 //
 // Markup:
-// <div class="typography-sample sample1"></div>
-// <div class="typography-sample sample2"></div>
-// <div class="typography-sample sample3"></div>
-// <div class="typography-sample sample4"></div>
-// <div class="typography-sample sample5"></div>
+// <div class="{{modifier_class}}">This is a sample text</div>
+//
+// Weight: 2
 //
 // Style guide: Typography
 
@@ -79,19 +81,14 @@ $typography-config: (
 }
 
 .typography-sample{
-    $style-names: map-keys($typography-config);
-
     border: 1px solid gray;
     padding: 10px;
     margin-bottom: 5px;
+}
 
-    @each $name in $style-names{
-        &.sample#{index($style-names, $name)} {
-            @include typography($name);
-            &:after {
-                content: "#{$name}"
-            }
-        }
+@each $name, $value in $typography-config {
+    .tg-#{$name}{
+        @include typography($name);
     }
 }
 
