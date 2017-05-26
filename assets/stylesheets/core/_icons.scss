@@ -42,31 +42,79 @@
 // Style guide: Icons.Set2
 $icons: (
     'set1':(
-        'activity': '/assets/images/icons/set1/activity.svg',
-        'arrow-down': '/assets/images/icons/set1/arrow-down.svg',
-        'arrow-side': '/assets/images/icons/set1/arrow-side.svg',
-        'check': '/assets/images/icons/set1/check.svg',
-        'close': '/assets/images/icons/set1/close.svg',
-        'comment': '/assets/images/icons/set1/comment.svg',
-        'edit': '/assets/images/icons/set1/edit.svg',
-        'filter': '/assets/images/icons/set1/filter.svg',
-        'flag': '/assets/images/icons/set1/flag.svg',
-        'mail': '/assets/images/icons/set1/mail.svg',
-        'phone': '/assets/images/icons/set1/phone.svg',
-        'plus': '/assets/images/icons/set1/plus.svg',
-        'settings': '/assets/images/icons/set1/settings.svg',
-        'trash': '/assets/images/icons/set1/trash.svg',
-        'view': '/assets/images/icons/set1/view.svg',
+        'activity': (
+            url:'/assets/images/icons/set1/activity.svg',
+            default-color: 'carbon'
+        ),
+        'arrow-down': (
+            url:'/assets/images/icons/set1/arrow-down.svg',
+            default-color: 'carbon'
+        ),
+        'arrow-side': (
+            url:'/assets/images/icons/set1/arrow-side.svg',
+            default-color: 'carbon'),
+        'check': (
+            url:'/assets/images/icons/set1/check.svg',
+            default-color:'carbon'),
+        'close': (
+            url:'/assets/images/icons/set1/close.svg',
+            default-color: 'carbon'),
+        'comment': (
+            url:'/assets/images/icons/set1/comment.svg',
+            default-color: 'carbon'),
+        'edit': (
+            url:'/assets/images/icons/set1/edit.svg',
+            default-color: 'carbon'),
+        'filter': (
+            url:'/assets/images/icons/set1/filter.svg',
+            default-color: 'carbon'),
+        'flag': (
+            url:'/assets/images/icons/set1/flag.svg',
+            default-color: 'carbon'),
+        'mail': (
+            url:'/assets/images/icons/set1/mail.svg',
+            default-color: 'carbon'),
+        'phone': (
+            url:'/assets/images/icons/set1/phone.svg',
+            default-color: 'carbon'),
+        'plus': (
+            url:'/assets/images/icons/set1/plus.svg',
+            default-color: 'carbon'),
+        'settings': (
+            url:'/assets/images/icons/set1/settings.svg',
+            default-color: 'carbon'),
+        'trash': (
+            url:'/assets/images/icons/set1/trash.svg',
+            default-color: 'carbon'),
+        'view': (
+            url:'/assets/images/icons/set1/view.svg',
+            default-color: 'carbon'),
     ),
     'set2':(
-        'check': '/assets/images/icons/set2/check.svg',
-        'comment': '/assets/images/icons/set2/comment.svg',
-        'edit': '/assets/images/icons/set2/edit.svg',
-        'error': '/assets/images/icons/set2/error.svg',
-        'flag': '/assets/images/icons/set2/flag.svg',
-        'link': '/assets/images/icons/set2/link.svg',
-        'plus': '/assets/images/icons/set2/plus.svg',
-        'search': '/assets/images/icons/set2/search.svg',
+        'check': (
+            url:'/assets/images/icons/set2/check.svg',
+            default-color: 'lime'),
+        'comment': (
+            url:'/assets/images/icons/set2/comment.svg',
+            default-color: 'carbon'),
+        'edit': (
+            url:'/assets/images/icons/set2/edit.svg',
+            default-color: 'carbon'),
+        'error': (
+            url: '/assets/images/icons/set2/error.svg',
+            default-color: 'alarm-red'),
+        'flag': (
+            url:'/assets/images/icons/set2/flag.svg',
+            default-color: 'carbon'),
+        'link': (
+            url:'/assets/images/icons/set2/link.svg',
+            default-color: 'carbon'),
+        'plus': (
+            url:'/assets/images/icons/set2/plus.svg',
+            default-color: 'carbon'),
+        'search': (
+            url:'/assets/images/icons/set2/search.svg',
+            default-color: 'carbon'),
     )
 );
 
@@ -83,11 +131,11 @@ $icons: (
     @include defaultIconStyle;
     @each $setName, $setIcons in $icons{
         &.#{$setName}{
-            @each $name, $url in $setIcons{
+            @each $name, $iParams in $setIcons{
                 &.#{$name}{
-                    -webkit-mask: url($url);
-                    mask: url($url);
-                    background-color: red;
+                    -webkit-mask: url(map-get($iParams , "url"));
+                    mask: url(map-get($iParams , "url"));
+                    background-color: color(map-get($iParams , "default-color"));
                 }
             }
         }
