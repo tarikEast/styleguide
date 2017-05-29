@@ -1,47 +1,149 @@
-// Buttons
-//
-// Definitions of buttons.
+// Buttons & links
 //
 // Weight: 5
 //
-// Markup:
-// <button class="button">Text only</div>
-//
 // Style guide: Buttons
 
-$button-colors: (
-    "primary":(
-        "lime":(
-            "background-color": #2abf00,
-            "font-color": #ffffff,
-            "hover-background-color": #2abf00,
-            "hover-font-color": #ffffff,
-            "active-background-color": #2abf00,
-            "active-font-color": #ffffff,
-        )
+// Buttons
+//
+// .primary-lime - Primary lime button
+// .primary-royal-blue - Primary royal blue button
+// .secondary-metal - Secondary metal button
+// .secondary-abort - Secondary abort button
+//
+// Markup:
+// <button class="itn-btn {{modifier_class}}">Text only</button>
+// <button class="itn-btn -icon {{modifier_class}}">
+//  <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-comment" />
+//  </svg> Icon
+// </button>
+// <button class="itn-btn -icon-only {{modifier_class}}">
+//  <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-comment" />
+//  </svg>
+// </button>
+// <button class="itn-btn -icon -link {{modifier_class}}">
+//  <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-comment" />
+//  </svg> Icon link
+// </button>
+//
+// Weight: 1
+//
+// Style guide: Buttons.Buttons
+
+$button-config: (
+    "primary-lime": (
+        bg-color: color('lime'),
+        font-color: color('white'),
+    ),
+    "primary-royal-blue": (
+        bg-color: color('royal-blue'),
+        font-color: color('white')      
+    ),
+    "secondary-metal": (
+        bg-color: color('metal'),
+        font-color: color('white')
+    ),
+    "secondary-abort": (
+        bg-color: #EDEEF2,
+        font-color: color('carbon')
     )
 );
 
-.button{
+.itn-btn{
+    display: inline-block;
     border: none;
     outline:none;
-    background: color('lime');
     opacity: 1.00;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03);
     border-radius: 2px;
-    line-height: 26px;
-    font-size: 13px;
-    color: color('white');
+    line-height: 28px;
+    font-size: 14px;
     padding: {
         left: 10px;
         right: 10px;
+        top: 0;
+        bottom: 0;
     }
-
-    &:hover{
-        background: #31c707;
+    svg{
+        float: left;                
     }
+    @each $name, $value in $button-config {
+        $bg-color: map-get($value,"bg-color");
+        $font-color: map-get($value, "font-color");
+        &.#{$name}{           
+            background-color: $bg-color;
+            color: $font-color;
+            &:hover{
+                background-color: lighten($bg-color, 6%);
+            }
+            &:active{
+                background-color: darken($bg-color, 2%);
+            }
 
-    &:active{
-        background: #29AF03;
+            svg{
+                fill: $font-color;                
+            }
+        }
+    }
+    &.-icon {
+        padding-left: 0;
+    }
+    &.-icon-only{
+        padding: 0;
+        
+        &:after {
+            content: "\200b";
+        }
+    }
+    &.-link{
+        background-color: color('white');
+        @each $name, $value in $button-config {
+            $bg-color: map-get($value,"bg-color");            
+            &.#{$name}{
+                color: $bg-color;
+                &:hover{
+                    background-color: color('white');
+                    color: lighten($bg-color, 5%);
+                }
+                &:active{
+                    background-color: color('white');
+                    color: darken($bg-color, 5%);
+                }
+
+                svg{
+                    fill: $bg-color;                
+                }
+            }
+        }
+    }
+}
+
+// Links
+//
+// Markup:
+// <a href="#">
+//  <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-comment" />
+//  </svg> Link
+// </a>
+//
+// Weight: 2
+//
+// Style guide: Buttons.Links
+
+a {
+    line-height: 28px;
+    font-size: 14px;
+    color: color('royal-blue');
+    text-decoration: none;
+    svg{
+        float: left;
+        fill: color('royal-blue');
+        &:hover{
+            background-color: color('white');
+            color: darken(color('royal-blue'), 6%);
+        }
     }
 }

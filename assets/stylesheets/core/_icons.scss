@@ -9,135 +9,131 @@
 // Set 1
 //
 // Markup:
-// <i class="icon set1 activity"></i>
-// <i class="icon set1 arrow-down"></i>
-// <i class="icon set1 arrow-side"></i>
-// <i class="icon set1 check"></i>
-// <i class="icon set1 close"></i>
-// <i class="icon set1 comment"></i>
-// <i class="icon set1 edit"></i>
-// <i class="icon set1 filter"></i>
-// <i class="icon set1 flag"></i>
-// <i class="icon set1 mail"></i>
-// <i class="icon set1 phone"></i>
-// <i class="icon set1 plus"></i>
-// <i class="icon set1 settings"></i>
-// <i class="icon set1 trash"></i>
-// <i class="icon set1 view"></i>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-activity" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-arrow-down" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-arrow-side" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-check" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-close" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-comment" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-edit" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-filter" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-flag" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-mail" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-phone" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-plus" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-setting" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-trash" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-view" />
+// </svg>
+//
+// Weight: 1
 //
 // Style guide: Icons.Set1
 
 // Set 2
 //
 // Markup:
-// <i class="icon set2 check"></i>
-// <i class="icon set2 comment"></i>
-// <i class="icon set2 edit"></i>
-// <i class="icon set2 error"></i>
-// <i class="icon set2 flag"></i>
-// <i class="icon set2 link"></i>
-// <i class="icon set2 plus"></i>
-// <i class="icon set2 search"></i>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-check" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-comment" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-edit" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-error" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-flag" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-link" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-plus" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-search" />
+// </svg>
+//
+// Weight: 2
 //
 // Style guide: Icons.Set2
-$icons: (
-    'set1':(
-        'activity': (
-            url:'/assets/images/icons/set1/activity.svg',
-            default-color: 'carbon'
-        ),
-        'arrow-down': (
-            url:'/assets/images/icons/set1/arrow-down.svg',
-            default-color: 'carbon'
-        ),
-        'arrow-side': (
-            url:'/assets/images/icons/set1/arrow-side.svg',
-            default-color: 'carbon'),
-        'check': (
-            url:'/assets/images/icons/set1/check.svg',
-            default-color:'carbon'),
-        'close': (
-            url:'/assets/images/icons/set1/close.svg',
-            default-color: 'carbon'),
-        'comment': (
-            url:'/assets/images/icons/set1/comment.svg',
-            default-color: 'carbon'),
-        'edit': (
-            url:'/assets/images/icons/set1/edit.svg',
-            default-color: 'carbon'),
-        'filter': (
-            url:'/assets/images/icons/set1/filter.svg',
-            default-color: 'carbon'),
-        'flag': (
-            url:'/assets/images/icons/set1/flag.svg',
-            default-color: 'carbon'),
-        'mail': (
-            url:'/assets/images/icons/set1/mail.svg',
-            default-color: 'carbon'),
-        'phone': (
-            url:'/assets/images/icons/set1/phone.svg',
-            default-color: 'carbon'),
-        'plus': (
-            url:'/assets/images/icons/set1/plus.svg',
-            default-color: 'carbon'),
-        'settings': (
-            url:'/assets/images/icons/set1/settings.svg',
-            default-color: 'carbon'),
-        'trash': (
-            url:'/assets/images/icons/set1/trash.svg',
-            default-color: 'carbon'),
-        'view': (
-            url:'/assets/images/icons/set1/view.svg',
-            default-color: 'carbon'),
-    ),
-    'set2':(
-        'check': (
-            url:'/assets/images/icons/set2/check.svg',
-            default-color: 'lime'),
-        'comment': (
-            url:'/assets/images/icons/set2/comment.svg',
-            default-color: 'carbon'),
-        'edit': (
-            url:'/assets/images/icons/set2/edit.svg',
-            default-color: 'carbon'),
-        'error': (
-            url: '/assets/images/icons/set2/error.svg',
-            default-color: 'alarm-red'),
-        'flag': (
-            url:'/assets/images/icons/set2/flag.svg',
-            default-color: 'carbon'),
-        'link': (
-            url:'/assets/images/icons/set2/link.svg',
-            default-color: 'carbon'),
-        'plus': (
-            url:'/assets/images/icons/set2/plus.svg',
-            default-color: 'carbon'),
-        'search': (
-            url:'/assets/images/icons/set2/search.svg',
-            default-color: 'carbon'),
-    )
-);
 
-@mixin defaultIconStyle {
-    display: inline-block;
-    height: 28px;
-    width: 28px;
-    background-size: cover;
-    mask-size: cover;
-    -webkit-mask-size: cover;
+@each $name, $value in $colors {
+  .fill-#{$name}{
+    fill:$value
+  }
 }
 
-.icon {
-    @include defaultIconStyle;
-    @each $setName, $setIcons in $icons{
-        &.#{$setName}{
-            @each $name, $iParams in $setIcons{
-                &.#{$name}{
-                    -webkit-mask: url(map-get($iParams , "url"));
-                    mask: url(map-get($iParams , "url"));
-                    background-color: color(map-get($iParams , "default-color"));
-                }
-            }
-        }
-    }
-}
+// Icon fill color
+//
+// .fill-carbon - Carbon color icon
+// .fill-royal-blue - Royal blue color icon
+// .fill-lime - Lime color icon
+// .fill-sky-blue - Sky blue color icon
+// .fill-grass - Grass color icon
+// .fill-metal - Metal color icon
+// .fill-alarm-red - Alarm red color icon
+// .fill-white - White color icon
+//
+// Markup:
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-check" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-comment" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-edit" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-error" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-flag" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-link" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-plus" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="{{modifier_class}}">
+//   <use xlink:href="#set2-search" />
+// </svg>
+//
+// Weight: 3
+//
+// Style guide: Icons.IconFill

@@ -29,7 +29,7 @@ $colors: (
 
 @function color($name) {
   @if not map-has-key($colors, $name) {
-    @error "Invalid color specified! Choose one of #{map-keys($colors)}";
+    @error "Invalid color specified (color specified: #{$name})! Choose one of #{map-keys($colors)}";
   }
   @return map-get($colors, $name);
 }

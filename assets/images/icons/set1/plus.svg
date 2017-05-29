@@ -1,16 +1,6 @@
-<svg width="28" height="28" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<title>@$&#9;</title>
-<desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-796 -1774)">
-<g id="Icon/Presta/White/Email">
-<g id="Icon/Presta/White/Plus">
-<g id="Shape">
-<use xlink:href="#path0_fill" transform="translate(805 1783)" fill="#202A37"/>
-</g>
-</g>
-</g>
-</g>
-<defs>
-<path id="path0_fill" d="M 0.5 5L 4 5L 4 8.5C 4 8.776 4.224 9 4.5 9C 4.776 9 5 8.776 5 8.5L 5 5L 8.5 5C 8.776 5 9 4.776 9 4.5C 9 4.224 8.776 4 8.5 4L 5 4L 5 0.5C 5 0.224 4.776 0 4.5 0C 4.224 0 4 0.224 4 0.5L 4 4L 0.5 4C 0.224 4 0 4.224 0 4.5C 0 4.776 0.224 5 0.5 5Z"/>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" xmlns:xlink="http://www.w3.org/1999/xlink" id="set1-plus">
+  <use xlink:href="#a12" transform="translate(9 9)"/>
+  <defs>
+    <path id="a12" d="M.5 5H4v3.5c0 .276.224.5.5.5s.5-.224.5-.5V5h3.5c.276 0 .5-.224.5-.5S8.776 4 8.5 4H5V.5c0-.276-.224-.5-.5-.5S4 .224 4 .5V4H.5c-.276 0-.5.224-.5.5s.224.5.5.5z"/>
+  </defs>
 </svg>

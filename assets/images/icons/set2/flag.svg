@@ -1,22 +1,8 @@
-<svg width="28" height="28" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<title>@$&#9;</title>
-<desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-596 -1834)">
-<g id="Icon/Misc/Carbon/Flag">
-<g id="Icon/Misc/Carbon/Flag">
-<g id="Group">
-<g id="Shape">
-<use xlink:href="#path0_fill" transform="translate(603 1840.26)" fill="#202A37"/>
-</g>
-<g id="Shape">
-<use xlink:href="#path1_fill" transform="translate(603 1838.55)" fill="#202A37"/>
-</g>
-</g>
-</g>
-</g>
-</g>
-<defs>
-<path id="path0_fill" d="M 2.59792e-13 0L 0 17.7429L 1 17.7429L 1 1.46549e-14L 2.59792e-13 0Z"/>
-<path id="path1_fill" fill-rule="evenodd" d="M 0.817566 1.28052L 0 0.608398L 0 11.6598L 0.182434 11.8098C 2.35266 13.5941 4.0658 13.4147 7.69434 11.8843C 11.0057 10.4877 12.3971 10.3418 14.1824 11.8098L 15 12.4819L 15 1.43054L 14.8176 1.28052C 12.6473 -0.503784 10.9342 -0.324341 7.30566 1.20605C 3.99426 2.60278 2.60291 2.74854 0.817566 1.28052ZM 14 10.4463C 12.1764 9.32129 10.4688 9.62878 7.30566 10.9628C 4.10785 12.3115 2.70062 12.4938 1 11.1827L 1 2.64392C 2.82367 3.76904 4.53119 3.46155 7.69434 2.12744C 10.8922 0.778687 12.2994 0.596558 14 1.90759L 14 10.4463Z"/>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" xmlns:xlink="http://www.w3.org/1999/xlink" id="set2-flag">
+  <use xlink:href="#a20" transform="translate(7 6.26)"/>
+  <use xlink:href="#b20" transform="translate(7 4.55)"/>
+  <defs>
+    <path id="a20" d="M0 0v17.7429h1V0H0z"/>
+    <path id="b20" fill-rule="evenodd" d="M.817566 1.28052L0 .608398V11.6598l.182434.15c2.170226 1.7843 3.883366 1.6049 7.511906.0745 3.31136-1.3966 4.70276-1.5425 6.48806-.0745l.8176.6721V1.43054l-.1824-.15002c-2.1703-1.784304-3.8834-1.604861-7.51194-.07447-3.3114 1.39673-4.70275 1.54249-6.488094.07447zM14 10.4463c-1.8236-1.12501-3.5312-.81752-6.69434.5165-3.19781 1.3487-4.60504 1.531-6.30566.2199V2.64392c1.82367 1.12512 3.53119.81763 6.69434-.51648C10.8922.778687 12.2994.596558 14 1.90759v8.53871z"/>
+  </defs>
 </svg>

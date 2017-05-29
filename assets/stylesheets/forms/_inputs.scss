@@ -1,0 +1,97 @@
+// Form Elements
+//
+// Weight: 6
+//
+// Style guide: FormElements
+
+// Inputs
+//
+// Markup:
+// <fieldset>
+//  <label for="text">Test</label>
+//  <input type="text" placeholder="Placeholder" id="text" />
+// </fieldset>
+// <fieldset disabled>
+//  <label for="text">Test</label>
+//  <input type="text" placeholder=":disabled" id="text" />
+// </fieldset>
+// <fieldset class="error">
+//  <label for="text">Test</label>
+//  <input type="text" value="text" id="text" />
+//  <span>Something is wrong.</span>
+// </fieldset>
+//
+// Weight: 1
+//
+// Style guide: FormElements.Inputs
+
+$border-color: #29384A;
+$border-color-shadow: black;
+$placeholder-color: #888FA8;
+$focus-color: #2278F1;
+$focus-color-shadow: #CBE6FF;
+
+fieldset{
+    border: none;
+    padding: 0;
+    position: relative;
+    label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 34px;
+        color: color('carbon');
+    }
+
+    &:disabled {
+        opacity: .7;
+    }
+
+    &.error {
+        input[type=text], input[type=text]:focus {
+            border-color: color('alarm-red');
+            outline-color: color('alarm-red');
+        }
+        span {
+            font-size: 11px;
+            color: color('alarm-red');
+        }
+    }
+
+    input[type=text]{
+        width: calc(100% - 30px);       
+        border: 1px solid rgba($border-color, 0.2);
+        box-shadow: inset 0 1px 2px 0 rgba($border-color-shadow,0.10);
+        border-radius: 2px;
+        color: color(carbon);
+        font-size: 13px;
+        margin-bottom: 10px;
+        height: 40px;
+        padding: 0 15px;
+        line-height: 100%;
+
+        ::-webkit-input-placeholder{
+            color: $placeholder-color;
+        }
+        ::-moz-placeholder {
+            color: $placeholder-color;
+        }
+        :-ms-input-placeholder {
+            color: $placeholder-color;
+        }
+        :-moz-placeholder {
+            color: $placeholder-color;
+        }
+
+        &:focus{
+            border-color: #2278F1;
+            box-shadow: inset 0px 1px 2px rgba($focus-color-shadow, .5);
+            outline:none;
+        }
+
+        &:disabled{
+            background: white;
+            cursor: not-allowed;
+        }
+    }
+}
