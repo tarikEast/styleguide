@@ -221,7 +221,18 @@
           <a href="section-typography.html">
           <span class="kss-nav__ref">2</span
           ><span class="kss-nav__name">Typography</span>
-        </a>         </li>
+        </a> 
+          <ul class="kss-nav__menu-child">
+               
+            <li class="kss-nav__menu-item">
+              <a href="section-typography.html#kssref-typography-mixins">
+                <span class="kss-nav__ref ">2.1</span
+                ><span class="kss-nav__name">typography($style)</span>
+              </a>
+            </li>
+             
+          </ul>
+        </li>
         <li class="kss-nav__menu-item">
           <a href="section-colors.html">
           <span class="kss-nav__ref">3</span
@@ -251,10 +262,126 @@
     </nav>
   </div>
   <article role="main" class="kss-main">
-    <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-       
+   
+    <div id="kssref-typography" class="kss-section kss-section--depth-1">
+
+        <div class="kss-style">
+          <h1 class="kss-title kss-title--level-1">
+            <a class="kss-title__permalink" href="#kssref-typography">
+          <span class="kss-title__ref">
+              2
+            <span class="kss-title__permalink-hash">
+                #Typography
+            </span>
+          </span>
+          Typography
+        </a>
+          </h1>
+
+ 
+          <div class="kss-description">
+            <p>Defined typographies.</p>
+
+          </div>
+        </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+          <div class="kss-modifier__default-name kss-style">
+            Default styling
+          </div>
+          <div class="kss-modifier__example">
+            <div class="[modifier class]">This is a sample text</div>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .tg-primary-headline
+          </div>
+          <div class="kss-modifier__description kss-style">
+            Apply primary headline
+          </div>
+          <div class="kss-modifier__example">
+            <div class="tg-primary-headline">This is a sample text</div>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .tg-secondary-headline
+          </div>
+          <div class="kss-modifier__description kss-style">
+            Apply secondary headline
+          </div>
+          <div class="kss-modifier__example">
+            <div class="tg-secondary-headline">This is a sample text</div>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .tg-sub-headline
+          </div>
+          <div class="kss-modifier__description kss-style">
+            Apply sub headline
+          </div>
+          <div class="kss-modifier__example">
+            <div class="tg-sub-headline">This is a sample text</div>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .tg-meta-headline
+          </div>
+          <div class="kss-modifier__description kss-style">
+            Apply meta headline
+          </div>
+          <div class="kss-modifier__example">
+            <div class="tg-meta-headline">This is a sample text</div>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .tg-paragraph-text
+          </div>
+          <div class="kss-modifier__description kss-style">
+            Apply paragraph text
+          </div>
+          <div class="kss-modifier__example">
+            <div class="tg-paragraph-text">This is a sample text</div>
+          </div>
+        </div>
+
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;[modifier class]&quot;&gt;This is a sample text&lt;/div&gt;</code></pre>
+        </div>
+         
     </div>
-    
+        <section id="kssref-typography-mixins" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-typography-mixins">
+          <span class="kss-title__ref">
+              2.1
+            <span class="kss-title__permalink-hash">
+                #Typography.Mixins
+            </span>
+          </span>
+          typography($style)
+        </a>
+          </h2>
+
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <code class="kss-parameters__name">$style</code>
+              <div class="kss-parameters__description">Name of the style.</div>
+            </li>
+          </ul>
+           
+          <div class="kss-description">
+            <p>Sass mixin to get specific typography.</p>
+<p>Usage:</p>
+<pre>
+.my-component {
+  @include typography('primary-headline');
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+      
   </article>
 
   <!-- SCRIPTS -->
