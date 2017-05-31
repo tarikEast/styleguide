@@ -25,7 +25,8 @@
     "gulp-sass": "^2.2.0",
     "gulp-sass-lint": "^1.1.1",
     "gulp-sourcemaps": "^1.6.0",
-    "kss": "^2.4.0"
+    "kss": "^2.4.0",
+    "normalize.css": "~4"
   },
   "peerDependencies": {
     "normalize.css": "~4"
