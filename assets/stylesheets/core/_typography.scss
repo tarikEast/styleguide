@@ -2,18 +2,34 @@
 //
 // Defined typographies.
 //
-// .tg-primary-headline - Apply primary headline
-// .tg-secondary-headline - Apply secondary headline
-// .tg-sub-headline - Apply sub headline
-// .tg-meta-headline - Apply meta headline
-// .tg-paragraph-text - Apply paragraph text
+// .--tg-primary-headline - Apply primary headline
+// .--tg-secondary-headline - Apply secondary headline
+// .--tg-sub-headline - Apply sub headline
+// .--tg-meta-headline - Apply meta headline
+// .--tg-paragraph-text - Apply paragraph text
 //
 // Markup:
 // <div class="{{modifier_class}}">This is a sample text</div>
 //
-// Weight: 2
+// Weight: -98
 //
 // Style guide: Typography
+
+// nd-typography($style)
+//
+// Sass mixin to get specific typography.
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   @include nd-typography('primary-headline');
+// }
+// </pre>
+//
+// $style - Name of the style.
+//
+// Style guide: Typography.Mixins
 
 $typography-config: (
     "primary-headline": (
@@ -58,52 +74,22 @@ $typography-config: (
     )
 );
 
-@mixin typography-default {
-    font-family: font-family();
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-}
-
-@mixin typography($style){
+@mixin nd-typography($style){
     @if not map-has-key($typography-config, $style) {
         @error "Invalid style specified! Choose one of #{map-keys($typography-config)}";
     }
     $style-props: map-get($typography-config , $style);
 
-    @include typography-default;
-
     font-size: map-get($style-props , "font-size");
     font-weight: map-get($style-props , "font-weight");
-    color: color(map-get($style-props , "color-name"));
+    color: nd-color(map-get($style-props , "color-name"));
     letter-spacing: map-get($style-props , "letter-spacing");
     text-transform: map-get($style-props , "text-transformation"); 
     line-height: map-get($style-props , "line-height"); 
 }
 
-.typography-sample{
-    border: 1px solid gray;
-    padding: 10px;
-    margin-bottom: 5px;
-}
-
 @each $name, $value in $typography-config {
-    .tg-#{$name}{
-        @include typography($name);
+    .--tg-#{$name}{
+        @include nd-typography($name);
     }
 }
-
-// typography($style)
-//
-// Sass mixin to get specific typography.
-//
-// Usage:
-//
-// <pre>
-// .my-component {
-//   @include typography('primary-headline');
-// }
-// </pre>
-//
-// $style - Name of the style.
-//
-// Style guide: Typography.Mixins

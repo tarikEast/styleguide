@@ -7,34 +7,34 @@
 //    Android - Roboto<br>
 //    Default - sans-serif<br>
 //
-// Weight: 1
+// Weight: -100
 //
 //
 // Style guide: Typeface
 
-$font-family: 'SF UI Display', 'Segoe UI', 'Roboto', sans-serif;
-
-@function font-family(){
-    @return $font-family;
-}
-
-.sample {
-    font-family: font-family();
-    &:after{
-        content: "this is a sample text"
-    }
-}
-
-// font-family()
+// nd-font-family()
 //
-// Sass function that returns font for use.
+// Sass mixin that sets font family (used on body by default).
 //
 // Usage:
 //
 // <pre>
 // .my-component {
-//   font-family: font-family();
+//   @include nd-font-family();
 // }
 // </pre>
 //
 // Style guide: Typeface.Functions
+
+$font-family: 'SF UI Display', 'Segoe UI', 'Roboto', sans-serif;
+
+@mixin nd-font-family(){
+    font-family: $font-family;
+}
+
+.sample {
+    @include nd-font-family();
+    &:after{
+        content: "this is a sample text"
+    }
+}

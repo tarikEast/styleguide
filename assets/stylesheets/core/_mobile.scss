@@ -1,0 +1,18 @@
+
+// hack for touch enabled devices
+// https://github.com/emberjs/ember.js/issues/605#issuecomment-57037709
+// https://github.com/runspired/ember-hammertime#pointer-css
+[data-ember-action], a, button, input, .link {
+  cursor: pointer;
+}
+
+// remove tap highlight on mobile
+[data-ember-action] {
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+h1, h2, h3, p, div {
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+

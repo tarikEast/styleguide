@@ -1,0 +1,287 @@
+// Form Elements
+//
+// Weight: 6
+//
+// Style guide: FormElements
+
+// Inputs
+//
+// Markup:
+//  <div class="form-field">
+//   <label for="text">Test</label>
+//   <input type="text" placeholder="Placeholder" id="text" />
+//  </div>
+//  <div class="form-field">
+//   <label for="text" class="disabled">Test</label>
+//   <input type="text" placeholder=":disabled" disabled="disabled" id="text" />
+//  </div>
+//  <div class="form-field--has-errors">
+//   <label for="text">Test</label>
+//   <input aria-invalid="true" type="text" value="text" id="text" />
+//   <span>Something is wrong.</span>
+//  </div>
+//
+// Weight: 1
+//
+// Style guide: FormElements.Inputs
+
+$border-color: #29384A;
+$border-color-shadow: black;
+$placeholder-color: #888FA8;
+$focus-color: #2278F1;
+$focus-color-shadow: #CBE6FF;
+
+@mixin inputStyle{
+    display: block;
+    border-radius: 2px;
+    font-size: 14px;
+    height: 40px;
+    color: color('carbon');
+    padding: 0 15px; 
+    color: color(carbon);  
+    margin-bottom: 10px; 
+    line-height: 100%;
+    outline: none;
+    background-color: color('white');
+
+    ::-webkit-input-placeholder{
+        color: $placeholder-color;
+    }
+    ::-moz-placeholder {
+        color: $placeholder-color;
+    }
+    :-ms-input-placeholder {
+        color: $placeholder-color;
+    }
+    :-moz-placeholder {
+        color: $placeholder-color;
+    }
+}
+
+@mixin focus{
+    &:focus{
+        border-color: #2278F1;
+        outline:none;
+        -webkit-box-shadow: 0px 0px 2px 2px rgba($focus-color-shadow,1);
+        -moz-box-shadow: 0px 0px 2px 2px rgba($focus-color-shadow,1);
+        box-shadow: 0px 0px 2px 2px rgba($focus-color-shadow,1);
+    }
+}
+
+@mixin disabled{
+    &:disabled{
+        opacity: .5;
+        background: white;
+        cursor: not-allowed;
+    }
+}
+
+.form-field{
+    label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 34px;     
+    }
+
+    label.disabled{
+        opacity: .5;
+    }
+
+    input[type=text]{
+        @include inputStyle;
+        width: calc(100% - 30px);       
+        border: 1px solid rgba($border-color, 0.2);
+        
+        @include focus;
+        @include disabled;
+    }
+
+    select {
+        @include inputStyle;
+        width: 100%;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogIDxkZXNjPgogICAgQ3JlYXRlZCB1c2luZyBGaWdtYQogIDwvZGVzYz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjg2IC0zMjY5KSI+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBkPSJNNjg2IDMyNjloMTF2MTdoLTExeiIvPgogICAgPGNsaXBQYXRoIGlkPSJhIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPgogICAgICA8cGF0aCBmaWxsPSIjRkZGIiBkPSJNMCAwaDE2MDB2NjAwMEgwVjB6Ii8+CiAgICA8L2NsaXBQYXRoPgogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2EpIj4KICAgICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTTAgMGgxNjAwdjYwMDBIMFYweiIvPgogICAgICA8dXNlIGZpbGw9IiNGRkYiIHhsaW5rOmhyZWY9IiNiIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNTYgMzI1NykiIGZpbHRlcj0idXJsKCNjKSIvPgogICAgICA8bWFzayBpZD0iZSI+CiAgICAgICAgPHVzZSBmaWxsPSIjZmZmIiB4bGluazpocmVmPSIjYiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzU2IDMyNTcpIi8+CiAgICAgIDwvbWFzaz4KICAgICAgPHVzZSBmaWxsPSIjMjkzODRBIiBmaWxsLW9wYWNpdHk9Ii4yIiB4bGluazpocmVmPSIjZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzU2IDMyNTcpIiBtYXNrPSJ1cmwoI2UpIi8+CiAgICAgIDxnIGZpbGw9IiMwNzE2MjciIGZpbGwtb3BhY2l0eT0iLjMiPgogICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI2YiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY4Ny41MiAzMjgwLjAyKSIvPgogICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI2YiIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIC0xIDY4Ny41MiAzMjc0Ljk4KSIvPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9nPgogIDxkZWZzPgogICAgPGZpbHRlciBpZD0iYyIgd2lkdGg9IjM1NiIgaGVpZ2h0PSI0MyIgeD0iMzU0IiB5PSIzMjU2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CiAgICAgIDxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CiAgICAgIDxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPgogICAgICA8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMjU1IDAiIHJlc3VsdD0iaGFyZEFscGhhIi8+CiAgICAgIDxmZU9mZnNldCBkeT0iMSIvPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxIi8+CiAgICAgIDxmZUNvbXBvc2l0ZSBpbjI9ImhhcmRBbHBoYSIgb3BlcmF0b3I9ImFyaXRobWV0aWMiIGsyPSItMSIgazM9IjEiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwLjEgMCIvPgogICAgICA8ZmVCbGVuZCBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3ciLz4KICAgIDwvZmlsdGVyPgogICAgPHBhdGggaWQ9ImIiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMkMwIC44OTU0MzEuODk1NDMxIDAgMiAwaDM0OGMxLjEwNSAwIDIgLjg5NTQzMSAyIDJ2MzZjMCAxLjEwNDYtLjg5NSAyLTIgMkgyYy0xLjEwNDU2OSAwLTItLjg5NTQtMi0yVjJ6Ii8+CiAgICA8cGF0aCBpZD0iZCIgZD0iTTIgMWgzNDh2LTJIMnYyem0zNDkgMXYzNmgyVjJoLTJ6bS0xIDM3SDJ2MmgzNDh2LTJ6TTEgMzhWMmgtMnYzNmgyek0yLTFDLjM0MzE0Ni0xLTEgLjM0MzE0Ni0xIDJoMmMwLS41NTIyOC40NDc3Mi0xIDEtMXYtMnptMzQ4IDJjLjU1MiAwIDEgLjQ0NzcyIDEgMWgyYzAtMS42NTY4NTQtMS4zNDMtMy0zLTN2MnptMSAzN2MwIC41NTIzLS40NDggMS0xIDF2MmMxLjY1NyAwIDMtMS4zNDMxIDMtM2gtMnpNMiAzOWMtLjU1MjI4IDAtMS0uNDQ3Ny0xLTFoLTJjMCAxLjY1NjkgMS4zNDMxNDYgMyAzIDN2LTJ6Ii8+CiAgICA8cGF0aCBpZD0iZiIgZD0iTTQuMDI1MjggNC4wNDgxOWwtLjcwNzEuNzA3MS43MDcxLjcwNzExLjcwNzExLS43MDcxMS0uNzA3MTEtLjcwNzF6TS0uNzA3MTA3LjczMDAxTDMuMzE4MTggNC43NTUyOWwxLjQxNDIxLTEuNDE0MjFMLjcwNzEwNy0uNjg0MjAzLS43MDcxMDcuNzMwMDF6TTQuNzMyMzkgNC43NTUyOUw4Ljc4MDU4LjcwNzEwNyA3LjM2NjM2LS43MDcxMDcgMy4zMTgxOCAzLjM0MTA4bDEuNDE0MjEgMS40MTQyMXoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
+        background-position: right;
+        padding-right:30px;
+        padding: 0 15px;
+        margin-bottom: 10px;
+
+        @include focus;
+        @include disabled;
+
+        option{
+            height: 40px;
+            width: 90%;
+            padding: 0 10px;
+            line-height: 100%;
+            font-size: 14px;
+            &:hover{
+                background-color: color("sky-blue");
+            }
+        }
+    }
+
+    span.itn-checkbox {
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        input[type=checkbox]{
+            opacity: 0;
+            display: none;
+
+            &+label{
+                position: relative;
+            }
+
+            &+label:before{
+                content: "\200b";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                border: 1px solid rgba($border-color, .2);
+                border-radius: 2px;
+                margin-right: 5px;
+                vertical-align: -8px;
+            }
+
+            &:focus+label:before{
+                border-color: $focus-color;
+            }
+
+            &:checked+label:before{
+                background-color: $focus-color;
+            }
+
+            &:checked+label:after{
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 7px;
+                background: white;
+                width: 2px;
+                height: 2px;
+                box-shadow: 
+                2px 0 0 white,
+                4px 0 0 white,
+                4px -2px 0 white,
+                4px -4px 0 white,
+                4px -6px 0 white,
+                4px -8px 0 white;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    span.itn-radio {
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        input[type=radio]{
+            opacity: 0;
+            display: none;
+
+            &+label{
+                position: relative;
+            }
+
+            &+label:before{
+                content: "\200b";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                border: 1px solid rgba($border-color, .2);
+                border-radius: 50%;
+                margin-right: 5px;
+                vertical-align: -8px;
+            }
+
+            &:focus+label:before{
+                border-color: $focus-color;
+            }
+
+            &:checked+label:before{
+                background-color: $focus-color;
+            }
+
+            &:checked+label:after{
+                content: '';
+                position: absolute;
+                left: 7px;
+                top: 5px;
+                background: white;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+
+}
+
+.form-field--has-errors {
+    color: color('alarm-red');
+    input[aria-invalid="true"], input[aria-invalid="true"]:focus {
+        width: calc(100% - 45px);
+        @include inputStyle;
+        border: 1px solid color('alarm-red');
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIyOCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGlkPSJzZXQyLWVycm9yIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhMTkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIGZpbGw9IiNlOTQ2NTkiLz4KICA8ZGVmcz4KICAgIDxwYXRoIGlkPSJhMTkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEwIDIwYzUuNTIyOSAwIDEwLTQuNDc3MiAxMC0xMCAwLTUuNTIyODMtNC40NzcxLTEwLTEwLTEwQzQuNDc3MTQgMCAwIDQuNDc3MTcgMCAxMGMwIDUuNTIyOCA0LjQ3NzE0IDEwIDEwIDEwek05LjU3MjYgNGMtLjU2NTIxIDAtMS4wMTgxLjQ2ODAyLS45OTk0NSAxLjAzMjk2bC4xODQwMiA1LjU3ODE0Yy4wMTc3Ni41MzkyLjQ1OTk5Ljk2Ny45OTk0NS45NjdoLjU2NDg4Yy41Mzk1IDAgLjk4MTctLjQyNzguOTk5NS0uOTY3bC4xODQtNS41NzgxNEMxMS41MjM2IDQuNDY4MDIgMTEuMDcwNyA0IDEwLjUwNTUgNGgtLjkzMjl6bS40NjY1IDExLjU0NjljLTEuMDA3ODUgMC0xLjU5Mzc5LS41MjM1LTEuNTkzNzktMS40MjE5IDAtLjkwNjIuNTg1OTQtMS40Mjk3IDEuNTkzNzktMS40Mjk3IDEuMDA3OCAwIDEuNjAxNS41MjM1IDEuNjAxNSAxLjQyOTcgMCAuODk4NC0uNTkzNyAxLjQyMTktMS42MDE1IDEuNDIxOXoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
+        background-position: right;
+        padding-right:30px;
+    }
+}
+
+// Select
+//
+// Markup:
+//  <div class="form-field">
+//   <label for="select">Test</label>
+//   <select placeholder="Placeholder" id="select">
+//      <option value="unknown">unknown</option>
+//      <option value="male">male</option>
+//      <option value="female">female</option>
+//   </select>
+//  </div>
+//
+// Weight: 2
+//
+// Style guide: FormElements.Select
+
+// Checkbox
+//
+// Markup:
+//   <div class="form-field">
+//    <span class="itn-checkbox">
+//     <input type="checkbox" id="checkbox1" /> 
+//     <label for="checkbox1">Option one</label>
+//    </span>
+//    <span class="itn-checkbox">
+//     <input type="checkbox" id="checkbox2" checked/> 
+//     <label for="checkbox2">Option two</label>
+//    </span>
+//   </div>
+//
+// Weight: 3
+//
+// Style guide: FormElements.Checkbox
+
+// Radio
+//
+// Markup:
+//   <div class="form-field">
+//    <span class="itn-radio">
+//     <input type="radio" id="radio1" name="radio" /> 
+//     <label for="radio1">Option one</label>
+//    </span>
+//    <span class="itn-radio">
+//     <input type="radio" id="radio2" name="radio" checked/> 
+//     <label for="radio2">Option two</label>
+//    </span>
+//   </div>
+//
+// Weight: 4
+//
+// Style guide: FormElements.Radio

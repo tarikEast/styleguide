@@ -1,0 +1,98 @@
+// Depricated
+//
+// Depricated styles
+//
+// weight: 150
+//
+// Style guide: Depricated
+
+
+// Colors
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   background-color: color("green");
+// }
+// </pre>
+//
+// Markup:
+// <div class="color-sample sample1"></div>
+// <div class="color-sample sample2"></div>
+// <div class="color-sample sample3"></div>
+// <div class="color-sample sample4"></div>
+// <div class="color-sample sample5"></div>
+// <div class="color-sample sample6"></div>
+// <div class="color-sample sample7"></div>
+// <div class="color-sample sample8"></div>
+// <div class="color-sample sample9"></div>
+// <div class="color-sample sample10"></div>
+// <div class="color-sample sample11"></div>
+// <div class="color-sample"> +++ not in pattern library +++ </div>
+// <div class="color-sample sample12"></div>
+// <div class="color-sample sample13"></div>
+// <div class="color-sample sample14"></div>
+// <div class="color-sample sample15"></div>
+// <div class="color-sample sample16"></div>
+// <div class="color-sample sample17"></div>
+// <div class="color-sample sample18"></div>
+// <div class="color-sample sample19"></div>
+//
+// Style guide: Depricated.Colors
+
+// color palette
+
+$colors: (
+  // in Sketch pattern library
+  'white': #FFFFFF,
+  'grey-lighter': #F0F0F0,
+  'grey-light': #DCDCDC,
+  'grey': #C8C8C8,
+  'grey-dark': #B4B4B4,
+  'black': #3C3C3C,
+
+  'orange': #FF8D11,
+  'red': #EC2B4B,
+  'blue': #5299CE, // was #00CCFF;
+  'green': #81C538,
+  'green-light': #C4E79E, // was #B9E58D;
+
+  // not in Sketch pattern library
+  'grey-darker': #797979,
+  'yellow': #FFD700,
+  'yellow-light': #FFECAB,
+  'red-light': lighten(#EC2B4B, 10),
+  'purple': #4A38A5,
+  'blue-light': #40ABEC,
+  'blue-lighter': #ADCCE6,
+  'green-ci': #71BD2B,
+  'green-lighter': #D3EEB7
+);
+
+@function color($name) {
+  @if not map-has-key($colors, $name) {
+    @warn "Color `#{$name}` not found.";
+  }
+  @return map-get($colors, $name);
+}
+
+// generate samples
+.color-sample {
+  height: 40px;
+  padding-left: 5px;
+  line-height: 40px;
+
+  $color-names: map-keys($colors);
+  @each $name, $value in $colors {
+    &.sample#{index($color-names, $name)} {
+      background-color: $value;
+      @if (lightness($value) < 49) {
+        color: color("white");
+      }
+      &:after {
+        content: "#{$name}: #{$value}";
+      }
+    }
+  }
+}
