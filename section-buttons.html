@@ -245,44 +245,42 @@
         <li class="kss-nav__menu-item">
           <a href="section-buttons.html">
           <span class="kss-nav__ref">5</span
-          ><span class="kss-nav__name">Buttons &amp; links</span>
+          ><span class="kss-nav__name">Buttons</span>
         </a> 
           <ul class="kss-nav__menu-child">
                
             <li class="kss-nav__menu-item">
-              <a href="section-buttons.html#kssref-buttons-buttonmixins">
+              <a href="section-buttons.html#kssref-buttons-mixin">
                 <span class="kss-nav__ref ">5.1</span
                 ><span class="kss-nav__name">nd-button($style)</span>
-              </a>
-            </li>
-              
-            <li class="kss-nav__menu-item">
-              <a href="section-buttons.html#kssref-buttons-buttons">
-                <span class="kss-nav__ref ">5.2</span
-                ><span class="kss-nav__name">Buttons</span>
               </a>
             </li>
              
           </ul>
         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-base.html">
+          <a href="section-links.html">
           <span class="kss-nav__ref">6</span
+          ><span class="kss-nav__name">Links</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-base.html">
+          <span class="kss-nav__ref">7</span
           ><span class="kss-nav__name">Base</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-mixins.html">
-          <span class="kss-nav__ref">7</span
+          <span class="kss-nav__ref">8</span
           ><span class="kss-nav__name">Mixins</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-modules.html">
-          <span class="kss-nav__ref">8</span
+          <span class="kss-nav__ref">9</span
           ><span class="kss-nav__name">Modules</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-depricated.html">
-          <span class="kss-nav__ref">9</span
+          <span class="kss-nav__ref">10</span
           ><span class="kss-nav__name">Depricated</span>
         </a>         </li>
       </ul>
@@ -301,62 +299,9 @@
                 #Buttons
             </span>
           </span>
-          Buttons &amp; links
-        </a>
-          </h1>
-
-         </div>
-
- 
-    </div>
-        <section id="kssref-buttons-buttonmixins" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-buttons-buttonmixins">
-          <span class="kss-title__ref">
-              5.1
-            <span class="kss-title__permalink-hash">
-                #Buttons.ButtonMixins
-            </span>
-          </span>
-          nd-button($style)
-        </a>
-          </h2>
-
-          <ul class="kss-parameters">
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">$style</code>
-              <div class="kss-parameters__description">Name of the style.</div>
-            </li>
-          </ul>
-           
-          <div class="kss-description">
-            <p>Sass mixin to get button styling to the component.</p>
-<p>Usage:</p>
-<pre>
-.my-component {
-  @include nd-button('primary-lime');
-}
-</pre>
-          </div>
-        </div>
-
-     </section>
-            <section id="kssref-buttons-buttons" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-buttons-buttons">
-          <span class="kss-title__ref">
-              5.2
-            <span class="kss-title__permalink-hash">
-                #Buttons.Buttons
-            </span>
-          </span>
           Buttons
         </a>
-          </h2>
+          </h1>
 
          </div>
 
@@ -537,7 +482,42 @@
 &lt;/button&gt;
 &lt;button class=&quot;--block [modifier class]&quot;&gt;Click me&lt;/button&gt;</code></pre>
         </div>
-             </section>
+         
+    </div>
+        <section id="kssref-buttons-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-buttons-mixin">
+          <span class="kss-title__ref">
+              5.1
+            <span class="kss-title__permalink-hash">
+                #Buttons.Mixin
+            </span>
+          </span>
+          nd-button($style)
+        </a>
+          </h2>
+
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <code class="kss-parameters__name">$style</code>
+              <div class="kss-parameters__description">Name of the style.</div>
+            </li>
+          </ul>
+           
+          <div class="kss-description">
+            <p>Sass mixin to get button styling to the component.</p>
+<p>Usage:</p>
+<pre>
+.my-component {
+  @include nd-button('primary-lime');
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
       
   </article>
 

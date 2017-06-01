@@ -530,6 +530,11 @@ h1, h2, h3, p, div {
   letter-spacing: normal;
   text-transform: none;
   line-height: 1; }
+  .--nd-primary-headline svg.scale {
+    height: 20px;
+    width: auto;
+    vertical-align: text-top;
+    fill: currentColor; }
 
 .--nd-secondary-headline {
   font-family: "SF UI Display", "Segoe UI", "Roboto", sans-serif;
@@ -539,6 +544,11 @@ h1, h2, h3, p, div {
   letter-spacing: normal;
   text-transform: none;
   line-height: 1; }
+  .--nd-secondary-headline svg.scale {
+    height: 14px;
+    width: auto;
+    vertical-align: text-top;
+    fill: currentColor; }
 
 .--nd-sub-headline {
   font-family: "SF UI Display", "Segoe UI", "Roboto", sans-serif;
@@ -548,6 +558,11 @@ h1, h2, h3, p, div {
   letter-spacing: normal;
   text-transform: none;
   line-height: 1; }
+  .--nd-sub-headline svg.scale {
+    height: 14px;
+    width: auto;
+    vertical-align: text-top;
+    fill: currentColor; }
 
 .--nd-meta-headline {
   font-family: "SF UI Display", "Segoe UI", "Roboto", sans-serif;
@@ -557,6 +572,11 @@ h1, h2, h3, p, div {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 1; }
+  .--nd-meta-headline svg.scale {
+    height: 10px;
+    width: auto;
+    vertical-align: text-top;
+    fill: currentColor; }
 
 .--nd-paragraph-text {
   font-family: "SF UI Display", "Segoe UI", "Roboto", sans-serif;
@@ -566,6 +586,11 @@ h1, h2, h3, p, div {
   letter-spacing: normal;
   text-transform: none;
   line-height: 20px; }
+  .--nd-paragraph-text svg.scale {
+    height: 12px;
+    width: auto;
+    vertical-align: text-top;
+    fill: currentColor; }
 
 .text-style-sample.sample1 {
   font-size: 112px;
@@ -845,23 +870,23 @@ input[type=submit].--primary-lime {
     input[type=button].--primary-lime.--link:hover,
     input[type=submit].--primary-lime.--link:hover {
       background-color: #ffffff;
-      color: #24a600; }
+      color: #23a000; }
     button.--primary-lime.--link:active,
     .button.--primary-lime.--link:active,
     input[type=button].--primary-lime.--link:active,
     input[type=submit].--primary-lime.--link:active {
       background-color: #ffffff;
-      color: #24a600; }
+      color: #23a000; }
   button.--primary-lime:hover,
   .button.--primary-lime:hover,
   input[type=button].--primary-lime:hover,
   input[type=submit].--primary-lime:hover {
-    background-color: #30d900; }
+    background-color: #31de00; }
   button.--primary-lime:active,
   .button.--primary-lime:active,
   input[type=button].--primary-lime:active,
   input[type=submit].--primary-lime:active {
-    background-color: #24a600; }
+    background-color: #23a000; }
 
 button.--primary-blue,
 .button.--primary-blue,
@@ -919,23 +944,23 @@ input[type=submit].--primary-blue {
     input[type=button].--primary-blue.--link:hover,
     input[type=submit].--primary-blue.--link:hover {
       background-color: #ffffff;
-      color: #0f6aeb; }
+      color: #0f68e6; }
     button.--primary-blue.--link:active,
     .button.--primary-blue.--link:active,
     input[type=button].--primary-blue.--link:active,
     input[type=submit].--primary-blue.--link:active {
       background-color: #ffffff;
-      color: #0f6aeb; }
+      color: #0f68e6; }
   button.--primary-blue:hover,
   .button.--primary-blue:hover,
   input[type=button].--primary-blue:hover,
   input[type=submit].--primary-blue:hover {
-    background-color: #3a87f3; }
+    background-color: #3f8af3; }
   button.--primary-blue:active,
   .button.--primary-blue:active,
   input[type=button].--primary-blue:active,
   input[type=submit].--primary-blue:active {
-    background-color: #0f6aeb; }
+    background-color: #0f68e6; }
 
 button.--secondary-metal,
 .button.--secondary-metal,
@@ -993,23 +1018,23 @@ input[type=submit].--secondary-metal {
     input[type=button].--secondary-metal.--link:hover,
     input[type=submit].--secondary-metal.--link:hover {
       background-color: #ffffff;
-      color: #79819d; }
+      color: #767e9b; }
     button.--secondary-metal.--link:active,
     .button.--secondary-metal.--link:active,
     input[type=button].--secondary-metal.--link:active,
     input[type=submit].--secondary-metal.--link:active {
       background-color: #ffffff;
-      color: #79819d; }
+      color: #767e9b; }
   button.--secondary-metal:hover,
   .button.--secondary-metal:hover,
   input[type=button].--secondary-metal:hover,
   input[type=submit].--secondary-metal:hover {
-    background-color: #979db3; }
+    background-color: #9aa0b5; }
   button.--secondary-metal:active,
   .button.--secondary-metal:active,
   input[type=button].--secondary-metal:active,
   input[type=submit].--secondary-metal:active {
-    background-color: #79819d; }
+    background-color: #767e9b; }
 
 button.--secondary-abort,
 .button.--secondary-abort,
@@ -1067,23 +1092,23 @@ input[type=submit].--secondary-abort {
     input[type=button].--secondary-abort.--link:hover,
     input[type=submit].--secondary-abort.--link:hover {
       background-color: #ffffff;
-      color: rgba(121, 129, 157, 0.15); }
+      color: rgba(118, 126, 155, 0.15); }
     button.--secondary-abort.--link:active,
     .button.--secondary-abort.--link:active,
     input[type=button].--secondary-abort.--link:active,
     input[type=submit].--secondary-abort.--link:active {
       background-color: #ffffff;
-      color: rgba(121, 129, 157, 0.15); }
+      color: rgba(118, 126, 155, 0.15); }
   button.--secondary-abort:hover,
   .button.--secondary-abort:hover,
   input[type=button].--secondary-abort:hover,
   input[type=submit].--secondary-abort:hover {
-    background-color: rgba(151, 157, 179, 0.15); }
+    background-color: rgba(154, 160, 181, 0.15); }
   button.--secondary-abort:active,
   .button.--secondary-abort:active,
   input[type=button].--secondary-abort:active,
   input[type=submit].--secondary-abort:active {
-    background-color: rgba(121, 129, 157, 0.15); }
+    background-color: rgba(118, 126, 155, 0.15); }
 
 input[type=text],
 input[type=email],
@@ -1205,6 +1230,28 @@ a {
     color: #C8C8C8; }
     a.muted:hover {
       color: #afafaf; }
+
+a.--primary-lime {
+  color: #2abf00;
+  text-decoration: none;
+  cursor: pointer; }
+  a.--primary-lime:hover {
+    color: #23a000; }
+  a.--primary-lime.muted {
+    color: #888FA8; }
+    a.--primary-lime.muted:hover {
+      color: #767e9b; }
+
+a.--primary-blue {
+  color: #2278f1;
+  text-decoration: none;
+  cursor: pointer; }
+  a.--primary-blue:hover {
+    color: #0f68e6; }
+  a.--primary-blue.muted {
+    color: #888FA8; }
+    a.--primary-blue.muted:hover {
+      color: #767e9b; }
 
 label {
   display: inline-block;
