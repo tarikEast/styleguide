@@ -797,7 +797,8 @@ input[type=submit].--primary-lime {
   min-height: 28px;
   text-transform: none;
   font-size: 13px;
-  line-height: 28px; }
+  line-height: 28px;
+  width: auto; }
   button.--primary-lime.--icon,
   .button.--primary-lime.--icon,
   input[type=button].--primary-lime.--icon,
@@ -864,7 +865,8 @@ input[type=submit].--primary-blue {
   min-height: 28px;
   text-transform: none;
   font-size: 13px;
-  line-height: 28px; }
+  line-height: 28px;
+  width: auto; }
   button.--primary-blue.--icon,
   .button.--primary-blue.--icon,
   input[type=button].--primary-blue.--icon,
@@ -931,7 +933,8 @@ input[type=submit].--secondary-metal {
   min-height: 28px;
   text-transform: none;
   font-size: 13px;
-  line-height: 28px; }
+  line-height: 28px;
+  width: auto; }
   button.--secondary-metal.--icon,
   .button.--secondary-metal.--icon,
   input[type=button].--secondary-metal.--icon,
@@ -998,7 +1001,8 @@ input[type=submit].--secondary-abort {
   min-height: 28px;
   text-transform: none;
   font-size: 13px;
-  line-height: 28px; }
+  line-height: 28px;
+  width: auto; }
   button.--secondary-abort.--icon,
   .button.--secondary-abort.--icon,
   input[type=button].--secondary-abort.--icon,

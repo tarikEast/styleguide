@@ -250,8 +250,15 @@
           <ul class="kss-nav__menu-child">
                
             <li class="kss-nav__menu-item">
-              <a href="section-buttons.html#kssref-buttons-buttons">
+              <a href="section-buttons.html#kssref-buttons-buttonmixins">
                 <span class="kss-nav__ref ">5.1</span
+                ><span class="kss-nav__name">nd-button($style)</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-buttons.html#kssref-buttons-buttons">
+                <span class="kss-nav__ref ">5.2</span
                 ><span class="kss-nav__name">Buttons</span>
               </a>
             </li>
@@ -302,13 +309,47 @@
 
  
     </div>
-        <section id="kssref-buttons-buttons" class="kss-section kss-section--depth-2">
+        <section id="kssref-buttons-buttonmixins" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-buttons-buttonmixins">
+          <span class="kss-title__ref">
+              5.1
+            <span class="kss-title__permalink-hash">
+                #Buttons.ButtonMixins
+            </span>
+          </span>
+          nd-button($style)
+        </a>
+          </h2>
+
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <code class="kss-parameters__name">$style</code>
+              <div class="kss-parameters__description">Name of the style.</div>
+            </li>
+          </ul>
+           
+          <div class="kss-description">
+            <p>Sass mixin to get button styling to the component.</p>
+<p>Usage:</p>
+<pre>
+.my-component {
+  @include nd-button('primary-headline');
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-buttons-buttons" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h2 class="kss-title kss-title--level-2">
             <a class="kss-title__permalink" href="#kssref-buttons-buttons">
           <span class="kss-title__ref">
-              5.1
+              5.2
             <span class="kss-title__permalink-hash">
                 #Buttons.Buttons
             </span>
