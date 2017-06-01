@@ -1,10 +1,3 @@
-// Buttons & links
-//
-// Weight: -95
-//
-// Style guide: Buttons
-
-
 // Buttons
 //
 // .--primary-lime - Primary lime button styling
@@ -34,10 +27,30 @@
 //   </svg>
 //   Click me
 // </button> 
+// <button class="--block {{modifier_class}}">Click me</button>
 //
-// Weight: 1
+// Weight: -95
 //
-// Style guide: Buttons.Buttons
+// Style guide: Buttons
+
+// nd-button($style)
+//
+// Sass mixin to get button styling to the component.
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   @include nd-button('primary-lime');
+// }
+// </pre>
+//
+// $style - Name of the style.
+//
+// Weight:1
+//
+// Style guide: Buttons.Mixin
+
 $nd-button-defaults: (
     padding: 0 10px,
     icon-padding: 0 10px 0 0,    
@@ -45,12 +58,17 @@ $nd-button-defaults: (
     border: none,
     height: 28px,
     min-height: 28px,
+    width: auto,
     text-transform: none,
     font-size: 13px,
     line-height: 28px
 );
 
 $nd-button-config:(
+    'default': (
+        background-color: nd-color('lime'),
+        color: nd-color('white')
+    ),
     'primary-lime':(
         background-color: nd-color('lime'),
         color: nd-color('white')
@@ -70,6 +88,9 @@ $nd-button-config:(
 );
 
 @mixin nd-button($style){
+    @if not map-has-key($nd-button-config, $style) {
+        @error "Invalid style specified! Choose one of #{map-keys($nd-button-config)}";
+    } 
     $button-style: map-get($nd-button-config, $style);
     background-color: map-get($button-style, 'background-color');
     color: map-get($button-style, 'color');
@@ -80,6 +101,7 @@ $nd-button-config:(
     text-transform: map-get($nd-button-defaults, 'text-transform');
     font-size: map-get($nd-button-defaults, 'font-size');
     line-height: map-get($nd-button-defaults, 'line-height');
+    width: map-get($nd-button-defaults, 'width');
 
     &.--icon{
         padding: map-get($nd-button-defaults, 'icon-padding');
@@ -101,27 +123,32 @@ $nd-button-config:(
         }
     }
 
+    &.--block {
+        display: block;
+        width: 100%;
+    }
+
     &.--link{
         background-color: nd-color('white');
         color: map-get($button-style, 'background-color');
 
         &:hover{
             background-color: nd-color('white');
-            color: darken(map-get($button-style, 'background-color'), 5%);
+            color: darken(map-get($button-style, 'background-color'), $hover-modificator);
         }
 
         &:active{
             background-color: nd-color('white');            
-            color: darken(map-get($button-style, 'background-color'), 5%);
+            color: darken(map-get($button-style, 'background-color'), $hover-modificator);
         }
     }
 
     &:hover{
-        background-color: lighten(map-get($button-style, 'background-color'), 5%);
+        background-color: lighten(map-get($button-style, 'background-color'), $hover-modificator);
     }
 
     &:active{
-        background-color: darken(map-get($button-style, 'background-color'), 5%);
+        background-color: darken(map-get($button-style, 'background-color'), $hover-modificator);
     }
 }
 

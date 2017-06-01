@@ -63,14 +63,20 @@ $nd-colors: (
 
 @function nd-color($name) {
   @if not map-has-key($nd-colors, $name) {
-    @error "Invalid color specified (color specified: #{$name})! Choose one of #{map-keys($nd-colors)}";
-  }
+    @error "Invalid color specified! Choose one of #{map-keys($nd-colors)}";
+  } 
   @return map-get($nd-colors, $name);
 }
 
 @mixin nd-color($bgColor, $fontColor){
-  background-color: color($bgColor);
-  color: color($fontColor);
+  @if not map-has-key($nd-colors, $bgColor) {
+    @error "Invalid color specified for background! Choose one of #{map-keys($nd-colors)}";
+  } 
+  @if not map-has-key($nd-colors, $fontColor) {
+    @error "Invalid color specified for font color! Choose one of #{map-keys($nd-colors)}";
+  } 
+  background-color: nd-color($bgColor);
+  color: nd-color($fontColor);
 }
 
 // generate samples

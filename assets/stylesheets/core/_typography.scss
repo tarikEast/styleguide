@@ -75,6 +75,7 @@ $nd-typography-config: (
 );
 
 @mixin nd-typography($style){
+    @include nd-font-family();
     @if not map-has-key($nd-typography-config, $style) {
         @error "Invalid style specified! Choose one of #{map-keys($nd-typography-config)}";
     }
@@ -86,6 +87,12 @@ $nd-typography-config: (
     letter-spacing: map-get($style-props , "letter-spacing");
     text-transform: map-get($style-props , "text-transformation"); 
     line-height: map-get($style-props , "line-height"); 
+    svg.scale{
+        height: map-get($style-props , "font-size");        
+        width: auto;
+        vertical-align: text-top;
+        fill: currentColor;
+    }
 }
 
 @each $name, $value in $nd-typography-config {

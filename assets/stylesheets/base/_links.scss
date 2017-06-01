@@ -1,29 +1,124 @@
-
 // Links
 //
-// Your standard link suitable for clicking.
-//
-// :hover    - Highlights when hovering.
-// .muted    - dimmed version
+// .--primary-lime - Primary lime link styling
+// .--primary-blue - Primary royal blue link styling
+// .muted - Muted link
 //
 // Markup:
-// <a href="#" class="{{modifier_class}}">Click Link</a>
+//  <div class="--nd-primary-headline">
+//    This is <a href="#" class="{{modifier_class}}">link</a>
+//    <a href="#" class="{{modifier_class}}">
+//      <svg width="28" height="28" class="scale" viewBox="0 0 28 28">
+//        <use xlink:href="#set2-comment" />
+//      </svg>
+//      icon link
+//    </a>
+//  </div>
+//  <div class="--nd-secondary-headline">
+//    This is a sample <a href="#" class="{{modifier_class}}">link</a>
+//    <a href="#" class="{{modifier_class}}">
+//      <svg width="28" height="28" class="scale" viewBox="0 0 28 28">
+//        <use xlink:href="#set2-comment" />
+//      </svg>
+//      icon link
+//    </a>
+//  </div>
+//  <div class="--nd-sub-headline">
+//    This is a sample <a href="#" class="{{modifier_class}}">link</a>
+//    <a href="#" class="{{modifier_class}}">
+//      <svg width="28" height="28" class="scale" viewBox="0 0 28 28">
+//        <use xlink:href="#set2-comment" />
+//      </svg>
+//      icon link
+//    </a>
+//  </div>
+//  <div class="--nd-meta-headline">
+//    This is a sample <a href="#" class="{{modifier_class}}">link</a>
+//    <a href="#" class="{{modifier_class}}">
+//      <svg width="28" height="28" class="scale" viewBox="0 0 28 28">
+//        <use xlink:href="#set2-comment" />
+//      </svg>
+//      icon link
+//    </a>
+//  </div>
+//  <div class="--nd-paragraph-text">
+//    This is a sample <a href="#" class="{{modifier_class}}">link</a>
+//    <a href="#" class="{{modifier_class}}">
+//      <svg width="28" height="28" class="scale" viewBox="0 0 28 28">
+//        <use xlink:href="#set2-comment" />
+//      </svg>
+//      icon link
+//    </a>
+//  </div>
 //
-// Style guide: Base.Links
+// Weight: -94
+//
+// Style guide: Links
 
-a {
-  color: color("grey-dark");
-  text-decoration: none;
+// nd-link($style)
+//
+// Sass mixin to get link styling to the component.
+//
+// Usage:
+//
+// <pre>
+// .my-component {
+//   @include nd-link('primary-lime');
+// }
+// </pre>
+//
+// $style - Name of the style.
+//
+// Weight:1
+//
+// Style guide: Links.Mixin
+
+$nd-link-defaults: (
+  muted-color: nd-color('metal'),
+  text-decoration: none,
+  cursor: pointer
+);
+
+$nd-link-config:(
+  'default': (
+      color: nd-color('royal-blue')
+  ),
+  'primary-lime':(
+      color: nd-color('lime')
+  ),
+  'primary-blue':(
+      color: nd-color('royal-blue')
+  )
+);
+
+@mixin nd-link($style){
+  @if not map-has-key($nd-link-config, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys(nd-link-config)}";
+  }
+  $link-style: map-get($nd-link-config, $style);
+
+  color: map-get($link-style, 'color');
+  text-decoration: map-get($nd-link-defaults, 'text-decoration');
+  cursor: map-get($nd-link-defaults, 'cursor');
 
   &:hover {
-    color: darken(color("grey-dark"), 10);
+    color: darken(map-get($link-style, 'color'), $hover-modificator);
   }
 
   &.muted {
-    color: color("grey");
-
+    color: map-get($nd-link-defaults, 'muted-color');
+    
     &:hover {
-      color: darken(color("grey"), 10);
+      color: darken(map-get($nd-link-defaults, 'muted-color'), $hover-modificator);
     }
+  }
+}
+
+a {
+  &.--primary-lime{
+    @include nd-link('primary-lime');
+  }
+  &.--primary-blue{
+    @include nd-link('primary-blue');
   }
 }
