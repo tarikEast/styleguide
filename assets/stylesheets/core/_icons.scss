@@ -1,0 +1,112 @@
+// Icons
+//
+// Weight: -97
+//
+// Style guide: Icons
+
+// Set 1
+//
+// Markup:
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-activity" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-arrow-down" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-arrow-side" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-check" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-close" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-comment" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-edit" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-filter" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-flag" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-mail" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-phone" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-plus" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-setting" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-trash" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set1-view" />
+// </svg>
+//
+// Weight: 1
+//
+// Style guide: Icons.Set1
+
+// Set 2
+//
+// Markup:
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-check" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-comment" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-edit" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-error" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-flag" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-link" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-plus" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28">
+//   <use xlink:href="#set2-search" />
+// </svg>
+//
+// Weight: 2
+//
+// Style guide: Icons.Set2
+
+.--nd-icon-error{
+  color: nd-color('alarm-red');
+}
+
+.--nd-select-arrow{
+  color: rgba(#071627, .3);
+}
+
+// Set 3 (additional icons)
+//
+// Markup:
+// <svg width="28" height="28" viewBox="0 0 28 28" class="--nd-icon-error">
+//   <use xlink:href="#set2-error" />
+// </svg>
+// <svg width="28" height="28" viewBox="0 0 28 28" class="--nd-select-arrow">
+//   <use xlink:href="#select-arrow" />
+// </svg>
+//
+// Weight: 2
+//
+// Style guide: Icons.Set3

@@ -36,6 +36,7 @@ gulp.task('styleguide', function(cb) {
     "css": ["../dist/stylesheets/styleguide.css", "stylesheets/styleguide.css"], // hack to deploy better
     "destination":  "styleguide",
     "source": ["assets"],
+    "template": ["custom-template"],
     "title": "Node Style Guide"
   }, cb);
 });

@@ -2,11 +2,11 @@
 //
 // Defined typographies.
 //
-// .--tg-primary-headline - Apply primary headline
-// .--tg-secondary-headline - Apply secondary headline
-// .--tg-sub-headline - Apply sub headline
-// .--tg-meta-headline - Apply meta headline
-// .--tg-paragraph-text - Apply paragraph text
+// .--nd-primary-headline - Apply primary headline
+// .--nd-secondary-headline - Apply secondary headline
+// .--nd-sub-headline - Apply sub headline
+// .--nd-meta-headline - Apply meta headline
+// .--nd-paragraph-text - Apply paragraph text
 //
 // Markup:
 // <div class="{{modifier_class}}">This is a sample text</div>
@@ -31,7 +31,7 @@
 //
 // Style guide: Typography.Mixins
 
-$typography-config: (
+$nd-typography-config: (
     "primary-headline": (
         font-size: 20px,
         font-weight: 300,
@@ -75,10 +75,10 @@ $typography-config: (
 );
 
 @mixin nd-typography($style){
-    @if not map-has-key($typography-config, $style) {
-        @error "Invalid style specified! Choose one of #{map-keys($typography-config)}";
+    @if not map-has-key($nd-typography-config, $style) {
+        @error "Invalid style specified! Choose one of #{map-keys($nd-typography-config)}";
     }
-    $style-props: map-get($typography-config , $style);
+    $style-props: map-get($nd-typography-config , $style);
 
     font-size: map-get($style-props , "font-size");
     font-weight: map-get($style-props , "font-weight");
@@ -88,8 +88,8 @@ $typography-config: (
     line-height: map-get($style-props , "line-height"); 
 }
 
-@each $name, $value in $typography-config {
-    .--tg-#{$name}{
+@each $name, $value in $nd-typography-config {
+    .--nd-#{$name}{
         @include nd-typography($name);
     }
 }
