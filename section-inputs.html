@@ -226,18 +226,7 @@
           <a href="section-typeface.html">
           <span class="kss-nav__ref">1</span
           ><span class="kss-nav__name">Fonts</span>
-        </a> 
-          <ul class="kss-nav__menu-child">
-               
-            <li class="kss-nav__menu-item">
-              <a href="section-typeface.html#kssref-typeface-functions">
-                <span class="kss-nav__ref ">1.1</span
-                ><span class="kss-nav__name">nd-font-family()</span>
-              </a>
-            </li>
-             
-          </ul>
-        </li>
+        </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-colors.html">
           <span class="kss-nav__ref">2</span
@@ -267,7 +256,32 @@
           <a href="section-inputs.html">
           <span class="kss-nav__ref">7</span
           ><span class="kss-nav__name">Inputs</span>
-        </a>         </li>
+        </a> 
+          <ul class="kss-nav__menu-child">
+               
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-defaults-input-mixin">
+                <span class="kss-nav__ref ">7.1</span
+                ><span class="kss-nav__name">nd-input-defaults()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-text-inputs">
+                <span class="kss-nav__ref ">7.2</span
+                ><span class="kss-nav__name">Text inputs</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-text-input-mixin">
+                <span class="kss-nav__ref ">7.3</span
+                ><span class="kss-nav__name">nd-text-input()</span>
+              </a>
+            </li>
+             
+          </ul>
+        </li>
         <li class="kss-nav__menu-item">
           <a href="section-base.html">
           <span class="kss-nav__ref">8</span
@@ -293,70 +307,170 @@
   </div>
   <article role="main" class="kss-main">
    
-    <div id="kssref-typeface" class="kss-section kss-section--depth-1">
+    <div id="kssref-inputs" class="kss-section kss-section--depth-1">
 
         <div class="kss-style">
           <h1 class="kss-title kss-title--level-1">
-            <a class="kss-title__permalink" href="#kssref-typeface">
+            <a class="kss-title__permalink" href="#kssref-inputs">
           <span class="kss-title__ref">
-              1
+              7
             <span class="kss-title__permalink-hash">
-                #Typeface
+                #Inputs
             </span>
           </span>
-          Fonts
+          Inputs
         </a>
           </h1>
 
-          <ul class="kss-parameters">
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   macOS and iOS</code>
-              <div class="kss-parameters__description">SF UI Display<br></div>
-            </li>
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   Windows</code>
-              <div class="kss-parameters__description">Segoe UI<br></div>
-            </li>
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   Android</code>
-              <div class="kss-parameters__description">Roboto<br></div>
-            </li>
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   Default</code>
-              <div class="kss-parameters__description">sans-serif<br></div>
-            </li>
-          </ul>
-           
+ 
           <div class="kss-description">
-            <p>We&#39;re using platform-specific fonts to match the default system look</p>
+            <p>Form input element definitions</p>
 
           </div>
         </div>
 
  
     </div>
-        <section id="kssref-typeface-functions" class="kss-section kss-section--depth-2">
+        <section id="kssref-inputs-defaults-input-mixin" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-typeface-functions">
+            <a class="kss-title__permalink" href="#kssref-inputs-defaults-input-mixin">
           <span class="kss-title__ref">
-              1.1
+              7.1
             <span class="kss-title__permalink-hash">
-                #Typeface.Functions
+                #Inputs.Defaults Input Mixin
             </span>
           </span>
-          nd-font-family()
+          nd-input-defaults()
         </a>
           </h2>
 
  
           <div class="kss-description">
-            <p>Sass mixin that sets font family (used on body by default).</p>
+            <p>Sass mixin to add default look to the form inputs.</p>
 <p>Usage:</p>
 <pre>
-.my-component {
-  @include nd-font-family();
+.my-input {
+  @include nd-input-defaults();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-text-inputs" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-text-inputs">
+          <span class="kss-title__ref">
+              7.2
+            <span class="kss-title__permalink-hash">
+                #Inputs.Text Inputs
+            </span>
+          </span>
+          Text inputs
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Standard text input for text and email</p>
+
+          </div>
+        </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+          <div class="kss-modifier__default-name kss-style">
+            Default styling
+          </div>
+          <div class="kss-modifier__example">
+            <label for="text[modifier class]">Text</label>
+<input type="text" id="text[modifier class]" placeholder="Some text here" class="--nd-text-input [modifier class]">
+<label for="email[modifier class]">Email</label>
+<input type="email" id="email[modifier class]" placeholder="jon@doe.com" class="--nd-text-input [modifier class]">
+<label for="tel[modifier class]">Telephone</label>
+<input type="tel" id="tel[modifier class]" placeholder="+38762385235" class="--nd-text-input [modifier class]">
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :focus
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on focus box shadow
+          </div>
+          <div class="kss-modifier__example">
+            <label for="textpseudo-class-focus">Text</label>
+<input type="text" id="textpseudo-class-focus" placeholder="Some text here" class="--nd-text-input pseudo-class-focus">
+<label for="emailpseudo-class-focus">Email</label>
+<input type="email" id="emailpseudo-class-focus" placeholder="jon@doe.com" class="--nd-text-input pseudo-class-focus">
+<label for="telpseudo-class-focus">Telephone</label>
+<input type="tel" id="telpseudo-class-focus" placeholder="+38762385235" class="--nd-text-input pseudo-class-focus">
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :disabled
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on disabled opactiy is lowered
+          </div>
+          <div class="kss-modifier__example">
+            <label for="textpseudo-class-disabled">Text</label>
+<input type="text" id="textpseudo-class-disabled" placeholder="Some text here" class="--nd-text-input pseudo-class-disabled">
+<label for="emailpseudo-class-disabled">Email</label>
+<input type="email" id="emailpseudo-class-disabled" placeholder="jon@doe.com" class="--nd-text-input pseudo-class-disabled">
+<label for="telpseudo-class-disabled">Telephone</label>
+<input type="tel" id="telpseudo-class-disabled" placeholder="+38762385235" class="--nd-text-input pseudo-class-disabled">
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .--has-errors
+          </div>
+          <div class="kss-modifier__description kss-style">
+            when input have errors
+          </div>
+          <div class="kss-modifier__example">
+            <label for="text--has-errors">Text</label>
+<input type="text" id="text--has-errors" placeholder="Some text here" class="--nd-text-input --has-errors">
+<label for="email--has-errors">Email</label>
+<input type="email" id="email--has-errors" placeholder="jon@doe.com" class="--nd-text-input --has-errors">
+<label for="tel--has-errors">Telephone</label>
+<input type="tel" id="tel--has-errors" placeholder="+38762385235" class="--nd-text-input --has-errors">
+          </div>
+        </div>
+
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;text[modifier class]&quot;&gt;Text&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;text[modifier class]&quot; placeholder=&quot;Some text here&quot; class=&quot;--nd-text-input [modifier class]&quot;&gt;
+&lt;label for=&quot;email[modifier class]&quot;&gt;Email&lt;/label&gt;
+&lt;input type=&quot;email&quot; id=&quot;email[modifier class]&quot; placeholder=&quot;jon@doe.com&quot; class=&quot;--nd-text-input [modifier class]&quot;&gt;
+&lt;label for=&quot;tel[modifier class]&quot;&gt;Telephone&lt;/label&gt;
+&lt;input type=&quot;tel&quot; id=&quot;tel[modifier class]&quot; placeholder=&quot;+38762385235&quot; class=&quot;--nd-text-input [modifier class]&quot;&gt;</code></pre>
+        </div>
+             </section>
+            <section id="kssref-inputs-text-input-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-text-input-mixin">
+          <span class="kss-title__ref">
+              7.3
+            <span class="kss-title__permalink-hash">
+                #Inputs.Text Input Mixin
+            </span>
+          </span>
+          nd-text-input()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add default look to the form text inputs.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-text-input();
 }
 </pre>
           </div>
