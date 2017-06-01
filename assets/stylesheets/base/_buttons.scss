@@ -1,0 +1,143 @@
+// Buttons & links
+//
+// Weight: -95
+//
+// Style guide: Buttons
+
+
+// Buttons
+//
+// .--primary-lime - Primary lime button styling
+// .--primary-blue - Primary royal blue button styling
+// .--secondary-metal - Secondary metal button styling
+//
+// Markup:
+// <button class="{{modifier_class}}">Click me</button>
+// <input type="button" class="{{modifier_class}}" value="Click me">
+// <input type="submit" class="{{modifier_class}}" value="Click me">
+// <a href="#" class="button {{modifier_class}}">Click me</a>
+// <button class="--icon {{modifier_class}}">
+//   <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+//     <use xlink:href="#set1-activity" />
+//   </svg>
+//   Click me
+// </button> 
+// <button class="--icon-only {{modifier_class}}">
+//   <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+//     <use xlink:href="#set1-activity" />
+//   </svg>
+// </button> 
+// <button class="--link --icon {{modifier_class}}">
+//   <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+//     <use xlink:href="#set1-activity" />
+//   </svg>
+//   Click me
+// </button> 
+//
+// Weight: 1
+//
+// Style guide: Buttons.Buttons
+$nd-button-defaults: (
+    padding: 0 10px,
+    icon-padding: 0 10px 0 0,    
+    icon-only-padding: 0,    
+    border: none,
+    height: 28px,
+    min-height: 28px,
+    text-transform: none,
+    font-size: 13px,
+    line-height: 28px
+);
+
+$nd-button-config:(
+    'primary-lime':(
+        background-color: nd-color('lime'),
+        color: nd-color('white')
+    ),
+    'primary-blue':(
+        background-color: nd-color('royal-blue'),
+        color: nd-color('white')
+    ),
+    'secondary-metal':(
+        background-color: nd-color('metal'),
+        color: nd-color('white')
+    ),
+    'secondary-abort':(
+        background-color: rgba(nd-color('metal'),.15),
+        color: nd-color('carbon')
+    )
+);
+
+@mixin nd-button($style){
+    $button-style: map-get($nd-button-config, $style);
+    background-color: map-get($button-style, 'background-color');
+    color: map-get($button-style, 'color');
+    padding: map-get($nd-button-defaults, 'padding');
+    border: map-get($nd-button-defaults, 'border');
+    height: map-get($nd-button-defaults, 'height');
+    min-height: map-get($nd-button-defaults, 'min-height');
+    text-transform: map-get($nd-button-defaults, 'text-transform');
+    font-size: map-get($nd-button-defaults, 'font-size');
+    line-height: map-get($nd-button-defaults, 'line-height');
+
+    &.--icon{
+        padding: map-get($nd-button-defaults, 'icon-padding');
+
+        svg {
+            float: left;
+        }
+    }
+
+    &.--icon-only{
+        padding: 0;
+
+        svg {
+            float: left;
+        }
+
+        &:after{
+            content: "\200b";
+        }
+    }
+
+    &.--link{
+        background-color: nd-color('white');
+        color: map-get($button-style, 'background-color');
+
+        &:hover{
+            background-color: nd-color('white');
+            color: darken(map-get($button-style, 'background-color'), 5%);
+        }
+
+        &:active{
+            background-color: nd-color('white');            
+            color: darken(map-get($button-style, 'background-color'), 5%);
+        }
+    }
+
+    &:hover{
+        background-color: lighten(map-get($button-style, 'background-color'), 5%);
+    }
+
+    &:active{
+        background-color: darken(map-get($button-style, 'background-color'), 5%);
+    }
+}
+
+button, 
+.button,
+input[type=button],
+input[type=submit]{
+    &.--primary-lime{
+        @include nd-button('primary-lime')
+    }
+    &.--primary-blue{
+        @include nd-button('primary-blue')
+    }
+    &.--secondary-metal{
+        @include nd-button('secondary-metal')
+    }
+    &.--secondary-abort{
+        @include nd-button('secondary-abort')
+    }
+}
