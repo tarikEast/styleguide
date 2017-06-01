@@ -1,0 +1,119 @@
+// Buttons
+//
+// Your standard button suitable for clicking.
+//
+// :hover    - Highlights when hovering.
+// :disabled - Greyed out when disabled
+// .active   - Highlights when active
+// .button--warn - red button
+// .button--info - blue button
+// .button--add - dashed ouline button with plus sign added before text
+// .button--text - text only button (DEPRECATED: use a link instead)
+// .button--text.button--muted - text only button, muted text color
+//
+// Markup:
+// <button class="{{modifier_class}}">Click Button</button>
+// <input type="button" class="{{modifier_class}}" value="Click Input Button">
+// <input type="submit" class="{{modifier_class}}" value="Click Input Submit">
+// <a href="#" class="button {{modifier_class}}">Click Link</a>
+//
+// Style guide: Depricated.Buttons
+
+button,
+.button,
+input[type=button],
+input[type=submit] {
+  @include form-element;
+
+  border: solid $button-border-width;
+  border-color: darken(color("green"), 5);
+  padding-left: $button-padding;
+  padding-right: $button-padding;
+  background-color: color("green");
+  color: color("white");
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover, &.active {
+    background-color: darken(color("green"), 5);
+    border-color: darken(color("green"), 10);
+    border: solid 1px darken(color("green"), 5);
+    color: color("white"); // for .button
+  }
+
+  &:disabled {
+    background-color: color("grey");
+    border-color: darken(color("grey"), 5);
+    cursor: not-allowed;
+  }
+
+  &.button--warn {
+    background-color: color("red");
+    border-color: darken(color("red"), 5);
+    color: color("white");
+
+    &:hover {
+      background-color: darken(color("red"), 5);
+      border-color: darken(color("red"), 10);
+      color: color("white");
+    }
+  }
+
+  &.button--info {
+    background-color: color("blue");
+    border-color: darken(color("blue"), 5);
+    color: color("white");
+
+    &:hover {
+      border-color: darken(color("blue"), 10);
+      background-color: darken(color("blue"), 5);
+      color: color("white");
+    }
+  }
+
+  &.button--add {
+    background-color: transparent;
+    border-style: dashed;
+    border-color: color("grey");
+    color: color("grey");
+
+    &:before {
+      content: "+ ";
+    }
+
+    &:hover {
+      border-color: darken(color("grey"), 10);
+      color: darken(color("grey"), 10);
+    }
+  }
+
+  // TODO: replace with link
+  &.button--text {
+    border: 0;
+    background-color: transparent;
+    color: color("grey-dark");
+    line-height: 25px;
+    text-transform: none;
+
+    &:hover {
+      border: 0;
+      background-color: transparent;
+      color: darken(color("grey-dark"), 10);
+    }
+
+    &.button--muted {
+      color: color("grey");
+
+      &:hover {
+        color: darken(color("grey"), 10);
+      }
+    }
+  }
+}
+
+a.button {
+  display: inline-block;
+  line-height: $form-element-height;
+  text-align: center;
+}
+
