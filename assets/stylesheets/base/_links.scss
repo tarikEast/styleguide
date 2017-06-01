@@ -76,7 +76,8 @@
 $nd-link-defaults: (
   muted-color: nd-color('metal'),
   text-decoration: none,
-  cursor: pointer
+  cursor: pointer,
+  outline: 0
 );
 
 $nd-link-config:(
@@ -100,6 +101,7 @@ $nd-link-config:(
   color: map-get($link-style, 'color');
   text-decoration: map-get($nd-link-defaults, 'text-decoration');
   cursor: map-get($nd-link-defaults, 'cursor');
+  outline: map-get($nd-link-defaults, 'outline');
 
   &:hover {
     color: darken(map-get($link-style, 'color'), $hover-modificator);

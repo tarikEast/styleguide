@@ -61,7 +61,8 @@ $nd-button-defaults: (
     width: auto,
     text-transform: none,
     font-size: 13px,
-    line-height: 28px
+    line-height: 28px,
+    outline: 0
 );
 
 $nd-button-config:(
@@ -102,6 +103,7 @@ $nd-button-config:(
     font-size: map-get($nd-button-defaults, 'font-size');
     line-height: map-get($nd-button-defaults, 'line-height');
     width: map-get($nd-button-defaults, 'width');
+    outline: map-get($nd-button-defaults, 'outline');
 
     &.--icon{
         padding: map-get($nd-button-defaults, 'icon-padding');
@@ -156,6 +158,9 @@ button,
 .button,
 input[type=button],
 input[type=submit]{
+    border-radius: $global-border-radius;
+    margin-bottom: $form-element-margin-bottom;
+
     &.--primary-lime{
         @include nd-button('primary-lime')
     }

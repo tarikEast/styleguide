@@ -1,31 +1,135 @@
 // Inputs
 //
-// Style guide: Base.Inputs
+// Form input element definitions
+//
+// Weight: -93
+//
+// Style guide: Inputs
 
+// nd-input-defaults()
+//
+// Sass mixin to add default look to the form inputs.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-input-defaults();
+// }
+// </pre>
+//
+// Weight: 1
+//
+// Style guide: Inputs.Defaults Input Mixin
 
 // Text inputs
 //
 // Standard text input for text and email
 //
 //
-// :focus - no specialties on focus
-// :disabled - greyed out
-// .underlined - only showing a line for inputs
+// :focus - on focus box shadow
+// :disabled - on disabled opactiy is lowered
+// .--has-errors - when input have errors
 //
 //
 // Markup:
-// <input type="text" placeholder="Some text here" class="{{modifier_class}}">
-// <input type="email" placeholder="Mail address here" class="{{modifier_class}}">
-// <input type="tel" placeholder="Telephone number here" class="{{modifier_class}}">
+// <label for="text{{modifier_class}}">Text</label>
+// <input type="text" id="text{{modifier_class}}" placeholder="Some text here" class="--nd-text-input {{modifier_class}}">
+// <label for="email{{modifier_class}}">Email</label>
+// <input type="email" id="email{{modifier_class}}" placeholder="jon@doe.com" class="--nd-text-input {{modifier_class}}">
+// <label for="tel{{modifier_class}}">Telephone</label>
+// <input type="tel" id="tel{{modifier_class}}" placeholder="+38762385235" class="--nd-text-input {{modifier_class}}">
 //
-// Style guide: Base.Inputs.Text
+// Weight: 2
+//
+// Style guide: Inputs.Text Inputs
+
+// nd-text-input()
+//
+// Sass mixin to add default look to the form text inputs.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-text-input();
+// }
+// </pre>
+//
+// Weight: 3
+//
+// Style guide: Inputs.Text Input Mixin
+
+@mixin nd-input-defaults(){
+    height: 40px;
+    min-height: 40px;    
+    border-radius: $global-border-radius;
+    border: 1px solid nd-color('metal');
+    width: 100%;
+    margin-bottom: $form-element-margin-bottom;
+    outline: 0;
+    line-height:100%;
+    font-size: 13px;
+    letter-spacing:0;
+    padding: 0 12px 0 12px;
+    color: nd-color('carbon');
+    background-color: nd-color('white');
+
+    &::placeholder{
+        color: nd-color('metal');
+    }
+
+    &:focus{
+        border-color: nd-color('royal-blue');
+        box-shadow: 0px 0px 3px 0px rgba(nd-color('royal-blue'),0.7);
+    }
+
+    &:disabled {
+        background-color: nd-color('white');
+        opacity: .5;
+        cursor: not-allowed;
+
+        &:focus{
+          border-color: nd-color('metal');
+          box-shadow: none;
+        }
+    }
+
+    &.--has-errors {
+        border-color: nd-color('alarm-red');
+        &:focus{
+            border-color: nd-color('alarm-red');
+            box-shadow: 0px 0px 3px 0px rgba(nd-color('alarm-red'),0.7);
+        }
+    }
+}
+
+@mixin nd-text-input(){
+    @include nd-input-defaults();
+
+    &.--has-errors, &[aria-invalid="true"], &[aria-invalid="true"]:focus {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjggMjgiPgogICAgPHVzZSB4bGluazpocmVmPSIjYTE5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0IDQpIiAvPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZmlsbD0iI2U5NDY1OSIgaWQ9ImExOSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMjBjNS41MjI5IDAgMTAtNC40NzcyIDEwLTEwIDAtNS41MjI4My00LjQ3NzEtMTAtMTAtMTBDNC40NzcxNCAwIDAgNC40NzcxNyAwIDEwYzAgNS41MjI4IDQuNDc3MTQgMTAgMTAgMTB6TTkuNTcyNiA0Yy0uNTY1MjEgMC0xLjAxODEuNDY4MDItLjk5OTQ1IDEuMDMyOTZsLjE4NDAyIDUuNTc4MTRjLjAxNzc2LjUzOTIuNDU5OTkuOTY3Ljk5OTQ1Ljk2N2guNTY0ODhjLjUzOTUgMCAuOTgxNy0uNDI3OC45OTk1LS45NjdsLjE4NC01LjU3ODE0QzExLjUyMzYgNC40NjgwMiAxMS4wNzA3IDQgMTAuNTA1NSA0aC0uOTMyOXptLjQ2NjUgMTEuNTQ2OWMtMS4wMDc4NSAwLTEuNTkzNzktLjUyMzUtMS41OTM3OS0xLjQyMTkgMC0uOTA2Mi41ODU5NC0xLjQyOTcgMS41OTM3OS0xLjQyOTcgMS4wMDc4IDAgMS42MDE1LjUyMzUgMS42MDE1IDEuNDI5NyAwIC44OTg0LS41OTM3IDEuNDIxOS0xLjYwMTUgMS40MjE5eiIKICAgICAgICAvPgogICAgPC9kZWZzPgo8L3N2Zz4=) no-repeat;
+        background-position: right 11px center;
+        padding-right: 40px;
+    }
+
+    .--error-message {
+        font-size: 11;
+        color: nd-color('alarm-red');
+    }
+}
+
 
 input[type=text],
 input[type=email],
 input[type=tel], {
-  @include input-element;
-  @include input-placeholder;
-  @include input-underlined;
+    @include input-element;
+    @include input-placeholder;
+    @include input-underlined;
+    
+    &.--nd-text-input {
+        @include nd-text-input();
+    }
 }
 
 // Text Area
