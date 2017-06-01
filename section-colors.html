@@ -21,6 +21,7 @@
 </head>
 
 <body id="kss-node">
+
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
     <defs>
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" xmlns:xlink="http://www.w3.org/1999/xlink" id="set1-activity">
@@ -195,10 +196,19 @@
           />
         </defs>
       </svg>
-
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="28" viewBox="0 0 11 17" xmlns:xlink="http://www.w3.org/1999/xlink"
+        id="select-arrow">
+        <g transform="translate(-1221 -3269)">
+          <use xlink:href="#a23" transform="translate(1222.52 3280.02)" />
+          <use xlink:href="#a23" transform="matrix(1 0 0 -1 1222.52 3274.98)" />
+        </g>
+        <defs>
+          <path id="a23" d="M4.02528 4.04819l-.7071.7071.7071.70711.70711-.70711-.70711-.7071zM-.707107.73001L3.31818 4.75529l1.41421-1.41421L.707107-.684203-.707107.73001zM4.73239 4.75529L8.78058.707107 7.36636-.707107 3.31818 3.34108l1.41421 1.41421z"
+          />
+        </defs>
+      </svg>
     </defs>
   </svg>
-
 
   <div class="kss-sidebar kss-style">
     <header class="kss-header">
@@ -218,47 +228,33 @@
           ><span class="kss-nav__name">Fonts</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-typography.html">
-          <span class="kss-nav__ref">2</span
-          ><span class="kss-nav__name">Typography</span>
-        </a>         </li>
-        <li class="kss-nav__menu-item">
           <a href="section-colors.html">
-          <span class="kss-nav__ref">3</span
+          <span class="kss-nav__ref">2</span
           ><span class="kss-nav__name">Colors</span>
         </a> 
           <ul class="kss-nav__menu-child">
                
             <li class="kss-nav__menu-item">
-              <a href="section-colors.html#kssref-colors-textclasses">
-                <span class="kss-nav__ref ">3.1</span
-                ><span class="kss-nav__name">Text color classes</span>
-              </a>
-            </li>
-              
-            <li class="kss-nav__menu-item">
-              <a href="section-colors.html#kssref-colors-bgclasses">
-                <span class="kss-nav__ref ">3.2</span
-                ><span class="kss-nav__name">Background color classes</span>
-              </a>
-            </li>
-              
-            <li class="kss-nav__menu-item">
               <a href="section-colors.html#kssref-colors-functions">
-                <span class="kss-nav__ref ">3.3</span
-                ><span class="kss-nav__name">color($name)</span>
+                <span class="kss-nav__ref ">2.1</span
+                ><span class="kss-nav__name">nd-color($name)</span>
               </a>
             </li>
               
             <li class="kss-nav__menu-item">
               <a href="section-colors.html#kssref-colors-mixin">
-                <span class="kss-nav__ref ">3.4</span
-                ><span class="kss-nav__name">color($bgColor, $fontColor)</span>
+                <span class="kss-nav__ref ">2.2</span
+                ><span class="kss-nav__name">nd-color($bgColor, $fontColor)</span>
               </a>
             </li>
              
           </ul>
         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-typography.html">
+          <span class="kss-nav__ref">3</span
+          ><span class="kss-nav__name">Typography</span>
+        </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-icons.html">
           <span class="kss-nav__ref">4</span
@@ -270,14 +266,24 @@
           ><span class="kss-nav__name">Buttons &amp; links</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-formelements.html">
+          <a href="section-base.html">
           <span class="kss-nav__ref">6</span
-          ><span class="kss-nav__name">Form Elements</span>
+          ><span class="kss-nav__name">Base</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-components.html">
+          <a href="section-mixins.html">
           <span class="kss-nav__ref">7</span
-          ><span class="kss-nav__name">Components</span>
+          ><span class="kss-nav__name">Mixins</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-modules.html">
+          <span class="kss-nav__ref">8</span
+          ><span class="kss-nav__name">Modules</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-depricated.html">
+          <span class="kss-nav__ref">9</span
+          ><span class="kss-nav__name">Depricated</span>
         </a>         </li>
       </ul>
     </nav>
@@ -290,7 +296,7 @@
           <h1 class="kss-title kss-title--level-1">
             <a class="kss-title__permalink" href="#kssref-colors">
           <span class="kss-title__ref">
-              3
+              2
             <span class="kss-title__permalink-hash">
                 #Colors
             </span>
@@ -301,7 +307,7 @@
 
  
           <div class="kss-description">
-            <p>Defined colors</p>
+            <p>Color palette</p>
 
           </div>
         </div>
@@ -311,251 +317,41 @@
             Example
           </div>
           <div class="kss-modifier__example">
-            <div class="color-sample sample1"></div>
-<div class="color-sample sample2"></div>
-<div class="color-sample sample3"></div>
-<div class="color-sample sample4"></div>
-<div class="color-sample sample5"></div>
-<div class="color-sample sample6"></div>
-<div class="color-sample sample7"></div>
-<div class="color-sample sample8"></div>
+            <div class="nd-color-sample sample1"></div>
+<div class="nd-color-sample sample2"></div>
+<div class="nd-color-sample sample3"></div>
+<div class="nd-color-sample sample4"></div>
+<div class="nd-color-sample sample5"></div>
+<div class="nd-color-sample sample6"></div>
+<div class="nd-color-sample sample7"></div>
+<div class="nd-color-sample sample8"></div>
           </div>
         </div>
 
         <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;color-sample sample1&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample2&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample3&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample4&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample5&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample6&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample7&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample8&quot;&gt;&lt;/div&gt;</code></pre>
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;nd-color-sample sample1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nd-color-sample sample2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nd-color-sample sample3&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nd-color-sample sample4&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nd-color-sample sample5&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nd-color-sample sample6&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nd-color-sample sample7&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;nd-color-sample sample8&quot;&gt;&lt;/div&gt;</code></pre>
         </div>
          
     </div>
-        <section id="kssref-colors-textclasses" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-colors-textclasses">
-          <span class="kss-title__ref">
-              3.1
-            <span class="kss-title__permalink-hash">
-                #Colors.TextClasses
-            </span>
-          </span>
-          Text color classes
-        </a>
-          </h2>
-
-         </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Examples
-          </div>
-          <div class="kss-modifier__default-name kss-style">
-            Default styling
-          </div>
-          <div class="kss-modifier__example">
-            <div class="[modifier class]">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-carbon
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Carbon text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-carbon">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-royal-blue
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Royalblue text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-royal-blue">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-lime
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Lime text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-lime">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-sky-blue
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Sky blue text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-sky-blue">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-grass
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Grass text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-grass">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-metal
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Metal text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-metal">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-alarm-red
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Alarm red text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-alarm-red">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .text-white
-          </div>
-          <div class="kss-modifier__description kss-style">
-            White text color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-white">This is a sample text</div>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;[modifier class]&quot;&gt;This is a sample text&lt;/div&gt;</code></pre>
-        </div>
-             </section>
-            <section id="kssref-colors-bgclasses" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-colors-bgclasses">
-          <span class="kss-title__ref">
-              3.2
-            <span class="kss-title__permalink-hash">
-                #Colors.BgClasses
-            </span>
-          </span>
-          Background color classes
-        </a>
-          </h2>
-
-         </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Examples
-          </div>
-          <div class="kss-modifier__default-name kss-style">
-            Default styling
-          </div>
-          <div class="kss-modifier__example">
-            <div class="[modifier class]">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-carbon
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Carbon background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-carbon">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-royal-blue
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Royalblue background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-royal-blue">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-lime
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Lime background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-lime">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-sky-blue
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Sky blue background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-sky-blue">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-grass
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Grass background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-grass">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-metal
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Metal background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-metal">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-alarm-red
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Alarm red background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-alarm-red">This is a sample text</div>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .bg-white
-          </div>
-          <div class="kss-modifier__description kss-style">
-            White background color
-          </div>
-          <div class="kss-modifier__example">
-            <div class="bg-white">This is a sample text</div>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;[modifier class]&quot;&gt;This is a sample text&lt;/div&gt;</code></pre>
-        </div>
-             </section>
-            <section id="kssref-colors-functions" class="kss-section kss-section--depth-2">
+        <section id="kssref-colors-functions" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h2 class="kss-title kss-title--level-2">
             <a class="kss-title__permalink" href="#kssref-colors-functions">
           <span class="kss-title__ref">
-              3.3
+              2.1
             <span class="kss-title__permalink-hash">
                 #Colors.Functions
             </span>
           </span>
-          color($name)
+          nd-color($name)
         </a>
           </h2>
 
@@ -571,8 +367,8 @@
 <p>Usage:</p>
 <pre>
 .my-component {
-  background-color: color("green");
-  color: color("metal");
+  background-color: nd-color("lime");
+  color: nd-color("metal");
 }
 </pre>
           </div>
@@ -585,12 +381,12 @@
           <h2 class="kss-title kss-title--level-2">
             <a class="kss-title__permalink" href="#kssref-colors-mixin">
           <span class="kss-title__ref">
-              3.4
+              2.2
             <span class="kss-title__permalink-hash">
                 #Colors.Mixin
             </span>
           </span>
-          color($bgColor, $fontColor)
+          nd-color($bgColor, $fontColor)
         </a>
           </h2>
 
@@ -610,7 +406,7 @@
 <p>Usage:</p>
 <pre>
 .my-component {
-  @include color("carbon", "white");
+  @include nd-color("carbon", "white");
 }
 </pre>
           </div>
@@ -625,6 +421,7 @@
   <script src="public/prettify.js"></script>
   <script>
     prettyPrint();
+
   </script>
     
   <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

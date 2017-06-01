@@ -21,6 +21,7 @@
 </head>
 
 <body id="kss-node">
+
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
     <defs>
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" xmlns:xlink="http://www.w3.org/1999/xlink" id="set1-activity">
@@ -195,10 +196,19 @@
           />
         </defs>
       </svg>
-
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="28" viewBox="0 0 11 17" xmlns:xlink="http://www.w3.org/1999/xlink"
+        id="select-arrow">
+        <g transform="translate(-1221 -3269)">
+          <use xlink:href="#a23" transform="translate(1222.52 3280.02)" />
+          <use xlink:href="#a23" transform="matrix(1 0 0 -1 1222.52 3274.98)" />
+        </g>
+        <defs>
+          <path id="a23" d="M4.02528 4.04819l-.7071.7071.7071.70711.70711-.70711-.70711-.7071zM-.707107.73001L3.31818 4.75529l1.41421-1.41421L.707107-.684203-.707107.73001zM4.73239 4.75529L8.78058.707107 7.36636-.707107 3.31818 3.34108l1.41421 1.41421z"
+          />
+        </defs>
+      </svg>
     </defs>
   </svg>
-
 
   <div class="kss-sidebar kss-style">
     <header class="kss-header">
@@ -218,14 +228,14 @@
           ><span class="kss-nav__name">Fonts</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-typography.html">
+          <a href="section-colors.html">
           <span class="kss-nav__ref">2</span
-          ><span class="kss-nav__name">Typography</span>
+          ><span class="kss-nav__name">Colors</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-colors.html">
+          <a href="section-typography.html">
           <span class="kss-nav__ref">3</span
-          ><span class="kss-nav__name">Colors</span>
+          ><span class="kss-nav__name">Typography</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-icons.html">
@@ -245,25 +255,28 @@
                 ><span class="kss-nav__name">Buttons</span>
               </a>
             </li>
-              
-            <li class="kss-nav__menu-item">
-              <a href="section-buttons.html#kssref-buttons-links">
-                <span class="kss-nav__ref ">5.2</span
-                ><span class="kss-nav__name">Links</span>
-              </a>
-            </li>
              
           </ul>
         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-formelements.html">
+          <a href="section-base.html">
           <span class="kss-nav__ref">6</span
-          ><span class="kss-nav__name">Form Elements</span>
+          ><span class="kss-nav__name">Base</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-components.html">
+          <a href="section-mixins.html">
           <span class="kss-nav__ref">7</span
-          ><span class="kss-nav__name">Components</span>
+          ><span class="kss-nav__name">Mixins</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-modules.html">
+          <span class="kss-nav__ref">8</span
+          ><span class="kss-nav__name">Modules</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-depricated.html">
+          <span class="kss-nav__ref">9</span
+          ><span class="kss-nav__name">Depricated</span>
         </a>         </li>
       </ul>
     </nav>
@@ -314,176 +327,139 @@
             Default styling
           </div>
           <div class="kss-modifier__example">
-            <button class="itn-btn [modifier class]">Text only</button>
-<button class="itn-btn -icon [modifier class]">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon
+            <button class="[modifier class]">Click me</button>
+<input type="button" class="[modifier class]" value="Click me">
+<input type="submit" class="[modifier class]" value="Click me">
+<a href="#" class="button [modifier class]">Click me</a>
+<button class="--icon [modifier class]">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
-<button class="itn-btn -icon-only [modifier class]">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg>
+<button class="--icon-only [modifier class]">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
 </button>
-<button class="itn-btn -icon -link [modifier class]">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon link
-</button>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .primary-lime
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Primary lime button
-          </div>
-          <div class="kss-modifier__example">
-            <button class="itn-btn primary-lime">Text only</button>
-<button class="itn-btn -icon primary-lime">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon
-</button>
-<button class="itn-btn -icon-only primary-lime">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg>
-</button>
-<button class="itn-btn -icon -link primary-lime">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon link
+<button class="--link --icon [modifier class]">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
           </div>
           <div class="kss-modifier__name kss-style">
-            .primary-royal-blue
+            .--primary-lime
           </div>
           <div class="kss-modifier__description kss-style">
-            Primary royal blue button
+            Primary lime button styling
           </div>
           <div class="kss-modifier__example">
-            <button class="itn-btn primary-royal-blue">Text only</button>
-<button class="itn-btn -icon primary-royal-blue">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon
+            <button class="--primary-lime">Click me</button>
+<input type="button" class="--primary-lime" value="Click me">
+<input type="submit" class="--primary-lime" value="Click me">
+<a href="#" class="button --primary-lime">Click me</a>
+<button class="--icon --primary-lime">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
-<button class="itn-btn -icon-only primary-royal-blue">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg>
+<button class="--icon-only --primary-lime">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
 </button>
-<button class="itn-btn -icon -link primary-royal-blue">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon link
+<button class="--link --icon --primary-lime">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
           </div>
           <div class="kss-modifier__name kss-style">
-            .secondary-metal
+            .--primary-blue
           </div>
           <div class="kss-modifier__description kss-style">
-            Secondary metal button
+            Primary royal blue button styling
           </div>
           <div class="kss-modifier__example">
-            <button class="itn-btn secondary-metal">Text only</button>
-<button class="itn-btn -icon secondary-metal">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon
+            <button class="--primary-blue">Click me</button>
+<input type="button" class="--primary-blue" value="Click me">
+<input type="submit" class="--primary-blue" value="Click me">
+<a href="#" class="button --primary-blue">Click me</a>
+<button class="--icon --primary-blue">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
-<button class="itn-btn -icon-only secondary-metal">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg>
+<button class="--icon-only --primary-blue">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
 </button>
-<button class="itn-btn -icon -link secondary-metal">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon link
+<button class="--link --icon --primary-blue">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
           </div>
           <div class="kss-modifier__name kss-style">
-            .secondary-abort
+            .--secondary-metal
           </div>
           <div class="kss-modifier__description kss-style">
-            Secondary abort button
+            Secondary metal button styling
           </div>
           <div class="kss-modifier__example">
-            <button class="itn-btn secondary-abort">Text only</button>
-<button class="itn-btn -icon secondary-abort">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon
+            <button class="--secondary-metal">Click me</button>
+<input type="button" class="--secondary-metal" value="Click me">
+<input type="submit" class="--secondary-metal" value="Click me">
+<a href="#" class="button --secondary-metal">Click me</a>
+<button class="--icon --secondary-metal">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
-<button class="itn-btn -icon-only secondary-abort">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg>
+<button class="--icon-only --secondary-metal">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
 </button>
-<button class="itn-btn -icon -link secondary-abort">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Icon link
+<button class="--link --icon --secondary-metal">
+  <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
+    <use xlink:href="#set1-activity" />
+  </svg>
+  Click me
 </button>
           </div>
         </div>
 
         <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;itn-btn [modifier class]&quot;&gt;Text only&lt;/button&gt;
-&lt;button class=&quot;itn-btn -icon [modifier class]&quot;&gt;
- &lt;svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot;&gt;
-  &lt;use xlink:href=&quot;#set1-comment&quot; /&gt;
- &lt;/svg&gt; Icon
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Click me&lt;/button&gt;
+&lt;input type=&quot;button&quot; class=&quot;[modifier class]&quot; value=&quot;Click me&quot;&gt;
+&lt;input type=&quot;submit&quot; class=&quot;[modifier class]&quot; value=&quot;Click me&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;button [modifier class]&quot;&gt;Click me&lt;/a&gt;
+&lt;button class=&quot;--icon [modifier class]&quot;&gt;
+  &lt;svg width=&quot;28&quot; height=&quot;28&quot; class=&quot;icon&quot; viewBox=&quot;0 0 28 28&quot;&gt;
+    &lt;use xlink:href=&quot;#set1-activity&quot; /&gt;
+  &lt;/svg&gt;
+  Click me
 &lt;/button&gt;
-&lt;button class=&quot;itn-btn -icon-only [modifier class]&quot;&gt;
- &lt;svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot;&gt;
-  &lt;use xlink:href=&quot;#set1-comment&quot; /&gt;
- &lt;/svg&gt;
+&lt;button class=&quot;--icon-only [modifier class]&quot;&gt;
+  &lt;svg width=&quot;28&quot; height=&quot;28&quot; class=&quot;icon&quot; viewBox=&quot;0 0 28 28&quot;&gt;
+    &lt;use xlink:href=&quot;#set1-activity&quot; /&gt;
+  &lt;/svg&gt;
 &lt;/button&gt;
-&lt;button class=&quot;itn-btn -icon -link [modifier class]&quot;&gt;
- &lt;svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot;&gt;
-  &lt;use xlink:href=&quot;#set1-comment&quot; /&gt;
- &lt;/svg&gt; Icon link
+&lt;button class=&quot;--link --icon [modifier class]&quot;&gt;
+  &lt;svg width=&quot;28&quot; height=&quot;28&quot; class=&quot;icon&quot; viewBox=&quot;0 0 28 28&quot;&gt;
+    &lt;use xlink:href=&quot;#set1-activity&quot; /&gt;
+  &lt;/svg&gt;
+  Click me
 &lt;/button&gt;</code></pre>
-        </div>
-             </section>
-            <section id="kssref-buttons-links" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-buttons-links">
-          <span class="kss-title__ref">
-              5.2
-            <span class="kss-title__permalink-hash">
-                #Buttons.Links
-            </span>
-          </span>
-          Links
-        </a>
-          </h2>
-
-         </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
-          <div class="kss-modifier__example">
-            <a href="#">
- <svg width="28" height="28" viewBox="0 0 28 28">
-  <use xlink:href="#set1-comment" />
- </svg> Link
-</a>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href=&quot;#&quot;&gt;
- &lt;svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot;&gt;
-  &lt;use xlink:href=&quot;#set1-comment&quot; /&gt;
- &lt;/svg&gt; Link
-&lt;/a&gt;</code></pre>
         </div>
              </section>
       
@@ -494,6 +470,7 @@
   <script src="public/prettify.js"></script>
   <script>
     prettyPrint();
+
   </script>
     
   <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

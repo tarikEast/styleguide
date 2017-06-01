@@ -21,6 +21,7 @@
 </head>
 
 <body id="kss-node">
+
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
     <defs>
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" xmlns:xlink="http://www.w3.org/1999/xlink" id="set1-activity">
@@ -195,10 +196,19 @@
           />
         </defs>
       </svg>
-
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="28" viewBox="0 0 11 17" xmlns:xlink="http://www.w3.org/1999/xlink"
+        id="select-arrow">
+        <g transform="translate(-1221 -3269)">
+          <use xlink:href="#a23" transform="translate(1222.52 3280.02)" />
+          <use xlink:href="#a23" transform="matrix(1 0 0 -1 1222.52 3274.98)" />
+        </g>
+        <defs>
+          <path id="a23" d="M4.02528 4.04819l-.7071.7071.7071.70711.70711-.70711-.70711-.7071zM-.707107.73001L3.31818 4.75529l1.41421-1.41421L.707107-.684203-.707107.73001zM4.73239 4.75529L8.78058.707107 7.36636-.707107 3.31818 3.34108l1.41421 1.41421z"
+          />
+        </defs>
+      </svg>
     </defs>
   </svg>
-
 
   <div class="kss-sidebar kss-style">
     <header class="kss-header">
@@ -222,21 +232,21 @@
             <li class="kss-nav__menu-item">
               <a href="section-typeface.html#kssref-typeface-functions">
                 <span class="kss-nav__ref ">1.1</span
-                ><span class="kss-nav__name">font-family()</span>
+                ><span class="kss-nav__name">nd-font-family()</span>
               </a>
             </li>
              
           </ul>
         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-typography.html">
+          <a href="section-colors.html">
           <span class="kss-nav__ref">2</span
-          ><span class="kss-nav__name">Typography</span>
+          ><span class="kss-nav__name">Colors</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-colors.html">
+          <a href="section-typography.html">
           <span class="kss-nav__ref">3</span
-          ><span class="kss-nav__name">Colors</span>
+          ><span class="kss-nav__name">Typography</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-icons.html">
@@ -249,14 +259,24 @@
           ><span class="kss-nav__name">Buttons &amp; links</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-formelements.html">
+          <a href="section-base.html">
           <span class="kss-nav__ref">6</span
-          ><span class="kss-nav__name">Form Elements</span>
+          ><span class="kss-nav__name">Base</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-components.html">
+          <a href="section-mixins.html">
           <span class="kss-nav__ref">7</span
-          ><span class="kss-nav__name">Components</span>
+          ><span class="kss-nav__name">Mixins</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-modules.html">
+          <span class="kss-nav__ref">8</span
+          ><span class="kss-nav__name">Modules</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-depricated.html">
+          <span class="kss-nav__ref">9</span
+          ><span class="kss-nav__name">Depricated</span>
         </a>         </li>
       </ul>
     </nav>
@@ -316,17 +336,17 @@
                 #Typeface.Functions
             </span>
           </span>
-          font-family()
+          nd-font-family()
         </a>
           </h2>
 
  
           <div class="kss-description">
-            <p>Sass function that returns font for use.</p>
+            <p>Sass mixin that sets font family (used on body by default).</p>
 <p>Usage:</p>
 <pre>
 .my-component {
-  font-family: font-family();
+  @include nd-font-family();
 }
 </pre>
           </div>
@@ -341,6 +361,7 @@
   <script src="public/prettify.js"></script>
   <script>
     prettyPrint();
+
   </script>
     
   <!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
