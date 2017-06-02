@@ -267,16 +267,93 @@
             </li>
               
             <li class="kss-nav__menu-item">
-              <a href="section-inputs.html#kssref-inputs-text-inputs">
+              <a href="section-inputs.html#kssref-inputs-disabled-input-mixin">
                 <span class="kss-nav__ref ">7.2</span
+                ><span class="kss-nav__name">nd-input-disabled()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-error-input-mixin">
+                <span class="kss-nav__ref ">7.3</span
+                ><span class="kss-nav__name">nd-input-has-errors()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-focus-input-mixin">
+                <span class="kss-nav__ref ">7.4</span
+                ><span class="kss-nav__name">nd-input-focus()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-placeholder-input-mixin">
+                <span class="kss-nav__ref ">7.5</span
+                ><span class="kss-nav__name">nd-input-placeholder()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-text-inputs">
+                <span class="kss-nav__ref ">7.6</span
                 ><span class="kss-nav__name">Text inputs</span>
               </a>
             </li>
               
             <li class="kss-nav__menu-item">
               <a href="section-inputs.html#kssref-inputs-text-input-mixin">
-                <span class="kss-nav__ref ">7.3</span
+                <span class="kss-nav__ref ">7.7</span
                 ><span class="kss-nav__name">nd-text-input()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-selects">
+                <span class="kss-nav__ref ">7.8</span
+                ><span class="kss-nav__name">Select Menus</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-select-input-mixin">
+                <span class="kss-nav__ref ">7.9</span
+                ><span class="kss-nav__name">nd-select-input()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-check-input-mixin">
+                <span class="kss-nav__ref ">7.10</span
+                ><span class="kss-nav__name">nd-check-input()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-check-error-mixin">
+                <span class="kss-nav__ref ">7.11</span
+                ><span class="kss-nav__name">nd-check-has-errors()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-check-error-mixin">
+                <span class="kss-nav__ref ">7.11</span
+                ><span class="kss-nav__name">nd-check-disabled()</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-checkbox">
+                <span class="kss-nav__ref ">7.12</span
+                ><span class="kss-nav__name">Checkbox</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-radio-button">
+                <span class="kss-nav__ref ">7.13</span
+                ><span class="kss-nav__name">Radio button</span>
               </a>
             </li>
              
@@ -288,18 +365,13 @@
           ><span class="kss-nav__name">Base</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-mixins.html">
-          <span class="kss-nav__ref">9</span
-          ><span class="kss-nav__name">Mixins</span>
-        </a>         </li>
-        <li class="kss-nav__menu-item">
           <a href="section-modules.html">
-          <span class="kss-nav__ref">10</span
+          <span class="kss-nav__ref">9</span
           ><span class="kss-nav__name">Modules</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-depricated.html">
-          <span class="kss-nav__ref">11</span
+          <span class="kss-nav__ref">10</span
           ><span class="kss-nav__name">Depricated</span>
         </a>         </li>
       </ul>
@@ -339,7 +411,7 @@
           <span class="kss-title__ref">
               7.1
             <span class="kss-title__permalink-hash">
-                #Inputs.Defaults Input Mixin
+                #Inputs.Defaults input mixin
             </span>
           </span>
           nd-input-defaults()
@@ -359,13 +431,125 @@
         </div>
 
      </section>
+            <section id="kssref-inputs-disabled-input-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-disabled-input-mixin">
+          <span class="kss-title__ref">
+              7.2
+            <span class="kss-title__permalink-hash">
+                #Inputs.Disabled input mixin
+            </span>
+          </span>
+          nd-input-disabled()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add disabled look to the form inputs.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-input-disabled();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-error-input-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-error-input-mixin">
+          <span class="kss-title__ref">
+              7.3
+            <span class="kss-title__permalink-hash">
+                #Inputs.Error input mixin
+            </span>
+          </span>
+          nd-input-has-errors()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add look to the form inputs when input have errors.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-input-has-errors();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-focus-input-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-focus-input-mixin">
+          <span class="kss-title__ref">
+              7.4
+            <span class="kss-title__permalink-hash">
+                #Inputs.Focus input mixin
+            </span>
+          </span>
+          nd-input-focus()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add focus look to the form inputs.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-input-focus();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-placeholder-input-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-placeholder-input-mixin">
+          <span class="kss-title__ref">
+              7.5
+            <span class="kss-title__permalink-hash">
+                #Inputs.Placeholder input mixin
+            </span>
+          </span>
+          nd-input-placeholder()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add placeholder look to the form inputs.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-input-placeholder();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
             <section id="kssref-inputs-text-inputs" class="kss-section kss-section--depth-2">
 
         <div class="kss-style">
           <h2 class="kss-title kss-title--level-2">
             <a class="kss-title__permalink" href="#kssref-inputs-text-inputs">
           <span class="kss-title__ref">
-              7.2
+              7.6
             <span class="kss-title__permalink-hash">
                 #Inputs.Text Inputs
             </span>
@@ -455,9 +639,9 @@
           <h2 class="kss-title kss-title--level-2">
             <a class="kss-title__permalink" href="#kssref-inputs-text-input-mixin">
           <span class="kss-title__ref">
-              7.3
+              7.7
             <span class="kss-title__permalink-hash">
-                #Inputs.Text Input Mixin
+                #Inputs.Text input mixin
             </span>
           </span>
           nd-text-input()
@@ -477,6 +661,363 @@
         </div>
 
      </section>
+            <section id="kssref-inputs-selects" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-selects">
+          <span class="kss-title__ref">
+              7.8
+            <span class="kss-title__permalink-hash">
+                #Inputs.Selects
+            </span>
+          </span>
+          Select Menus
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Standard select input</p>
+
+          </div>
+        </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+          <div class="kss-modifier__default-name kss-style">
+            Default styling
+          </div>
+          <div class="kss-modifier__example">
+            <label for="select-[modifier class]">Options</label>
+<select id="select-[modifier class]" class="--nd-select [modifier class]">
+ <option value="1">first item</option>
+ <option value="2">second item</option>
+</select>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :focus
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on focus box shadow
+          </div>
+          <div class="kss-modifier__example">
+            <label for="select-pseudo-class-focus">Options</label>
+<select id="select-pseudo-class-focus" class="--nd-select pseudo-class-focus">
+ <option value="1">first item</option>
+ <option value="2">second item</option>
+</select>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :disabled
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on disabled opactiy is lowered
+          </div>
+          <div class="kss-modifier__example">
+            <label for="select-pseudo-class-disabled">Options</label>
+<select id="select-pseudo-class-disabled" class="--nd-select pseudo-class-disabled">
+ <option value="1">first item</option>
+ <option value="2">second item</option>
+</select>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .--has-errors
+          </div>
+          <div class="kss-modifier__description kss-style">
+            when input have errors
+          </div>
+          <div class="kss-modifier__example">
+            <label for="select---has-errors">Options</label>
+<select id="select---has-errors" class="--nd-select --has-errors">
+ <option value="1">first item</option>
+ <option value="2">second item</option>
+</select>
+          </div>
+        </div>
+
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;label for=&quot;select-[modifier class]&quot;&gt;Options&lt;/label&gt;
+&lt;select id=&quot;select-[modifier class]&quot; class=&quot;--nd-select [modifier class]&quot;&gt;
+ &lt;option value=&quot;1&quot;&gt;first item&lt;/option&gt;
+ &lt;option value=&quot;2&quot;&gt;second item&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+             </section>
+            <section id="kssref-inputs-select-input-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-select-input-mixin">
+          <span class="kss-title__ref">
+              7.9
+            <span class="kss-title__permalink-hash">
+                #Inputs.Select input mixin
+            </span>
+          </span>
+          nd-select-input()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add default look to the form select inputs.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-select-input();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-check-input-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-check-input-mixin">
+          <span class="kss-title__ref">
+              7.10
+            <span class="kss-title__permalink-hash">
+                #Inputs.Check input mixin
+            </span>
+          </span>
+          nd-check-input()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add default look to the form check inputs (like radio and checkbox).</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-check-input();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-check-error-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-check-error-mixin">
+          <span class="kss-title__ref">
+              7.11
+            <span class="kss-title__permalink-hash">
+                #Inputs.Check error mixin
+            </span>
+          </span>
+          nd-check-has-errors()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add look to the form check inputs (like radio and checkbox) when they have error.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-check-has-errors();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-check-error-mixin" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-check-error-mixin">
+          <span class="kss-title__ref">
+              7.11
+            <span class="kss-title__permalink-hash">
+                #Inputs.Check error mixin
+            </span>
+          </span>
+          nd-check-disabled()
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sass mixin to add look to the form check inputs (like radio and checkbox) when they are disabled.</p>
+<p>Usage:</p>
+<pre>
+.my-input {
+  @include nd-check-disabled();
+}
+</pre>
+          </div>
+        </div>
+
+     </section>
+            <section id="kssref-inputs-checkbox" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-checkbox">
+          <span class="kss-title__ref">
+              7.12
+            <span class="kss-title__permalink-hash">
+                #Inputs.Checkbox
+            </span>
+          </span>
+          Checkbox
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Standard checkbox input</p>
+
+          </div>
+        </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+          <div class="kss-modifier__default-name kss-style">
+            Default styling
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="cb1-[modifier class]" class="[modifier class]" />
+<label for="cb1-[modifier class]">Option1</label>
+<input type="checkbox" id="cb2-[modifier class]" class="[modifier class]" checked />
+<label for="cb2-[modifier class]">Option2</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :focus
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on focus box shadow
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="cb1-pseudo-class-focus" class="pseudo-class-focus" />
+<label for="cb1-pseudo-class-focus">Option1</label>
+<input type="checkbox" id="cb2-pseudo-class-focus" class="pseudo-class-focus" checked />
+<label for="cb2-pseudo-class-focus">Option2</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :disabled
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on disabled opactiy is lowered
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="cb1-pseudo-class-disabled" class="pseudo-class-disabled" />
+<label for="cb1-pseudo-class-disabled">Option1</label>
+<input type="checkbox" id="cb2-pseudo-class-disabled" class="pseudo-class-disabled" checked />
+<label for="cb2-pseudo-class-disabled">Option2</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .--has-errors
+          </div>
+          <div class="kss-modifier__description kss-style">
+            when input have errors
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="cb1---has-errors" class="--has-errors" />
+<label for="cb1---has-errors">Option1</label>
+<input type="checkbox" id="cb2---has-errors" class="--has-errors" checked />
+<label for="cb2---has-errors">Option2</label>
+          </div>
+        </div>
+
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;checkbox&quot; id=&quot;cb1-[modifier class]&quot; class=&quot;[modifier class]&quot; /&gt;
+&lt;label for=&quot;cb1-[modifier class]&quot;&gt;Option1&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;cb2-[modifier class]&quot; class=&quot;[modifier class]&quot; checked /&gt;
+&lt;label for=&quot;cb2-[modifier class]&quot;&gt;Option2&lt;/label&gt;</code></pre>
+        </div>
+             </section>
+            <section id="kssref-inputs-radio-button" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-radio-button">
+          <span class="kss-title__ref">
+              7.13
+            <span class="kss-title__permalink-hash">
+                #Inputs.Radio button
+            </span>
+          </span>
+          Radio button
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Standard radio button input</p>
+
+          </div>
+        </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+          <div class="kss-modifier__default-name kss-style">
+            Default styling
+          </div>
+          <div class="kss-modifier__example">
+            <input type="radio" id="r1-[modifier class]" name="r-[modifier class]" class="[modifier class]" />
+<label for="r1-[modifier class]">Option1</label>
+<input type="radio" id="r2-[modifier class]" name="r-[modifier class]" class="[modifier class]" checked />
+<label for="r2-[modifier class]">Option2</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :focus
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on focus box shadow
+          </div>
+          <div class="kss-modifier__example">
+            <input type="radio" id="r1-pseudo-class-focus" name="r-pseudo-class-focus" class="pseudo-class-focus" />
+<label for="r1-pseudo-class-focus">Option1</label>
+<input type="radio" id="r2-pseudo-class-focus" name="r-pseudo-class-focus" class="pseudo-class-focus" checked />
+<label for="r2-pseudo-class-focus">Option2</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :disabled
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on disabled opactiy is lowered
+          </div>
+          <div class="kss-modifier__example">
+            <input type="radio" id="r1-pseudo-class-disabled" name="r-pseudo-class-disabled" class="pseudo-class-disabled" />
+<label for="r1-pseudo-class-disabled">Option1</label>
+<input type="radio" id="r2-pseudo-class-disabled" name="r-pseudo-class-disabled" class="pseudo-class-disabled" checked />
+<label for="r2-pseudo-class-disabled">Option2</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .--has-errors
+          </div>
+          <div class="kss-modifier__description kss-style">
+            when input have errors
+          </div>
+          <div class="kss-modifier__example">
+            <input type="radio" id="r1---has-errors" name="r---has-errors" class="--has-errors" />
+<label for="r1---has-errors">Option1</label>
+<input type="radio" id="r2---has-errors" name="r---has-errors" class="--has-errors" checked />
+<label for="r2---has-errors">Option2</label>
+          </div>
+        </div>
+
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;radio&quot; id=&quot;r1-[modifier class]&quot; name=&quot;r-[modifier class]&quot; class=&quot;[modifier class]&quot; /&gt;
+&lt;label for=&quot;r1-[modifier class]&quot;&gt;Option1&lt;/label&gt;
+&lt;input type=&quot;radio&quot; id=&quot;r2-[modifier class]&quot; name=&quot;r-[modifier class]&quot; class=&quot;[modifier class]&quot; checked /&gt;
+&lt;label for=&quot;r2-[modifier class]&quot;&gt;Option2&lt;/label&gt;</code></pre>
+        </div>
+             </section>
       
   </article>
 
