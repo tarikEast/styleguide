@@ -1738,9 +1738,12 @@ p {
       padding-right: 18px;
       width: calc(100% - 46px); }
       .nd-cards .card > .text > .--heading {
-        font-size: 14px; }
+        font-size: 14px;
+        line-height: 16px;
+        color: #202A37; }
       .nd-cards .card > .text > .--meta-data {
         font-size: 11px;
+        line-height: 13px;
         color: #888FA8; }
       .nd-cards .card > .text > .--heading + .--meta-data {
         padding-top: 4px; }
