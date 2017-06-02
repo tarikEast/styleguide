@@ -226,18 +226,7 @@
           <a href="section-typeface.html">
           <span class="kss-nav__ref">1</span
           ><span class="kss-nav__name">Fonts</span>
-        </a> 
-          <ul class="kss-nav__menu-child">
-               
-            <li class="kss-nav__menu-item">
-              <a href="section-typeface.html#kssref-typeface-functions">
-                <span class="kss-nav__ref ">1.1</span
-                ><span class="kss-nav__name">nd-font-family()</span>
-              </a>
-            </li>
-             
-          </ul>
-        </li>
+        </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-colors.html">
           <span class="kss-nav__ref">2</span
@@ -272,7 +261,11 @@
           <a href="section-cards.html">
           <span class="kss-nav__ref">8</span
           ><span class="kss-nav__name">Cards</span>
-        </a>         </li>
+        </a> 
+          <ul class="kss-nav__menu-child">
+              
+          </ul>
+        </li>
         <li class="kss-nav__menu-item">
           <a href="section-base.html">
           <span class="kss-nav__ref">9</span
@@ -293,77 +286,93 @@
   </div>
   <article role="main" class="kss-main">
    
-    <div id="kssref-typeface" class="kss-section kss-section--depth-1">
+    <div id="kssref-cards" class="kss-section kss-section--depth-1">
 
         <div class="kss-style">
           <h1 class="kss-title kss-title--level-1">
-            <a class="kss-title__permalink" href="#kssref-typeface">
+            <a class="kss-title__permalink" href="#kssref-cards">
           <span class="kss-title__ref">
-              1
+              8
             <span class="kss-title__permalink-hash">
-                #Typeface
+                #Cards
             </span>
           </span>
-          Fonts
+          Cards
         </a>
           </h1>
 
-          <ul class="kss-parameters">
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   macOS and iOS</code>
-              <div class="kss-parameters__description">SF UI Display<br></div>
-            </li>
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   Windows</code>
-              <div class="kss-parameters__description">Segoe UI<br></div>
-            </li>
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   Android</code>
-              <div class="kss-parameters__description">Roboto<br></div>
-            </li>
-            <li class="kss-parameters__item">
-              <code class="kss-parameters__name">   Default</code>
-              <div class="kss-parameters__description">sans-serif<br></div>
-            </li>
-          </ul>
-           
+ 
           <div class="kss-description">
-            <p>We&#39;re using platform-specific fonts to match the default system look</p>
+            <p>This is card styling</p>
 
           </div>
         </div>
 
- 
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+          <div class="kss-modifier__example">
+            <div class="nd-cards">
+    <div class="card">
+        <div class="circle">
+        </div>
+        <div class="text">
+            <div class="--heading">
+                User Action
+            </div>
+            <div class="--meta-data">
+                Timestamp
+            </div>
+        </div>
     </div>
-        <section id="kssref-typeface-functions" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-typeface-functions">
-          <span class="kss-title__ref">
-              1.1
-            <span class="kss-title__permalink-hash">
-                #Typeface.Functions
-            </span>
-          </span>
-          nd-font-family()
-        </a>
-          </h2>
-
- 
-          <div class="kss-description">
-            <p>Sass mixin that sets font family (used on body by default).</p>
-<p>Usage:</p>
-<pre>
-.my-component {
-  @include nd-font-family();
-}
-</pre>
+    <div class="card">
+        <div class="circle">
+        </div>
+        <div class="text">
+            <div class="--heading">
+                User Action
+            </div>
+            <div class="--meta-data">
+                Timestamp
+            </div>
+        </div>
+    </div>
+</div>
           </div>
         </div>
 
-     </section>
-      
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;nd-cards&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;circle&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;text&quot;&gt;
+            &lt;div class=&quot;--heading&quot;&gt;
+                User Action
+            &lt;/div&gt;
+            &lt;div class=&quot;--meta-data&quot;&gt;
+                Timestamp
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;circle&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;text&quot;&gt;
+            &lt;div class=&quot;--heading&quot;&gt;
+                User Action
+            &lt;/div&gt;
+            &lt;div class=&quot;--meta-data&quot;&gt;
+                Timestamp
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+         
+    </div>
+  
   </article>
 
   <!-- SCRIPTS -->
