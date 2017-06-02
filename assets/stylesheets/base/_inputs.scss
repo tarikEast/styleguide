@@ -6,6 +6,27 @@
 //
 // Style guide: Inputs
 
+$nd-input-border: 1px solid nd-color('metal');
+$nd-input-font-size: 13px;
+$nd-input-font-color: nd-color('carbon');
+$nd-input-background-color: nd-color('white');
+
+@mixin nd-input-defaults(){
+    height: 40px;
+    min-height: 40px;    
+    border-radius: $global-border-radius;
+    border: $nd-input-border;
+    width: 100%;
+    margin-bottom: $form-element-margin-bottom;
+    outline: 0;
+    line-height:100%;
+    font-size: $nd-input-font-size;
+    letter-spacing:0;
+    padding: 0 12px 0 12px;
+    color: $nd-input-font-color;
+    background-color: $nd-input-background-color;
+}
+
 // nd-input-defaults()
 //
 // Sass mixin to add default look to the form inputs.
@@ -20,17 +41,154 @@
 //
 // Weight: 1
 //
-// Style guide: Inputs.Defaults Input Mixin
+// Style guide: Inputs.Defaults input mixin
+
+$nd-focus-border-color: nd-color('royal-blue');
+$nd-focus-box-shadow: 0px 0px 3px 0px rgba(nd-color('royal-blue'),0.7);
+
+@mixin nd-input-focus(){
+    &:focus{
+        border-color: $nd-focus-border-color;
+        box-shadow: $nd-focus-box-shadow;
+    }
+}
+
+// nd-input-focus()
+//
+// Sass mixin to add focus look to the form inputs.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-input-focus();
+// }
+// </pre>
+//
+// Weight: 1
+//
+// Style guide: Inputs.Focus input mixin
+
+@mixin nd-input-placeholder(){
+    &::placeholder{
+        color: nd-color('metal');
+        font-size: $nd-input-font-size;
+        opacity: 1;
+    }
+}
+
+$nd-disabled-opacity: .5;
+$nd-disabled-cursor: not-allowed;
+
+@mixin nd-input-disabled(){
+    &:disabled {
+        background-color: $nd-input-background-color;
+        opacity: $nd-disabled-opacity;
+        cursor: $nd-disabled-cursor;
+    }
+}
+
+$error-color: nd-color('alarm-red');
+$error-box-shadow: 0px 0px 3px 0px rgba($error-color,0.7);
+
+@mixin nd-input-has-errors(){
+    &.--has-errors {
+        border-color: $error-color;
+        &:focus{
+            border-color: $error-color;
+            box-shadow: $error-box-shadow;
+        }
+    }
+}
+
+@mixin nd-input-error-messages(){
+    .--error-message {
+        font-size: 11;
+        color: $error-color;
+    }
+}
+
+// nd-input-placeholder()
+//
+// Sass mixin to add placeholder look to the form inputs.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-input-placeholder();
+// }
+// </pre>
+//
+// Weight: 1
+//
+// Style guide: Inputs.Placeholder input mixin
+
+// nd-input-disabled()
+//
+// Sass mixin to add disabled look to the form inputs.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-input-disabled();
+// }
+// </pre>
+//
+// Weight: 1
+//
+// Style guide: Inputs.Disabled input mixin
+
+// nd-input-has-errors()
+//
+// Sass mixin to add look to the form inputs when input have errors.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-input-has-errors();
+// }
+// </pre>
+//
+// Weight: 1
+//
+// Style guide: Inputs.Error input mixin
+
+@mixin nd-text-input(){
+    @include nd-input-defaults();
+    @include nd-input-focus();
+    @include nd-input-placeholder();
+    @include nd-input-disabled();
+    @include nd-input-has-errors();
+
+    &.--has-errors, &[aria-invalid="true"], &[aria-invalid="true"]:focus {
+        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjggMjgiPgogICAgPHVzZSB4bGluazpocmVmPSIjYTE5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0IDQpIiAvPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZmlsbD0iI2U5NDY1OSIgaWQ9ImExOSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMjBjNS41MjI5IDAgMTAtNC40NzcyIDEwLTEwIDAtNS41MjI4My00LjQ3NzEtMTAtMTAtMTBDNC40NzcxNCAwIDAgNC40NzcxNyAwIDEwYzAgNS41MjI4IDQuNDc3MTQgMTAgMTAgMTB6TTkuNTcyNiA0Yy0uNTY1MjEgMC0xLjAxODEuNDY4MDItLjk5OTQ1IDEuMDMyOTZsLjE4NDAyIDUuNTc4MTRjLjAxNzc2LjUzOTIuNDU5OTkuOTY3Ljk5OTQ1Ljk2N2guNTY0ODhjLjUzOTUgMCAuOTgxNy0uNDI3OC45OTk1LS45NjdsLjE4NC01LjU3ODE0QzExLjUyMzYgNC40NjgwMiAxMS4wNzA3IDQgMTAuNTA1NSA0aC0uOTMyOXptLjQ2NjUgMTEuNTQ2OWMtMS4wMDc4NSAwLTEuNTkzNzktLjUyMzUtMS41OTM3OS0xLjQyMTkgMC0uOTA2Mi41ODU5NC0xLjQyOTcgMS41OTM3OS0xLjQyOTcgMS4wMDc4IDAgMS42MDE1LjUyMzUgMS42MDE1IDEuNDI5NyAwIC44OTg0LS41OTM3IDEuNDIxOS0xLjYwMTUgMS40MjE5eiIKICAgICAgICAvPgogICAgPC9kZWZzPgo8L3N2Zz4=) no-repeat;
+        background-position: right 11px center;
+        padding-right: 40px;
+    }
+}
+
+input[type=text],
+input[type=email],
+input[type=tel], {
+    @include input-element;
+    @include input-placeholder;
+    @include input-underlined;
+    
+    &.--nd-text-input {
+        @include nd-text-input();
+    }
+}
 
 // Text inputs
 //
 // Standard text input for text and email
 //
-//
 // :focus - on focus box shadow
 // :disabled - on disabled opactiy is lowered
 // .--has-errors - when input have errors
-//
 //
 // Markup:
 // <label for="text{{modifier_class}}">Text</label>
@@ -58,98 +216,257 @@
 //
 // Weight: 3
 //
-// Style guide: Inputs.Text Input Mixin
+// Style guide: Inputs.Text input mixin
 
-@mixin nd-input-defaults(){
-    height: 40px;
-    min-height: 40px;    
-    border-radius: $global-border-radius;
-    border: 1px solid nd-color('metal');
-    width: 100%;
-    margin-bottom: $form-element-margin-bottom;
-    outline: 0;
-    line-height:100%;
-    font-size: 13px;
-    letter-spacing:0;
-    padding: 0 12px 0 12px;
-    color: nd-color('carbon');
-    background-color: nd-color('white');
-
-    &::placeholder{
-        color: nd-color('metal');
-    }
-
-    &:focus{
-        border-color: nd-color('royal-blue');
-        box-shadow: 0px 0px 3px 0px rgba(nd-color('royal-blue'),0.7);
-    }
-
-    &:disabled {
-        background-color: nd-color('white');
-        opacity: .5;
-        cursor: not-allowed;
-
-        &:focus{
-          border-color: nd-color('metal');
-          box-shadow: none;
-        }
-    }
-
-    &.--has-errors {
-        border-color: nd-color('alarm-red');
-        &:focus{
-            border-color: nd-color('alarm-red');
-            box-shadow: 0px 0px 3px 0px rgba(nd-color('alarm-red'),0.7);
-        }
-    }
-}
-
-@mixin nd-text-input(){
+@mixin nd-select-input(){
     @include nd-input-defaults();
-
-    &.--has-errors, &[aria-invalid="true"], &[aria-invalid="true"]:focus {
-        background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjggMjgiPgogICAgPHVzZSB4bGluazpocmVmPSIjYTE5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0IDQpIiAvPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZmlsbD0iI2U5NDY1OSIgaWQ9ImExOSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTAgMjBjNS41MjI5IDAgMTAtNC40NzcyIDEwLTEwIDAtNS41MjI4My00LjQ3NzEtMTAtMTAtMTBDNC40NzcxNCAwIDAgNC40NzcxNyAwIDEwYzAgNS41MjI4IDQuNDc3MTQgMTAgMTAgMTB6TTkuNTcyNiA0Yy0uNTY1MjEgMC0xLjAxODEuNDY4MDItLjk5OTQ1IDEuMDMyOTZsLjE4NDAyIDUuNTc4MTRjLjAxNzc2LjUzOTIuNDU5OTkuOTY3Ljk5OTQ1Ljk2N2guNTY0ODhjLjUzOTUgMCAuOTgxNy0uNDI3OC45OTk1LS45NjdsLjE4NC01LjU3ODE0QzExLjUyMzYgNC40NjgwMiAxMS4wNzA3IDQgMTAuNTA1NSA0aC0uOTMyOXptLjQ2NjUgMTEuNTQ2OWMtMS4wMDc4NSAwLTEuNTkzNzktLjUyMzUtMS41OTM3OS0xLjQyMTkgMC0uOTA2Mi41ODU5NC0xLjQyOTcgMS41OTM3OS0xLjQyOTcgMS4wMDc4IDAgMS42MDE1LjUyMzUgMS42MDE1IDEuNDI5NyAwIC44OTg0LS41OTM3IDEuNDIxOS0xLjYwMTUgMS40MjE5eiIKICAgICAgICAvPgogICAgPC9kZWZzPgo8L3N2Zz4=) no-repeat;
-        background-position: right 11px center;
-        padding-right: 40px;
-    }
-
-    .--error-message {
-        font-size: 11;
-        color: nd-color('alarm-red');
-    }
-}
-
-
-input[type=text],
-input[type=email],
-input[type=tel], {
-    @include input-element;
-    @include input-placeholder;
-    @include input-underlined;
+    @include nd-input-defaults();
+    @include nd-input-focus();
+    @include nd-input-disabled();
+    @include nd-input-has-errors();
     
-    &.--nd-text-input {
-        @include nd-text-input();
-    }
+    appearance: none;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDExIDE3IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKICAgIGlkPSJzZWxlY3QtYXJyb3ciPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMjEgLTMyNjkpIj4KICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNhMjMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMjIuNTIgMzI4MC4wMikiIC8+CiAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYTIzIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAxMjIyLjUyIDMyNzQuOTgpIiAvPgogICAgPC9nPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZmlsbD0icmdiYSg3LCAyMiwgMzksIDAuMykiIGlkPSJhMjMiIGQ9Ik00LjAyNTI4IDQuMDQ4MTlsLS43MDcxLjcwNzEuNzA3MS43MDcxMS43MDcxMS0uNzA3MTEtLjcwNzExLS43MDcxek0tLjcwNzEwNy43MzAwMUwzLjMxODE4IDQuNzU1MjlsMS40MTQyMS0xLjQxNDIxTC43MDcxMDctLjY4NDIwMy0uNzA3MTA3LjczMDAxek00LjczMjM5IDQuNzU1MjlMOC43ODA1OC43MDcxMDcgNy4zNjYzNi0uNzA3MTA3IDMuMzE4MTggMy4zNDEwOGwxLjQxNDIxIDEuNDE0MjF6IgogICAgICAgIC8+CiAgICA8L2RlZnM+Cjwvc3ZnPg==) no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
 }
 
-// Text Area
+select {
+  @include input-element;
+  @include input-underlined;
+
+  // TODO: add arrow
+  &.--nd-select {
+      @include nd-select-input();
+  }
+}
+
+// Select Menus
 //
-// Standard text input for long text
+// Standard select input
 //
-// :focus - no specialties on focus
-// :disabled - greyed out
+// :focus - on focus box shadow
+// :disabled - on disabled opactiy is lowered
+// .--has-errors - when input have errors
 //
 // Markup:
-// <textarea placeholder="Placeholder text"></textarea>
-// <textarea placeholder="Placeholder text">Looong text....</textarea>
+// <label for="select-{{modifier_class}}">Options</label>
+// <select id="select-{{modifier_class}}" class="--nd-select {{modifier_class}}">
+//  <option value="1">first item</option>
+//  <option value="2">second item</option>
+// </select>
 //
-// Style guide: Base.Inputs.Text Area
-textarea {
-  @include input-element;
-  @include input-placeholder;
+// Weight: 4
+//
+// Style guide: Inputs.Selects
 
-  // TODO: calculate values
-  padding-top: 15px;
+// nd-select-input()
+//
+// Sass mixin to add default look to the form select inputs.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-select-input();
+// }
+// </pre>
+//
+// Weight: 5
+//
+// Style guide: Inputs.Select input mixin
 
-  resize: vertical;
+@mixin nd-check-input(){
+    appearance: none;
+    opacity: 0;
+    outline: none;    
+
+    &+label {
+        position: relative;
+        line-height: 17px;
+        margin: {
+            bottom: $form-element-margin-bottom;
+        };
+        font-size: $nd-input-font-size;
+    }
+
+    &+label:before{
+        content: "\200b";
+        float: left;
+        width: 17px;
+        height: 17px;
+        border: $nd-input-border;
+        margin-right: 5px;
+        vertical-align: -8px;
+    }
+
+    &:focus+label:before{
+        border-color: $nd-focus-border-color;
+        box-shadow: $nd-focus-box-shadow;
+    }
+
+    &:checked+label:before {
+        border-color: $nd-focus-border-color;
+        background-color: $nd-focus-border-color;
+    }
 }
+
+// nd-check-input()
+//
+// Sass mixin to add default look to the form check inputs (like radio and checkbox).
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-check-input();
+// }
+// </pre>
+//
+// Weight: 6
+//
+// Style guide: Inputs.Check input mixin
+
+@mixin nd-check-has-errors{
+    &.--has-errors{
+        &+label:before{
+            border-color: $error-color;
+        }
+        &:focus+label:before{
+            border-color: $error-color;
+            box-shadow: $error-box-shadow;
+        }
+
+        &:checked+label:before{
+            background-color: $error-color;
+        }
+    }
+}
+
+// nd-check-has-errors()
+//
+// Sass mixin to add look to the form check inputs (like radio and checkbox) when they have error.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-check-has-errors();
+// }
+// </pre>
+//
+// Weight: 9
+//
+// Style guide: Inputs.Check error mixin
+
+@mixin nd-check-disabled{
+    &:disabled{
+        &+label, &+label:before{
+            opacity: $nd-disabled-opacity;
+            cursor: $nd-disabled-cursor;
+        }
+    }
+}
+
+// nd-check-disabled()
+//
+// Sass mixin to add look to the form check inputs (like radio and checkbox) when they are disabled.
+//
+// Usage:
+//
+// <pre>
+// .my-input {
+//   @include nd-check-disabled();
+// }
+// </pre>
+//
+// Weight: 10
+//
+// Style guide: Inputs.Check error mixin
+
+input[type=checkbox]{
+    @include nd-check-input();
+
+    &+label:before{
+        border-radius:$global-border-radius;
+    }
+
+    &:checked+label:after{
+        content: '';
+        position: absolute;
+        left: 3px;
+        top: 8px;
+        background: $nd-input-background-color;
+        width: 2px;
+        height: 2px;
+        box-shadow: 
+        2px 0 0 $nd-input-background-color,
+        4px 0 0 $nd-input-background-color,
+        4px -2px 0 $nd-input-background-color,
+        4px -4px 0 $nd-input-background-color,
+        4px -6px 0 $nd-input-background-color,
+        4px -8px 0 $nd-input-background-color;
+        transform: rotate(45deg);
+    }
+
+    @include nd-check-has-errors();
+    @include nd-check-disabled(); 
+}
+
+// Checkbox
+//
+// Standard checkbox input
+//
+// :focus - on focus box shadow
+// :disabled - on disabled opactiy is lowered
+// .--has-errors - when input have errors
+//
+// Markup:
+// <input type="checkbox" id="cb1-{{modifier_class}}" class="{{modifier_class}}" />
+// <label for="cb1-{{modifier_class}}">Option1</label>
+// <input type="checkbox" id="cb2-{{modifier_class}}" class="{{modifier_class}}" checked />
+// <label for="cb2-{{modifier_class}}">Option2</label>
+//
+// Weight: 11
+//
+// Style guide: Inputs.Checkbox
+
+input[type=radio]{
+    @include nd-check-input();
+
+    &+label::before{
+        border-radius: 50%;
+    }
+
+    &:checked+label:after{
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        background: $nd-input-background-color;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+    }
+
+    @include nd-check-has-errors();
+    @include nd-check-disabled(); 
+}
+
+// Radio button
+//
+// Standard radio button input
+//
+// :focus - on focus box shadow
+// :disabled - on disabled opactiy is lowered
+// .--has-errors - when input have errors
+//
+// Markup:
+// <input type="radio" id="r1-{{modifier_class}}" name="r-{{modifier_class}}" class="{{modifier_class}}" />
+// <label for="r1-{{modifier_class}}">Option1</label>
+// <input type="radio" id="r2-{{modifier_class}}" name="r-{{modifier_class}}" class="{{modifier_class}}" checked />
+// <label for="r2-{{modifier_class}}">Option2</label>
+//
+// Weight: 12
+//
+// Style guide: Inputs.Radio button

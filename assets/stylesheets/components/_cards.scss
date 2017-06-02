@@ -1,0 +1,106 @@
+$nd-card-circle-size: 34px;
+$nd-card-circle-margin: 12px;
+$nd-card-color: nd-color('metal');
+$nd-card-borders: 1px solid rgba($nd-card-color, .2);
+
+@mixin nd-card-meta-data(){
+    > .--meta-data {
+        font-size: 11px;
+        line-height: 13px;
+        color: $nd-card-color;
+    }
+
+    > .--heading+.--meta-data{
+        padding-top: 4px;
+    }
+}
+
+@mixin nd-card-heading(){
+    > .--heading {
+        font-size: 14px;
+        line-height: 16px;
+        color: nd-color('carbon');
+    }
+}
+
+@mixin nd-card-text(){
+    > .text {
+        @include nd-card-heading();
+        @include nd-card-meta-data();
+        
+        background: url(data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOCIgaGVpZ2h0PSI1IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgPHVzZSBmaWxsPSIjODg4RkE4IiBmaWxsLW9wYWNpdHk9Ii43IiB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgMy4wNCA0LjA0KSIvPgogIDxkZWZzPgogICAgPHBhdGggaWQ9ImEiIGQ9Ik0uNTI4MTk0LS41MzI0NThDLjIzNDEyNS0uODI0MTcxLS4yNDA3NDUtLjgyMjI2Mi0uNTMyNDU4LS41MjgxOTRjLS4yOTE3MTMuMjk0MDY5LS4yODk4MDQuNzY4OTM5LjAwNDI2NCAxLjA2MDY1MkwuNTI4MTk0LS41MzI0NTh6TTMuMDYyMDYgMy4wMzc1M2wuNTI4MTkuNTMyNDZjLjE0MTk2LS4xNDA4Mi4yMjE4MS0uMzMyNS4yMjE4MS0uNTMyNDYgMC0uMTk5OTYtLjA3OTg1LS4zOTE2NC0uMjIxODEtLjUzMjQ2bC0uNTI4MTkuNTMyNDZ6TS0uNTI4MTk0IDUuNTQyNmMtLjI5NDA2OC4yOTE3Mi0uMjk1OTc3Ljc2NjU5LS4wMDQyNjQgMS4wNjA2NS4yOTE3MTMuMjk0MDcuNzY2NTgzLjI5NTk4IDEuMDYwNjUyLjAwNDI3TC0uNTI4MTk0IDUuNTQyNnptMC01LjAxMDE0MkwyLjUzMzg2IDMuNTY5OTlsMS4wNTYzOS0xLjA2NDkyTC41MjgxOTQtLjUzMjQ1OC0uNTI4MTk0LjUzMjQ1OHpNMi41MzM4NiAyLjUwNTA3TC0uNTI4MTk0IDUuNTQyNi41MjgxOTQgNi42MDc1MiAzLjU5MDI1IDMuNTY5OTkgMi41MzM4NiAyLjUwNTA3eiIvPgogIDwvZGVmcz4KPC9zdmc+) no-repeat;
+        background-position: right 5px top 8px;
+        padding-right: 18px;
+        width: calc(100% - #{$nd-card-circle-size + $nd-card-circle-margin});        
+    }
+}
+
+@mixin nd-card-circle(){
+    > .circle {
+        height: $nd-card-circle-size;
+        width: $nd-card-circle-size;
+        border-radius: 50%;
+        background-color: nd-color('metal');
+        margin-right: $nd-card-circle-margin;
+    }
+}
+
+@mixin nd-card(){
+    .card {
+        @include nd-card-text();
+        @include nd-card-circle();
+
+        padding: 15px;
+        border-bottom: $nd-card-borders;
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.nd-cards{
+    @include nd-card();
+
+    border: $nd-card-borders;
+    border-radius: $global-border-radius;
+}
+
+// Cards
+//
+// This is card styling
+//
+// Markup:
+// <div class="nd-cards">
+//     <div class="card">
+//         <div class="circle">
+//         </div>
+//         <div class="text">
+//             <div class="--heading">
+//                 User Action
+//             </div>
+//             <div class="--meta-data">
+//                 Timestamp
+//             </div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="circle">
+//         </div>
+//         <div class="text">
+//             <div class="--heading">
+//                 User Action
+//             </div>
+//             <div class="--meta-data">
+//                 Timestamp
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: -90
+//
+// Style guide: Cards

@@ -11,9 +11,6 @@
 @import "core/variables";
 @import "core/icons";
 
-// Mixins
-//
-// Style guide: Mixins
 @import "mixins/form-element";
 @import "mixins/input-element";
 @import "mixins/input-placeholder";
@@ -27,12 +24,13 @@
 @import "depricated/buttons";
 @import "base/buttons";
 @import "base/inputs";
+@import "base/textareas";
 @import "base/images";
 @import "depricated/links";
 @import "base/links";
 @import "base/label";
 @import "base/lists";
-@import "base/selects";
+@import "depricated/selects";
 @import "base/text";
 
 // Modules
@@ -45,3 +43,5 @@
 @import "modules/phone-wrapper";
 @import "modules/profile-image";
 @import "modules/progress-indicator";
+
+@import "components/cards";
