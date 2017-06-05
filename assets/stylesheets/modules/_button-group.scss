@@ -3,14 +3,21 @@
 //
 // Groups a set of buttons horizontally
 //
+// .--primary-lime - Primary lime button styling
+// .--primary-blue - Primary royal blue button styling
+// .--secondary-metal - Secondary metal button styling
+// .--secondary-abort - Secondary abort button styling
+//
 // Markup:
 //   <div class="button-group">
-//     <button>Button 1</button>
-//     <button>Button 2</button>
-//     <button>Button 3</button>
+//     <button class="{{modifier_class}}">Button 1</button>
+//     <button class="{{modifier_class}}">Button 2</button>
+//     <button class="{{modifier_class}}">Button 3</button>
 //   </div>
 //
-// Style guide: Modules.Button Group
+// Weight:3
+//
+// Style guide: Buttons.Button Group
 
 
 .button-group {
@@ -19,6 +26,7 @@
     flex: 1 1 0; // flex-basis: 0 makes equal width
     border-radius: 0;
     border-right-width: 0;
+    border-right: 1px solid rgba(nd-color('carbon'), .2);
     &:first-of-type {
       border-top-left-radius: $global-border-radius;
       border-bottom-left-radius: $global-border-radius;
@@ -26,7 +34,7 @@
     &:last-of-type {
       border-top-right-radius: $global-border-radius;
       border-bottom-right-radius: $global-border-radius;
-      border-right-width: $button-border-width;
+      border-right-width: 0;
     }
   }
 }

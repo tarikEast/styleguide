@@ -16,15 +16,9 @@
 @import "mixins/input-placeholder";
 @import "mixins/input-underlined";
 
-// Base
-//
-// styles for basic html elements
-//
-// Style guide: Base
 @import "depricated/buttons";
 @import "base/buttons";
 @import "base/inputs";
-@import "base/textareas";
 @import "base/images";
 @import "depricated/links";
 @import "base/links";
@@ -40,7 +34,6 @@
 // Style guide: Modules
 @import "modules/button-group";
 @import "modules/flash-messages";
-@import "modules/phone-wrapper";
 @import "modules/profile-image";
 @import "modules/progress-indicator";
 

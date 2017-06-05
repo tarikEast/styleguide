@@ -1,101 +1,58 @@
-$nd-card-circle-size: 34px;
-$nd-card-circle-margin: 12px;
-$nd-card-color: nd-color('metal');
-$nd-card-borders: 1px solid rgba($nd-card-color, .2);
-
-@mixin nd-card-meta-data(){
-    > .--meta-data {
-        font-size: 11px;
-        line-height: 13px;
-        color: $nd-card-color;
-    }
-
-    > .--heading+.--meta-data{
-        padding-top: 4px;
-    }
-}
-
-@mixin nd-card-heading(){
-    > .--heading {
-        font-size: 14px;
-        line-height: 16px;
-        color: nd-color('carbon');
-    }
-}
-
-@mixin nd-card-text(){
-    > .text {
-        @include nd-card-heading();
-        @include nd-card-meta-data();
-        
-        background: url(data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOCIgaGVpZ2h0PSI1IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgPHVzZSBmaWxsPSIjODg4RkE4IiBmaWxsLW9wYWNpdHk9Ii43IiB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgMy4wNCA0LjA0KSIvPgogIDxkZWZzPgogICAgPHBhdGggaWQ9ImEiIGQ9Ik0uNTI4MTk0LS41MzI0NThDLjIzNDEyNS0uODI0MTcxLS4yNDA3NDUtLjgyMjI2Mi0uNTMyNDU4LS41MjgxOTRjLS4yOTE3MTMuMjk0MDY5LS4yODk4MDQuNzY4OTM5LjAwNDI2NCAxLjA2MDY1MkwuNTI4MTk0LS41MzI0NTh6TTMuMDYyMDYgMy4wMzc1M2wuNTI4MTkuNTMyNDZjLjE0MTk2LS4xNDA4Mi4yMjE4MS0uMzMyNS4yMjE4MS0uNTMyNDYgMC0uMTk5OTYtLjA3OTg1LS4zOTE2NC0uMjIxODEtLjUzMjQ2bC0uNTI4MTkuNTMyNDZ6TS0uNTI4MTk0IDUuNTQyNmMtLjI5NDA2OC4yOTE3Mi0uMjk1OTc3Ljc2NjU5LS4wMDQyNjQgMS4wNjA2NS4yOTE3MTMuMjk0MDcuNzY2NTgzLjI5NTk4IDEuMDYwNjUyLjAwNDI3TC0uNTI4MTk0IDUuNTQyNnptMC01LjAxMDE0MkwyLjUzMzg2IDMuNTY5OTlsMS4wNTYzOS0xLjA2NDkyTC41MjgxOTQtLjUzMjQ1OC0uNTI4MTk0LjUzMjQ1OHpNMi41MzM4NiAyLjUwNTA3TC0uNTI4MTk0IDUuNTQyNi41MjgxOTQgNi42MDc1MiAzLjU5MDI1IDMuNTY5OTkgMi41MzM4NiAyLjUwNTA3eiIvPgogIDwvZGVmcz4KPC9zdmc+) no-repeat;
-        background-position: right 5px top 8px;
-        padding-right: 18px;
-        width: calc(100% - #{$nd-card-circle-size + $nd-card-circle-margin});        
-    }
-}
-
-@mixin nd-card-circle(){
-    > .circle {
-        height: $nd-card-circle-size;
-        width: $nd-card-circle-size;
-        border-radius: 50%;
-        background-color: nd-color('metal');
-        margin-right: $nd-card-circle-margin;
-    }
-}
-
-@mixin nd-card(){
-    .card {
-        @include nd-card-text();
-        @include nd-card-circle();
-
-        padding: 15px;
-        border-bottom: $nd-card-borders;
-        display: flex;
-        width: 100%;
-        align-items: center;
-
-        &:last-child {
-            border-bottom: none;
-        }
-    }
-}
-
-.nd-cards{
-    @include nd-card();
-
-    border: $nd-card-borders;
-    border-radius: $global-border-radius;
-}
-
-// Cards
-//
-// This is card styling
+// Feeed Cards
 //
 // Markup:
-// <div class="nd-cards">
-//     <div class="card">
-//         <div class="circle">
-//         </div>
-//         <div class="text">
-//             <div class="--heading">
-//                 User Action
+// <div class="nd-cards --nd-feed-cards">
+//     <div class="card  --open">
+//         <div class="content">
+//             <div class="circle"></div>
+//             <div class="details">
+//                 <header>Main component</header>
+//                 <span>Metadata</span>
 //             </div>
-//             <div class="--meta-data">
-//                 Timestamp
+//         </div>
+//         <div class="sub-cards">
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                 </div>
 //             </div>
 //         </div>
 //     </div>
 //     <div class="card">
-//         <div class="circle">
-//         </div>
-//         <div class="text">
-//             <div class="--heading">
-//                 User Action
+//         <div class="content">
+//             <div class="circle"></div>
+//             <div class="details">
+//                 <header>Main component</header>
+//                 <span>Metadata</span>
 //             </div>
-//             <div class="--meta-data">
-//                 Timestamp
+//         </div>
+//         <div class="sub-cards">
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                 </div>
 //             </div>
 //         </div>
 //     </div>
@@ -103,4 +60,264 @@ $nd-card-borders: 1px solid rgba($nd-card-color, .2);
 //
 // Weight: -90
 //
-// Style guide: Cards
+// Style guide: FeedCards
+
+// Object Cards
+//
+// Markup:
+// <div class="nd-cards --nd-object-cards">
+//     <div class="card  --open">
+//         <div class="content">
+//             <div class="circle"></div>
+//             <div class="details">
+//                 <header>Main component</header>
+//                 <span>Metadata</span>
+//             </div>
+//             <div class="square"></div>
+//             <div class="progress" style="width:20%"></div>
+//         </div>
+//         <div class="sub-cards">
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                     <div class="progress" style="width:25%"></div>
+//                 </div>
+//             </div>
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                     <div class="progress" style="width:15%"></div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="card">
+//         <div class="content">
+//             <div class="circle"></div>
+//             <div class="details">
+//                 <header>Main component</header>
+//                 <span>Metadata</span>
+//             </div>
+//             <div class="square"></div>
+//         </div>
+//         <div class="sub-cards">
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div class="card">
+//                 <div class="content">
+//                     <div class="circle"></div>
+//                     <div class="details">
+//                         <header>Sub component</header>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </div>
+//
+// Weight: -89
+//
+// Style guide: ObjectCards
+
+$nd-cards-configuration: (
+    feed-cards: (
+        border: 1px solid rgba(nd-color('metal'), .2),
+        card: (
+            padding: 15px,
+            circle-radius: 34px,
+            circle-color: nd-color('metal'),
+            circle-margin: 0 12px 0 0,
+            details-background: url(data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOCIgaGVpZ2h0PSI1IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgPHVzZSBmaWxsPSIjODg4RkE4IiBmaWxsLW9wYWNpdHk9Ii43IiB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgMy4wNCA0LjA0KSIvPgogIDxkZWZzPgogICAgPHBhdGggaWQ9ImEiIGQ9Ik0uNTI4MTk0LS41MzI0NThDLjIzNDEyNS0uODI0MTcxLS4yNDA3NDUtLjgyMjI2Mi0uNTMyNDU4LS41MjgxOTRjLS4yOTE3MTMuMjk0MDY5LS4yODk4MDQuNzY4OTM5LjAwNDI2NCAxLjA2MDY1MkwuNTI4MTk0LS41MzI0NTh6TTMuMDYyMDYgMy4wMzc1M2wuNTI4MTkuNTMyNDZjLjE0MTk2LS4xNDA4Mi4yMjE4MS0uMzMyNS4yMjE4MS0uNTMyNDYgMC0uMTk5OTYtLjA3OTg1LS4zOTE2NC0uMjIxODEtLjUzMjQ2bC0uNTI4MTkuNTMyNDZ6TS0uNTI4MTk0IDUuNTQyNmMtLjI5NDA2OC4yOTE3Mi0uMjk1OTc3Ljc2NjU5LS4wMDQyNjQgMS4wNjA2NS4yOTE3MTMuMjk0MDcuNzY2NTgzLjI5NTk4IDEuMDYwNjUyLjAwNDI3TC0uNTI4MTk0IDUuNTQyNnptMC01LjAxMDE0MkwyLjUzMzg2IDMuNTY5OTlsMS4wNTYzOS0xLjA2NDkyTC41MjgxOTQtLjUzMjQ1OC0uNTI4MTk0LjUzMjQ1OHpNMi41MzM4NiAyLjUwNTA3TC0uNTI4MTk0IDUuNTQyNi41MjgxOTQgNi42MDc1MiAzLjU5MDI1IDMuNTY5OTkgMi41MzM4NiAyLjUwNTA3eiIvPgogIDwvZGVmcz4KPC9zdmc+) no-repeat,
+            details-background-position: right 5px top 8px,
+            details-padding: 0 18px 0 0,
+            progress-color: rgba(nd-color('metal'), .2),
+            header-typography: 'secondary-headline',
+            span-typography: 'meta-headline',
+            background-color: nd-color('white'),
+            open-background-color: nd-color('white')
+        ),
+        sub-card: (
+            padding: 10px 15px,  
+            circle-radius: 19px,
+            circle-color: nd-color('metal'),
+            circle-margin: 0 9px 0 0,
+            details-background: none,
+            details-background-position: right 5px top 8px,
+            details-padding: 0,
+            progress-color: rgba(nd-color('metal'), .2),
+            header-typography: 'sub-headline',
+            span-typography: 'meta-headline',
+            background-color: nd-color('white'),
+            open-background-color: nd-color('white')          
+        )
+    ),
+    object-cards: (
+        border: 1px solid rgba(nd-color('metal'), .2),
+        card: (
+            padding: 13px,
+            circle-radius: 34px,
+            circle-color: nd-color('lime'),
+            circle-margin: 0 12px 0 0,
+            details-background: none,
+            details-background-position: 0,
+            details-padding: 0,
+            progress-color: rgba(nd-color('lime'), .3),
+            header-typography: 'secondary-headline',
+            span-typography: 'meta-headline',
+            background-color: lighten(nd-color('metal'), 38%),
+            open-background-color: nd-color('white')
+        ),
+        sub-card: (
+            padding: 10px 13px,  
+            circle-radius: 19px,
+            circle-color: nd-color('lime'),
+            circle-margin: 0 9px 0 0,
+            details-background: none,
+            details-background-position: right 5px top 8px,
+            details-padding: 0,
+            progress-color: rgba(nd-color('lime'), .3),
+            header-typography: 'sub-headline',
+            span-typography: 'meta-headline',
+            background-color: nd-color('white'),
+            open-background-color: nd-color('white')
+        )
+    )
+);
+
+@mixin nd-circle($radius, $margin, $color){
+    width: $radius;
+    height: $radius;
+    border-radius: 50%;
+    background-color: $color;
+    margin: $margin;
+}
+
+@mixin nd-square($dimension, $margin, $color){
+    width: $dimension;
+    height: $dimension;
+    border-radius: $global-border-radius;
+    background-color: $color;
+    margin: $margin;
+}
+
+@mixin nd-card-content ($style) {
+    display: flex;
+    align-items: center;
+    padding: map-get($style , 'padding');
+    position: relative;
+
+    .circle {
+        @include nd-circle(map-get($style, 'circle-radius'), 
+                map-get($style, 'circle-margin'), 
+                map-get($style, 'circle-color'));
+        flex-grow: 0;
+    }
+
+    .details {
+        flex-grow: 1;
+        background: map-get($style, 'details-background');
+        background-position: map-get($style, 'details-background-position');
+        padding: map-get($style, 'circle-margin');
+
+        header {
+            @include nd-typography(map-get($style, 'header-typography'));
+            line-height: 16px;
+
+            &+span{
+                margin-top: 5px;
+            }
+        }
+
+        span {
+            @include nd-typography(map-get($style, 'span-typography'));
+            display: block;
+            text-transform: none;
+            line-height: 13px;
+        }
+    }
+
+    .square {
+        @include nd-square(map-get($style, 'circle-radius'), 0 0 0 13px, lighten(nd-color(metal), 20%))
+    }
+
+    .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: map-get($style, 'progress-color');
+    }
+}
+
+@mixin nd-cards($style){
+    &.--nd-#{$style}{
+        $style-config: map-get($nd-cards-configuration, $style);
+        border: map-get($style-config, 'border');
+
+        .card{
+            $card-style: map-get($style-config, 'card');
+            background-color: map-get($card-style, 'background-color');
+
+            &+.card {
+                border-top: map-get($style-config, 'border');
+            }
+
+            .content{
+                @include nd-card-content($card-style);
+            }
+
+            &.--open .sub-cards {
+                border-top: map-get($style-config, 'border');
+                display: block;
+            }
+
+            &.--open .content {
+                .details{
+                    background: none;
+                    background-position: 0;
+                    padding: 0;
+                }
+            }
+
+            &.--open{
+                background-color: map-get($card-style, 'open-background-color');   
+                box-shadow: 0px 0px 5px 0px rgba(nd-color('metal'),0.75);                             
+            }
+
+            .sub-cards{
+                $sub-card-style: map-get($style-config, 'sub-card');
+                display: none;
+                
+
+                &+.sub-cards{
+                   border-top: map-get($style-config, 'border'); 
+                }
+                
+                .card{
+                    background-color: map-get($sub-card-style, 'background-color');
+                    .content {
+                        @include nd-card-content($sub-card-style);                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nd-cards{
+    border-radius: $global-border-radius;    
+    @include nd-cards('feed-cards');
+    @include nd-cards('object-cards');
+}

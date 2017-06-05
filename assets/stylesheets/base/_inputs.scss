@@ -172,13 +172,26 @@ $error-box-shadow: 0px 0px 3px 0px rgba($error-color,0.7);
 
 input[type=text],
 input[type=email],
-input[type=tel], {
+input[type=tel] {
     @include input-element;
     @include input-placeholder;
     @include input-underlined;
     
     &.--nd-text-input {
         @include nd-text-input();
+    }
+}
+
+textarea {
+  @include input-element;
+  @include input-placeholder;
+  padding-top: 15px;
+
+  resize: vertical;
+    
+    &.--nd-text-input {
+        @include nd-text-input();
+        padding-top: 12px;
     }
 }
 
@@ -197,6 +210,7 @@ input[type=tel], {
 // <input type="email" id="email{{modifier_class}}" placeholder="jon@doe.com" class="--nd-text-input {{modifier_class}}">
 // <label for="tel{{modifier_class}}">Telephone</label>
 // <input type="tel" id="tel{{modifier_class}}" placeholder="+38762385235" class="--nd-text-input {{modifier_class}}">
+// <textarea id="area{{modifier_class}}" placeholder="Some text here" class="--nd-text-input {{modifier_class}}"></textarea>
 //
 // Weight: 2
 //
