@@ -261,7 +261,11 @@
           <a href="section-lists.html">
           <span class="kss-nav__ref">8</span
           ><span class="kss-nav__name">Lists</span>
-        </a>         </li>
+        </a> 
+          <ul class="kss-nav__menu-child">
+              
+          </ul>
+        </li>
         <li class="kss-nav__menu-item">
           <a href="section-feedcards.html">
           <span class="kss-nav__ref">9</span
@@ -281,470 +285,55 @@
           <a href="section-depricated.html">
           <span class="kss-nav__ref">12</span
           ><span class="kss-nav__name">Depricated</span>
-        </a> 
-          <ul class="kss-nav__menu-child">
-               
-            <li class="kss-nav__menu-item">
-              <a href="section-depricated.html#kssref-depricated-buttons">
-                <span class="kss-nav__ref ">12.1</span
-                ><span class="kss-nav__name">Buttons</span>
-              </a>
-            </li>
-              
-            <li class="kss-nav__menu-item">
-              <a href="section-depricated.html#kssref-depricated-colors">
-                <span class="kss-nav__ref ">12.2</span
-                ><span class="kss-nav__name">Colors</span>
-              </a>
-            </li>
-              
-            <li class="kss-nav__menu-item">
-              <a href="section-depricated.html#kssref-depricated-links">
-                <span class="kss-nav__ref ">12.3</span
-                ><span class="kss-nav__name">Links</span>
-              </a>
-            </li>
-              
-            <li class="kss-nav__menu-item">
-              <a href="section-depricated.html#kssref-depricated-selects">
-                <span class="kss-nav__ref ">12.4</span
-                ><span class="kss-nav__name">Select Menus</span>
-              </a>
-            </li>
-              
-            <li class="kss-nav__menu-item">
-              <a href="section-depricated.html#kssref-depricated-text-styles">
-                <span class="kss-nav__ref ">12.5</span
-                ><span class="kss-nav__name">Text Styles</span>
-              </a>
-            </li>
-             
-          </ul>
-        </li>
+        </a>         </li>
       </ul>
     </nav>
   </div>
   <article role="main" class="kss-main">
    
-    <div id="kssref-depricated" class="kss-section kss-section--depth-1">
+    <div id="kssref-lists" class="kss-section kss-section--depth-1">
 
         <div class="kss-style">
           <h1 class="kss-title kss-title--level-1">
-            <a class="kss-title__permalink" href="#kssref-depricated">
+            <a class="kss-title__permalink" href="#kssref-lists">
           <span class="kss-title__ref">
-              12
+              8
             <span class="kss-title__permalink-hash">
-                #Depricated
+                #Lists
             </span>
           </span>
-          Depricated
+          Lists
         </a>
           </h1>
 
  
           <div class="kss-description">
-            <p>Depricated styles</p>
+            <p>clean list without styling</p>
 
           </div>
         </div>
 
- 
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+          <div class="kss-modifier__example">
+            <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+          </div>
+        </div>
+
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+         
     </div>
-        <section id="kssref-depricated-buttons" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-depricated-buttons">
-          <span class="kss-title__ref">
-              12.1
-            <span class="kss-title__permalink-hash">
-                #Depricated.Buttons
-            </span>
-          </span>
-          Buttons
-        </a>
-          </h2>
-
- 
-          <div class="kss-description">
-            <p>Your standard button suitable for clicking.</p>
-
-          </div>
-        </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Examples
-          </div>
-          <div class="kss-modifier__default-name kss-style">
-            Default styling
-          </div>
-          <div class="kss-modifier__example">
-            <button class="[modifier class]">Click Button</button>
-<input type="button" class="[modifier class]" value="Click Input Button">
-<input type="submit" class="[modifier class]" value="Click Input Submit">
-<a href="#" class="button [modifier class]">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            :hover
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Highlights when hovering.
-          </div>
-          <div class="kss-modifier__example">
-            <button class="pseudo-class-hover">Click Button</button>
-<input type="button" class="pseudo-class-hover" value="Click Input Button">
-<input type="submit" class="pseudo-class-hover" value="Click Input Submit">
-<a href="#" class="button pseudo-class-hover">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            :disabled
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Greyed out when disabled
-          </div>
-          <div class="kss-modifier__example">
-            <button class="pseudo-class-disabled">Click Button</button>
-<input type="button" class="pseudo-class-disabled" value="Click Input Button">
-<input type="submit" class="pseudo-class-disabled" value="Click Input Submit">
-<a href="#" class="button pseudo-class-disabled">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .active
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Highlights when active
-          </div>
-          <div class="kss-modifier__example">
-            <button class="active">Click Button</button>
-<input type="button" class="active" value="Click Input Button">
-<input type="submit" class="active" value="Click Input Submit">
-<a href="#" class="button active">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .button--warn
-          </div>
-          <div class="kss-modifier__description kss-style">
-            red button
-          </div>
-          <div class="kss-modifier__example">
-            <button class="button--warn">Click Button</button>
-<input type="button" class="button--warn" value="Click Input Button">
-<input type="submit" class="button--warn" value="Click Input Submit">
-<a href="#" class="button button--warn">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .button--info
-          </div>
-          <div class="kss-modifier__description kss-style">
-            blue button
-          </div>
-          <div class="kss-modifier__example">
-            <button class="button--info">Click Button</button>
-<input type="button" class="button--info" value="Click Input Button">
-<input type="submit" class="button--info" value="Click Input Submit">
-<a href="#" class="button button--info">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .button--add
-          </div>
-          <div class="kss-modifier__description kss-style">
-            dashed ouline button with plus sign added before text
-          </div>
-          <div class="kss-modifier__example">
-            <button class="button--add">Click Button</button>
-<input type="button" class="button--add" value="Click Input Button">
-<input type="submit" class="button--add" value="Click Input Submit">
-<a href="#" class="button button--add">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .button--text
-          </div>
-          <div class="kss-modifier__description kss-style">
-            text only button (DEPRECATED: use a link instead)
-          </div>
-          <div class="kss-modifier__example">
-            <button class="button--text">Click Button</button>
-<input type="button" class="button--text" value="Click Input Button">
-<input type="submit" class="button--text" value="Click Input Submit">
-<a href="#" class="button button--text">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .button--text.button--muted
-          </div>
-          <div class="kss-modifier__description kss-style">
-            text only button, muted text color
-          </div>
-          <div class="kss-modifier__example">
-            <button class="button--text button--muted">Click Button</button>
-<input type="button" class="button--text button--muted" value="Click Input Button">
-<input type="submit" class="button--text button--muted" value="Click Input Submit">
-<a href="#" class="button button--text button--muted">Click Link</a>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Click Button&lt;/button&gt;
-&lt;input type=&quot;button&quot; class=&quot;[modifier class]&quot; value=&quot;Click Input Button&quot;&gt;
-&lt;input type=&quot;submit&quot; class=&quot;[modifier class]&quot; value=&quot;Click Input Submit&quot;&gt;
-&lt;a href=&quot;#&quot; class=&quot;button [modifier class]&quot;&gt;Click Link&lt;/a&gt;</code></pre>
-        </div>
-             </section>
-            <section id="kssref-depricated-colors" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-depricated-colors">
-          <span class="kss-title__ref">
-              12.2
-            <span class="kss-title__permalink-hash">
-                #Depricated.Colors
-            </span>
-          </span>
-          Colors
-        </a>
-          </h2>
-
- 
-          <div class="kss-description">
-            <p>Usage:</p>
-<pre>
-.my-component {
-  background-color: color("green");
-}
-</pre>
-          </div>
-        </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
-          <div class="kss-modifier__example">
-            <div class="color-sample sample1"></div>
-<div class="color-sample sample2"></div>
-<div class="color-sample sample3"></div>
-<div class="color-sample sample4"></div>
-<div class="color-sample sample5"></div>
-<div class="color-sample sample6"></div>
-<div class="color-sample sample7"></div>
-<div class="color-sample sample8"></div>
-<div class="color-sample sample9"></div>
-<div class="color-sample sample10"></div>
-<div class="color-sample sample11"></div>
-<div class="color-sample"> +++ not in pattern library +++ </div>
-<div class="color-sample sample12"></div>
-<div class="color-sample sample13"></div>
-<div class="color-sample sample14"></div>
-<div class="color-sample sample15"></div>
-<div class="color-sample sample16"></div>
-<div class="color-sample sample17"></div>
-<div class="color-sample sample18"></div>
-<div class="color-sample sample19"></div>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;color-sample sample1&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample2&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample3&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample4&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample5&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample6&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample7&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample8&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample9&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample10&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample11&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample&quot;&gt; +++ not in pattern library +++ &lt;/div&gt;
-&lt;div class=&quot;color-sample sample12&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample13&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample14&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample15&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample16&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample17&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample18&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;color-sample sample19&quot;&gt;&lt;/div&gt;</code></pre>
-        </div>
-             </section>
-            <section id="kssref-depricated-links" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-depricated-links">
-          <span class="kss-title__ref">
-              12.3
-            <span class="kss-title__permalink-hash">
-                #Depricated.Links
-            </span>
-          </span>
-          Links
-        </a>
-          </h2>
-
- 
-          <div class="kss-description">
-            <p>Your standard link suitable for clicking.</p>
-
-          </div>
-        </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Examples
-          </div>
-          <div class="kss-modifier__default-name kss-style">
-            Default styling
-          </div>
-          <div class="kss-modifier__example">
-            <a href="#" class="[modifier class]">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            :hover
-          </div>
-          <div class="kss-modifier__description kss-style">
-            Highlights when hovering.
-          </div>
-          <div class="kss-modifier__example">
-            <a href="#" class="pseudo-class-hover">Click Link</a>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .muted
-          </div>
-          <div class="kss-modifier__description kss-style">
-            dimmed version
-          </div>
-          <div class="kss-modifier__example">
-            <a href="#" class="muted">Click Link</a>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;[modifier class]&quot;&gt;Click Link&lt;/a&gt;</code></pre>
-        </div>
-             </section>
-            <section id="kssref-depricated-selects" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-depricated-selects">
-          <span class="kss-title__ref">
-              12.4
-            <span class="kss-title__permalink-hash">
-                #Depricated.Selects
-            </span>
-          </span>
-          Select Menus
-        </a>
-          </h2>
-
- 
-          <div class="kss-description">
-            <p>Standard select input</p>
-
-          </div>
-        </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Examples
-          </div>
-          <div class="kss-modifier__default-name kss-style">
-            Default styling
-          </div>
-          <div class="kss-modifier__example">
-            <select class="[modifier class]">
- <option value="">choose an item</option>
- <option value="1">first item</option>
- <option value="2">second item</option>
-</select>
-          </div>
-          <div class="kss-modifier__name kss-style">
-            .underlined
-          </div>
-          <div class="kss-modifier__description kss-style">
-            only showing a line for inputs
-          </div>
-          <div class="kss-modifier__example">
-            <select class="underlined">
- <option value="">choose an item</option>
- <option value="1">first item</option>
- <option value="2">second item</option>
-</select>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;select class=&quot;[modifier class]&quot;&gt;
- &lt;option value=&quot;&quot;&gt;choose an item&lt;/option&gt;
- &lt;option value=&quot;1&quot;&gt;first item&lt;/option&gt;
- &lt;option value=&quot;2&quot;&gt;second item&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-        </div>
-             </section>
-            <section id="kssref-depricated-text-styles" class="kss-section kss-section--depth-2">
-
-        <div class="kss-style">
-          <h2 class="kss-title kss-title--level-2">
-            <a class="kss-title__permalink" href="#kssref-depricated-text-styles">
-          <span class="kss-title__ref">
-              12.5
-            <span class="kss-title__permalink-hash">
-                #Depricated.Text Styles
-            </span>
-          </span>
-          Text Styles
-        </a>
-          </h2>
-
- 
-          <div class="kss-description">
-            <p>TODO: add desktop sizes, use &#39;rem&#39; values</p>
-<p>Usage:</p>
-<pre>
-.my-header {
-  @include text-style("display1");
-}
-</pre>
-          </div>
-        </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
-          <div class="kss-modifier__example">
-            <div class="text-style-sample sample1"></div>
-<div class="text-style-sample sample2"></div>
-<div class="text-style-sample sample3"></div>
-<div class="text-style-sample sample4"></div>
-<div class="text-style-sample sample5"></div>
-<div class="text-style-sample sample6"></div>
-<div class="text-style-sample sample7"></div>
-<div class="text-style-sample sample8"></div>
-<div class="text-style-sample sample9"></div>
-<div class="text-style-sample sample10"></div>
-<div class="text-style-sample sample11"></div>
-<div class="text-style-sample sample12"></div>
-          </div>
-        </div>
-
-        <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;text-style-sample sample1&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample2&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample3&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample4&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample5&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample6&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample7&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample8&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample9&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample10&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample11&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;text-style-sample sample12&quot;&gt;&lt;/div&gt;</code></pre>
-        </div>
-             </section>
-      
+  
   </article>
 
   <!-- SCRIPTS -->

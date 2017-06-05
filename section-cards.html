@@ -258,19 +258,19 @@
           ><span class="kss-nav__name">Inputs</span>
         </a>         </li>
         <li class="kss-nav__menu-item">
-          <a href="section-cards.html">
+          <a href="section-lists.html">
           <span class="kss-nav__ref">8</span
-          ><span class="kss-nav__name">Cards</span>
+          ><span class="kss-nav__name">Lists</span>
+        </a>         </li>
+        <li class="kss-nav__menu-item">
+          <a href="section-cards.html">
+          <span class="kss-nav__ref">9</span
+          ><span class="kss-nav__name">Feeed Cards</span>
         </a> 
           <ul class="kss-nav__menu-child">
               
           </ul>
         </li>
-        <li class="kss-nav__menu-item">
-          <a href="section-base.html">
-          <span class="kss-nav__ref">9</span
-          ><span class="kss-nav__name">Base</span>
-        </a>         </li>
         <li class="kss-nav__menu-item">
           <a href="section-modules.html">
           <span class="kss-nav__ref">10</span
@@ -292,12 +292,12 @@
           <h1 class="kss-title kss-title--level-1">
             <a class="kss-title__permalink" href="#kssref-cards">
           <span class="kss-title__ref">
-              8
+              9
             <span class="kss-title__permalink-hash">
                 #Cards
             </span>
           </span>
-          Cards
+          Feeed Cards
         </a>
           </h1>
 
@@ -313,28 +313,58 @@
             Example
           </div>
           <div class="kss-modifier__example">
-            <div class="nd-cards">
-    <div class="card">
-        <div class="circle">
-        </div>
-        <div class="text">
-            <div class="--heading">
-                User Action
+            <div class="nd-cards --nd-feed-cards">
+    <div class="card  --open">
+        <div class="content">
+            <div class="circle"></div>
+            <div class="details">
+                <header>Main component</header>
+                <span>Metadata</span>
             </div>
-            <div class="--meta-data">
-                Timestamp
+        </div>
+        <div class="sub-cards">
+            <div class="card">
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details">
+                        <header>Sub component</header>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details">
+                        <header>Sub component</header>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="card">
-        <div class="circle">
-        </div>
-        <div class="text">
-            <div class="--heading">
-                User Action
+        <div class="content">
+            <div class="circle"></div>
+            <div class="details">
+                <header>Main component</header>
+                <span>Metadata</span>
             </div>
-            <div class="--meta-data">
-                Timestamp
+        </div>
+        <div class="sub-cards">
+            <div class="card">
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details">
+                        <header>Sub component</header>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="circle"></div>
+                    <div class="details">
+                        <header>Sub component</header>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -343,28 +373,58 @@
         </div>
 
         <div class="kss-markup kss-style">
-          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;nd-cards&quot;&gt;
-    &lt;div class=&quot;card&quot;&gt;
-        &lt;div class=&quot;circle&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;text&quot;&gt;
-            &lt;div class=&quot;--heading&quot;&gt;
-                User Action
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;nd-cards --nd-feed-cards&quot;&gt;
+    &lt;div class=&quot;card  --open&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;details&quot;&gt;
+                &lt;header&gt;Main component&lt;/header&gt;
+                &lt;span&gt;Metadata&lt;/span&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;--meta-data&quot;&gt;
-                Timestamp
+        &lt;/div&gt;
+        &lt;div class=&quot;sub-cards&quot;&gt;
+            &lt;div class=&quot;card&quot;&gt;
+                &lt;div class=&quot;content&quot;&gt;
+                    &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;details&quot;&gt;
+                        &lt;header&gt;Sub component&lt;/header&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card&quot;&gt;
+                &lt;div class=&quot;content&quot;&gt;
+                    &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;details&quot;&gt;
+                        &lt;header&gt;Sub component&lt;/header&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card&quot;&gt;
-        &lt;div class=&quot;circle&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;text&quot;&gt;
-            &lt;div class=&quot;--heading&quot;&gt;
-                User Action
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;details&quot;&gt;
+                &lt;header&gt;Main component&lt;/header&gt;
+                &lt;span&gt;Metadata&lt;/span&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;--meta-data&quot;&gt;
-                Timestamp
+        &lt;/div&gt;
+        &lt;div class=&quot;sub-cards&quot;&gt;
+            &lt;div class=&quot;card&quot;&gt;
+                &lt;div class=&quot;content&quot;&gt;
+                    &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;details&quot;&gt;
+                        &lt;header&gt;Sub component&lt;/header&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card&quot;&gt;
+                &lt;div class=&quot;content&quot;&gt;
+                    &lt;div class=&quot;circle&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;details&quot;&gt;
+                        &lt;header&gt;Sub component&lt;/header&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
