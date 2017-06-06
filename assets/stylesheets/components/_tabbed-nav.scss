@@ -1,0 +1,83 @@
+// Tabbed Navigation
+//
+// Tabbed navigation. Script tag and style="display: block" on tab1-content are just for demo purposes, should be implemented with your framework
+//
+// Markup:
+// <script>   
+//     function ndOnTabChange(tab) { 
+//         var contents = document.querySelectorAll('*[id$="-content"]');
+//         for (var i = 0; i < contents.length; i++) {contents[i].style.display = 'none';}
+//         document.getElementById(tab + "-content").style.display = 'block';
+//     }
+// </script>
+// <div role="tablist">
+//     <input role="tab" type="radio" id="tab1" name="tablist" checked onClick="ndOnTabChange('tab1')">
+//     <label for="tab1">Tab 1</label>
+//     <input role="tab" type="radio" id="tab2" name="tablist" onClick="ndOnTabChange('tab2')">
+//     <label for="tab2">Other tab with long name</label>
+// </div>
+// <div class="tab-contents">
+//     <div id="tab1-content" role="tabpanel" style="display: block">
+//         Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+//     </div>
+//     <div id="tab2-content" role="tabpanel">
+//         Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+//     </div>
+// </div>
+// <br style="clear: both;" />
+//
+// Weight: -85
+//
+// Style guide: Tabbed Navigation
+
+[role="tablist"]{
+    display: block;
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    border-bottom: 1px solid rgba(nd-color('metal'), .3);
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    [role="tab"]{
+        +label {
+            display: block;
+            padding: 0 10px;
+            margin: 0;
+            margin-right: 20px;
+            float: left;
+            height: 34px;
+            line-height: 34px;
+            
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        &:checked+label{
+            border-bottom: 2px solid nd-color('royal-blue');
+            color: nd-color('royal-blue');
+        }
+    }
+
+    input[type="radio"] {
+        position: absolute;
+    }
+
+    input[type="radio"]+label:before, input[type="radio"]+label:after{
+        display: none;
+    }
+}
+
+[id$="content"]
+{
+    display: none;
+    width: 100%;
+}
