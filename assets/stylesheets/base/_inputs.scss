@@ -484,3 +484,56 @@ input[type=radio]{
 // Weight: 12
 //
 // Style guide: Inputs.Radio button
+
+input[type="checkbox"].--sortable{
+    @include nd-check-input();
+
+    &:checked+label:before {
+        background-color: $nd-input-background-color;
+        border-color: $nd-input-border;
+    }
+
+    &+label::before{
+        border-radius: 50%;
+    }
+
+    &:checked+label:after{
+        content: none;
+    }
+
+    &.--descending {
+        &:checked+label:before, &+label::before{
+            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
+            background-position: center;
+            background-color: nd-color('royal-blue');
+        }
+    }
+
+    &.--ascending {
+        &:checked+label:before, &+label::before{
+            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
+            background-position: center;
+            background-color: nd-color('royal-blue');
+            transform: rotate(180deg)
+        }
+    }
+
+    @include nd-check-disabled(); 
+}
+
+// Sort Checkbox
+//
+// Sort checkbox input
+//
+// :focus - on focus box shadow
+// :disabled - on disabled opactiy is lowered
+// .--descending - descending
+// .--ascending - ascending
+//
+// Markup:
+// <input type="checkbox" id="scb1-{{modifier_class}}" class="{{modifier_class}} --sortable" />
+// <label for="scb1-{{modifier_class}}">Label</label>
+//
+// Weight: 13
+//
+// Style guide: Inputs.Sort Checkbox
