@@ -332,14 +332,14 @@
             <li class="kss-nav__menu-item">
               <a href="section-inputs.html#kssref-inputs-check-error-mixin">
                 <span class="kss-nav__ref ">7.11</span
-                ><span class="kss-nav__name">nd-check-disabled()</span>
+                ><span class="kss-nav__name">nd-check-has-errors()</span>
               </a>
             </li>
               
             <li class="kss-nav__menu-item">
               <a href="section-inputs.html#kssref-inputs-check-error-mixin">
                 <span class="kss-nav__ref ">7.11</span
-                ><span class="kss-nav__name">nd-check-has-errors()</span>
+                ><span class="kss-nav__name">nd-check-disabled()</span>
               </a>
             </li>
               
@@ -354,6 +354,13 @@
               <a href="section-inputs.html#kssref-inputs-radio-button">
                 <span class="kss-nav__ref ">7.13</span
                 ><span class="kss-nav__name">Radio button</span>
+              </a>
+            </li>
+              
+            <li class="kss-nav__menu-item">
+              <a href="section-inputs.html#kssref-inputs-sort-checkbox">
+                <span class="kss-nav__ref ">7.14</span
+                ><span class="kss-nav__name">Sort Checkbox</span>
               </a>
             </li>
              
@@ -843,17 +850,17 @@
                 #Inputs.Check error mixin
             </span>
           </span>
-          nd-check-disabled()
+          nd-check-has-errors()
         </a>
           </h2>
 
  
           <div class="kss-description">
-            <p>Sass mixin to add look to the form check inputs (like radio and checkbox) when they are disabled.</p>
+            <p>Sass mixin to add look to the form check inputs (like radio and checkbox) when they have error.</p>
 <p>Usage:</p>
 <pre>
 .my-input {
-  @include nd-check-disabled();
+  @include nd-check-has-errors();
 }
 </pre>
           </div>
@@ -871,17 +878,17 @@
                 #Inputs.Check error mixin
             </span>
           </span>
-          nd-check-has-errors()
+          nd-check-disabled()
         </a>
           </h2>
 
  
           <div class="kss-description">
-            <p>Sass mixin to add look to the form check inputs (like radio and checkbox) when they have error.</p>
+            <p>Sass mixin to add look to the form check inputs (like radio and checkbox) when they are disabled.</p>
 <p>Usage:</p>
 <pre>
 .my-input {
-  @include nd-check-has-errors();
+  @include nd-check-disabled();
 }
 </pre>
           </div>
@@ -1046,6 +1053,86 @@
 &lt;label for=&quot;r1-[modifier class]&quot;&gt;Option1&lt;/label&gt;
 &lt;input type=&quot;radio&quot; id=&quot;r2-[modifier class]&quot; name=&quot;r-[modifier class]&quot; class=&quot;[modifier class]&quot; checked /&gt;
 &lt;label for=&quot;r2-[modifier class]&quot;&gt;Option2&lt;/label&gt;</code></pre>
+        </div>
+             </section>
+            <section id="kssref-inputs-sort-checkbox" class="kss-section kss-section--depth-2">
+
+        <div class="kss-style">
+          <h2 class="kss-title kss-title--level-2">
+            <a class="kss-title__permalink" href="#kssref-inputs-sort-checkbox">
+          <span class="kss-title__ref">
+              7.14
+            <span class="kss-title__permalink-hash">
+                #Inputs.Sort Checkbox
+            </span>
+          </span>
+          Sort Checkbox
+        </a>
+          </h2>
+
+ 
+          <div class="kss-description">
+            <p>Sort checkbox input</p>
+
+          </div>
+        </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Examples
+          </div>
+          <div class="kss-modifier__default-name kss-style">
+            Default styling
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="scb1-[modifier class]" class="[modifier class] --sortable" />
+<label for="scb1-[modifier class]">Label</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :focus
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on focus box shadow
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="scb1-pseudo-class-focus" class="pseudo-class-focus --sortable" />
+<label for="scb1-pseudo-class-focus">Label</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            :disabled
+          </div>
+          <div class="kss-modifier__description kss-style">
+            on disabled opactiy is lowered
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="scb1-pseudo-class-disabled" class="pseudo-class-disabled --sortable" />
+<label for="scb1-pseudo-class-disabled">Label</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .--descending
+          </div>
+          <div class="kss-modifier__description kss-style">
+            descending
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="scb1---descending" class="--descending --sortable" />
+<label for="scb1---descending">Label</label>
+          </div>
+          <div class="kss-modifier__name kss-style">
+            .--ascending
+          </div>
+          <div class="kss-modifier__description kss-style">
+            ascending
+          </div>
+          <div class="kss-modifier__example">
+            <input type="checkbox" id="scb1---ascending" class="--ascending --sortable" />
+<label for="scb1---ascending">Label</label>
+          </div>
+        </div>
+
+        <div class="kss-markup kss-style">
+          <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;input type=&quot;checkbox&quot; id=&quot;scb1-[modifier class]&quot; class=&quot;[modifier class] --sortable&quot; /&gt;
+&lt;label for=&quot;scb1-[modifier class]&quot;&gt;Label&lt;/label&gt;</code></pre>
         </div>
              </section>
       
