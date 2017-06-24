@@ -4,6 +4,7 @@
   height: $form-element-height;
   min-height: $form-element-height; // cannot be squished together
   margin-bottom: $form-element-margin-bottom;
+  transition: .2s;
   width: 100%;
 
   &:focus {

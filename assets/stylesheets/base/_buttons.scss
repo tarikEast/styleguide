@@ -15,18 +15,18 @@
 //     <use xlink:href="#set1-activity" />
 //   </svg>
 //   Click me
-// </button> 
+// </button>
 // <button class="--icon-only {{modifier_class}}">
 //   <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
 //     <use xlink:href="#set1-activity" />
 //   </svg>
-// </button> 
+// </button>
 // <button class="--link --icon {{modifier_class}}">
 //   <svg width="28" height="28" class="icon" viewBox="0 0 28 28">
 //     <use xlink:href="#set1-activity" />
 //   </svg>
 //   Click me
-// </button> 
+// </button>
 // <button class="--block {{modifier_class}}">Click me</button>
 //
 // Weight: -95
@@ -53,8 +53,8 @@
 
 $nd-button-defaults: (
     padding: 0 10px,
-    icon-padding: 0 10px 0 0,    
-    icon-only-padding: 0,    
+    icon-padding: 0 10px 0 0,
+    icon-only-padding: 0,
     border: none,
     height: 28px,
     min-height: 28px,
@@ -91,7 +91,7 @@ $nd-button-config:(
 @mixin nd-button($style){
     @if not map-has-key($nd-button-config, $style) {
         @error "Invalid style specified! Choose one of #{map-keys($nd-button-config)}";
-    } 
+    }
     $button-style: map-get($nd-button-config, $style);
     background-color: map-get($button-style, 'background-color');
     color: map-get($button-style, 'color');
@@ -140,7 +140,7 @@ $nd-button-config:(
         }
 
         &:active{
-            background-color: nd-color('white');            
+            background-color: nd-color('white');
             color: darken(map-get($button-style, 'background-color'), $hover-modificator);
         }
     }
@@ -154,12 +154,13 @@ $nd-button-config:(
     }
 }
 
-button, 
+button,
 .button,
 input[type=button],
 input[type=submit]{
     border-radius: $global-border-radius;
     margin-bottom: $form-element-margin-bottom;
+    transition: .2s;
 
     &.--primary-lime{
         @include nd-button('primary-lime')

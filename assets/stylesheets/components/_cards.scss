@@ -149,7 +149,7 @@ $nd-cards-configuration: (
             open-background-color: nd-color('white')
         ),
         sub-card: (
-            padding: 10px 15px,  
+            padding: 10px 15px,
             circle-radius: 19px,
             circle-color: nd-color('metal'),
             circle-margin: 0 9px 0 0,
@@ -160,7 +160,7 @@ $nd-cards-configuration: (
             header-typography: 'sub-headline',
             span-typography: 'meta-headline',
             background-color: nd-color('white'),
-            open-background-color: nd-color('white')          
+            open-background-color: nd-color('white')
         )
     ),
     object-cards: (
@@ -180,7 +180,7 @@ $nd-cards-configuration: (
             open-background-color: nd-color('white')
         ),
         sub-card: (
-            padding: 10px 13px,  
+            padding: 10px 13px,
             circle-radius: 19px,
             circle-color: nd-color('lime'),
             circle-margin: 0 9px 0 0,
@@ -219,8 +219,8 @@ $nd-cards-configuration: (
     position: relative;
 
     .circle {
-        @include nd-circle(map-get($style, 'circle-radius'), 
-                map-get($style, 'circle-margin'), 
+        @include nd-circle(map-get($style, 'circle-radius'),
+                map-get($style, 'circle-margin'),
                 map-get($style, 'circle-color'));
         flex-grow: 0;
     }
@@ -292,23 +292,23 @@ $nd-cards-configuration: (
             }
 
             &.--open{
-                background-color: map-get($card-style, 'open-background-color');   
-                box-shadow: 0px 0px 5px 0px rgba(nd-color('metal'),0.75);                             
+                background-color: map-get($card-style, 'open-background-color');
+                box-shadow: 0px 0px 5px 0px rgba(nd-color('metal'),0.75);
             }
 
             .sub-cards{
                 $sub-card-style: map-get($style-config, 'sub-card');
                 display: none;
-                
+
 
                 &+.sub-cards{
-                   border-top: map-get($style-config, 'border'); 
+                   border-top: map-get($style-config, 'border');
                 }
-                
+
                 .card{
                     background-color: map-get($sub-card-style, 'background-color');
                     .content {
-                        @include nd-card-content($sub-card-style);                        
+                        @include nd-card-content($sub-card-style);
                     }
                 }
             }
@@ -317,7 +317,7 @@ $nd-cards-configuration: (
 }
 
 .nd-cards{
-    border-radius: $global-border-radius;    
+    border-radius: $global-border-radius;
     @include nd-cards('feed-cards');
     @include nd-cards('object-cards');
 }

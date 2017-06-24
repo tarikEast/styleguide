@@ -6,14 +6,14 @@
 //
 // Style guide: Inputs
 
-$nd-input-border: 1px solid nd-color('metal');
+$nd-input-border: 1px solid #CDD0D4;
 $nd-input-font-size: 13px;
 $nd-input-font-color: nd-color('carbon');
 $nd-input-background-color: nd-color('white');
 
 @mixin nd-input-defaults(){
     height: 40px;
-    min-height: 40px;    
+    min-height: 40px;
     border-radius: $global-border-radius;
     border: $nd-input-border;
     width: 100%;
@@ -22,9 +22,10 @@ $nd-input-background-color: nd-color('white');
     line-height:100%;
     font-size: $nd-input-font-size;
     letter-spacing:0;
-    padding: 0 12px 0 12px;
+    padding: 0 10px;
     color: $nd-input-font-color;
     background-color: $nd-input-background-color;
+    box-shadow: 0 1px 0 rgba(#000,0.03) inset;
 }
 
 // nd-input-defaults()
@@ -44,7 +45,7 @@ $nd-input-background-color: nd-color('white');
 // Style guide: Inputs.Defaults input mixin
 
 $nd-focus-border-color: nd-color('royal-blue');
-$nd-focus-box-shadow: 0px 0px 3px 0px rgba(nd-color('royal-blue'),0.7);
+$nd-focus-box-shadow: 0 0 0 2px #CBE6FF;
 
 @mixin nd-input-focus(){
     &:focus{
@@ -89,7 +90,7 @@ $nd-disabled-cursor: not-allowed;
 }
 
 $error-color: nd-color('alarm-red');
-$error-box-shadow: 0px 0px 3px 0px rgba($error-color,0.7);
+$error-box-shadow: 0 0 0 2px rgba($error-color,0.2);
 
 @mixin nd-input-has-errors(){
     &.--has-errors {
@@ -176,7 +177,7 @@ input[type=tel] {
     @include input-element;
     @include input-placeholder;
     @include input-underlined;
-    
+
     &.--nd-text-input {
         @include nd-text-input();
     }
@@ -188,7 +189,7 @@ textarea {
   padding-top: 15px;
 
   resize: vertical;
-    
+
     &.--nd-text-input {
         @include nd-text-input();
         padding-top: 12px;
@@ -234,14 +235,14 @@ textarea {
 
 @mixin nd-select-input(){
     @include nd-input-defaults();
-    @include nd-input-defaults();
     @include nd-input-focus();
     @include nd-input-disabled();
     @include nd-input-has-errors();
-    
+
     appearance: none;
-    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDExIDE3IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKICAgIGlkPSJzZWxlY3QtYXJyb3ciPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMjEgLTMyNjkpIj4KICAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNhMjMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMjIuNTIgMzI4MC4wMikiIC8+CiAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYTIzIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAxMjIyLjUyIDMyNzQuOTgpIiAvPgogICAgPC9nPgogICAgPGRlZnM+CiAgICAgICAgPHBhdGggZmlsbD0icmdiYSg3LCAyMiwgMzksIDAuMykiIGlkPSJhMjMiIGQ9Ik00LjAyNTI4IDQuMDQ4MTlsLS43MDcxLjcwNzEuNzA3MS43MDcxMS43MDcxMS0uNzA3MTEtLjcwNzExLS43MDcxek0tLjcwNzEwNy43MzAwMUwzLjMxODE4IDQuNzU1MjlsMS40MTQyMS0xLjQxNDIxTC43MDcxMDctLjY4NDIwMy0uNzA3MTA3LjczMDAxek00LjczMjM5IDQuNzU1MjlMOC43ODA1OC43MDcxMDcgNy4zNjYzNi0uNzA3MTA3IDMuMzE4MTggMy4zNDEwOGwxLjQxNDIxIDEuNDE0MjF6IgogICAgICAgIC8+CiAgICA8L2RlZnM+Cjwvc3ZnPg==) no-repeat;
-    background-position: right 14px center;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDExIDE3Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iI0I0QjlCRSIgc3Ryb2tlLXdpZHRoPSIyIj48cG9seWxpbmUgcG9pbnRzPSIxLjUyMSAxMS4wNDQgNS41NDYgMTUuMDY5IDkuNTk0IDExLjAyMSIvPjxwb2x5bGluZSBwb2ludHM9IjEuNTIxIDIuMDQ0IDUuNTQ2IDYuMDY5IDkuNTk0IDIuMDIxIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDgpIi8+PC9nPjwvc3ZnPg==), linear-gradient(-180deg, #FFFFFF 0%, #F9F9F9 100%);
+    background-repeat: no-repeat, repeat-x;
+    background-position: right 12px center, center center;
     padding-right: 40px;
 }
 
@@ -293,7 +294,7 @@ select {
 @mixin nd-check-input(){
     appearance: none;
     opacity: 0;
-    outline: none;    
+    outline: none;
 
     &+label {
         position: relative;
@@ -413,7 +414,7 @@ input[type=checkbox]{
         background: $nd-input-background-color;
         width: 2px;
         height: 2px;
-        box-shadow: 
+        box-shadow:
         2px 0 0 $nd-input-background-color,
         4px 0 0 $nd-input-background-color,
         4px -2px 0 $nd-input-background-color,
@@ -424,7 +425,7 @@ input[type=checkbox]{
     }
 
     @include nd-check-has-errors();
-    @include nd-check-disabled(); 
+    @include nd-check-disabled();
 }
 
 // Checkbox
@@ -464,7 +465,7 @@ input[type=radio]{
     }
 
     @include nd-check-has-errors();
-    @include nd-check-disabled(); 
+    @include nd-check-disabled();
 }
 
 // Radio button
@@ -490,7 +491,6 @@ input[type="checkbox"].--sortable{
 
     &:checked+label:before {
         background-color: $nd-input-background-color;
-        border-color: $nd-input-border;
     }
 
     &+label::before{
@@ -506,6 +506,7 @@ input[type="checkbox"].--sortable{
             background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
             background-position: center;
             background-color: nd-color('royal-blue');
+            border: none;
         }
     }
 
@@ -514,11 +515,12 @@ input[type="checkbox"].--sortable{
             background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
             background-position: center;
             background-color: nd-color('royal-blue');
-            transform: rotate(180deg)
+            transform: rotate(180deg);
+            border: none;
         }
     }
 
-    @include nd-check-disabled(); 
+    @include nd-check-disabled();
 }
 
 // Sort Checkbox

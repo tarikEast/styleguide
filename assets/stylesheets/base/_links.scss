@@ -109,7 +109,7 @@ $nd-link-config:(
 
   &.muted {
     color: map-get($nd-link-defaults, 'muted-color');
-    
+
     &:hover {
       color: darken(map-get($nd-link-defaults, 'muted-color'), $hover-modificator);
     }
@@ -122,5 +122,13 @@ a {
   }
   &.--primary-blue{
     @include nd-link('primary-blue');
+  }
+  &.button{
+    &.--primary-lime,
+    &.--primary-blue{
+      &:hover{
+        color: #FFF;
+      }
+    }
   }
 }
