@@ -171,29 +171,31 @@ $error-box-shadow: 0 0 0 2px rgba($error-color,0.2);
     }
 }
 
-input[type=text],
-input[type=email],
-input[type=tel] {
-    @include input-element;
-    @include input-placeholder;
-    @include input-underlined;
+@if $show-samples {
+  input[type=text],
+  input[type=email],
+  input[type=tel] {
+      //@include input-element;
+      //@include input-placeholder;
+      //@include input-underlined;
 
-    &.--nd-text-input {
-        @include nd-text-input();
-    }
-}
+      &.--nd-text-input {
+          @include nd-text-input();
+      }
+  }
 
-textarea {
-  @include input-element;
-  @include input-placeholder;
-  padding-top: 15px;
+  textarea {
+    //@include input-element;
+    //@include input-placeholder;
+    padding-top: 15px;
 
-  resize: vertical;
+    resize: vertical;
 
-    &.--nd-text-input {
-        @include nd-text-input();
-        padding-top: 12px;
-    }
+      &.--nd-text-input {
+          @include nd-text-input();
+          padding-top: 12px;
+      }
+  }
 }
 
 // Text inputs
@@ -246,13 +248,15 @@ textarea {
     padding-right: 40px;
 }
 
-select {
-  @include input-element;
-  @include input-underlined;
+@if $show-samples {
+  select {
+    //@include input-element;
+    //@include input-underlined;
 
-  // TODO: add arrow
-  &.--nd-select {
-      @include nd-select-input();
+    // TODO: add arrow
+    &.--nd-select {
+        @include nd-select-input();
+    }
   }
 }
 
@@ -399,33 +403,35 @@ select {
 //
 // Style guide: Inputs.Check error mixin
 
-input[type=checkbox]{
-    @include nd-check-input();
+@if $show-samples {
+  input[type=checkbox]{
+      @include nd-check-input();
 
-    &+label:before{
-        border-radius:$global-border-radius;
-    }
+      &+label:before{
+          border-radius:$global-border-radius;
+      }
 
-    &:checked+label:after{
-        content: '';
-        position: absolute;
-        left: 3px;
-        top: 8px;
-        background: $nd-input-background-color;
-        width: 2px;
-        height: 2px;
-        box-shadow:
-        2px 0 0 $nd-input-background-color,
-        4px 0 0 $nd-input-background-color,
-        4px -2px 0 $nd-input-background-color,
-        4px -4px 0 $nd-input-background-color,
-        4px -6px 0 $nd-input-background-color,
-        4px -8px 0 $nd-input-background-color;
-        transform: rotate(45deg);
-    }
+      &:checked+label:after{
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 8px;
+          background: $nd-input-background-color;
+          width: 2px;
+          height: 2px;
+          box-shadow:
+          2px 0 0 $nd-input-background-color,
+          4px 0 0 $nd-input-background-color,
+          4px -2px 0 $nd-input-background-color,
+          4px -4px 0 $nd-input-background-color,
+          4px -6px 0 $nd-input-background-color,
+          4px -8px 0 $nd-input-background-color;
+          transform: rotate(45deg);
+      }
 
-    @include nd-check-has-errors();
-    @include nd-check-disabled();
+      @include nd-check-has-errors();
+      @include nd-check-disabled();
+  }
 }
 
 // Checkbox
@@ -446,26 +452,28 @@ input[type=checkbox]{
 //
 // Style guide: Inputs.Checkbox
 
-input[type=radio]{
-    @include nd-check-input();
+@if $show-samples {
+  input[type=radio]{
+      @include nd-check-input();
 
-    &+label::before{
-        border-radius: 50%;
-    }
+      &+label::before{
+          border-radius: 50%;
+      }
 
-    &:checked+label:after{
-        content: '';
-        position: absolute;
-        left: 6px;
-        top: 6px;
-        background: $nd-input-background-color;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-    }
+      &:checked+label:after{
+          content: '';
+          position: absolute;
+          left: 6px;
+          top: 6px;
+          background: $nd-input-background-color;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+      }
 
-    @include nd-check-has-errors();
-    @include nd-check-disabled();
+      @include nd-check-has-errors();
+      @include nd-check-disabled();
+  }
 }
 
 // Radio button
@@ -486,41 +494,43 @@ input[type=radio]{
 //
 // Style guide: Inputs.Radio button
 
-input[type="checkbox"].--sortable{
-    @include nd-check-input();
+@if $show-samples {
+  input[type="checkbox"].--sortable{
+      @include nd-check-input();
 
-    &:checked+label:before {
-        background-color: $nd-input-background-color;
-    }
+      &:checked+label:before {
+          background-color: $nd-input-background-color;
+      }
 
-    &+label::before{
-        border-radius: 50%;
-    }
+      &+label::before{
+          border-radius: 50%;
+      }
 
-    &:checked+label:after{
-        content: none;
-    }
+      &:checked+label:after{
+          content: none;
+      }
 
-    &.--descending {
-        &:checked+label:before, &+label::before{
-            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
-            background-position: center;
-            background-color: nd-color('royal-blue');
-            border: none;
-        }
-    }
+      &.--descending {
+          &:checked+label:before, &+label::before{
+              background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
+              background-position: center;
+              background-color: nd-color('royal-blue');
+              border: none;
+          }
+      }
 
-    &.--ascending {
-        &:checked+label:before, &+label::before{
-            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
-            background-position: center;
-            background-color: nd-color('royal-blue');
-            transform: rotate(180deg);
-            border: none;
-        }
-    }
+      &.--ascending {
+          &:checked+label:before, &+label::before{
+              background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjkiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICA8dXNlIHhsaW5rOmhyZWY9IiNhIi8+CiAgPGRlZnM+CiAgICA8cGF0aCBmaWxsPSIjRkZGIiBpZD0iYSIgZD0iTTMuNTAwMSAwYy0uMjc2NTEgMC0uNTAwMDIuMjI0MDEtLjUwMDAyLjUwMDAyMVY3LjQzMjgyTC44MjA0ODkgNS42MTYyNGMtLjIxMzUwOS0uMTc3MDEtLjUyNzUyMi0uMTQ4MDEtLjcwNDUzLjA2NC0uMTc3MDA3LjIxMjAxLS4xNDgwMDU4LjUyNzUyLjA2NDAwMy43MDQwM0wzLjUwMDEgOS4wMDAzOGMuMDYxNTEgMCAzLjMyMDE0LTIuNjE2MTEgMy4zMjAxNC0yLjYxNjExLjIxMjAxLS4xNzcwMS4yNDA1MS0uNDkyMDIuMDY0MDEtLjcwNDAzLS4xNzcwMS0uMjEyMDEtLjQ5MTUyLS4yNDEwMS0uNzA0NTMtLjA2NGwtMi4xNzk2IDEuODE2NThWLjUwMDAyMUM0LjAwMDEyLjIyNDAxIDMuNzc2NjIgMCAzLjUwMDEgMHoiLz4KICA8L2RlZnM+Cjwvc3ZnPgo=) no-repeat;
+              background-position: center;
+              background-color: nd-color('royal-blue');
+              transform: rotate(180deg);
+              border: none;
+          }
+      }
 
-    @include nd-check-disabled();
+      @include nd-check-disabled();
+  }
 }
 
 // Sort Checkbox

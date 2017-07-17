@@ -162,12 +162,14 @@ $nd-do-arrow: (
     }
 }
 
-.nd-dropout-panel {
-    @include nd-dropout-panel(map-get($nd-dropout-style, 'dropout'));
-}
+@if $show-samples {
+  .nd-dropout-panel {
+      @include nd-dropout-panel(map-get($nd-dropout-style, 'dropout'));
+  }
 
-.nd-tooltip {
-    @include nd-dropout-panel(map-get($nd-dropout-style, 'tooltip'));
-    max-width: 300px;
-    text-align: justify;
+  .nd-tooltip {
+      @include nd-dropout-panel(map-get($nd-dropout-style, 'tooltip'));
+      max-width: 300px;
+      text-align: justify;
+  }
 }

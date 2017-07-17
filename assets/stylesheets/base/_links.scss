@@ -116,18 +116,20 @@ $nd-link-config:(
   }
 }
 
-a {
-  &.--primary-lime{
-    @include nd-link('primary-lime');
-  }
-  &.--primary-blue{
-    @include nd-link('primary-blue');
-  }
-  &.button{
-    &.--primary-lime,
+@if $show-samples {
+  a {
+    &.--primary-lime{
+      @include nd-link('primary-lime');
+    }
     &.--primary-blue{
-      &:hover{
-        color: #FFF;
+      @include nd-link('primary-blue');
+    }
+    &.button{
+      &.--primary-lime,
+      &.--primary-blue{
+        &:hover{
+          color: #FFF;
+        }
       }
     }
   }

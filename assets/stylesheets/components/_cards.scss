@@ -316,8 +316,10 @@ $nd-cards-configuration: (
     }
 }
 
-.nd-cards{
-    border-radius: $global-border-radius;
-    @include nd-cards('feed-cards');
-    @include nd-cards('object-cards');
+@if $show-samples {
+  .nd-cards{
+      border-radius: $global-border-radius;
+      @include nd-cards('feed-cards');
+      @include nd-cards('object-cards');
+  }
 }

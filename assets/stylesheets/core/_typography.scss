@@ -95,8 +95,10 @@ $nd-typography-config: (
     }
 }
 
-@each $name, $value in $nd-typography-config {
-    .--nd-#{$name}{
-        @include nd-typography($name);
-    }
+@if $show-samples {
+  @each $name, $value in $nd-typography-config {
+      .--nd-#{$name}{
+          @include nd-typography($name);
+      }
+  }
 }

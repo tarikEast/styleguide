@@ -154,24 +154,26 @@ $nd-button-config:(
     }
 }
 
-button,
-.button,
-input[type=button],
-input[type=submit]{
-    border-radius: $global-border-radius;
-    margin-bottom: $form-element-margin-bottom;
-    transition: .2s;
+@if $show-samples {
+  button,
+  .button,
+  input[type=button],
+  input[type=submit]{
+      border-radius: $global-border-radius;
+      margin-bottom: $form-element-margin-bottom;
+      transition: .2s;
 
-    &.--primary-lime{
-        @include nd-button('primary-lime')
-    }
-    &.--primary-blue{
-        @include nd-button('primary-blue')
-    }
-    &.--secondary-metal{
-        @include nd-button('secondary-metal')
-    }
-    &.--secondary-abort{
-        @include nd-button('secondary-abort')
-    }
+      &.--primary-lime{
+          @include nd-button('primary-lime')
+      }
+      &.--primary-blue{
+          @include nd-button('primary-blue')
+      }
+      &.--secondary-metal{
+          @include nd-button('secondary-metal')
+      }
+      &.--secondary-abort{
+          @include nd-button('secondary-abort')
+      }
+  }
 }

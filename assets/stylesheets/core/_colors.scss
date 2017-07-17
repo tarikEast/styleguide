@@ -79,22 +79,25 @@ $nd-colors: (
   color: nd-color($fontColor);
 }
 
-// generate samples
-.nd-color-sample {
-  height: 40px;
-  padding-left: 5px;
-  line-height: 40px;
+@if $show-samples {
+  // generate samples
+  .nd-color-sample {
+    height: 40px;
+    padding-left: 5px;
+    line-height: 40px;
 
-  $color-names: map-keys($nd-colors);
-  @each $name, $value in $nd-colors {
-    &.sample#{index($color-names, $name)} {
-      background-color: $value;
-      @if (lightness($value) < 60) {
-        color: nd-color("white");
-      }
-      &:after {
-        content: "#{$name}: #{$value}";
+    $color-names: map-keys($nd-colors);
+    @each $name, $value in $nd-colors {
+      &.sample#{index($color-names, $name)} {
+        background-color: $value;
+        @if (lightness($value) < 60) {
+          color: nd-color("white");
+        }
+        &:after {
+          content: "#{$name}: #{$value}";
+        }
       }
     }
   }
 }
+
