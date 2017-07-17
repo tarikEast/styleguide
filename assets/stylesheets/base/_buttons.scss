@@ -52,106 +52,106 @@
 // Style guide: Buttons.Mixin
 
 $nd-button-defaults: (
-    padding: 0 10px,
-    icon-padding: 0 10px 0 0,
-    icon-only-padding: 0,
-    border: none,
-    height: 28px,
-    min-height: 28px,
-    width: auto,
-    text-transform: none,
-    font-size: 13px,
-    line-height: 28px,
-    outline: 0
+  padding: 0 10px,
+  icon-padding: 0 10px 0 0,
+  icon-only-padding: 0,
+  border: none,
+  height: 28px,
+  min-height: 28px,
+  width: auto,
+  text-transform: none,
+  font-size: 13px,
+  line-height: 28px,
+  outline: 0
 );
 
 $nd-button-config:(
-    'default': (
-        background-color: nd-color('lime'),
-        color: nd-color('white')
-    ),
-    'primary-lime':(
-        background-color: nd-color('lime'),
-        color: nd-color('white')
-    ),
-    'primary-blue':(
-        background-color: nd-color('royal-blue'),
-        color: nd-color('white')
-    ),
-    'secondary-metal':(
-        background-color: nd-color('metal'),
-        color: nd-color('white')
-    ),
-    'secondary-abort':(
-        background-color: rgba(nd-color('metal'),.15),
-        color: nd-color('carbon')
-    )
+  'default': (
+    background-color: nd-color('lime'),
+    color: nd-color('white')
+  ),
+  'primary-lime':(
+    background-color: nd-color('lime'),
+    color: nd-color('white')
+  ),
+  'primary-blue':(
+    background-color: nd-color('royal-blue'),
+    color: nd-color('white')
+  ),
+  'secondary-metal':(
+    background-color: nd-color('metal'),
+    color: nd-color('white')
+  ),
+  'secondary-abort':(
+    background-color: rgba(nd-color('metal'),.15),
+    color: nd-color('carbon')
+  )
 );
 
 @mixin nd-button($style){
-    @if not map-has-key($nd-button-config, $style) {
-        @error "Invalid style specified! Choose one of #{map-keys($nd-button-config)}";
+  @if not map-has-key($nd-button-config, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($nd-button-config)}";
+  }
+  $button-style: map-get($nd-button-config, $style);
+  background-color: map-get($button-style, 'background-color');
+  color: map-get($button-style, 'color');
+  padding: map-get($nd-button-defaults, 'padding');
+  border: map-get($nd-button-defaults, 'border');
+  height: map-get($nd-button-defaults, 'height');
+  min-height: map-get($nd-button-defaults, 'min-height');
+  text-transform: map-get($nd-button-defaults, 'text-transform');
+  font-size: map-get($nd-button-defaults, 'font-size');
+  line-height: map-get($nd-button-defaults, 'line-height');
+  width: map-get($nd-button-defaults, 'width');
+  outline: map-get($nd-button-defaults, 'outline');
+
+  &.--icon{
+    padding: map-get($nd-button-defaults, 'icon-padding');
+
+    svg {
+      float: left;
     }
-    $button-style: map-get($nd-button-config, $style);
-    background-color: map-get($button-style, 'background-color');
-    color: map-get($button-style, 'color');
-    padding: map-get($nd-button-defaults, 'padding');
-    border: map-get($nd-button-defaults, 'border');
-    height: map-get($nd-button-defaults, 'height');
-    min-height: map-get($nd-button-defaults, 'min-height');
-    text-transform: map-get($nd-button-defaults, 'text-transform');
-    font-size: map-get($nd-button-defaults, 'font-size');
-    line-height: map-get($nd-button-defaults, 'line-height');
-    width: map-get($nd-button-defaults, 'width');
-    outline: map-get($nd-button-defaults, 'outline');
+  }
 
-    &.--icon{
-        padding: map-get($nd-button-defaults, 'icon-padding');
+  &.--icon-only{
+    padding: 0;
 
-        svg {
-            float: left;
-        }
-    }
-
-    &.--icon-only{
-        padding: 0;
-
-        svg {
-            float: left;
-        }
-
-        &:after{
-            content: "\200b";
-        }
+    svg {
+      float: left;
     }
 
-    &.--block {
-        display: block;
-        width: 100%;
+    &:after{
+      content: "\200b";
     }
+  }
 
-    &.--link{
-        background-color: nd-color('white');
-        color: map-get($button-style, 'background-color');
+  &.--block {
+    display: block;
+    width: 100%;
+  }
 
-        &:hover{
-            background-color: nd-color('white');
-            color: darken(map-get($button-style, 'background-color'), $hover-modificator);
-        }
-
-        &:active{
-            background-color: nd-color('white');
-            color: darken(map-get($button-style, 'background-color'), $hover-modificator);
-        }
-    }
+  &.--link{
+    background-color: nd-color('white');
+    color: map-get($button-style, 'background-color');
 
     &:hover{
-        background-color: lighten(map-get($button-style, 'background-color'), $hover-modificator);
+      background-color: nd-color('white');
+      color: darken(map-get($button-style, 'background-color'), $hover-modificator);
     }
 
     &:active{
-        background-color: darken(map-get($button-style, 'background-color'), $hover-modificator);
+      background-color: nd-color('white');
+      color: darken(map-get($button-style, 'background-color'), $hover-modificator);
     }
+  }
+
+  &:hover{
+    background-color: lighten(map-get($button-style, 'background-color'), $hover-modificator);
+  }
+
+  &:active{
+    background-color: darken(map-get($button-style, 'background-color'), $hover-modificator);
+  }
 }
 
 @if $show-samples {
@@ -159,21 +159,21 @@ $nd-button-config:(
   .button,
   input[type=button],
   input[type=submit]{
-      border-radius: $global-border-radius;
-      margin-bottom: $form-element-margin-bottom;
-      transition: .2s;
+    border-radius: $global-border-radius;
+    margin-bottom: $form-element-margin-bottom;
+    transition: .2s;
 
-      &.--primary-lime{
-          @include nd-button('primary-lime')
-      }
-      &.--primary-blue{
-          @include nd-button('primary-blue')
-      }
-      &.--secondary-metal{
-          @include nd-button('secondary-metal')
-      }
-      &.--secondary-abort{
-          @include nd-button('secondary-abort')
-      }
+    &.--primary-lime{
+      @include nd-button('primary-lime')
+    }
+    &.--primary-blue{
+      @include nd-button('primary-blue')
+    }
+    &.--secondary-metal{
+      @include nd-button('secondary-metal')
+    }
+    &.--secondary-abort{
+      @include nd-button('secondary-abort')
+    }
   }
 }

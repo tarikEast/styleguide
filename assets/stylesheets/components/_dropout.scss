@@ -47,129 +47,129 @@
 // Style guide: Tooltip
 
 $nd-dropout-style: (
-    dropout: (
-        bg-color: nd-color('white'),
-        shadow-color: rgba(nd-color('carbon'), .3),
-        color: inherit
-    ),
-    tooltip: (
-        bg-color: nd-color('carbon'),
-        shadow-color: nd-color('white'),
-        color: nd-color('white')
-    )
+  dropout: (
+    bg-color: nd-color('white'),
+    shadow-color: rgba(nd-color('carbon'), .3),
+    color: inherit
+  ),
+  tooltip: (
+    bg-color: nd-color('carbon'),
+    shadow-color: nd-color('white'),
+    color: nd-color('white')
+  )
 );
 
 $nd-do-bgcolor: nd-color('white');
 $nd-do-shadowcolor: rgba(nd-color('carbon'), .3);
 
 $nd-do-arrow: (
-    top-middle: (
-        top: -3.5px,
-        left: calc(50% - 4px),
-        rotation: 45deg
-    ),
-    top-left: (
-        top: -3.5px,
-        left: 9px,
-        rotation: 45deg 
-    ),
-    top-right: (
-        top: -3.5px,
-        right: 9px,
-        rotation: 45deg 
-    ),
-    right-top: (
-        top: 9px,
-        right: -3.5px,
-        rotation: 135deg 
-    ),
-    right-middle: (
-        top: calc(50% - 4px),
-        right: -3.5px,
-        rotation: 135deg 
-    ),
-    right-bottom: (
-        bottom: 9px,
-        right: -3.5px,
-        rotation: 135deg 
-    ),
-    bottom-middle: (
-        bottom: -3.5px,
-        left: calc(50% - 4px),
-        rotation: -135deg
-    ),
-    bottom-left: (
-        bottom: -3.5px,
-        left: 9px,
-        rotation: -135deg 
-    ),
-    bottom-right: (
-        bottom: -3.5px,
-        right: 9px,
-        rotation: -135deg 
-    ),
-    left-top: (
-        top: 9px,
-        left: -3.5px,
-        rotation: -45deg 
-    ),
-    left-middle: (
-        top: calc(50% - 4px),
-        left: -3.5px,
-        rotation: -45deg 
-    ),
-    left-bottom: (
-        bottom: 9px,
-        left: -3.5px,
-        rotation: -45deg 
-    )
+  top-middle: (
+    top: -3.5px,
+    left: calc(50% - 4px),
+    rotation: 45deg
+  ),
+  top-left: (
+    top: -3.5px,
+    left: 9px,
+    rotation: 45deg
+  ),
+  top-right: (
+    top: -3.5px,
+    right: 9px,
+    rotation: 45deg
+  ),
+  right-top: (
+    top: 9px,
+    right: -3.5px,
+    rotation: 135deg
+  ),
+  right-middle: (
+    top: calc(50% - 4px),
+    right: -3.5px,
+    rotation: 135deg
+  ),
+  right-bottom: (
+    bottom: 9px,
+    right: -3.5px,
+    rotation: 135deg
+  ),
+  bottom-middle: (
+    bottom: -3.5px,
+    left: calc(50% - 4px),
+    rotation: -135deg
+  ),
+  bottom-left: (
+    bottom: -3.5px,
+    left: 9px,
+    rotation: -135deg
+  ),
+  bottom-right: (
+    bottom: -3.5px,
+    right: 9px,
+    rotation: -135deg
+  ),
+  left-top: (
+    top: 9px,
+    left: -3.5px,
+    rotation: -45deg
+  ),
+  left-middle: (
+    top: calc(50% - 4px),
+    left: -3.5px,
+    rotation: -45deg
+  ),
+  left-bottom: (
+    bottom: 9px,
+    left: -3.5px,
+    rotation: -45deg
+  )
 );
 
 @mixin nd-dropout-panel($style) {
-    position: relative;
-    background-color: map-get($style, 'bg-color');
-    box-shadow: 0 0 2px 1px map-get($style, 'shadow-color');
-    padding: 5px;
-    border-radius: $global-border-radius;
-    color: map-get($style, 'color');
+  position: relative;
+  background-color: map-get($style, 'bg-color');
+  box-shadow: 0 0 2px 1px map-get($style, 'shadow-color');
+  padding: 5px;
+  border-radius: $global-border-radius;
+  color: map-get($style, 'color');
 
-    @each $name, $value in $nd-do-arrow {
-        &.--arrow-#{$name}:after{
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            box-sizing: border-box;
-            border-width: 4px;
-            border-style: solid;
-            border-color: map-get($style, 'bg-color') transparent transparent map-get($style, 'bg-color');
-            transform-origin: 50% 50%;
-            box-shadow: -1px -1px 1px 0 map-get($style, 'shadow-color');
-            @if map-has-key($value, 'top'){
-                top: map-get($value, 'top');
-            }
-            @if map-has-key($value, 'bottom'){
-                bottom: map-get($value, 'bottom');
-            }
-            @if map-has-key($value, 'left'){
-                left: map-get($value, 'left');
-            }
-            @if map-has-key($value, 'right'){
-                right: map-get($value, 'right');
-            }
-            transform: rotate(map-get($value, 'rotation'));
-        }
+  @each $name, $value in $nd-do-arrow {
+    &.--arrow-#{$name}:after{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      box-sizing: border-box;
+      border-width: 4px;
+      border-style: solid;
+      border-color: map-get($style, 'bg-color') transparent transparent map-get($style, 'bg-color');
+      transform-origin: 50% 50%;
+      box-shadow: -1px -1px 1px 0 map-get($style, 'shadow-color');
+      @if map-has-key($value, 'top'){
+        top: map-get($value, 'top');
+      }
+      @if map-has-key($value, 'bottom'){
+        bottom: map-get($value, 'bottom');
+      }
+      @if map-has-key($value, 'left'){
+        left: map-get($value, 'left');
+      }
+      @if map-has-key($value, 'right'){
+        right: map-get($value, 'right');
+      }
+      transform: rotate(map-get($value, 'rotation'));
     }
+  }
 }
 
 @if $show-samples {
   .nd-dropout-panel {
-      @include nd-dropout-panel(map-get($nd-dropout-style, 'dropout'));
+    @include nd-dropout-panel(map-get($nd-dropout-style, 'dropout'));
   }
 
   .nd-tooltip {
-      @include nd-dropout-panel(map-get($nd-dropout-style, 'tooltip'));
-      max-width: 300px;
-      text-align: justify;
+    @include nd-dropout-panel(map-get($nd-dropout-style, 'tooltip'));
+    max-width: 300px;
+    text-align: justify;
   }
 }

@@ -32,73 +32,73 @@
 // Style guide: Typography.Mixins
 
 $nd-typography-config: (
-    "primary-headline": (
-        font-size: 20px,
-        font-weight: 300,
-        color-name: 'carbon',
-        letter-spacing: normal,
-        text-transformation: none,
-        line-height: 1
-    ),
-    "secondary-headline": (
-        font-size: 14px,
-        font-weight: 400,
-        color-name: 'carbon',
-        letter-spacing: normal,
-        text-transformation: none,
-        line-height: 1        
-    ),
-    "sub-headline": (
-        font-size: 14px,
-        font-weight: 400,
-        color-name: 'metal',
-        letter-spacing: normal,
-        text-transformation: none,
-        line-height: 1       
-    ),
-    "meta-headline": (
-        font-size: 10px,
-        font-weight: 400,
-        color-name: 'metal',
-        letter-spacing: .5px,
-        text-transformation: uppercase,
-        line-height: 1       
-    ),
-    "paragraph-text": (
-        font-size: 12px,
-        font-weight: 400,
-        color-name: 'carbon',
-        letter-spacing: normal,
-        text-transformation: none,
-        line-height: 20px        
-    )
+  "primary-headline": (
+    font-size: 20px,
+    font-weight: 300,
+    color-name: 'carbon',
+    letter-spacing: normal,
+    text-transformation: none,
+    line-height: 1
+  ),
+  "secondary-headline": (
+    font-size: 14px,
+    font-weight: 400,
+    color-name: 'carbon',
+    letter-spacing: normal,
+    text-transformation: none,
+    line-height: 1
+  ),
+  "sub-headline": (
+    font-size: 14px,
+    font-weight: 400,
+    color-name: 'metal',
+    letter-spacing: normal,
+    text-transformation: none,
+    line-height: 1
+  ),
+  "meta-headline": (
+    font-size: 10px,
+    font-weight: 400,
+    color-name: 'metal',
+    letter-spacing: .5px,
+    text-transformation: uppercase,
+    line-height: 1
+  ),
+  "paragraph-text": (
+    font-size: 12px,
+    font-weight: 400,
+    color-name: 'carbon',
+    letter-spacing: normal,
+    text-transformation: none,
+    line-height: 20px
+  )
 );
 
 @mixin nd-typography($style){
-    @include nd-font-family();
-    @if not map-has-key($nd-typography-config, $style) {
-        @error "Invalid style specified! Choose one of #{map-keys($nd-typography-config)}";
-    }
-    $style-props: map-get($nd-typography-config , $style);
+  @include nd-font-family();
+  @if not map-has-key($nd-typography-config, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($nd-typography-config)}";
+  }
+  $style-props: map-get($nd-typography-config , $style);
 
-    font-size: map-get($style-props , "font-size");
-    font-weight: map-get($style-props , "font-weight");
-    color: nd-color(map-get($style-props , "color-name"));
-    letter-spacing: map-get($style-props , "letter-spacing");
-    text-transform: map-get($style-props , "text-transformation"); 
-    line-height: map-get($style-props , "line-height"); 
-    svg.scale{
-        height: map-get($style-props , "font-size");        
-        width: auto;
-        vertical-align: text-top;
-        fill: currentColor;
-    }
+  font-size: map-get($style-props , "font-size");
+  font-weight: map-get($style-props , "font-weight");
+  color: nd-color(map-get($style-props , "color-name"));
+  letter-spacing: map-get($style-props , "letter-spacing");
+  text-transform: map-get($style-props , "text-transformation");
+  line-height: map-get($style-props , "line-height");
+  svg.scale{
+    height: map-get($style-props , "font-size");
+    width: auto;
+    vertical-align: text-top;
+    fill: currentColor;
+  }
 }
 
 @if $show-samples {
   @each $name, $value in $nd-typography-config {
-      .--nd-#{$name}{
-          @include nd-typography($name);
-      }
+    .--nd-#{$name}{
+      @include nd-typography($name);
+    }
   }
 }

@@ -3,8 +3,8 @@
 // Tabbed navigation. Script tag and style="display: block" on tab1-content are just for demo purposes, should be implemented with your framework
 //
 // Markup:
-// <script>   
-//     function ndOnTabChange(tab) { 
+// <script>
+//     function ndOnTabChange(tab) {
 //         var contents = document.querySelectorAll('*[id$="-content"]');
 //         for (var i = 0; i < contents.length; i++) {contents[i].style.display = 'none';}
 //         document.getElementById(tab + "-content").style.display = 'block';
@@ -31,53 +31,53 @@
 // Style guide: Tabbed Navigation
 
 [role="tablist"]{
-    display: block;
-    float: none;
-    list-style: none;
-    position: relative;
-    margin: 0;
-    margin-bottom: 10px;
-    padding: 0;
-    border-bottom: 1px solid rgba(nd-color('metal'), .3);
+  display: block;
+  float: none;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  border-bottom: 1px solid rgba(nd-color('metal'), .3);
 
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  [role="tab"]{
+    +label {
+      display: block;
+      padding: 0 10px;
+      margin: 0;
+      margin-right: 20px;
+      float: left;
+      height: 34px;
+      line-height: 34px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
 
-    [role="tab"]{
-        +label {
-            display: block;
-            padding: 0 10px;
-            margin: 0;
-            margin-right: 20px;
-            float: left;
-            height: 34px;
-            line-height: 34px;
-            
-            &:last-of-type {
-                margin-right: 0;
-            }
-        }
-
-        &:checked+label{
-            border-bottom: 2px solid nd-color('royal-blue');
-            color: nd-color('royal-blue');
-        }
+    &:checked+label{
+      border-bottom: 2px solid nd-color('royal-blue');
+      color: nd-color('royal-blue');
     }
+  }
 
-    input[type="radio"] {
-        position: absolute;
-    }
+  input[type="radio"] {
+    position: absolute;
+  }
 
-    input[type="radio"]+label:before, input[type="radio"]+label:after{
-        display: none;
-    }
+  input[type="radio"]+label:before, input[type="radio"]+label:after{
+    display: none;
+  }
 }
 
 [id$="content"]
 {
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }

@@ -29,14 +29,14 @@
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Roboto', sans-serif;
 
 @mixin nd-font-family(){
-    font-family: $font-family;
+  font-family: $font-family;
 }
 
 @if $show-samples {
   .sample {
-      @include nd-font-family();
-      &:after{
-          content: "this is a sample text"
-      }
+    @include nd-font-family();
+    &:after{
+      content: "this is a sample text"
+    }
   }
 }

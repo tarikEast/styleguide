@@ -1,7 +1,7 @@
 
 body {
   @include nd-font-family();
-  @include text-style("body1");
+  //@include text-style("body1");
   line-height: 1.5;
 
   // better font rendering
@@ -12,7 +12,7 @@ body {
 
 // reset headers
 h1, h2, h3, h4, h5 {
-  @include text-style("body1");
+  //@include text-style("body1");
   margin-top: 0;
   margin-bottom: 0;
 }
