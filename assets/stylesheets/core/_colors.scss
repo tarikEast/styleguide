@@ -40,7 +40,7 @@
 //
 // Style guide: Colors.Palette
 
-$colors-new: (
+$colors: (
   'carbon': #202A37,
   'royal-blue': #2278f1,
   'lime': #2abf00,
@@ -50,11 +50,11 @@ $colors-new: (
   'alarm-red': #e94659,
   'white': #ffffff
 );
-$nd-colors: $colors-new; // DEPRECATED
+$nd-colors: $colors; // DEPRECATED
 
 @if $show-samples {
   .color-sample {
-    @include color-samples($colors-new);
+    @include color-samples($colors);
   }
 }
 
@@ -79,7 +79,7 @@ $colors-old-compat: (
 );
 
 // Color palette (all merged)
-$colors: map-merge($colors-new, map-merge($colors-old, $colors-old-compat));
+$colors-all: map-merge($colors, map-merge($colors-old, $colors-old-compat));
 
 // Color functions
 //
@@ -103,14 +103,16 @@ $colors: map-merge($colors-new, map-merge($colors-old, $colors-old-compat));
 // Style guide: Colors.Functions.color
 
 @function color($name) {
-  @if not map-has-key($colors, $name) {
+  @if not map-has-key($colors-all, $name) {
     @error "'#{$name}' is an invalid color! Choose one of #{map-keys($colors)}.";
   }
-  @if map-has-key($colors-old, $name) {
-    @warn "you used an old color: '#{$name}'. Please use the new ones.";
-  }
-  @if map-has-key($colors-old-compat, $name) {
-    @warn "you used a compat color: '#{$name}'. Please use the new ones.";
+  @if not map-has-key($colors, $name) {
+    @if map-has-key($colors-old, $name) {
+      @warn "you used an old color: '#{$name}'. Please use the new ones.";
+    }
+    @if map-has-key($colors-old-compat, $name) {
+      @warn "you used a compat color: '#{$name}'. Please use the new ones.";
+    }
   }
   @return map-get($colors, $name);
 }
