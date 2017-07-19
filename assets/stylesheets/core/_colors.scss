@@ -4,12 +4,6 @@
 //
 // Style guide: Colors
 
-// Color palettes
-//
-// Weight: -1
-//
-// Style guide: Colors.Palettes
-
 // internal mixin to generate color samples
 @mixin color-samples($color-map) {
   height: 40px;
@@ -32,6 +26,8 @@
 
 // Color palette
 //
+// Weight: -1
+//
 // Markup:
 // <div class="color-sample sample1"></div>
 // <div class="color-sample sample2"></div>
@@ -42,7 +38,7 @@
 // <div class="color-sample sample7"></div>
 // <div class="color-sample sample8"></div>
 //
-// Style guide: Colors.Palettes.new
+// Style guide: Colors.Palette
 
 $colors-new: (
   'carbon': #202A37,
@@ -85,6 +81,7 @@ $colors-old-compat: (
 // Color palette (all merged)
 $colors: map-merge($colors-new, map-merge($colors-old, $colors-old-compat));
 
+// Color functions
 //
 // Style guide: Colors.Functions
 
