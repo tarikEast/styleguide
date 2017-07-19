@@ -50,7 +50,6 @@ $colors: (
   'alarm-red': #e94659,
   'white': #ffffff
 );
-$nd-colors: $colors; // DEPRECATED
 
 @if $show-samples {
   .color-sample {
