@@ -14,11 +14,11 @@
   @each $name, $value in $color-map {
     &.sample#{index($color-names, $name)} {
       background-color: $value;
-      @if (lightness($value) < 60) {
-        color: color("white");
-      }
       &:after {
         content: "#{$name}: #{$value}";
+        @if (lightness($value) < 30%) {
+          color: white;
+        }
       }
     }
   }
