@@ -124,28 +124,9 @@ $colors: map-merge($colors-new, map-merge($colors-old, $colors-old-compat));
   @return color($name);
 }
 
-// Mixins
-//
-// Style guide: Colors.Mixins
-
-// nd-color($bgColor, $fontColor)
-//
-// Sass mixin that sets background color and font color.
-//
-// Usage:
-//
-// <pre>
-// .my-component {
-//   @include nd-color("carbon", "white");
-// }
-// </pre>
-//
-// $bgColor - Name of background color.
-// $fontColor - Name of font color.
-//
-// Style guide: Colors.Mixins.nd-color
-
+// Deprecated
 @mixin nd-color($bgColor, $fontColor) {
+  @warn "'nd-color' mixin is deprecated. Please use the normal color functions.";
   @if not map-has-key($colors, $bgColor) {
     @error "'#{$bgColor} is an invalid background color! Choose one of #{map-keys($colors)}";
   }
