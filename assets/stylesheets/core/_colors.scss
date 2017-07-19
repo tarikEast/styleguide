@@ -1,37 +1,132 @@
 // Colors
 //
-// Color palette
-//
 // Weight: -99
-//
-// Markup:
-// <div class="nd-color-sample sample1"></div>
-// <div class="nd-color-sample sample2"></div>
-// <div class="nd-color-sample sample3"></div>
-// <div class="nd-color-sample sample4"></div>
-// <div class="nd-color-sample sample5"></div>
-// <div class="nd-color-sample sample6"></div>
-// <div class="nd-color-sample sample7"></div>
-// <div class="nd-color-sample sample8"></div>
 //
 // Style guide: Colors
 
-// nd-color($name)
+// Color palettes
 //
-// Sass function that returns specified color hex value from color palette.
+// Weight: -1
+//
+// Style guide: Colors.Palettes
+
+// internal mixin to generate color samples
+@mixin color-samples($color-map) {
+  height: 40px;
+  padding-left: 5px;
+  line-height: 40px;
+
+  $color-names: map-keys($color-map);
+  @each $name, $value in $color-map {
+    &.sample#{index($color-names, $name)} {
+      background-color: $value;
+      @if (lightness($value) < 60) {
+        color: color("white");
+      }
+      &:after {
+        content: "#{$name}: #{$value}";
+      }
+    }
+  }
+}
+
+// Color palette
+//
+// Markup:
+// <div class="color-sample sample1"></div>
+// <div class="color-sample sample2"></div>
+// <div class="color-sample sample3"></div>
+// <div class="color-sample sample4"></div>
+// <div class="color-sample sample5"></div>
+// <div class="color-sample sample6"></div>
+// <div class="color-sample sample7"></div>
+// <div class="color-sample sample8"></div>
+//
+// Style guide: Colors.Palettes.new
+
+$colors-new: (
+  'carbon': #202A37,
+  'royal-blue': #2278f1,
+  'lime': #2abf00,
+  'sky-blue': #cbe6ff,
+  'grass': #bbeda2,
+  'metal': #888FA8,
+  'alarm-red': #e94659,
+  'white': #ffffff
+);
+$nd-colors: $colors-new; // DEPRECATED
+
+@if $show-samples {
+  .color-sample {
+    @include color-samples($colors-new);
+  }
+}
+
+// Color palette (old names)
+$colors-old: (
+  'black': #202A37,      // carbon
+  'blue': #2278f1,       // royal-blue
+  'green': #2abf00,      // lime
+  'blue-light': #cbe6ff, // sky-blue
+  'green-light': #bbeda2,// grass
+  'gray': #888FA8,       // metal
+  'red': #e94659,        // alarm-red
+  'white': #ffffff,      // white
+);
+
+// Color palette (old compat names with old values)
+$colors-old-compat: (
+  'grey-lighter': #f0f0f0,
+  'grey-light': #dcdcdc,
+  'grey-dark': #b4b4b4,
+  'orange': #ff8d11
+);
+
+// Color palette (all merged)
+$colors: map-merge($colors-new, map-merge($colors-old, $colors-old-compat));
+
+//
+// Style guide: Colors.Functions
+
+// color($name)
+//
+// Sass function that returns specified color hex value from color palette
 //
 // Usage:
 //
 // <pre>
 // .my-component {
-//   background-color: nd-color("lime");
-//   color: nd-color("metal");
+//   background-color: color("lime");
+//   color: color("carbon");
 // }
 // </pre>
 //
-// $name - Name of the color.
+// $name - color name
 //
-// Style guide: Colors.Functions
+// Style guide: Colors.Functions.color
+
+@function color($name) {
+  @if not map-has-key($colors, $name) {
+    @error "'#{$name}' is an invalid color! Choose one of #{map-keys($colors)}.";
+  }
+  @if map-has-key($colors-old, $name) {
+    @warn "you used an old color: '#{$name}'. Please use the new ones.";
+  }
+  @if map-has-key($colors-old-compat, $name) {
+    @warn "you used a compat color: '#{$name}'. Please use the new ones.";
+  }
+  @return map-get($colors, $name);
+}
+
+// Deprecated
+@function nd-color($name) {
+  @warn "'nd-color' is deprecated. Please use 'color' instead.";
+  @return color($name);
+}
+
+// Mixins
+//
+// Style guide: Colors.Mixins
 
 // nd-color($bgColor, $fontColor)
 //
@@ -48,56 +143,16 @@
 // $bgColor - Name of background color.
 // $fontColor - Name of font color.
 //
-// Style guide: Colors.Mixin
+// Style guide: Colors.Mixins.nd-color
 
-$nd-colors: (
-  'carbon': #202A37,
-  'royal-blue': #2278f1,
-  'lime': #2abf00,
-  'sky-blue': #cbe6ff,
-  'grass': #bbeda2,
-  'metal': #888FA8,
-  'alarm-red': #e94659,
-  'white': #ffffff,
-);
-
-@function nd-color($name) {
-  @if not map-has-key($nd-colors, $name) {
-    @error "Invalid color specified! Choose one of #{map-keys($nd-colors)}";
+@mixin nd-color($bgColor, $fontColor) {
+  @if not map-has-key($colors, $bgColor) {
+    @error "'#{$bgColor} is an invalid background color! Choose one of #{map-keys($colors)}";
   }
-  @return map-get($nd-colors, $name);
-}
-
-@mixin nd-color($bgColor, $fontColor){
-  @if not map-has-key($nd-colors, $bgColor) {
-    @error "Invalid color specified for background! Choose one of #{map-keys($nd-colors)}";
+  @if not map-has-key($colors, $fontColor) {
+    @error "'#{$fontColor} is an invalid font color! Choose one of #{map-keys($colors)}";
   }
-  @if not map-has-key($nd-colors, $fontColor) {
-    @error "Invalid color specified for font color! Choose one of #{map-keys($nd-colors)}";
-  }
-  background-color: nd-color($bgColor);
-  color: nd-color($fontColor);
-}
-
-@if $show-samples {
-  // generate samples
-  .nd-color-sample {
-    height: 40px;
-    padding-left: 5px;
-    line-height: 40px;
-
-    $color-names: map-keys($nd-colors);
-    @each $name, $value in $nd-colors {
-      &.sample#{index($color-names, $name)} {
-        background-color: $value;
-        @if (lightness($value) < 60) {
-          color: nd-color("white");
-        }
-        &:after {
-          content: "#{$name}: #{$value}";
-        }
-      }
-    }
-  }
+  background-color: color($bgColor);
+  color: color($fontColor);
 }
 
