@@ -133,65 +133,65 @@
 
 $nd-cards-configuration: (
   feed-cards: (
-    border: 1px solid rgba(nd-color('metal'), .2),
+    border: 1px solid rgba(color('metal'), .2),
     card: (
       padding: 15px,
       circle-radius: 34px,
-      circle-color: nd-color('metal'),
+      circle-color: color('metal'),
       circle-margin: 0 12px 0 0,
       details-background: url(data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOCIgaGVpZ2h0PSI1IiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgPHVzZSBmaWxsPSIjODg4RkE4IiBmaWxsLW9wYWNpdHk9Ii43IiB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgMy4wNCA0LjA0KSIvPgogIDxkZWZzPgogICAgPHBhdGggaWQ9ImEiIGQ9Ik0uNTI4MTk0LS41MzI0NThDLjIzNDEyNS0uODI0MTcxLS4yNDA3NDUtLjgyMjI2Mi0uNTMyNDU4LS41MjgxOTRjLS4yOTE3MTMuMjk0MDY5LS4yODk4MDQuNzY4OTM5LjAwNDI2NCAxLjA2MDY1MkwuNTI4MTk0LS41MzI0NTh6TTMuMDYyMDYgMy4wMzc1M2wuNTI4MTkuNTMyNDZjLjE0MTk2LS4xNDA4Mi4yMjE4MS0uMzMyNS4yMjE4MS0uNTMyNDYgMC0uMTk5OTYtLjA3OTg1LS4zOTE2NC0uMjIxODEtLjUzMjQ2bC0uNTI4MTkuNTMyNDZ6TS0uNTI4MTk0IDUuNTQyNmMtLjI5NDA2OC4yOTE3Mi0uMjk1OTc3Ljc2NjU5LS4wMDQyNjQgMS4wNjA2NS4yOTE3MTMuMjk0MDcuNzY2NTgzLjI5NTk4IDEuMDYwNjUyLjAwNDI3TC0uNTI4MTk0IDUuNTQyNnptMC01LjAxMDE0MkwyLjUzMzg2IDMuNTY5OTlsMS4wNTYzOS0xLjA2NDkyTC41MjgxOTQtLjUzMjQ1OC0uNTI4MTk0LjUzMjQ1OHpNMi41MzM4NiAyLjUwNTA3TC0uNTI4MTk0IDUuNTQyNi41MjgxOTQgNi42MDc1MiAzLjU5MDI1IDMuNTY5OTkgMi41MzM4NiAyLjUwNTA3eiIvPgogIDwvZGVmcz4KPC9zdmc+) no-repeat,
       details-background-position: right 5px top 8px,
       details-padding: 0 18px 0 0,
-      progress-color: rgba(nd-color('metal'), .2),
+      progress-color: rgba(color('metal'), .2),
       header-typography: 'secondary-headline',
       span-typography: 'meta-headline',
-      background-color: nd-color('white'),
-      open-background-color: nd-color('white')
+      background-color: color('white'),
+      open-background-color: color('white')
     ),
     sub-card: (
       padding: 10px 15px,
       circle-radius: 19px,
-      circle-color: nd-color('metal'),
+      circle-color: color('metal'),
       circle-margin: 0 9px 0 0,
       details-background: none,
       details-background-position: right 5px top 8px,
       details-padding: 0,
-      progress-color: rgba(nd-color('metal'), .2),
+      progress-color: rgba(color('metal'), .2),
       header-typography: 'sub-headline',
       span-typography: 'meta-headline',
-      background-color: nd-color('white'),
-      open-background-color: nd-color('white')
+      background-color: color('white'),
+      open-background-color: color('white')
     )
   ),
   object-cards: (
-    border: 1px solid rgba(nd-color('metal'), .2),
+    border: 1px solid rgba(color('metal'), .2),
     card: (
       padding: 13px,
       circle-radius: 34px,
-      circle-color: nd-color('lime'),
+      circle-color: color('lime'),
       circle-margin: 0 12px 0 0,
       details-background: none,
       details-background-position: 0,
       details-padding: 0,
-      progress-color: rgba(nd-color('lime'), .3),
+      progress-color: rgba(color('lime'), .3),
       header-typography: 'secondary-headline',
       span-typography: 'meta-headline',
-      background-color: lighten(nd-color('metal'), 38%),
-      open-background-color: nd-color('white')
+      background-color: lighten(color('metal'), 38%),
+      open-background-color: color('white')
     ),
     sub-card: (
       padding: 10px 13px,
       circle-radius: 19px,
-      circle-color: nd-color('lime'),
+      circle-color: color('lime'),
       circle-margin: 0 9px 0 0,
       details-background: none,
       details-background-position: right 5px top 8px,
       details-padding: 0,
-      progress-color: rgba(nd-color('lime'), .3),
+      progress-color: rgba(color('lime'), .3),
       header-typography: 'sub-headline',
       span-typography: 'meta-headline',
-      background-color: nd-color('white'),
-      open-background-color: nd-color('white')
+      background-color: color('white'),
+      open-background-color: color('white')
     )
   )
 );
@@ -257,7 +257,7 @@ $nd-cards-configuration: (
   }
 
   .square {
-    @include nd-square(map-get($style, 'circle-radius'), 0 0 0 13px, lighten(nd-color(metal), 20%))
+    @include nd-square(map-get($style, 'circle-radius'), 0 0 0 13px, lighten(color(metal), 20%))
   }
 
   .progress {
@@ -302,7 +302,7 @@ $nd-cards-configuration: (
 
       &.--open{
         background-color: map-get($card-style, 'open-background-color');
-        box-shadow: 0px 0px 5px 0px rgba(nd-color('metal'),0.75);
+        box-shadow: 0px 0px 5px 0px rgba(color('metal'), 0.75);
       }
 
       .sub-cards{

@@ -74,7 +74,7 @@
 // Style guide: Links.Mixin
 
 $nd-link-defaults: (
-  muted-color: nd-color('metal'),
+  muted-color: color('metal'),
   text-decoration: none,
   cursor: pointer,
   outline: 0
@@ -82,13 +82,13 @@ $nd-link-defaults: (
 
 $nd-link-config:(
   'default': (
-      color: nd-color('royal-blue')
+      color: color('royal-blue')
   ),
   'primary-lime':(
-      color: nd-color('lime')
+      color: color('lime')
   ),
   'primary-blue':(
-      color: nd-color('royal-blue')
+      color: color('royal-blue')
   )
 );
 

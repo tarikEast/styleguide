@@ -83,7 +83,7 @@ $nd-typography-config: (
 
   font-size: map-get($style-props , "font-size");
   font-weight: map-get($style-props , "font-weight");
-  color: nd-color(map-get($style-props , "color-name"));
+  color: color(map-get($style-props , "color-name"));
   letter-spacing: map-get($style-props , "letter-spacing");
   text-transform: map-get($style-props , "text-transformation");
   line-height: map-get($style-props , "line-height");

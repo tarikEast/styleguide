@@ -67,24 +67,24 @@ $nd-button-defaults: (
 
 $nd-button-config:(
   'default': (
-    background-color: nd-color('lime'),
-    color: nd-color('white')
+    background-color: color('lime'),
+    color: color('white')
   ),
   'primary-lime':(
-    background-color: nd-color('lime'),
-    color: nd-color('white')
+    background-color: color('lime'),
+    color: color('white')
   ),
   'primary-blue':(
-    background-color: nd-color('royal-blue'),
-    color: nd-color('white')
+    background-color: color('royal-blue'),
+    color: color('white')
   ),
   'secondary-metal':(
-    background-color: nd-color('metal'),
-    color: nd-color('white')
+    background-color: color('metal'),
+    color: color('white')
   ),
   'secondary-abort':(
-    background-color: rgba(nd-color('metal'),.15),
-    color: nd-color('carbon')
+    background-color: rgba(color('metal'), .15),
+    color: color('carbon')
   )
 );
 
@@ -131,16 +131,16 @@ $nd-button-config:(
   }
 
   &.--link{
-    background-color: nd-color('white');
+    background-color: color('white');
     color: map-get($button-style, 'background-color');
 
     &:hover{
-      background-color: nd-color('white');
+      background-color: color('white');
       color: darken(map-get($button-style, 'background-color'), $hover-modificator);
     }
 
     &:active{
-      background-color: nd-color('white');
+      background-color: color('white');
       color: darken(map-get($button-style, 'background-color'), $hover-modificator);
     }
   }

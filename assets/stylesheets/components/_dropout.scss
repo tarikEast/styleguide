@@ -48,19 +48,19 @@
 
 $nd-dropout-style: (
   dropout: (
-    bg-color: nd-color('white'),
-    shadow-color: rgba(nd-color('carbon'), .3),
+    bg-color: color('white'),
+    shadow-color: rgba(color('carbon'), .3),
     color: inherit
   ),
   tooltip: (
-    bg-color: nd-color('carbon'),
-    shadow-color: nd-color('white'),
-    color: nd-color('white')
+    bg-color: color('carbon'),
+    shadow-color: color('white'),
+    color: color('white')
   )
 );
 
-$nd-do-bgcolor: nd-color('white');
-$nd-do-shadowcolor: rgba(nd-color('carbon'), .3);
+$nd-do-bgcolor: color('white');
+$nd-do-shadowcolor: rgba(color('carbon'), .3);
 
 $nd-do-arrow: (
   top-middle: (
