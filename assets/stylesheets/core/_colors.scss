@@ -37,49 +37,53 @@
 // <div class="color-sample sample6"></div>
 // <div class="color-sample sample7"></div>
 // <div class="color-sample sample8"></div>
+// <div class="color-sample sample9"></div>
+// <div class="color-sample sample10"></div>
 //
 // Style guide: Colors.Palette
 
+// Color palette (new names)
 $colors: (
-  'carbon': #202A37,
+  'carbon': #202a37,
   'carbon-dark': #0D1722,
+  'metal': #888fa8,
+  'metal-light': #cdd0d4,
+  'white': #ffffff,
   'royal-blue': #2278f1,
-  'lime': #2abf00,
   'sky-blue': #cbe6ff,
+  'lime': #2abf00,
   'grass': #bbeda2,
-  'metal': #888FA8,
-  'alarm-red': #e94659,
-  'white': #ffffff
+  'alarm-red': #e94659
 );
-
-@if $show-samples {
-  .color-sample {
-    @include color-samples($colors);
-  }
-}
 
 // Color palette (old names)
 $colors-old: (
-  'black': #202A37,      // carbon
-  'blue': #2278f1,       // royal-blue
-  'green': #2abf00,      // lime
-  'blue-light': #cbe6ff, // sky-blue
-  'green-light': #bbeda2,// grass
-  'gray': #888FA8,       // metal
-  'red': #e94659,        // alarm-red
+  'black': #202a37,      // carbon
+  'grey': #888fa8,       // metal
+  'grey-light': #cdd0d4, // metal-light
   'white': #ffffff,      // white
+  'blue': #2278f1,       // royal-blue
+  'blue-light': #cbe6ff, // sky-blue
+  'green': #2abf00,      // lime
+  'green-light': #bbeda2,// grass
+  'red': #e94659         // alarm-red
 );
 
 // Color palette (old compat names with old values)
 $colors-old-compat: (
   'grey-lighter': #f0f0f0,
-  'grey-light': #dcdcdc,
   'grey-dark': #b4b4b4,
   'orange': #ff8d11
 );
 
 // Color palette (all merged)
 $colors-all: map-merge($colors, map-merge($colors-old, $colors-old-compat));
+
+@if $show-samples {
+  .color-sample {
+    @include color-samples($colors);
+  }
+}
 
 // Color functions
 //
