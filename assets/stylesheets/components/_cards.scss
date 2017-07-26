@@ -208,8 +208,15 @@ $nd-cards-configuration: (
   width: $dimension;
   height: $dimension;
   border-radius: $global-border-radius;
-  background-color: $color;
+  background-color: transparent;
   margin: $margin;
+  text-align: center;
+  padding-top: 4px;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background-color: $color;
+  }
 }
 
 @mixin nd-card-content ($style) {
@@ -227,6 +234,7 @@ $nd-cards-configuration: (
 
   .details {
     flex-grow: 1;
+    z-index: 10;
     background: map-get($style, 'details-background');
     background-position: map-get($style, 'details-background-position');
     padding: map-get($style, 'circle-margin');
@@ -254,6 +262,7 @@ $nd-cards-configuration: (
 
   .progress {
     position: absolute;
+    z-index: 0;
     top: 0;
     left: 0;
     height: 100%;
